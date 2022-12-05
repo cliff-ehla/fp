@@ -1,10 +1,14 @@
 <script>
 	import {onMount} from "svelte";
-	onMount(() => {
+	onMount(async () => {
+		let res = await fetch('/api/migrate_posts', {
+			method: 'POST'
+		})
+		console.log(await res.json())
 		// getTagsFromWP()
 		// getUsersFromWP()
 		// getCategoriesFromWP()
-		getPostsFromWP()
+		// getPostsFromWP()
 	})
 
 	const getCategoriesFromWP = async () => {
