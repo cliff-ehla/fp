@@ -20,6 +20,7 @@
 		<a href="/blog/{p.id}" class="block mb-8">
 			<img src="http://localhost:8888/wp-content/uploads/{p.attributes.wp_large_url}" alt="">
 			<p><b>{p.attributes.title}</b></p>
+			<p class="text-green-700"><b>{p.attributes.author.data.attributes.name}</b></p>
 			<p>{dayjs(p.attributes.createdAt).format('YYYY-MM-DD')}</p>
 			<div class="flex flex-wrap">
 				{#each p.attributes.tags.data as t}
