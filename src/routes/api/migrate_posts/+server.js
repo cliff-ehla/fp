@@ -2,7 +2,7 @@ import {json} from "@sveltejs/kit";
 import {db} from "../../../lib/db.js";
 
 export const POST = async () => {
-	let res = await fetch('http://localhost:8888/wp-json/wp/v2/posts?per_page=5')
+	let res = await fetch('http://localhost:8888/wp-json/wp/v2/posts?per_page=20')
 	let posts = await res.json()
 
 	const result = await Promise.all(posts.map(post => new Promise(async (resolve, reject) => {
@@ -21,8 +21,8 @@ export const POST = async () => {
 		}
 		let payload = {
 			title: post.title.rendered,
-			// excerpt: post.excerpt.rendered,
-			// content: post.content.rendered,
+			excerpt: post.excerpt.rendered,
+			content: post.content.rendered,
 			slug: post.slug,
 			wp_large_url,
 			wp_thumb_url,
