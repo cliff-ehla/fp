@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^1.0.0-next.48",
 		"dayjs": "^1.11.6",
 		"mysql2": "^2.3.3"
 	}
