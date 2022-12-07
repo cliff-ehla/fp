@@ -8,7 +8,7 @@
 {#if posts}
 	{#each posts as p}
 		<a href="{base}/blog/{p.id}" class="flex mb-8">
-			<img class="max-w-sm rounded" src="http://localhost:8888/wp-content/uploads/{p.attributes.wp_large_url}" alt="">
+			<img class="max-w-sm rounded" src="https://floatingprojectscollective.net/wp-content/uploads/{p.attributes.wp_large_url}" alt="">
 			<div class="ml-4">
 				<h2 class="text-xl"><b>{p.attributes.title}</b></h2>
 				<p class="mb-4 text-gray-700">{p.attributes.author.data.attributes.name}</p>
