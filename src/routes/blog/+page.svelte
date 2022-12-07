@@ -1,12 +1,13 @@
 <script>
 	export let data
 	import dayjs from 'dayjs'
+	import { base } from '$app/paths';
 	let posts = data.data
 </script>
 <div class="p-4">
 {#if posts}
 	{#each posts as p}
-		<a href="/blog/{p.id}" class="flex mb-8">
+		<a href="{base}/blog/{p.id}" class="flex mb-8">
 			<img class="max-w-sm rounded" src="http://localhost:8888/wp-content/uploads/{p.attributes.wp_large_url}" alt="">
 			<div class="ml-4">
 				<h2 class="text-xl"><b>{p.attributes.title}</b></h2>

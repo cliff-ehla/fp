@@ -1,11 +1,12 @@
 <script>
+	import { base } from '$app/paths';
 	import '../style/tailwind.css'
 </script>
 <div class="flex px-4 items-center border-b border-gray-400 h-12">
-	<a href="/" class="font-bold mr-4">Floating Project</a>
-	<a href="/blog">Art notes</a>
-	<a href="/event">Events</a>
-	<a href="/about">About</a>
+	<a href="{base}" class="font-bold mr-4">Floating Project 3</a>
+	<a href="{base}/blog">Art notes</a>
+	<a href="{base}/event">Events</a>
+	<a href="{base}/about">About</a>
 </div>
 <slot></slot>
 
