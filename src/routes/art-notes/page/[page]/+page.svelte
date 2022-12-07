@@ -3,12 +3,16 @@
 	import dayjs from 'dayjs'
 	import { base } from '$app/paths';
 	let posts = data.data
+	let pagination = data.meta.pagination
+	console.log(data)
 </script>
 <div class="p-4">
 {#if posts}
 	{#each posts as p}
-		<a href="{base}/blog/{p.id}" class="flex mb-8">
-			<img class="max-w-sm rounded" src="https://floatingprojectscollective.net/wp-content/uploads/{p.attributes.wp_large_url}" alt="">
+		<a href="{base}/art-notes/{p.id}" class="flex mb-8">
+			<span class="w-48 flex-shrink-0">
+				<img src="https://floatingprojectscollective.net/wp-content/uploads/{p.attributes.wp_thumb_url}" alt="">
+			</span>
 			<div class="ml-4">
 				<h2 class="text-xl"><b>{p.attributes.title}</b></h2>
 				<p class="mb-4 text-gray-700">{p.attributes.author.data.attributes.name}</p>
@@ -27,4 +31,10 @@
 		</a>
 	{/each}
 {/if}
+</div>
+
+<div class="flex">
+	{#each Array.from({length: pagination.pageCount}, (v, i) => i) as i}
+		<a class="w-8 h-8 rounded-full bg-gray-100 border border-gray-300 mx-2" href="/art-notes/page/{i+1}">{i + 1}</a>
+	{/each}
 </div>
