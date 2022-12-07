@@ -13,7 +13,7 @@
 		console.log('cliff: ', posts)
 	})
 </script>
-
+<h1 class="text-4xl">Blog</h1>
 <div class="p-4">
 {#if posts}
 	{#each posts as p}
