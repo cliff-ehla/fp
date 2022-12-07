@@ -2,12 +2,11 @@
 	export let data
 	import dayjs from 'dayjs'
 	import { base } from '$app/paths';
-	let posts = data.data
+	$: posts = data.data
 	let pagination = data.meta.pagination
-	console.log(data)
 </script>
+
 <div class="p-4">
-{#if posts}
 	{#each posts as p}
 		<a href="{base}/art-notes/{p.id}" class="flex mb-8">
 			<span class="w-48 flex-shrink-0">
@@ -30,11 +29,9 @@
 			</div>
 		</a>
 	{/each}
-{/if}
-</div>
-
-<div class="flex">
-	{#each Array.from({length: pagination.pageCount}, (v, i) => i) as i}
-		<a class="w-8 h-8 rounded-full bg-gray-100 border border-gray-300 mx-2" href="/art-notes/page/{i+1}">{i + 1}</a>
-	{/each}
+	<div class="flex">
+		{#each Array.from({length: pagination.pageCount}, (v, i) => i) as i}
+			<a class="flex justify-center items-center w-8 h-8 rounded-full bg-gray-100 border border-gray-300 mx-2" href="/art-notes/page/{i+1}">{i + 1}</a>
+		{/each}
+	</div>
 </div>
