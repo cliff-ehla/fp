@@ -17,7 +17,7 @@ const http = (() => {
 		resource = getQueryUrl(resource, query)
 		const res = await fetch('http://localhost:1337/api' + resource, {
 			headers: {
-				'Authorization': "bearer 62f46ad28f35dfce1e68b04a87d5448d3177ab599b49de295308bcc59bda1079413583412b9604869a0fdf202d63416dce4f0d3cb908fd8e45724746c22fbdf199dc66f8601085cf48fa779ce8fd6abe6cd391717a3db3b7f6c71b45eb969106aa211689eaa2d2cd29667d68f5ecce638c133f2933193b35ef27f69c2759668b"
+				'Authorization': "bearer 8ad8e50b2b82202dcde9375fa93adef20b517576b410ebc5ab63b0ad7bb81465a78804a03fbb12425bdd736bd4fac5ac9cb2245077f477072cb6b56a8449c88a7ed67a4be4da41be82d21e39e4a3e88473326e5fcc9dbd029f396a388411e755005173a5a9c1312ae7900ca8adabe79b1b5860626246f53695319aa1080c6ae9"
 			}
 		})
 		return onRes(res)
@@ -29,7 +29,7 @@ const http = (() => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
-				'Authorization': "bearer 62f46ad28f35dfce1e68b04a87d5448d3177ab599b49de295308bcc59bda1079413583412b9604869a0fdf202d63416dce4f0d3cb908fd8e45724746c22fbdf199dc66f8601085cf48fa779ce8fd6abe6cd391717a3db3b7f6c71b45eb969106aa211689eaa2d2cd29667d68f5ecce638c133f2933193b35ef27f69c2759668b"
+				'Authorization': "bearer 8ad8e50b2b82202dcde9375fa93adef20b517576b410ebc5ab63b0ad7bb81465a78804a03fbb12425bdd736bd4fac5ac9cb2245077f477072cb6b56a8449c88a7ed67a4be4da41be82d21e39e4a3e88473326e5fcc9dbd029f396a388411e755005173a5a9c1312ae7900ca8adabe79b1b5860626246f53695319aa1080c6ae9"
 			},
 			body: body && JSON.stringify(body)
 		})
