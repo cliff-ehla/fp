@@ -2,15 +2,19 @@
 	import { base } from '$app/paths';
 	import '../style/tailwind.css'
 </script>
-<div class="bg-red-500 text-white text-xs py-1 text-center">
-	注意：網站正在收復中
-</div>
-<div class="flex flex-wrap px-4 border-b border-gray-400">
-	<a href="/{base}" class="font-bold mr-4">Floating Projects</a>
-	<a href="{base}/art-notes/page/1">Art notes</a>
-	<a href="{base}/event">Events</a>
-	<a href="{base}/collective">Collective</a>
-	<a href="{base}/about">About</a>
+<!--<div class="bg-red-500 text-white text-xs py-1 text-center">-->
+<!--	注意：網站正在收復中-->
+<!--</div>-->
+<div class="shadow bg-white">
+	<div class="text-center pt-4">
+		<a href="/" class="font-bold">Floating Projects</a>
+	</div>
+	<div class="flex justify-center px-4 border-b border-gray-300 mb-4">
+		<a href="/art-notes/page/1">Art notes</a>
+		<a href="/event">Events</a>
+		<a href="/collective">Collective</a>
+		<a href="/about">About</a>
+	</div>
 </div>
 <slot></slot>
 

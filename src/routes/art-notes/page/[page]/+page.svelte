@@ -9,7 +9,7 @@
 
 <div class="container">
 	{#each posts as p, i}
-		<a href="{base}/art-notes/{p.id}" class="flex flex-col">
+		<a href="{base}/art-notes/{p.id}" class="flex flex-col sm:flex-row">
 			<div class="w-full sm:w-48 flex-shrink-0">
 				<img class="rounded-xl border border-gray-300 shadow-xl" src="{VITE_IMAGE_BASE}{p.attributes.wp_thumb_url}" alt="">
 			</div>
