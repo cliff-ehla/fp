@@ -5,6 +5,9 @@
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 	$: posts = data.data
 	let pagination = data.meta.pagination
+	$:{
+		console.log(posts)
+	}
 </script>
 
 <div class="container">

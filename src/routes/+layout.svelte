@@ -2,9 +2,6 @@
 	import { base } from '$app/paths';
 	import '../style/tailwind.css'
 </script>
-<!--<div class="bg-red-500 text-white text-xs py-1 text-center">-->
-<!--	注意：網站正在收復中-->
-<!--</div>-->
 <div class="shadow bg-white">
 	<div class="text-center pt-4">
 		<a href="/" class="font-bold">Floating Projects</a>
