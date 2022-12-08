@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+figure {
+    @apply max-w-full;
+}
+.container {
+    @apply max-w-lg mx-auto px-4;
+}
