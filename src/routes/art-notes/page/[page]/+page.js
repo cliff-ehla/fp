@@ -4,6 +4,7 @@ export const load = async ({fetch, params}) => {
 		sort: 'createdAt:desc',
 		populate: '%2A',
 		'pagination[page]': params.page,
-		'pagination[pageSize]': 10
+		'pagination[pageSize]': 10,
+		'filters[author][id][$eq]': '5'
 	})
 }
