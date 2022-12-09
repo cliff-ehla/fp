@@ -1,7 +1,7 @@
 <script>
 	export let data
 	import dayjs from "dayjs";
-	let post = data.data.attributes
+	let post = data.data[0].attributes
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 </script>
 

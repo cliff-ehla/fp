@@ -3,9 +3,6 @@
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 	export let post
 	$: p = post
-	$:{
-		console.log(p)
-	}
 </script>
 <a class="flex flex-col sm:flex-row">
 	<div class="w-full sm:w-48 flex-shrink-0">
@@ -13,7 +10,7 @@
 	</div>
 	<div class="ml-0 sm:ml-4 mt-2 sm:mt-0">
 		<h2 class="text-lg leading-tight font-bold">
-			<a href="/art-notes/{p.id}">
+			<a href="/art-notes/{p.attributes.slug}">
 				{p.attributes.title}
 			</a>
 		</h2>
