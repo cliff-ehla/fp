@@ -10,7 +10,7 @@
 <div class="container my-4">
 	<div class="bg-white border border-gray-300 rounded-xl p-4 mb-8 shadow-lg">
 		<h1 class="mb-2 text-blue-800 font-bold">Category: {category.attributes.name}</h1>
-		<p>{category.attributes.description}</p>
+		<p class="text-gray-700 leading-relaxed">{category.attributes.description}</p>
 	</div>
 	{#each posts as post, i}
 		<PostPreview {post}/>

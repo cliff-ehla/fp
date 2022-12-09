@@ -14,8 +14,8 @@
 	</div>
 </div>
 <slot></slot>
-<div class="bg-gray-100 text-gray-500 text-sm border-t border-gray-200">
-	<div class="container py-8 text-center">
+<div class="bg-gray-100 text-gray-500 text-base border-t border-gray-300 mt-8">
+	<div class="container py-12 text-center">
 		Floating Projects Collective {dayjs().format('YYYY')}
 	</div>
 </div>
