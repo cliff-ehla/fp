@@ -2,12 +2,16 @@
 	import PostPreview from "../../../../../lib/PostPreview.svelte";
 	export let data
 	import {page} from "$app/stores";
-	$: posts = data.data
-	let pagination = data.meta.pagination
+	$: posts = data.posts
+	$: pagination = data.pagination
+	$: category = data.category
 </script>
 
 <div class="container">
-	<h1 class="mb-4 italic text-blue-800 font-bold">Category:</h1>
+	<div class="bg-white border border-gray-300 rounded-xl p-4 mb-8 shadow-lg">
+		<h1 class="mb-2 text-blue-800 font-bold">Category: {category.attributes.name}</h1>
+		<p>{category.attributes.description}</p>
+	</div>
 	{#each posts as post, i}
 		<PostPreview {post}/>
 		{#if i < posts.length - 1}
