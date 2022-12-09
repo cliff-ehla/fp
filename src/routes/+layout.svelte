@@ -1,6 +1,6 @@
 <script>
-	import { base } from '$app/paths';
 	import '../style/tailwind.css'
+	import dayjs from "dayjs";
 </script>
 <div class="shadow bg-white">
 	<div class="text-center pt-4">
@@ -14,6 +14,11 @@
 	</div>
 </div>
 <slot></slot>
+<div class="bg-gray-100 text-gray-500 text-sm border-t border-gray-200">
+	<div class="container py-8 text-center">
+		Floating Projects Collective {dayjs().format('YYYY')}
+	</div>
+</div>
 
 <style>
 	a {
