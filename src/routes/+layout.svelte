@@ -6,7 +6,7 @@
 	<div class="text-center pt-4">
 		<a href="/" class="font-bold">Floating Projects</a>
 	</div>
-	<div class="flex justify-center px-4 border-b border-gray-300 mb-4">
+	<div class="flex justify-center px-4 border-b border-gray-300">
 		<a href="/art-notes/page/1">Art notes</a>
 		<a href="/event">Events</a>
 		<a href="/collective">Collective</a>

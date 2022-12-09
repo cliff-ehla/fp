@@ -5,7 +5,7 @@
 	let pagination = data.meta.pagination
 </script>
 
-<div class="container">
+<div class="container py-8">
 	{#each posts as post, i}
 		<PostPreview {post}/>
 		{#if i < posts.length - 1}

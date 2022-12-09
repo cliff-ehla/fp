@@ -6,7 +6,7 @@
 	let pagination = data.meta.pagination
 </script>
 
-<div class="container">
+<div class="container py-8">
 	<h1 class="mb-4 italic text-blue-800 font-bold">Author's post:</h1>
 	{#each posts as post, i}
 		<PostPreview {post}/>
