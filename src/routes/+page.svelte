@@ -28,12 +28,12 @@
 	})
 </script>
 <div class="pt-12 pb-2">
-	<img bind:this={logo} src="/fp-logo.png" alt="logo" class="w-72 mx-auto">
+	<img bind:this={logo} src="/fp-logo.png" alt="logo" class="w-72 mx-auto opacity-0">
 </div>
 <div class="py-4 px-8">
 	<p bind:this={title_el} class="animate-item mb-2">最新文章/ Latest</p>
 	{#each latest_blog as p}
-		<a href="/art-notes/{p.id}" class="block animate-item py-2 text-gray-500">
+		<a href="/art-notes/{p.attributes.slug}" class="block animate-item opacity-0 py-2 text-gray-500">
 			<p class="text-xs">{dayjs(p.attributes.createdAt).format('DD MMM YYYY')}</p>
 			<p>{p.attributes.title}</p>
 		</a>

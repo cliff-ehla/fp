@@ -1,13 +1,12 @@
 <script>
 	export let data
 	import dayjs from "dayjs";
-	let post = data.data[0].attributes
+	let post = data.attributes
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
-	console.log(post)
 </script>
 
 <div class="post-body container leading-loose text-gray-700 text-lg">
-	{#if post.image}
+	{#if post.image.data}
 		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{post.image.data.attributes.url}" alt={post.title}>
 	{:else}
 		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{VITE_IMAGE_BASE}{post.wp_large_url}" alt={post.title}>
