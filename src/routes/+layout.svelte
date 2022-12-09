@@ -1,7 +1,14 @@
 <script>
 	import '../style/tailwind.css'
 	import dayjs from "dayjs";
+	import {navigating} from "$app/stores";
+	import IndeterminateLoadingBar from "../lib/IndeterminateLoadingBar.svelte";
 </script>
+{#if $navigating}
+	<div class="fixed inset-x-0 top-0 z-50">
+		<IndeterminateLoadingBar/>
+	</div>
+{/if}
 <div class="shadow bg-white">
 	<div class="text-center pt-4">
 		<a href="/" class="font-bold">Floating Projects</a>
