@@ -3,10 +3,15 @@
 	import dayjs from "dayjs";
 	let post = data.data[0].attributes
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
+	console.log(post)
 </script>
 
 <div class="post-body container leading-loose text-gray-700 text-lg">
-	<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{VITE_IMAGE_BASE}{post.wp_large_url}" alt={post.title}>
+	{#if post.image}
+		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{post.image.data.attributes.url}" alt={post.title}>
+	{:else}
+		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{VITE_IMAGE_BASE}{post.wp_large_url}" alt={post.title}>
+	{/if}
 	<h1 class="text-2xl text-gray-800 mb-4">{post.title}</h1>
 	<a href="/author/{post.author.data.attributes.slug}/1" class="my-4 flex items-center text-gray-800">
 		<div class="w-12 h-12 rounded-full bg-gray-100 border border-gray-400"></div>

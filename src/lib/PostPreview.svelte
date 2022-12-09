@@ -6,7 +6,11 @@
 </script>
 <a class="flex flex-col sm:flex-row">
 	<div class="w-full sm:w-48 flex-shrink-0">
-		<img class="rounded-xl border border-gray-300 shadow-xl" src="{VITE_IMAGE_BASE}{p.attributes.wp_thumb_url}" alt="">
+		{#if p.attributes.image.data}
+			<img class="rounded-xl border border-gray-300 shadow-xl" src="{p.attributes.image.data.attributes.url}" alt="{p.attributes.title}">
+		{:else}
+			<img class="rounded-xl border border-gray-300 shadow-xl" src="{VITE_IMAGE_BASE}{p.attributes.wp_thumb_url}" alt="{p.attributes.title}">
+		{/if}
 	</div>
 	<div class="ml-0 sm:ml-4 mt-2 sm:mt-0">
 		<h2 class="text-lg leading-tight font-bold">
