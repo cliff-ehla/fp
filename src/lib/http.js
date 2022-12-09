@@ -1,5 +1,6 @@
-const VITE_API_BASE = import.meta.env.VITE_API_BASE
-const VITE_STRAPI_TOKEN = import.meta.env.VITE_STRAPI_TOKEN
+const env = import.meta.env.VITE_ENV
+const VITE_API_BASE = env === 'dev' ? import.meta.env.VITE_DEV_API_BASE : import.meta.env.VITE_API_BASE
+const VITE_STRAPI_TOKEN = env === 'dev' ? import.meta.env.VITE_DEV_STRAPI_TOKEN : import.meta.env.VITE_STRAPI_TOKEN
 
 const onRes = async (res) => {
 	return await res.json()

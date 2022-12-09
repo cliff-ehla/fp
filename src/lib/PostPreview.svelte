@@ -3,6 +3,9 @@
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 	export let post
 	$: p = post
+	$:{
+		console.log(p)
+	}
 </script>
 <a class="flex flex-col sm:flex-row">
 	<div class="w-full sm:w-48 flex-shrink-0">
