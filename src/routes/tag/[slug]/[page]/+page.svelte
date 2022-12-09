@@ -6,6 +6,7 @@
 </script>
 
 <div class="container">
+	<h1 class="mb-4 italic text-blue-800 font-bold">Searching for tag:</h1>
 	{#each posts as post, i}
 		<PostPreview {post}/>
 		{#if i < posts.length - 1}
