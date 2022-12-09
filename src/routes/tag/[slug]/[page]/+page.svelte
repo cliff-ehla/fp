@@ -3,10 +3,11 @@
 	export let data
 	$: posts = data.data
 	let pagination = data.meta.pagination
+	import {page} from "$app/stores";
 </script>
 
 <div class="container py-8">
-	<h1 class="mb-4 italic text-blue-800 font-bold">Searching for tag:</h1>
+	<h1 class="mb-4 italic text-blue-800">Searching for tag: <b>{$page.params.slug}</b></h1>
 	{#each posts as post, i}
 		<PostPreview {post}/>
 		{#if i < posts.length - 1}
