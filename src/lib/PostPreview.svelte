@@ -24,15 +24,16 @@
 				<p class="text-xs">發表於 {dayjs(p.attributes.createdAt).format('YYYY-MM-DD')}</p>
 			</a>
 		</div>
+		<div class="flex flex-wrap">
+			<span class="text-xs mr-1 mt-0.5 text-gray-500">檔案:</span>
+			{#each p.attributes.categories.data as t}
+				<a href="/art-notes/category/{t.attributes.slug}/1" class="text-sm border-b border-gray-700 text-gray-700 mr-2 mb-1">{t.attributes.name}</a>
+			{/each}
+		</div>
 		<p class="mb-2 text-gray-700 text-sm">{@html p.attributes.excerpt}</p>
 		<div class="flex flex-wrap">
 			{#each p.attributes.tags.data as t}
 				<a href="/tag/{t.attributes.slug}/1" class="text-xs px-1 bg-gray-200 text-blue-900 italic rounded border-gray-200 border mr-2 mb-1">{t.attributes.name}</a>
-			{/each}
-		</div>
-		<div class="flex flex-wrap">
-			{#each p.attributes.categories.data as t}
-				<p class="text-sm bg-red-300 mr-2 mb-1">{t.attributes.name}</p>
 			{/each}
 		</div>
 	</div>
