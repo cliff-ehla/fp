@@ -1,18 +1,18 @@
-import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from "svelte-preprocess";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
 		adapter: adapter(),
-		// paths: {
-		// 	assets: "https://floatingprojectscollective.net"
-		// },
-		// prerender: {
-		// 	handleHttpError: 'ignore',
-		// 	handleMissingId: 'ignore',
-		// 	concurrency: 5
-		// }
+		paths: {
+			assets: "https://floatingprojectscollective.net"
+		},
+		prerender: {
+			handleHttpError: 'ignore',
+			handleMissingId: 'ignore',
+			concurrency: 5
+		}
 	},
 	preprocess: [
 		preprocess({

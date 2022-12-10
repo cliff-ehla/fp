@@ -7,5 +7,6 @@ export const load = async ({fetch, params}) => {
 		'filters[slug][$eq]': params.slug
 	})
 	if (!posts.data.length) throw redirect(307, '/');
+	console.log('post detail')
 	return posts.data[0]
 }

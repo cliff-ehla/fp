@@ -10,7 +10,7 @@ export const load = async ({fetch, params}) => {
 		'pagination[pageSize]': 10,
 		'filters[categories][slug][$eq]': params.slug
 	})
-	console.log(123, category, post)
+	console.log('category list: ' + params.slug)
 	return {
 		category: category.data[0],
 		posts: post.data,
