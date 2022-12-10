@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-vercel';
 import preprocess from "svelte-preprocess";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,11 +8,11 @@ const config = {
 		paths: {
 			assets: "https://floatingprojectscollective.net"
 		},
-		prerender: {
-			handleHttpError: 'ignore',
-			handleMissingId: 'ignore',
-			concurrency: 5
-		}
+		// prerender: {
+		// 	handleHttpError: 'ignore',
+		// 	handleMissingId: 'ignore',
+		// 	concurrency: 5
+		// }
 	},
 	preprocess: [
 		preprocess({
