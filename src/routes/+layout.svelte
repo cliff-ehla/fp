@@ -14,8 +14,8 @@
 		<a href="/" class="font-bold">Floating Projects</a>
 	</div>
 	<div class="flex justify-center px-4 border-b border-gray-300">
-		<a href="/art-notes/page/1">Art notes</a>
-		<a href="/event">Events</a>
+		<a href="/art-notes/page/1">Floating Teatime</a>
+		<a href="/event">Open Door</a>
 		<a href="/collective">Collective</a>
 		<a href="/about">About</a>
 	</div>
