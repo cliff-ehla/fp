@@ -1,9 +1,7 @@
 <script>
 	export let data
-	import dayjs from "dayjs";
 	let post = data.attributes
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
-	console.log(post)
 </script>
 
 <div class="post-body container leading-loose text-gray-700 text-lg">
