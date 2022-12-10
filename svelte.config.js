@@ -7,6 +7,11 @@ const config = {
 		adapter: adapter(),
 		// paths: {
 		// 	assets: "https://floatingprojectscollective.net"
+		// },
+		// prerender: {
+		// 	handleHttpError: 'ignore',
+		// 	handleMissingId: 'ignore',
+		// 	concurrency: 5
 		// }
 	},
 	preprocess: [
