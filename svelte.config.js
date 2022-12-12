@@ -5,9 +5,9 @@ import preprocess from "svelte-preprocess";
 const config = {
 	kit: {
 		adapter: adapter(),
-		paths: {
-			assets: "https://floatingprojectscollective.net"
-		},
+		// paths: {
+		// 	assets: "https://floatingprojectscollective.net"
+		// },
 		// prerender: {
 		// 	handleHttpError: 'ignore',
 		// 	handleMissingId: 'ignore',
