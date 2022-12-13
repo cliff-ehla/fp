@@ -5,7 +5,7 @@
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 </script>
 
-<div class="post-body container leading-loose text-gray-700 text-lg">
+<div class="post-body mx-auto max-w-screen-md leading-loose text-gray-700 text-lg">
 	{#if post.image.data}
 		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{post.image.data.attributes.url}" alt={post.title}>
 	{:else}
