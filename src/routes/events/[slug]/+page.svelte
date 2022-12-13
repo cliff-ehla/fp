@@ -52,7 +52,7 @@
 		{#if post.artists.data.length}
 			<div class="grid grid-cols-3 gap-4">
 				{#each post.artists.data as artist}
-					<a href="/people/{artist.attributes.slug}" class="flex mb-4 items-center border border-gray-300 rounded-full">
+					<a href="/collective/{artist.attributes.slug}" class="flex mb-4 items-center border border-gray-300 rounded-full">
 						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-gray-100 border border-gray-400"></div>
 						<div class="px-2 leading-tight">
 							{artist.attributes.name}
