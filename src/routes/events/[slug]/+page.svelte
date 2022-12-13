@@ -5,7 +5,7 @@
 	console.log(data)
 </script>
 
-<div class="post-body mx-auto max-w-screen-md leading-loose text-gray-700 text-lg">
+<div class="post-body mx-auto max-w-screen-md px-4 leading-loose text-gray-700 text-lg">
 	{#if post.image.data}
 		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{post.image.data.attributes.url}" alt={post.title}>
 	{:else}
@@ -27,8 +27,8 @@
 	</div>
 </div>
 
-<div class="mx-auto max-w-screen-md">
-	<h2 class="font-bold text-xl mb-4">Related reviews on this event</h2>
+<div class="mx-auto max-w-screen-md px-4">
+	<h2 class="font-bold text-xl mb-4">Related readings</h2>
 	{#if post.reviews.data.length}
 		<div class="grid grid-cols-2 gap-8">
 			{#each post.reviews.data as post}

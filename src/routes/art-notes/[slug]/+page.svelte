@@ -1,11 +1,14 @@
 <script>
 	export let data
 	import dayjs from "dayjs";
-	let post = data.attributes
+	$: post = data.attributes
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
+	$:{
+		console.log(123, post)
+	}
 </script>
 
-<div class="post-body mx-auto max-w-screen-md leading-loose text-gray-700 text-lg">
+<div class="post-body mx-auto max-w-screen-md px-4 leading-loose text-gray-700 text-lg">
 	{#if post.image.data}
 		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{post.image.data.attributes.url}" alt={post.title}>
 	{:else}
@@ -31,5 +34,35 @@
 			<a href="/tag/{t.attributes.slug}/1"
 			   class="text-base bg-gray-50 px-2 py-1 mr-1 mb-1 rounded text-gray-600 border border-gray-400">{t.attributes.name}</a>
 		{/each}
+	</div>
+</div>
+
+<div class="mx-auto max-w-screen-md px-4">
+	{#if post.related_posts.data.length}
+		<h2 class="font-bold text-xl mb-4">Related readings</h2>
+		<div class="grid grid-cols-2 gap-8">
+			{#each post.related_posts.data as post}
+				<a href="/art-notes/{post.attributes.slug}" class="border border-gray-400 rounded-lg overflow-hidden">
+					{#if post.attributes.image}
+						<img class="m-0 mb-4 rounded-xl shadow-lg w-full" src="{post.attributes.image.data.attributes.url}" alt={post.attributes.title}>
+					{:else}
+						<img src="{VITE_IMAGE_BASE}{post.attributes.wp_thumb_url}" alt={post.attributes.title}>
+					{/if}
+					<div class="p-2">
+						<h3 class="font-bold text-base leading-tight">{post.attributes.title}</h3>
+					</div>
+				</a>
+			{/each}
+		</div>
+	{/if}
+	<div class="my-8">
+		{#if post.events.data.length}
+			<h2 class="font-bold text-xl mb-4">Related events</h2>
+			{#each post.events.data as event}
+				<p>
+					<a href="/events/{event.attributes.slug}">{event.attributes.title}</a>
+				</p>
+			{/each}
+		{/if}
 	</div>
 </div>
