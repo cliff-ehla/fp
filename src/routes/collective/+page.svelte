@@ -6,6 +6,8 @@
 	$: collective = data.data
 	$: past_members = collective.filter(c => {
 		return dayjs(c.attributes.membership_end).isBefore(dayjs()) && !c.attributes.oversea_affiliate
+	}).sort((a,b) => {
+		return (a.attributes.founding_member && !b.attributes.founding_member) ? -1 : 1
 	})
 	$: oversea_members = collective.filter(c => {
 		return c.attributes.oversea_affiliate
