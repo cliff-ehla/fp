@@ -1,4 +1,5 @@
 <script>
+	import dayjs from "dayjs";
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 	export let event
 	$: p = event
@@ -13,6 +14,12 @@
 		{/if}
 	</div>
 	<div class="ml-0 sm:ml-4 mt-2 sm:mt-0">
+		<p class="italic text-blue-900 font-bold">
+			{dayjs(p.attributes.start_date).format('YYYY.MM.DD')}
+			{#if p.attributes.end_date}
+				- {dayjs(p.attributes.end_date).format('MM.DD')}
+			{/if}
+		</p>
 		<h2 class="text-lg leading-tight font-bold">
 			<a href="/events/{p.attributes.slug}">
 				{p.attributes.title}
