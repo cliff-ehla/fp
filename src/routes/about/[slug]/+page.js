@@ -1,4 +1,7 @@
 import http from "../../../lib/http.js";
 export const load = async ({fetch, params}) => {
-	return http.get(fetch, '/about-fp')
+	console.log(params.slug)
+	return http.get(fetch, '/abouts', {
+		'filters[slug][$eq]': params.slug
+	})
 }
