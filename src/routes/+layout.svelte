@@ -23,7 +23,7 @@
 		},{
 			title: '關於我們',
 			subtitle: 'About',
-			href: '/about'
+			href: '/about/introduction'
 		},
 	]
 </script>
