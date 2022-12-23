@@ -19,7 +19,7 @@
 		},{
 			title: '重點策劃',
 			subtitle: 'Signature Projects',
-			href: '/'
+			href: '/signature-projects'
 		},{
 			title: '關於我們',
 			subtitle: 'About',

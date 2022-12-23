@@ -31,7 +31,7 @@
 </div>
 <div class="py-8">
 	<div class="container">
-		<p class="text-gray-700 mb-4 text-center pt-4 text-2xl">Oversea Affiliate</p>
+		<p class="text-gray-700 mb-4 text-center pt-4 text-2xl">Overseas Affiliate</p>
 		<div class="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid gap-4">
 			{#each oversea_members as member}
 				<MemberPreview {member}/>
