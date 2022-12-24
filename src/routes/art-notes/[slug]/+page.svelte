@@ -2,6 +2,9 @@
 	export let data
 	import AuthorsWidget from "../../../lib/AuthorsWidget.svelte";
 	$: post = data.attributes
+	$:{
+		console.log(post)
+	}
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 </script>
 
@@ -33,7 +36,7 @@
 <div class="mx-auto max-w-screen-md px-4">
 	{#if post.related_posts.data.length}
 		<h2 class="font-bold text-xl mb-4">Related readings</h2>
-		<div class="grid grid-cols-2 gap-8">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 			{#each post.related_posts.data as post}
 				<a href="/art-notes/{post.attributes.slug}" class="border border-gray-400 rounded-lg overflow-hidden">
 					{#if post.attributes.image}
@@ -51,11 +54,20 @@
 	<div class="my-8">
 		{#if post.events.data.length}
 			<h2 class="font-bold text-xl mb-4">Related events</h2>
-			{#each post.events.data as event}
-				<p>
-					<a href="/events/{event.attributes.slug}">{event.attributes.title}</a>
-				</p>
-			{/each}
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+				{#each post.events.data as event}
+					<div
+						class="border border-gray-400 rounded-lg overflow-hidden"
+						href="/events/{event.attributes.slug}">
+						{#if event.attributes.image.data}
+							<img src={event.attributes.image.data.attributes.url} alt={event.attributes.title}>
+						{:else}
+							<img src="{VITE_IMAGE_BASE}{event.attributes.wp_url}" alt={event.attributes.title}>
+						{/if}
+						<div class="p-4">{event.attributes.title}</div>
+					</div>
+				{/each}
+			</div>
 		{/if}
 	</div>
 </div>

@@ -1,19 +1,25 @@
 const env = import.meta.env.VITE_ENV
 const VITE_API_BASE = env === 'dev' ? import.meta.env.VITE_DEV_API_BASE : import.meta.env.VITE_API_BASE
 const VITE_STRAPI_TOKEN = env === 'dev' ? import.meta.env.VITE_DEV_STRAPI_TOKEN : import.meta.env.VITE_STRAPI_TOKEN
+import qs from "qs"
 
 const onRes = async (res) => {
 	return await res.json()
 }
 
 const getQueryUrl = (resource, query) => {
+	let url = `${resource}?${qs.stringify(query, {
+		encodeValuesOnly: true, // prettify URL
+	})}`
+	console.log('AAA', url)
 	if (query) {
 		for (const property in query) {
 			let char = resource.includes('?') ? '&' : '?'
 			resource += `${char}${property}=${query[property]}`
 		}
 	}
-	return resource
+	console.log('BBB', resource)
+	return url
 }
 
 const http = (() => {

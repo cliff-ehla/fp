@@ -3,7 +3,7 @@ import {redirect} from "@sveltejs/kit";
 
 export const load = async ({fetch, params}) => {
 	const members = await http.get(fetch, `/authors`, {
-		populate: '%2A',
+		populate: '*',
 		'filters[slug][$eq]': params.slug
 	})
 	const posts = await http.get(fetch, '/posts', {

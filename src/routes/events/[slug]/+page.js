@@ -3,7 +3,7 @@ import {redirect} from "@sveltejs/kit";
 
 export const load = async ({fetch, params}) => {
 	const posts = await http.get(fetch, `/events`, {
-		populate: '%2A',
+		populate: '*',
 		'filters[slug][$eq]': params.slug
 	})
 	if (!posts.data.length) throw redirect(307, '/');

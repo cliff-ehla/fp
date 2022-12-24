@@ -3,7 +3,16 @@ export const load = async ({fetch, params}) => {
 	console.log('author list: ' + params.slug)
 	return http.get(fetch, '/posts', {
 		sort: 'createdAt:desc',
-		populate: '%2A',
+		populate: {
+			authors: {
+				populate: {
+					image: true
+				}
+			},
+			categories: true,
+			tags: true,
+			image: true
+		},
 		'pagination[page]': params.page,
 		'pagination[pageSize]': 10,
 		'filters[authors][slug][$eq]': params.slug

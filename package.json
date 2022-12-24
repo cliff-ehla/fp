@@ -23,6 +23,7 @@
 		"@sveltejs/adapter-vercel": "^1.0.0-next.84",
 		"dayjs": "^1.11.6",
 		"gsap": "^3.11.3",
-		"mysql2": "^2.3.3"
+		"mysql2": "^2.3.3",
+		"qs": "^6.11.0"
 	}
 }

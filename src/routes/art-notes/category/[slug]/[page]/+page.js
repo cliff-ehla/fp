@@ -5,7 +5,7 @@ export const load = async ({fetch, params}) => {
 	})
 	const post = await http.get(fetch, '/posts', {
 		sort: 'createdAt:desc',
-		populate: '%2A',
+		populate: '*',
 		'pagination[page]': params.page,
 		'pagination[pageSize]': 10,
 		'filters[categories][slug][$eq]': params.slug
