@@ -1,5 +1,6 @@
 <script>
 	import dayjs from 'dayjs'
+	import AuthorsWidget from "./AuthorsWidget.svelte";
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 	export let post
 	$: p = post
@@ -19,11 +20,7 @@
 			</a>
 		</h2>
 		<div class="flex items-center">
-			<div class="w-8 h-8 rounded-full bg-gray-100 border border-gray-400"></div>
-			<a href="/author/{p.attributes.author.data.attributes.slug}/1" class="ml-2 my-2">
-				<p class="text-sm font-bold text-gray-700">{p.attributes.author.data.attributes.name}</p>
-				<p class="text-xs">發表於 {dayjs(p.attributes.createdAt).format('YYYY-MM-DD')}</p>
-			</a>
+			<AuthorsWidget authors={p.attributes.authors.data} createdAt={p.attributes.createdAt}/>
 		</div>
 		<div class="flex flex-wrap">
 			<span class="text-xs mr-1 mt-0.5 text-gray-500">檔案:</span>

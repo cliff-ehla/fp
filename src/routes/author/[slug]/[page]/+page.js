@@ -6,6 +6,6 @@ export const load = async ({fetch, params}) => {
 		populate: '%2A',
 		'pagination[page]': params.page,
 		'pagination[pageSize]': 10,
-		'filters[author][slug][$eq]': params.slug
+		'filters[authors][slug][$eq]': params.slug
 	})
 }

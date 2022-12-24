@@ -10,7 +10,7 @@ export const load = async ({fetch, params}) => {
 		sort: 'createdAt:desc',
 		'pagination[page]': 1,
 		'pagination[pageSize]': 3,
-		'filters[author][slug][$eq]': params.slug
+		'filters[authors][slug][$eq]': params.slug
 	})
 	const events = await http.get(fetch, '/events', {
 		sort: 'createdAt:desc',
