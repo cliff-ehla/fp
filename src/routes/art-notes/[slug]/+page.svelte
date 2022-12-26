@@ -39,7 +39,7 @@
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 			{#each post.related_posts.data as post}
 				<a href="/art-notes/{post.attributes.slug}" class="border border-gray-400 rounded-lg overflow-hidden">
-					{#if post.attributes.image}
+					{#if post.attributes.image.data}
 						<img class="m-0 mb-4 rounded-xl shadow-lg w-full" src="{post.attributes.image.data.attributes.url}" alt={post.attributes.title}>
 					{:else}
 						<img src="{VITE_IMAGE_BASE}{post.attributes.wp_thumb_url}" alt={post.attributes.title}>
