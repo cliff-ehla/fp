@@ -33,13 +33,15 @@
 	</div>
 {/if}
 <div class="shadow bg-white">
-<!--	<div class="text-center pt-4">-->
-<!--		<a href="/" class="font-bold">Floating Projects</a>-->
-<!--	</div>-->
-	<div class="flex justify-center px-4 border-b border-gray-300">
+	<div class="text-center flex justify-center">
+		<a href="/" class="p-2 sm:p-0 sm:block sm:absolute sm:left-4 sm:top-3">
+			<img class="mx-auto w-6" src="/fp-icon.png" alt="fp-icon">
+		</a>
+	</div>
+	<div class="flex items-center flex-wrap justify-center">
 		{#each menu as item}
-			<a href="{item.href}" class="inline-flex flex-col items-center">
-				<b>{item.title}</b>
+			<a href="{item.href}" class="px-3 py-1 inline-flex flex-col items-center">
+				<b class="text-sm sm:text-base whitespace-nowrap">{item.title}</b>
 				<span class="text-xs">{item.subtitle}</span>
 			</a>
 		{/each}
@@ -51,9 +53,3 @@
 		Floating Projects Collective {dayjs().format('YYYY')}
 	</div>
 </div>
-
-<style>
-	a {
-		@apply mx-2 p-2;
-	}
-</style>
