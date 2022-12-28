@@ -1,15 +1,19 @@
 <script>
 	let menu = [
 		{
-			name: 'Introduction',
+			name: 'What We Do',
 			slug: 'introduction'
 		},
 		{
-			name: 'Conceptual',
+			name: 'What We Envision',
 			slug: 'conceptual'
 		},
 		{
-			name: 'Contact',
+			name: 'Media Coverage',
+			slug: 'media'
+		},
+		{
+			name: 'Contact Us',
 			slug: 'contact'
 		}
 	]
