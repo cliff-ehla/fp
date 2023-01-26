@@ -1,0 +1,35 @@
+---
+title: "讀書會：歷史與未來"
+slug: "bookshare1903"
+summary: ""
+createdAt: 2019-03-10
+category: ["book-sharing"]
+event_start_date: "2019-03-10"
+event_time: "12:00-15:00"
+event_location: "據點。句點 (石硤尾賽馬會創意藝術中心3樓L306D Floating Project)"
+event_fee: "$70 (包1杯飲品及小食)"
+tags: "歷史"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2019-03-10-${slug}`;
+</script>
+
+歷史塑造了我們的科技、政治和社會，也塑造了我們的思想和夢想。現實彷彿是自然又理所當然。<br>
+今次的讀書會，讓我們一起分享讓人們從過去走到現在的事，以不同角度閱讀現在，思考不一樣的未來。<br>
+同場加映：《據點。句點》藝術空間舉辦的展覽 — 《無法取得位置 Nothing Can Come Closer》，詳情見 https://www.facebook.com/events/376729836439046/?ti=icl
+
+愛書人：12位<br>
+說書人：4位 (每位15分鐘)<br>
+分享書藉包括：<br>
+－"Factfulness: Ten Reasons We're Wrong About The World - And Why Things Are Better Than You Think"- Hans Rosling<br>
+－《從中國歷史來看中國民族性及中國文化》錢穆<br>
+－《讀史觀勢》張建雄<br>
+－《第二次世界大戰史》馬丁・吉爾伯特<br>
+日期：10/3/2019 (星期六)<br>
+時間：<br>
+12:00-14:00（讀書會）<br>
+14:00-15:00（展覽導賞）<br>
+地點：據點。句點 (石硤尾賽馬會創意藝術中心3樓L306D Floating Project)<br>
+費用：$70 (包1杯飲品及小食)<br>
+名額：16人

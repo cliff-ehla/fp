@@ -1,0 +1,30 @@
+---
+title: "睛彩人生"
+slug: "dr-yuen"
+summary: "源旭眼科專科醫生"
+createdAt: 2018-11-17
+category: ["be-our-guess"]
+event_start_date: "2018-11-17"
+event_time: "19:15-21:30"
+event_location: "九龍旺角登打士街56號柏裕商業中心15樓安利體驗館會議室A"
+event_fee: "$90一位 (包括三文治及飲品)"
+tags: "眼科"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2018-11-17-${slug}`;
+</script>
+
+分享嘉賓：Dr. Leonard YUEN 源旭眼科專科醫生<br>
+-美國哈佛大學碩士畢業<br>
+-受訓並執業於英國、美國、新加坡、香港<br>
+-熱心慈善活動，如奧比斯、老有所醫義診計劃和其他義工服務
+
+分享重點：<br>
+眼科醫學的最新科技發展<br>
+慈善活動的感懷與得著
+
+日期：2018年11月17日(星期六)<br>
+時間：晚上7:15-9:30<br>
+地點：九龍旺角登打士街56號柏裕商業中心15樓安利體驗館會議室A<br>
+費用：$90一位 (包括三文治及飲品)

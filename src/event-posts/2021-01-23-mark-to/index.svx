@@ -1,0 +1,26 @@
+---
+title: "2021投資基本功"
+slug: "mark-to"
+summary: "永豐金融資產管理董事總經理涂國彬先生(Mark To)"
+createdAt: 2021-01-23
+category: ["be-our-guess"]
+event_start_date: "2021-01-23"
+event_time: "11:00-12:00"
+event_location: "ZOOM及Facebook現場直播"
+event_fee: "免費"
+tags: "金融經濟，股市，滙市，投資"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-01-23-${slug}`;
+</script>
+
+名人面對面2.0：投資基本功<br>
+極不平凡的2020年終於過去，經濟蕭條下，股金比特幣齊升，美元大弱勢，2021年何去何從？🤔<br>
+Empower高興邀得涂國彬先生為大家分享《2021投資基本功》，早作準備💪🏻。<br>
+涂先生從事經濟及投資策略研究多年，近年創立經營環球宏觀多元資產對沖基金業務，現為永豐金融資產管理董事總經理。<br>
+日期：2021年1月23日（星期六）<br>
+時間：上午11:00-12:00<br>
+費用：全免<br>
+形式：Zoom及Facebook Live 現場直播<br>
+*若希望直接交流，歡迎問我們索取zoom直播連結。謝謝

@@ -1,0 +1,29 @@
+---
+title: "創業家解鎖：無懼變化而變通 堅守原則致成功"
+slug: "paul-yip-220220"
+summary: "全港最大寵物用品連鎖店Q-pets創辦人、創業家葉煜明先生Paul"
+createdAt: 2022-02-20
+category: ["be-our-guess"]
+event_start_date: "2022-02-20"
+event_time: "15:00-16:00"
+event_location: "旺角登打士街56號家樂坊15樓安利體驗館，同步以zoom現場直播"
+event_fee: "$40"
+tags: "創業"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2022-02-20-${slug}`;
+</script>
+
+分享重點：<br>
+💡 當日「唔認識寵物行業」下創業， Paul的創業眼光和心態怎樣？<br>
+💡 寵物店成行成市，能突圍而出並成為全港最大的寵物連鎖店，Paul做了甚麼重要策略？<br>
+💡 面對疫情不斷和創新科技概念的湧現，Paul作爲寵物行業的領航者及擁有豐富經驗的創業者，怎樣為未來定位？<br>
+Paul更會解構為何他在內地有工廠和辦事處，不聘請香港人打理，也可以兩年不用北上？🤔<br>
+他又如何看區塊鏈NFT與元宇宙Metaverse的趨勢？🤔<br>
+歡迎邀請親友一起實體或線上出席！💪🏻🤗
+
+Powered by Empower<br>
+www.Empower.hk<br>
+Facebook.com/Empower.hk<br>
+YouTube.com/Empowerhk

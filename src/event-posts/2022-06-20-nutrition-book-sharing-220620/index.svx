@@ -1,0 +1,36 @@
+---
+title: "＜營養讀書會＞星級版"
+slug: "nutrition-book-sharing-220620"
+summary: ""
+createdAt: 2022-06-20
+category: ["book-sharing"]
+event_start_date: "2022-06-20"
+event_time: "19:30-21:15"
+event_location: "尖沙咀漢口道騏生商業中心14樓1402室 活然自然醫學診療中心（袁醫生醫務所）"
+event_fee: "全免"
+tags: ""
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2022-06-20-${slug}`;
+</script>
+
+＜營養讀書會＞自5月開辦以來，每星期都吸引希望活學營養知識，過上更健康快活人生的朋友一起參加🤗。
+
+6月20日的營養讀書會，Empower榮幸邀得📘《營養謬誤》的作者、在醫學界赫赫有名的袁維康醫生親臨分享！
+
+袁醫生為牙醫醫學士、自然醫學博士及中醫醫學博士，為少數擁有3個不同領域的醫學學位的醫生，醫見獨到精闢。
+
+當晚袁醫生將介紹著書背景，並深入淺出地剖析「脂肪謬誤」，令大家更能營營求真，濡養思維，明辨謬見，告別迷誤。
+
+日期：6月20日（星期一）<br>
+時間：晚上7:30-9:15 <br>
+地點：尖沙咀漢口道騏生商業中心14樓1402室 活然自然醫學診療中心（袁醫生醫務所） <br>
+費用：全免
+
+歡迎邀請關注健康的親友一起參加。營養生活化，生活營養化，打造健康生活圈！💪🏻
+
+Powered by Empower <br>
+www.Empower.hk <br>
+Facebook.com/Empower.hk <br>
+YouTube.com/Empowerhk

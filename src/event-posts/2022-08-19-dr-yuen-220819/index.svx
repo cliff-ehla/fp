@@ -1,0 +1,39 @@
+---
+title: "《擇善固執 功著杏林》"
+slug: "dr-yuen-220819"
+summary: "袁維康醫生"
+createdAt: 2022-08-19
+category: ["be-our-guess"]
+event_start_date: "2022-08-19"
+event_time: "19:30-20:45"
+event_location: "旺角登打士街56號家樂坊15樓安利體驗館會議室，Zoom同步直播"
+event_fee: "$40"
+tags: ""
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2022-08-19-${slug}`;
+</script>
+
+💫《擇善固執 功著杏林》
+主講嘉賓：袁維康醫生 <br>
+⭐美國克雷頓自然醫學院醫學博士 <br>
+⭐中國湖南中醫藥大學醫學博士 <br>
+⭐香港大學牙科醫學士 <br>
+⭐中國中醫藥管理局屬下協會特授「民間名醫」<br>
+⭐暢銷書《營養謬誤》作者
+
+分享重點：<br>
+💡 生於醫學世家，兩位兄長皆為著名西醫，甚麼原因促使袁醫生毅然放棄牙醫本業，並遠赴美國及中國內地，分別攻讀自然醫學博士及中醫學博士？<br>
+💡 無懼親友反對而堅持轉向，背後的理念與動力為何？<br>
+💡 從醫30年，有何高山低谷與得失苦樂？
+
+日期：8月19日（五）<br>
+時間：晚上7:30-8:45 <br>
+地點：旺角登打士街56號家樂坊15樓安利體驗館會議室，Zoom同步直播 <br>
+費用：$40 <br>
+
+Powered by Empower <br>
+www.Empower.hk <br>
+Facebook.com/Empower.hk <br>
+YouTube.com/Empowerhk

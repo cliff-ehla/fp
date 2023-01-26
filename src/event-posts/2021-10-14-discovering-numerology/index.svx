@@ -1,0 +1,27 @@
+---
+title: "生命密碼初探"
+slug: "discovering-numerology"
+summary: ""
+createdAt: 2021-10-14
+category: ["cultural"]
+event_start_date: "2021-10-14"
+event_time: "14:00-15:15"
+event_location: "旺角家樂坊15樓安利體驗館會議室B"
+event_fee: "$50"
+tags: "生命密碼，自我探索"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-10-14-${slug}`;
+</script>
+
+❤️ 認識自己的性格特質<br>
+❤️ 更瞭解自己，更瞭解他人<br>
+❤️ 增進有效溝通
+
+日期：2021年10月14日（星期四，假期）<br>
+時間：下午2:00-3:15<br>
+地點：旺角家樂坊15樓安利體驗館會議室B<br>
+費用 : $50<br>
+報名優惠：以優惠價$80一併報名當天3:30-4:45的血型飲食法<br>
+報名方式：請inbox訊息給我們報名及索取付款詳情

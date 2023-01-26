@@ -1,0 +1,31 @@
+---
+title: "活學營養Keep Fit 2.0工作坊（星期一）"
+slug: "fitnessworkshop20"
+summary: ""
+createdAt: 2020-05-18
+category: ["fitness"]
+event_start_date: "2020-05-18"
+event_time: "10:30-11:20"
+event_location: "ZOOM"
+event_fee: "免費"
+tags: "肌肉鍛鍊"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2020-05-18-${slug}`;
+</script>
+
+想告別肚腩及手臂ByeBye肉？一於動起來，齊齊塑造理想身型！Keep Fit工作坊針對平日無運動習慣的朋友，循序漸進由基礎起步，讓大家起動💥
+經絡拍打- 疏通經絡，促進血液循環！
+
+全身性運動- 簡單有效的肌力訓練配合心肺功能訓練，塑造理想身型！
+
+日期：逢星期一
+
+時間：10:30-11:20
+
+地點：各自在家進行，透過免費APP”Zoom”進行
+
+費用 : 免費
+
+備註：報名請PM我們以便傳送連結

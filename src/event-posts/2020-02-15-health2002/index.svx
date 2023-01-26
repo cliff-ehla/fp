@@ -1,0 +1,21 @@
+---
+title: "活學營養: 抗敏抗毒 呼吸暢通"
+slug: "health2002"
+summary: ""
+createdAt: 2020-02-15
+category: ["nutrition"]
+event_start_date: "2020-02-15"
+event_time: "14:30-16:00"
+event_location: "旺角家樂坊15樓安利體驗館C室"
+event_fee: "每堂$30"
+tags: "鼻敏感"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2020-02-15-${slug}`;
+</script>
+
+- 香港幾乎每4人就有1人鼻敏感，也有不少人患氣管敏感、哮喘等過敏症。這些敏感症是遺傳？還是其他原因誘發？<br>
+- 如何透過改善飲食及生活習慣，並運用有機營養素，舒緩甚至根治過敏症？<br>
+- 面對春夏天氣變化、空氣污染、流感高峰及新型病毒，如何強化免疫系統加以抗衡？<br>
+費用：每堂$30

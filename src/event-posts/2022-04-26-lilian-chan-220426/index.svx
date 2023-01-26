@@ -1,0 +1,29 @@
+---
+title: "傷逝：這麼遠，那麼近！"
+slug: "lilian-chan-220426"
+summary: "陳呂令意校長--前中學及小學直資學校校長，現任大學講師、家長教育專家、生命教育及生涯規劃教練"
+createdAt: 2022-04-26
+category: ["be-our-guess"]
+event_start_date: "2022-04-26"
+event_time: "12:45-13:30"
+event_location: "ZOOM"
+event_fee: "$40"
+tags: ""
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2022-04-26-${slug}`;
+</script>
+
+過去數月，香港疫情嚴峻，染疫和死亡人數直線上升，歿者包括體弱長者、年輕人及幼童。不少人感遺憾的是在彌留之際，家人未能陪伴在旁😞。
+
+分享重點：<br>
+💡闡述《漢語大詞典》：「傷逝，悲傷地懷念去世的人。」<br>
+💡如何處理負面情緒<br>
+💡重新連結，維持親密關係，創造幸福
+
+日期：4月26日（二）<br>
+時間：中午12:45至1:45<br>
+形式：Zoom直播<br>
+費用：$40<br>
+歡迎Inbox索取連結，謝謝！

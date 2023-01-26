@@ -1,0 +1,28 @@
+---
+title: "讀書會2.0-心靈勵志"
+slug: "booksharing2004"
+summary: ""
+createdAt: 2020-04-04
+category: ["book-sharing"]
+event_start_date: "2020-04-04"
+event_time: "14:30-16:00"
+event_location: "將以Zoom Cloud Meetings軟件進行現場直播"
+event_fee: "全免"
+tags: "心靈勵志"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2020-04-04-${slug}`;
+</script>
+
+雞蛋從外打破是食物，從內打破是生命；人生從外打破是壓力，從內打破是成長。<br>
+生活壓力四方八面，幸好遇壓時總有書籍能助我們向前邁進。<br>
+今次讀書會，我們特別選擇分享心靈及勵志類書籍，讓大家共同成長，同時拓展我們生命的寬度及深度。<br>
+誠邀你一起分享閱讀體驗，一同感受由文字所帶出的美妙世界。<br>
+歡迎大家一起閱讀，一起分享，相互啟發！<br>
+說書人：4位 (每位8分鐘)<br>
+日期：4/4/2020 (星期六)<br>
+時間：14:30-16:00<br>
+交流形式：將以Zoom Cloud Meetings軟件進行現場直播<br>
+費用：全免<br>
+備註：請先下載免費應用程式Zoom，連結將於稍後發放

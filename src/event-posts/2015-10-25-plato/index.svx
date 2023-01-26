@@ -1,0 +1,22 @@
+---
+title: "plato"
+slug: "plato"
+summary: "Plato 先生"
+createdAt: 2015-10-25
+category: ["be-our-guess"]
+event_start_date: "2015-10-25"
+event_end_date: ""
+tags: []
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2015-10-25-${slug}`;
+</script>
+
+這次名人工作坊更曾被一流知名學府北京大學及清華大學的世界級EMBA 列為其中一門重要課堂
+
+全香港首批可親身學習這課堂 機會非常難得!!!
+
+日期：2015年10月25日 (星期日)<br>
+時間：晚上7:00-9:30<br>
+地點：旺角登打士街56號栢裕商業中心15樓安利體驗館 Cooking Studio

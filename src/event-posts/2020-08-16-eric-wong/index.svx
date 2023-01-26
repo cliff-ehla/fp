@@ -1,0 +1,28 @@
+---
+title: "網絡保安 你我都要識"
+slug: "eric-wong"
+summary: "黃廣達先生 Eric Wong"
+createdAt: 2020-08-16
+category: ["be-our-guess"]
+event_start_date: "2020-08-16"
+event_time: "16:00-17:00"
+event_location: "ZOOM"
+event_fee: "免費"
+tags: "網絡保安"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2020-08-16-${slug}`;
+</script>
+
+分享嘉賓：黃廣達先生 Eric Wong<br>
+現職羅兵咸永道會計師事務所風險及控制服務高級經理，曾任香港電訊資訊科技保安助理副總裁
+
+- 在家工作及視像會議成為新常態，如何確保網絡安全，免被黑客入侵😖？<br>
+- 怎樣強化各社交媒體帳戶的私隱設定💪🏻💪🏻，以免洩露行蹤，或不斷接收曾查看網頁的相關資訊？<br>
+- 怎樣設定密碼才最安全？如何使用多重認證？🤔
+
+日期：2020年8月16日（星期日）<br>
+時間：下午4:00至5:00<br>
+費用：全免<br>
+形式：以Zoom Cloud Meetings軟件現場直播，請私訊Inbox我們查詢連結

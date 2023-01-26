@@ -1,0 +1,26 @@
+---
+title: "XS Keep Fit 工作坊"
+slug: "keepfitworkshop1810"
+summary: ""
+createdAt: 2018-10-15
+category: ["fitness"]
+event_start_date: "2018-10-15"
+event_time: "14:30-16:00"
+event_location: "旺角登打士街家樂坊安利體驗館15樓C室"
+event_fee: "$50"
+tags: "肌肉鍛錬，Tabata"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2018-10-15-${slug}`;
+</script>
+
+想告別肚腩及手臂ByeBye肉？一於動起來，齊齊塑造理想身型！<br>
+XS Keep Fit消脂班針對平日無運動習慣的朋友，循序漸進由基礎起步，讓大家起動💥<br>
+Tabata - 全身性運動，簡單有效的肌力訓練配合心肺功能訓練，塑造理想身型！<br>
+日期：2018年10月15日<br>
+時間：下午2:30-4:00<br>
+地點：旺角登打士街家樂坊安利體驗館15樓C室<br>
+費用：$50<br>
+備註：請自備瑜珈墊及水樽（現場有飲用水提供）<br>
+*若需借用瑜珈墊，可以$10租用一張，但必須事先通知。

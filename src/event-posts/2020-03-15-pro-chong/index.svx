@@ -1,0 +1,29 @@
+---
+title: "2020環球經濟 能否否極泰來？"
+slug: "pro-chong"
+summary: "劉佐德全球經濟及金融研究所常務所長、香港中文大學經濟學系副教授莊太量教授"
+createdAt: 2020-03-15
+category: ["be-our-guess"]
+event_start_date: "2020-03-15"
+event_time: "14:30-15:30"
+event_location: "ZOOM"
+event_fee: "免費"
+tags: "金融經濟，股市"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2020-03-15-${slug}`;
+</script>
+
+🔶 全球股市崩盤式下跌，後市走勢如何？<br>
+🔶 新冠肺炎對中國以至全球經濟有何影響？<br>
+🔶 國際形勢有何變化？<br>
+🔶 石油與商品價格如何走向？
+
+日期：2020年3月15日(星期日)<br>
+時間：下午2:30-3:30<br>
+講座形式：將以Zoom Cloud Meetings軟件作現場直播<br>
+費用：全免<br>
+報告：請傳私人訊息給我們報名<br>
+備註：請先下載免費應用程式ZOOM，連結確認報名後發放<br>
+請先下載免費應用程式ZOOM(詳情請參閱附件) ，連結將於稍後發放。

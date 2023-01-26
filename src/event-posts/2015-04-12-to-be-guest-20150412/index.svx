@@ -1,0 +1,29 @@
+---
+title: "名人飯局- 第一炮"
+slug: "to-be-guest-20150412"
+summary: "聽成功人士一言勝讀百年書 "
+createdAt: 2015-04-12
+category: ["be-our-guess"]
+event_start_date: "2015-04-12"
+event_end_date: ""
+tags: []
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2015-04-12-${slug}`;
+</script>
+
+聽成功人士一言勝讀百年書 
+
+想增值自己提升自我職場上價值？名人飯局第一炮特別邀請<br>
+Dennis Fung lived in Silicon Valley for his education in network engineering and work for over a decade. He launched digital pay TV operation in the US before. He was an IT head at Next Media Group launching Taiwan's first over-the-top TV. Currently, Dennis works for Dim Sum TV developing the latest mobile apps for the China market. 
+
+At名人飯局 on April 12, Dennis will share with us how to build a team with strong team spirit and what traits a young employee should possess to succeed in a job. From his past experience in digital entertainment, he might even give us secret tips on how to get legitimate films and mini series from overseas for your enjoyment at home.
+
+Terry has agreed to be the host at our inaugural 名人飯局. It will be fun.
+
+Date : 12th April 2015<br>
+Time: 7:30-9:30pm<br>
+Venue: 旺角栢裕中心15樓<br>
+AEC cooking studio<br>
+Fee: $150

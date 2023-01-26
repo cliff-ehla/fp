@@ -1,0 +1,29 @@
+---
+title: "善用親子調解 家庭融洽和諧"
+slug: "fish-leung-communication"
+summary: "香港十大親子調解專家、香港家庭調解協會總幹事、註冊社工梁淑瑜小姐Fish"
+createdAt: 2021-12-10
+category: ["be-our-guess"]
+event_start_date: "2021-12-10"
+event_time: "19:30-20:30"
+event_location: "旺角登打士街56號家樂坊15樓安利體驗館，同步以zoom現場直播"
+event_fee: "$30 (線上線下同價)"
+tags: "調解，親子關係，溝通技巧"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-12-10-${slug}`;
+</script>
+
+主講嘉賓：梁淑瑜小姐Fish<br>
+香港十大親子調解專家、香港家庭調解協會總幹事、註冊社工，主講逾600場公開專題講座及培訓工作坊，屢獲粵港澳媒體採訪報道
+
+分享重點：<br>
+💡解構Fish獨創的「親子調解」的適用範疇<br>
+💡如何有系統和有步驟地解決家庭衝突，達致全方位家庭和諧？<br>
+💡由小朋友讀書與生活習慣引起的衝突，或代溝導致的青少年與家長不和，親子調解如何幫得上忙？
+
+Powered by Empower<br>
+www.Empower.hk<br>
+Facebook.com/Empower.hk<br>
+YouTube.com/Empowerhk

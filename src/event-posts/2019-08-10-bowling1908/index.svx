@@ -1,0 +1,22 @@
+---
+title: "周末鬆一鬆：保齡球同樂"
+slug: "bowling1908"
+summary: ""
+createdAt: 2019-08-10
+category: ["fitness"]
+event_start_date: "2019-08-10"
+event_time: "11:00-14:00"
+event_location: "長沙彎昇悅居會所"
+event_fee: "$80/位(包括租用一對保齡球鞋費用)"
+tags: "保齡"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2019-08-10-${slug}`;
+</script>
+
+日期：2019年8月10日(六)<br>
+時間：上午11:00-14:00<br>
+地點：長沙彎昇悅居會所<br>
+費用：$80/位(包括租用一對保齡球鞋費用)<br>
+打完保齡，一齊食午餐交流，費用自付，時間預計13:00-14:00

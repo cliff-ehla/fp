@@ -1,0 +1,23 @@
+---
+title: "牛轉乾坤"
+slug: "cny2021"
+summary: ""
+createdAt: 2021-02-12
+category: ["reflection"]
+author: "admin"
+tags: ""
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-02-12-${slug}`;
+</script>
+
+謝謝各方友好一直以來對Empower的鼎力支持！🥰🥰<br>
+㊗️大家🐮年<br>
+🌟工作：<br>
+縱如牛埋頭苦幹，也不忘抬頭看看👀<br>
+🌟同伴：<br>
+看顧彼此，家庭、信仰、事業牪皆相隨❤️<br>
+🌟自己：<br>
+隨心瀟灑，遊歷人生，犇向新天新地🎆<br>
+新一年我們定必繼續努力，為大家提供更多富足身心靈的資訊與服務，Empower the Community！💪🏻🥰

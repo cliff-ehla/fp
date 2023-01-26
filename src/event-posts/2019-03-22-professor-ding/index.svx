@@ -1,0 +1,19 @@
+---
+title: "獅子山下 九龍半島之蛻變"
+slug: "professor-ding"
+summary: "香港歷史博物館前總館長、香港中文大學歷史系客席教授丁新豹博士"
+createdAt: 2019-03-22
+category: ["be-our-guess"]
+event_start_date: "2019-03-22"
+event_time: "19:15-21:30"
+event_location: "旺角家樂坊15樓安利體驗館"
+event_fee: "$90一位 (包括三文治及飲品)"
+tags: "香港歷史，填海"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2019-03-22-${slug}`;
+</script>
+
+丁博士笑言：「你住在哪裡？學校在哪裡？教會又在哪裡？如果都腳踏實地，你真係叻喇！」<br>
+丁博士將以百年歷史為經緯，細說曾被稱為「不毛之地」，至今已成為全球人口密度最高地區的九龍半島的發展歷程和填海史！

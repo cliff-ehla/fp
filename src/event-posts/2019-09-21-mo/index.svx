@@ -1,0 +1,27 @@
+---
+title: "邂逅·連結·突破·啟發 - 紥作的延續"
+slug: "mo"
+summary: "Draw2Studio創辦人鄭少武Mo"
+createdAt: 2019-09-21
+category: ["be-our-guess"]
+event_start_date: "2019-09-21"
+event_time: "19:15-21:30"
+event_location: "九龍旺角登打士街56號家樂坊15樓安利體驗館會議室B"
+event_fee: "$90 (包三文治及飲品)"
+tags: "創業，手工創作"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2019-09-21-${slug}`;
+</script>
+
+內容：<br>
+- 手藝的傳統與創新<br>
+- 拜師學藝的體會與啟發<br>
+- 創業苦與樂<br>
+- 現場示範紥籐小技巧
+
+日期：2019年9月21日(星期六)<br>
+時間：晚上7:15-9:30<br>
+地點：九龍旺角登打士街56號家樂坊15樓安利體驗館會議室B<br>
+費用：$90 (包三文治及飲品)

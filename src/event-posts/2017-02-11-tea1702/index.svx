@@ -1,0 +1,27 @@
+---
+title: "春日品茶趣·輕茶道"
+slug: "tea1702"
+summary: ""
+createdAt: 2017-02-11
+category: ["cultural"]
+event_start_date: "2017-02-11"
+event_time: "14:30-16:00"
+event_location: ""
+event_fee: ""
+tags: "茶道，荼藝"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2017-02-11-${slug}`;
+</script>
+
+一片春日的落英，搭配微微的茶香，好不愜意。<br>
+Empower 榮幸邀得瑜茶舍創辦人 Catherine，為我們開辦“春日品茶趣·輕茶道”工作坊，內容包括：<br>
+- 茶藝表演<br>
+- 茶文化及茶藝講解<br>
+- 何謂六大茶類<br>
+- 茶器運用<br>
+- 茶與禮儀<br>
+- 品茗一至兩種茶品<br>
+- 問答環節<br>
+⭐ 導師：Ms Catherine Yung，自幼跟隨經營普洱茶葉生意的媽媽穿梭中港兩地，拜訪不同茶道老師，登雲南茶山採茶葉。為令茶道年青化和時尚化，4年前創辦瑜茶舍，以平易近人的品茗體驗，讓更多年輕人能透過實地教學，領略傳統茶道之美

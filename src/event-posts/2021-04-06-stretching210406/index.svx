@@ -1,0 +1,27 @@
+---
+title: "伸展拉筋工作坊"
+slug: "stretching210406"
+summary: ""
+createdAt: 2021-04-06
+category: ["fitness"]
+event_start_date: "2021-04-06"
+event_time: "15:30-16:30"
+event_location: "旺角家樂坊15樓安利體驗館C房"
+event_fee: "$50(請自備瑜珈墊）"
+tags: "拉筋，伸展"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-04-06-${slug}`;
+</script>
+
+⭐越來越人關注上交叉/下交叉綜合症，今次拉筋重點在放鬆受影響肌肉💪🏻，尤其適合日日坐寫字樓對住電腦的朋友呢😉
+
+備註：需要全程戴口罩
+
+報名優惠：以優惠價$60一併報名當天16:45-17:30的活學營養：肝膽排毒
+
+導師：
+黃海寧 Joyce Wong <br>
+伸展導師<br>
+團體運動導師 (ACE美國運動協會)

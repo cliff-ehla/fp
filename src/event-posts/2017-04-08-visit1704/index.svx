@@ -1,0 +1,24 @@
+---
+title: "清幽澄淨- 慈山寺"
+slug: "visit1704"
+summary: ""
+createdAt: 2017-04-08
+category: ["cultural"]
+event_start_date: "2017-04-08"
+event_time: "10:00-13:30"
+event_location: "慈山寺"
+event_fee: "免費"
+tags: "慈山寺"
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2017-04-08-${slug}`;
+</script>
+
+坐落於大埔的慈山寺，背山面海，環境清幽。寺院借鑑唐代建築風格，配以現代建築的簡約樸素設計。靜心遊觀，淨化心靈，讓人得以忘卻世俗的煩囂壓力。<br>
+要預約慈山寺的團體導賞參觀，往往需時數月至逾年。Empower 非常感恩能組團進內導賞參觀。
+
+日期：2017年4月8日(星期六)<br>
+時間：上午10:00至中午13:30 （包括午飯時間，午飯費用自付）<br>
+地點：香港新界大埔普門路88號慈山寺<br>
+將於09:30在大埔墟火車站集合。
