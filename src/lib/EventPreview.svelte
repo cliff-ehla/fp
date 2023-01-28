@@ -5,7 +5,7 @@
 	$: p = event
 </script>
 
-<a class="flex flex-col sm:flex-row my-6">
+<a href="/events/{p.attributes.slug}" class="hover:bg-blue-50 hover:text-blue-600 flex flex-col sm:flex-row my-6">
 	<div class="w-full sm:w-48 flex-shrink-0">
 		{#if p.attributes.image.data}
 			<img class="rounded-xl border border-gray-300 shadow-xl" src="{p.attributes.image.data.attributes.url}" alt="{p.attributes.title}">
@@ -21,9 +21,7 @@
 			{/if}
 		</p>
 		<h2 class="text-lg leading-tight font-bold">
-			<a href="/events/{p.attributes.slug}">
-				{p.attributes.title}
-			</a>
+			{p.attributes.title}
 		</h2>
 		<p class="mb-2 text-gray-700 text-sm">{@html p.attributes.excerpt}</p>
 		<div class="flex flex-wrap">
