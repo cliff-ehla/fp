@@ -48,8 +48,22 @@
 	</div>
 </div>
 <slot></slot>
-<div class="bg-gray-100 text-gray-500 text-base border-t border-gray-300 pt-8">
-	<div class="container py-12 text-center">
+<div class="bg-gray-100 text-gray-500 text-base border-t border-gray-300 py-8">
+	<div class="flex items-center justify-center mb-2">
+		<a href="https://www.facebook.com/floatingprojects/" target="_blank">
+			<img class="social" src="/fb.png" alt="FP facebook">
+		</a>
+		<a href="https://www.instagram.com/floatingprojects/" target="_blank">
+			<img class="social" src="/ig.png" alt="FP instagram">
+		</a>
+	</div>
+	<div class="container text-center">
 		Floating Projects Collective {dayjs().format('YYYY')}
 	</div>
 </div>
+
+<style>
+	.social {
+		@apply w-8 mx-1;
+	}
+</style>
