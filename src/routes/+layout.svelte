@@ -56,6 +56,9 @@
 		<a href="https://www.instagram.com/floatingprojects/" target="_blank">
 			<img class="social" src="/ig.png" alt="FP instagram">
 		</a>
+		<a href="https://vimeo.com/floatingprojectsvideos" target="_blank">
+			<img class="social" src="/vimeo.png" alt="FP instagram">
+		</a>
 	</div>
 	<div class="container text-center">
 		Floating Projects Collective {dayjs().format('YYYY')}

@@ -1,10 +1,8 @@
 <script>
 	export let data
-	let post = data.attributes
+	$: post = data.attributes
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
-	console.log(data)
 </script>
-
 <div class="post-body mx-auto max-w-screen-md px-4 leading-loose text-gray-700 text-lg">
 	{#if post.image.data}
 		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{post.image.data.attributes.url}" alt={post.title}>
