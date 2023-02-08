@@ -1,6 +1,10 @@
 import http from "../../lib/http.js";
 export const load = async ({fetch, url}) => {
     const q = url.searchParams.get('q')
+    if (!q) return {
+        posts: [],
+        events: []
+    }
     const [
         { data: posts },
         { data: events }
@@ -19,6 +23,10 @@ export const load = async ({fetch, url}) => {
                         }
                     }
                 ]
+            },
+            populate: {
+                image: true,
+                authors: true
             }
         }),
         http.get(fetch, '/events', {
@@ -35,6 +43,9 @@ export const load = async ({fetch, url}) => {
                         }
                     }
                 ]
+            },
+            populate: {
+                image: true
             }
         })
     ])
