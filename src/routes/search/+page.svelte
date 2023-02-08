@@ -1,7 +1,8 @@
 <script>
     export let data
-    let {events, search_key} = data
+    let {search_key} = data
     $: posts = data.posts
+    $: events = data.events
     import PostPreview from "../../lib/PostPreview.svelte";
     import EventPreview from "../../lib/EventPreview.svelte";
     import { goto } from '$app/navigation';
@@ -16,7 +17,9 @@
     <div class="flex justify-center my-12">
         <form on:submit={onSubmit} class="inline-flex border-2 border-gray-400">
             <input class="text-xl px-4 py-2" type="text" bind:value={search_key}/>
-            <button class="px-4 bg-gray-700 text-white" type="submit">Search</button>
+            <button class="px-4" type="submit">
+                <img class="w-4 h-4" src="/search.png" alt="search">
+            </button>
         </form>
     </div>
     <h2 class="text-3xl my-12 text-gray-500 text-center font-light">Posts</h2>
