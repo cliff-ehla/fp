@@ -1,0 +1,1 @@
+<img src="/elemental-dynamite.jpg" alt="elemental-dynamite">
