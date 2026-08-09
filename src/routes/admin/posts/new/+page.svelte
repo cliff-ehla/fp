@@ -4,6 +4,7 @@
     import { onAuthStateChanged } from 'firebase/auth';
     import { onMount } from 'svelte';
     import 'quill/dist/quill.snow.css';
+    import RelationSelect from '$lib/components/RelationSelect.svelte';
     
     let isAdmin = false;
     let loading = true;
@@ -235,7 +236,7 @@
                             <div class="space-y-6">
                                 <div>
                                     <label class="block text-xs font-bold text-gray-400 uppercase mb-2">categories</label>
-                                    <select bind:value={selectedCategory} class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm focus:border-[#4945ff] outline-none">
+                                    <select bind:value={selectedCategory} class="w-full bg-[#32324d] text-gray-300 border border-[#4a4a6a] rounded p-3 text-sm focus:border-[#7b79ff] focus:ring-1 focus:ring-[#7b79ff] outline-none transition mb-6">
                                         <option value="">Select a category...</option>
                                         {#each dbCategories as cat}
                                             <option value={cat.id}>{cat.name || cat.slug}</option>
@@ -243,42 +244,29 @@
                                     </select>
                                 </div>
 
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-2">authors</label>
-                                    <select bind:value={selectedAuthors} multiple class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 h-28 text-sm focus:border-[#4945ff] outline-none">
-                                        {#each dbAuthors as author}
-                                            <option value={author.id}>{author.name}</option>
-                                        {/each}
-                                    </select>
-                                    <p class="text-xs text-gray-500 mt-1">Hold Cmd/Ctrl to select multiple</p>
-                                </div>
+                                <RelationSelect 
+                                    label="authors" 
+                                    options={dbAuthors.map(a => ({ id: a.id, label: a.name }))} 
+                                    bind:selectedIds={selectedAuthors} 
+                                />
 
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-2">tags</label>
-                                    <select bind:value={selectedTags} multiple class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 h-28 text-sm focus:border-[#4945ff] outline-none">
-                                        {#each dbTags as tag}
-                                            <option value={tag.id}>{tag.name || tag.slug}</option>
-                                        {/each}
-                                    </select>
-                                </div>
+                                <RelationSelect 
+                                    label="tags" 
+                                    options={dbTags.map(t => ({ id: t.id, label: t.name || t.slug }))} 
+                                    bind:selectedIds={selectedTags} 
+                                />
 
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-2">events</label>
-                                    <select bind:value={selectedEvents} multiple class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 h-28 text-sm focus:border-[#4945ff] outline-none">
-                                        {#each dbEvents as event}
-                                            <option value={event.id}>{event.title}</option>
-                                        {/each}
-                                    </select>
-                                </div>
+                                <RelationSelect 
+                                    label="events" 
+                                    options={dbEvents.map(e => ({ id: e.id, label: e.title }))} 
+                                    bind:selectedIds={selectedEvents} 
+                                />
 
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-2">related_posts</label>
-                                    <select bind:value={selectedRelatedPosts} multiple class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 h-28 text-sm focus:border-[#4945ff] outline-none">
-                                        {#each dbPosts as p}
-                                            <option value={p.id}>{p.title}</option>
-                                        {/each}
-                                    </select>
-                                </div>
+                                <RelationSelect 
+                                    label="related_posts" 
+                                    options={dbPosts.map(p => ({ id: p.id, label: p.title }))} 
+                                    bind:selectedIds={selectedRelatedPosts} 
+                                />
                             </div>
                         </div>
                     </div>
