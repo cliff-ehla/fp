@@ -120,14 +120,18 @@ h1 .num{color:var(--cinnabar)}
   display:flex;align-items:center;justify-content:center;
 }
 .card .icon svg{width:27px;height:27px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-family:var(--serif);font-weight:700;font-size:16.5px;line-height:1.35}
-.card .date{font-family:var(--mono);font-size:12px;color:var(--cinnabar);font-weight:500;letter-spacing:.04em;margin-bottom:1px}
+.card .icon.img-icon{width:120px;height:120px;border:none;background:none;border-radius:0}
+.card .icon img{width:100%;height:100%;object-fit:contain}
+.card h3{font-family:var(--serif);font-weight:700;font-size:18.5px;line-height:1.35}
+.card .date{font-family:var(--mono);font-size:14px;color:var(--cinnabar);font-weight:500;letter-spacing:.04em;margin-bottom:1px}
 .card .short{font-size:12.8px;color:var(--gray);line-height:1.6;margin-top:2px}
 .card .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:11px;padding-top:10px;border-top:1px dashed var(--line)}
 .pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;padding:3px 9px;border-radius:999px;white-space:nowrap}
 .pill.rec{background:var(--teal-soft);color:var(--teal)}
 .pill.once{background:var(--cinnabar-soft);color:var(--cinnabar)}
-.pics{display:flex}
+.people{display:flex;align-items:center;gap:10px;min-width:0}
+.pics{display:flex;flex:none}
+.names{display:flex;flex-direction:column;font-size:12px;color:var(--gray);line-height:1.4}
 .av{
   width:52px;height:52px;border-radius:50%;flex:none;
   background:var(--ink);color:var(--paper);
@@ -168,12 +172,18 @@ h1 .num{color:var(--cinnabar)}
 .modal .head{display:flex;gap:15px;align-items:center;margin-bottom:6px}
 .modal .icon{width:56px;height:56px;border-radius:13px;border:1.5px solid var(--ink);background:var(--paper);display:flex;align-items:center;justify-content:center;flex:none}
 .modal .icon svg{width:33px;height:33px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.modal .icon.img-icon{width:146px;height:146px;border:none;background:none;border-radius:0}
+.modal .icon img{width:100%;height:100%;object-fit:contain}
 .modal h2{font-family:var(--serif);font-weight:900;font-size:22px;line-height:1.3}
 .modal .meta{font-family:var(--mono);font-size:12px;color:var(--gray);letter-spacing:.04em;margin-top:2px}
 .modal .meta b{color:var(--cinnabar);font-weight:500}
 .modal .tags{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0}
 .tag{font-size:11.5px;padding:3px 11px;border-radius:999px;border:1px solid var(--line);color:var(--gray);background:var(--paper)}
 .modal p{font-size:14px;color:#45423A;margin:0 0 12px}
+.modal .desc ul{margin:0 0 12px;padding-left:20px}
+.modal .desc li{font-size:14px;color:#45423A;margin:0 0 6px}
+.modal .desc li ul{margin:6px 0 0}
+.modal .desc b{color:var(--ink)}
 .modal .pic-block{border-top:1px dashed var(--line);padding-top:14px;margin-top:4px}
 .modal .pic-block .lab{font-family:var(--mono);font-size:11px;letter-spacing:.15em;color:var(--faint);margin-bottom:9px}
 .person{display:inline-flex;align-items:center;gap:8px;margin:0 14px 8px 0}
@@ -284,7 +294,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
   <div class="tl-sec"><span class="lab">循環系列 — 由第一年開始，不斷重複</span></div>
 
   <div class="row" style="min-height:120px">
-    <div class="spanmark" style="top:-6px;height:calc(100% + 500px)" aria-hidden="true"></div>
+    <div class="spanmark" style="top:-6px;height:calc(100% + 1832px)" aria-hidden="true"></div>
     <div class="card side-l" data-id="teatime" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-teacup"/></svg></div>
@@ -528,7 +538,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       </div>
     </div>
     <div class="tags" id="m-tags"></div>
-    <p id="m-desc"></p>
+    <div id="m-desc" class="desc"></div>
     <div class="pic-block">
       <div class="lab">PERSON(S) IN CHARGE</div>
       <div id="m-pics"></div>
@@ -538,11 +548,36 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
 
 <script>
 const CDN = 'https://fpchk.s3.ap-southeast-1.amazonaws.com/';
+const ICONS = {
+  mayfung:   '/fp5icon/teatime-removebg-preview.png',
+  teatime:   '/fp5icon/teatime-removebg-preview.png',
+  cineclub:  '/fp5icon/cine_club-removebg-preview.png',
+  halloween: '/fp5icon/cine_club-removebg-preview.png',
+  crtwall:   '/fp5icon/cine_club-removebg-preview.png',
+  mediaarch: '/fp5icon/media_archeology-removebg-preview.png',
+  adminnight:'/fp5icon/admin_night-removebg-preview.png',
+  spatial:   '/fp5icon/spacial_calibration-removebg-preview.png',
+  workshop:  '/fp5icon/workshop-removebg-preview.png',
+  modular:   '/fp5icon/synth_onsite_rental-removebg-preview.png',
+  stc:       '/fp5icon/subject_to_change-removebg-preview.png',
+  ml:        '/fp5icon/ML_serius-removebg-preview.png',
+  vcd:       '/fp5icon/vcd_found_footage-removebg-preview.png',
+  fkinstall: '/fp5icon/motion_tracking_sound_installation-removebg-preview.png',
+  board:     '/fp5icon/chess-removebg-preview.png'
+};
+function iconHTML(id, svgId){
+  const img = ICONS[id];
+  return img ? '<img src="'+img+'" alt="">' : '<svg><use href="#'+svgId+'"/></svg>';
+}
+function setIcon(el, id, svgId){
+  el.classList.toggle('img-icon', !!ICONS[id]);
+  el.innerHTML = iconHTML(id, svgId);
+}
 const PEOPLE = {
   L:  {name:'Linda Chiu-han Lai 黎肖嫻', init:'L',  photo:CDN+'2015/07/B-W_Linda_London2015_square.jpg'},
-  H:  {name:'Hector Rodriguez', init:'H'},
-  A:  {name:'LAI Chung-man Andio 黎仲民', init:'A', photo:CDN+'2015/07/10600667_10154046082295616_7776628200158255836_n.jpg'},
-  FK: {name:'WONG Fuk-kuen 黃福權', init:'FK',      photo:CDN+'fuk2022_7878ce00a9.jpg'},
+  H:  {name:'Hector Rodriguez', init:'H',        photo:'/fp5icon/hector.jpg'},
+  A:  {name:'LAI Chung-man Andio 黎仲民', init:'A', photo:'/fp5icon/andio.jpg'},
+  FK: {name:'WONG Fuk-kuen 黃福權', init:'FK',      photo:'/fp5icon/fukkuen.jpeg'},
   W:  {name:'LAI Wai-leung 黎偉亮', init:'W',       photo:CDN+'2015/08/Wai_image02_sq-bw.jpg'},
   S:  {name:'NG Sing-yiu Stanley 伍昇耀', init:'S', photo:CDN+'Stan_Ng_profile_image_026a672b60.jpg'},
   HC: {name:'LAU Ho-chi 劉浩知', init:'HC',         photo:CDN+'Lau_Hochi_profile_1_8e5de784b5.jpg'},
@@ -571,7 +606,7 @@ const DATA = {
   teatime: {icon:'ic-teacup', title:'Fountain Teatime 茶聚噴泉',
     meta:'循環系列 · ≈ 每月一次 · 一年長',
     tags:['社群連結','標誌系列','實驗性'],
-    desc:'請唔同嘉賓嚟傾 being、living、doing、survival 同 interdisciplinarity。已接受邀請未定期：Jen Lee（跨物種思維）、Ocean Leung + Mark Chung（新藝術空間嘅孕育）、Lau Ho-chi（展覽製作作為職業）。待邀名單仲有 Elliot Leung、Lo Lai-lai、Ding Cheuk-laam、Zhang Zimu、Ryo 等；Jerry & Mandy（遊戲）留第二年。',
+    desc:'請唔同嘉賓嚟傾 being、living、doing、survival 同 interdisciplinarity。已接受邀請未定期：Jen Lee（跨物種思維）、Ocean Leung + Mark Chung（新藝術空間嘅孕育）、Lau Ho-chi（展覽製作作為職業）。待邀名單仲有 Elliot Leung、Lo Lai-lai、Ding Cheuk-laam、Zhang Zimu、Ryo 等；Jerry &amp; Mandy（遊戲）留第二年。',
     pics:['L']},
   cineclub: {icon:'ic-crt', title:'Private Cine Club 私人放映會',
     meta:'循環系列 · ≈ 兩個月一次 · 即興按主題',
@@ -601,7 +636,15 @@ const DATA = {
   mediaarch: {icon:'ic-cassette', title:'媒體考古 Media Archaeology',
     meta:'研究線 · 分階段展開',
     tags:['實驗性','標誌系列'],
-    desc:'Linda 學術書寫嘅延伸：免費 pop-up 展（用返舊作材料）、講座「日常生活中嘅媒體考古時刻」、三個工作坊 — 影像地圖、驅動工具發明嘅「慾望」研究、追溯自己嘅創作系譜。同 Hector 嘅 laserdisc 線、香港媒體藝術調查出版計劃互相扣連。',
+    desc:['Linda 學術書寫嘅延伸，唔係一個單一活動，而係一條貫穿全期嘅研究線，分幾個部分逐步展開：',
+      '<ul><li><b>Pop-up 展覽</b>（免費入場）：用返 Linda 自己舊作嘅材料重新編排展出，唔係新製作，係舊素材嘅新讀法。</li>'
+      +'<li><b>講座「日常生活中嘅媒體考古時刻」</b>：講點樣喺日常生活入面搵到「媒體考古」呢種目光 — 舊科技、舊格式、舊物件點樣仍然滲透喺而家嘅生活入面。</li>'
+      +'<li><b>三個工作坊</b>，遞進式：<ul>'
+        +'<li>影像地圖（image maps）— 學員練習用地圖式思維整理同連結圖像素材。</li>'
+        +'<li>「慾望」研究 — 探討驅動人類發明工具背後嘅慾望同動機，由呢個角度重新理解科技史。</li>'
+        +'<li>追溯自己嘅創作系譜 — 學員回望自己一路以嚟嘅創作脈絡，最後整理成一份屬於自己嘅作品集。</li>'
+      +'</ul></li></ul>',
+      '呢條線同 Hector 嘅 laserdisc / Private Cine Club 線，同埋 Angela Su 嘅香港媒體藝術調查出版計劃互相呼應扣連 — 三者都係圍住「舊媒體、舊格式點樣喺當下仲有生命力」呢個大問題轉。'],
     pics:['L','H']},
   stc: {icon:'ic-shuffle', title:'Subject to Change',
     meta:'流動 · 未定形',
@@ -611,7 +654,9 @@ const DATA = {
   ml: {icon:'ic-net', title:'ML Series 學習系統的詩學',
     meta:'12 週課程 · 待 ADC 批款（申請 2026.12 交）',
     tags:['有收入','社群連結','標誌系列'],
-    desc:'兩條平行軌道：Track 1 基礎編程（4 週）、Track 2 ML 實作（4 週），每節 3 小時，上限 30 人，用 Python / scikit-learn / PyTorch。Hector 主教；Linda 負責前置嘅「影像作為數據」講座（非技術）；Winnie Soon + Fiona Lau 嘅 lecture-performance；收尾係公開講座「Poetics of Infrastructure」。',
+    desc:['兩條平行軌道：Track 1「基礎編程」（4週）打底，由零開始學 Python 同基本邏輯；Track 2「ML實作」（4週）進階到用 scikit-learn 同 PyTorch 訓練同操作實際模型。每節3小時，每軌大約24小時，用 Google Colab 做教學平台，上限30人，務求人人有機會落手做，唔係得個睇字。',
+      'Hector 係主教，貫穿成個課程嘅技術脈絡；但呢個唔止係一個 coding class — 前面有 Linda 嘅「影像作為數據」講座打頭陣，由非技術角度切入，講點樣睇「一張圖」變成「一堆數字」呢件事本身有咩文化含義，同埋帶學員做城市考察，將呢種思考帶出課室。課程中段有 Winnie Soon 同 Fiona Lau 嘅 lecture-performance「Generating dialogue, generating text」，用表演形式拆解人機對話同文本生成呢個題目。尾聲收喺 Hector 嘅公開講座「Poetics of Infrastructure」，將前面成套技術訓練拉返上去，問返「基礎建設本身有冇詩意」呢個大問題。',
+      '即係話成套嘢嘅骨架係編程訓練，但血肉係文化提問 — 技術同人文兩條線一齊教，先夠得上「學習系統的詩學」呢個名。（延伸版本預算約 HK$192,060，含10%行政費；12月前要交 ADC 申請。）'],
     pics:['H','HG','L']},
   vcd: {icon:'ic-film', title:'VCD Found-footage 公開徵集',
     meta:'一次性項目 · 徵集 → 比賽 → 放映',
@@ -657,11 +702,11 @@ let lastFocus = null;
 function openModal(id){
   const d = DATA[id];
   if(!d) return;
-  mIcon.innerHTML = '<svg><use href="#'+d.icon+'"/></svg>';
+  setIcon(mIcon, id, d.icon);
   mTitle.textContent = d.title;
   mMeta.innerHTML = d.meta;
   mTags.innerHTML = d.tags.map(t=>'<span class="tag">'+t+'</span>').join('');
-  mDesc.textContent = d.desc;
+  mDesc.innerHTML = Array.isArray(d.desc) ? d.desc.map(p=>'<p>'+p+'</p>').join('') : '<p>'+d.desc+'</p>';
   mPics.innerHTML = d.pics.map(k=>{
     const p = PEOPLE[k];
     return '<span class="person">'+avHTML(k)+'<span>'+p.name+'</span></span>';
@@ -678,9 +723,31 @@ function closeModal(){
 }
 
 document.querySelectorAll('.card').forEach(c=>{
-  const d = DATA[c.dataset.id];
+  const id = c.dataset.id;
+  const d = DATA[id];
   const picsEl = c.querySelector('.pics');
-  if(d && picsEl) picsEl.innerHTML = d.pics.map(avHTML).join('');
+  if(d && picsEl){
+    picsEl.innerHTML = d.pics.map(avHTML).join('');
+    let wrap = picsEl.parentElement;
+    if(!wrap.classList.contains('people')){
+      wrap = document.createElement('div');
+      wrap.className = 'people';
+      picsEl.parentNode.insertBefore(wrap, picsEl);
+      wrap.appendChild(picsEl);
+    }
+    let namesEl = wrap.querySelector('.names');
+    if(!namesEl){
+      namesEl = document.createElement('div');
+      namesEl.className = 'names';
+      wrap.appendChild(namesEl);
+    }
+    namesEl.innerHTML = d.pics.map(k=>{
+      const p = PEOPLE[k];
+      return '<span>'+(p ? p.name : k)+'</span>';
+    }).join('');
+  }
+  const iconEl = c.querySelector('.icon');
+  if(d && iconEl && ICONS[id]) setIcon(iconEl, id, d.icon);
   c.addEventListener('click', ()=>openModal(c.dataset.id));
   c.addEventListener('keydown', e=>{
     if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openModal(c.dataset.id); }
