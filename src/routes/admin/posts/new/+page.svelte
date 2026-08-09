@@ -29,7 +29,7 @@
     // Selected relationships
     let selectedAuthors = [];
     let selectedTags = [];
-    let selectedCategory = '';
+    let selectedCategoryArray = [];
     let selectedEvents = [];
     let selectedRelatedPosts = [];
 
@@ -132,7 +132,8 @@
                 return { id: p.id, title: p.title, slug: p.slug };
             });
 
-            const categoryObj = selectedCategory ? dbCategories.find(c => c.id === selectedCategory) : null;
+            const categoryId = selectedCategoryArray[0] || null;
+            const categoryObj = categoryId ? dbCategories.find(c => c.id === categoryId) : null;
             const category = categoryObj ? { id: categoryObj.id, name: categoryObj.name, slug: categoryObj.slug } : null;
 
             const postData = {
@@ -234,15 +235,12 @@
                             <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-6">Relations</h3>
                             
                             <div class="space-y-6">
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-2">categories</label>
-                                    <select bind:value={selectedCategory} class="w-full bg-[#32324d] text-gray-300 border border-[#4a4a6a] rounded p-3 text-sm focus:border-[#7b79ff] focus:ring-1 focus:ring-[#7b79ff] outline-none transition mb-6">
-                                        <option value="">Select a category...</option>
-                                        {#each dbCategories as cat}
-                                            <option value={cat.id}>{cat.name || cat.slug}</option>
-                                        {/each}
-                                    </select>
-                                </div>
+                                <RelationSelect 
+                                    label="categories" 
+                                    options={dbCategories.map(c => ({ id: c.id, label: c.name || c.slug }))} 
+                                    bind:selectedIds={selectedCategoryArray} 
+                                    multiple={false}
+                                />
 
                                 <RelationSelect 
                                     label="authors" 
