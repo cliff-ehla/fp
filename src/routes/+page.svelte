@@ -48,16 +48,7 @@
 </div>
 <div class="max-w-screen-sm mx-auto">
 	<div class="py-4 px-8">
-		<p bind:this={title_el} class="animate-item mb-2">最新文章/ Latest</p>
-		{#each latest_blog as p}
-			<a href="/art-notes/{p.attributes.slug}" class="block animate-item opacity-0 py-2 text-gray-500">
-				<p class="text-xs">{dayjs(p.attributes.createdAt).format('DD MMM YYYY')}</p>
-				<p>{p.attributes.title}</p>
-			</a>
-		{/each}
-	</div>
-	<div class="py-4 px-8">
-		<p class="animate-item mb-2">最新活動/ Events</p>
+		<p bind:this={title_el} class="animate-item mb-2">最新活動/ Events</p>
 		{#each latest_events as e}
 			<a href="/events/{e.attributes.slug}" class="block animate-item opacity-0 py-2 text-gray-500">
 				<p class="text-xs">
@@ -70,4 +61,18 @@
 			</a>
 		{/each}
 	</div>
+	<div class="py-4 px-8">
+		<p class="animate-item mb-2">最新文章/ Latest</p>
+		{#each latest_blog as p}
+			<a href="/art-notes/{p.attributes.slug}" class="block animate-item opacity-0 py-2 text-gray-500">
+				<p class="text-xs">{dayjs(p.attributes.createdAt).format('DD MMM YYYY')}</p>
+				<p>{p.attributes.title}</p>
+			</a>
+		{/each}
+	</div>
 </div>
+
+<svelte:head>
+	<title>Floating Projects 據點。句點</title>
+	<meta name="description" content="Floating Projects (據點。句點) is an artist-run art production and exhibition space in Hong Kong, founded in 2010 by Linda C.H. Lai. Explore art notes, events, and the Floating Projects Collective's ongoing experiments in collaborative, interdisciplinary art." />
+</svelte:head>
