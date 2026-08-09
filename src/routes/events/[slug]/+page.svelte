@@ -27,7 +27,7 @@
 
 <div class="mx-auto max-w-screen-md px-4">
 	<h2 class="font-bold text-xl mb-4">Related readings</h2>
-	{#if post.reviews.data.length}
+	{#if post.reviews?.data?.length}
 		<div class="grid grid-cols-2 gap-8">
 			{#each post.reviews.data as post}
 				<a href="/art-notes/{post.attributes.slug}" class="border border-gray-400 rounded-lg overflow-hidden">
@@ -47,7 +47,7 @@
 	{/if}
 	<div class="my-8">
 		<h2 class="font-bold text-xl mb-4">Artists in this event</h2>
-		{#if post.artists.data.length}
+		{#if post.artists?.data?.length}
 			<div class="grid grid-cols-3 gap-4">
 				{#each post.artists.data as artist}
 					<a href="/collective/{artist.attributes.slug}" class="flex mb-4 items-center border border-gray-300 rounded-full">

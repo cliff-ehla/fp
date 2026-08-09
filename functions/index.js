@@ -173,6 +173,17 @@ const formatStrapiEvent = (doc) => {
                         slug: t.slug
                     }
                 })) : []
+            },
+            reviews: {
+                data: Array.isArray(data.reviews) ? data.reviews.map(r => ({
+                    id: String(r.id),
+                    attributes: {
+                        ...r,
+                        image: {
+                            data: (r.mainImage || r.image) ? { attributes: { url: r.mainImage || r.image } } : null
+                        }
+                    }
+                })) : []
             }
         }
     };
@@ -505,6 +516,6 @@ app.get('/api/authors', handleAuthors);
 exports.api = functions
     .region('asia-east2')
     .runWith({
-        serviceAccount: 'empower-b4b4a@appspot.gserviceaccount.com'
+        serviceAccount: 'floating-project-website@appspot.gserviceaccount.com'
     })
     .https.onRequest(app);
