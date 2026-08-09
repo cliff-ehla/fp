@@ -14,7 +14,8 @@
     // Filter out already selected options and filter by search query
     $: availableOptions = options.filter(opt => {
         const notSelected = !selectedIds.includes(opt.id);
-        const matchesSearch = opt.label.toLowerCase().includes(searchQuery.toLowerCase());
+        const labelText = opt.label || '';
+        const matchesSearch = labelText.toLowerCase().includes(searchQuery.toLowerCase());
         return notSelected && matchesSearch;
     });
     

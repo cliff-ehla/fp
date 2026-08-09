@@ -104,14 +104,14 @@
                 content = data.content || '';
                 mainImage = data.mainImage || '';
                 
-                selectedAuthors = (data.authors || []).map(a => a.id);
-                selectedTags = (data.tags || []).map(t => t.id);
-                selectedEvents = (data.events || []).map(e => e.id);
-                selectedRelatedPosts = (data.related_posts || []).map(p => p.id);
+                selectedAuthors = (data.authors || []).map(a => typeof a === 'object' ? String(a.id || a._id) : String(a));
+                selectedTags = (data.tags || []).map(t => typeof t === 'object' ? String(t.id || t._id) : String(t));
+                selectedEvents = (data.events || []).map(e => typeof e === 'object' ? String(e.id || e._id) : String(e));
+                selectedRelatedPosts = (data.related_posts || []).map(p => typeof p === 'object' ? String(p.id || p._id) : String(p));
                 if (data.categories) {
-                    selectedCategoryArray = data.categories.map(c => c.id);
-                } else if (data.category && data.category.id) {
-                    selectedCategoryArray = [data.category.id];
+                    selectedCategoryArray = data.categories.map(c => typeof c === 'object' ? String(c.id || c._id) : String(c));
+                } else if (data.category && (data.category.id || data.category._id || typeof data.category === 'string')) {
+                    selectedCategoryArray = [typeof data.category === 'object' ? String(data.category.id || data.category._id) : String(data.category)];
                 }
                 
                 if (quill) {
@@ -135,28 +135,28 @@
         try {
             const authors = selectedAuthors.map(id => {
                 const a = dbAuthors.find(x => x.id === id);
-                return { id: a.id, name: a.name, slug: a.slug, image: a.image || '' };
-            });
+                return a ? { id: a.id, name: a.name, slug: a.slug, image: a.image || '' } : null;
+            }).filter(Boolean);
 
             const tags = selectedTags.map(id => {
                 const t = dbTags.find(x => x.id === id);
-                return { id: t.id, name: t.name, slug: t.slug };
-            });
+                return t ? { id: t.id, name: t.name, slug: t.slug } : null;
+            }).filter(Boolean);
 
             const events = selectedEvents.map(id => {
                 const e = dbEvents.find(x => x.id === id);
-                return { id: e.id, title: e.title, slug: e.slug, mainImage: e.mainImage || '' };
-            });
+                return e ? { id: e.id, title: e.title, slug: e.slug, mainImage: e.mainImage || '' } : null;
+            }).filter(Boolean);
 
             const related_posts = selectedRelatedPosts.map(id => {
                 const p = dbPosts.find(x => x.id === id);
-                return { id: p.id, title: p.title, slug: p.slug };
-            });
+                return p ? { id: p.id, title: p.title, slug: p.slug } : null;
+            }).filter(Boolean);
 
             const categories = selectedCategoryArray.map(id => {
                 const c = dbCategories.find(x => x.id === id);
-                return { id: c.id, name: c.name, slug: c.slug };
-            });
+                return c ? { id: c.id, name: c.name, slug: c.slug } : null;
+            }).filter(Boolean);
             const category = categories.length > 0 ? categories[0] : null;
 
             const postData = {
