@@ -108,7 +108,9 @@
                 selectedTags = (data.tags || []).map(t => t.id);
                 selectedEvents = (data.events || []).map(e => e.id);
                 selectedRelatedPosts = (data.related_posts || []).map(p => p.id);
-                if (data.category && data.category.id) {
+                if (data.categories) {
+                    selectedCategoryArray = data.categories.map(c => c.id);
+                } else if (data.category && data.category.id) {
                     selectedCategoryArray = [data.category.id];
                 }
                 
@@ -151,9 +153,11 @@
                 return { id: p.id, title: p.title, slug: p.slug };
             });
 
-            const categoryId = selectedCategoryArray[0] || null;
-            const categoryObj = categoryId ? dbCategories.find(c => c.id === categoryId) : null;
-            const category = categoryObj ? { id: categoryObj.id, name: categoryObj.name, slug: categoryObj.slug } : null;
+            const categories = selectedCategoryArray.map(id => {
+                const c = dbCategories.find(x => x.id === id);
+                return { id: c.id, name: c.name, slug: c.slug };
+            });
+            const category = categories.length > 0 ? categories[0] : null;
 
             const postData = {
                 title,
@@ -163,6 +167,7 @@
                 mainImage,
                 updatedAt: serverTimestamp(),
                 category,
+                categories,
                 authors,
                 tags,
                 events,
@@ -256,7 +261,6 @@
                         label="categories" 
                         options={dbCategories.map(c => ({ id: c.id, label: c.name || c.slug }))} 
                         bind:selectedIds={selectedCategoryArray} 
-                        multiple={false}
                     />
 
                     <RelationSelect 
