@@ -9,6 +9,7 @@
     
     let dropdownOpen = false;
     let searchQuery = '';
+    let focusedIndex = -1;
 
     // Filter out already selected options and filter by search query
     $: availableOptions = options.filter(opt => {
@@ -16,6 +17,12 @@
         const matchesSearch = opt.label.toLowerCase().includes(searchQuery.toLowerCase());
         return notSelected && matchesSearch;
     });
+    
+    // Reset focus when options change
+    $: {
+        availableOptions;
+        focusedIndex = -1;
+    }
     
     // Map selected IDs back to option objects for rendering the selected list
     $: selectedOptions = selectedIds.map(id => options.find(opt => opt.id === id)).filter(Boolean);
@@ -43,6 +50,39 @@
         selectedIds = selectedIds.filter(selectedId => selectedId !== id);
         dispatch('change', selectedIds);
     }
+
+    function handleKeydown(event) {
+        if (!dropdownOpen && (event.key === 'ArrowDown' || event.key === 'Enter')) {
+            openDropdown();
+            return;
+        }
+
+        if (!dropdownOpen) return;
+
+        if (event.key === 'ArrowDown') {
+            event.preventDefault();
+            if (focusedIndex < availableOptions.length - 1) {
+                focusedIndex++;
+            } else {
+                focusedIndex = 0; // loop back to top
+            }
+        } else if (event.key === 'ArrowUp') {
+            event.preventDefault();
+            if (focusedIndex > 0) {
+                focusedIndex--;
+            } else {
+                focusedIndex = availableOptions.length - 1; // loop back to bottom
+            }
+        } else if (event.key === 'Enter') {
+            event.preventDefault();
+            if (focusedIndex >= 0 && focusedIndex < availableOptions.length) {
+                selectOption(availableOptions[focusedIndex].id);
+            }
+        } else if (event.key === 'Escape') {
+            event.preventDefault();
+            closeDropdown();
+        }
+    }
 </script>
 
 <div class="mb-6">
@@ -57,6 +97,7 @@
                 type="text"
                 bind:value={searchQuery}
                 on:focus={openDropdown}
+                on:keydown={handleKeydown}
                 placeholder="Add relation"
                 class="w-full bg-[#32324d] text-gray-300 border border-[#4a4a6a] rounded p-3 text-sm focus:border-[#7b79ff] focus:ring-1 focus:ring-[#7b79ff] outline-none transition pr-10"
             />
@@ -74,11 +115,11 @@
                 {#if availableOptions.length === 0}
                     <div class="px-4 py-2 text-sm text-gray-500">No options found</div>
                 {:else}
-                    {#each availableOptions as option}
+                    {#each availableOptions as option, i}
                         <button 
                             type="button" 
                             on:click={() => selectOption(option.id)}
-                            class="w-full text-left px-4 py-2.5 text-sm text-gray-200 hover:bg-[#32324d] transition flex items-center gap-3"
+                            class="w-full text-left px-4 py-2.5 text-sm text-gray-200 hover:bg-[#32324d] transition flex items-center gap-3 {focusedIndex === i ? 'bg-[#32324d]' : ''}"
                         >
                             <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                             <span class="truncate">{option.label}</span>
