@@ -1,0 +1,30 @@
+{
+  "worktree": {
+    "bgIsolation": "none"
+  },
+  "disableAgentView": true,
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude is waiting for your input!\" with title \"Claude Code\" sound name \"Glass\"'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Task completed successfully!\" with title \"Claude Code\" sound name \"Blow\"'"
+          }
+        ]
+      }
+    ]
+  }
+}

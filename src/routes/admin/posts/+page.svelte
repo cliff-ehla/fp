@@ -1,20 +1,27 @@
 <script>
     import { db, auth } from '$lib/firebase.js';
-    import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+    import { collection, getCountFromServer, getDocs, limit, orderBy, query, startAfter } from 'firebase/firestore';
     import { onAuthStateChanged } from 'firebase/auth';
     import { onMount } from 'svelte';
 
     let isAdmin = false;
     let loading = true;
+    let pageLoading = false;
     let posts = [];
-    
+    let totalCount = 0;
+
+    const PAGE_SIZE = 10;
+    let page = 1;
+    let pageCursors = [null]; // pageCursors[i] = the "startAfter" doc cursor to fetch page i+1
+    let hasNextPage = false;
+
     const ADMIN_EMAILS = ['fukkuen.work@gmail.com'];
 
     onMount(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user && ADMIN_EMAILS.includes(user.email)) {
                 isAdmin = true;
-                await loadPosts();
+                await Promise.all([loadTotalCount(), loadPage(1)]);
             } else {
                 isAdmin = false;
                 window.location.href = '/admin';
@@ -24,24 +31,53 @@
         return unsubscribe;
     });
 
-    async function loadPosts() {
+    async function loadTotalCount() {
         try {
-            const postsQuery = query(collection(db, 'posts'), orderBy('createdAt', 'desc'));
+            const snap = await getCountFromServer(collection(db, 'posts'));
+            totalCount = snap.data().count;
+        } catch (error) {
+            console.error("Error loading post count:", error);
+        }
+    }
+
+    function formatPost(doc) {
+        const data = doc.data();
+        return {
+            id: doc.id,
+            ...data,
+            formattedDate: data.createdAt ? new Date(data.createdAt.toDate()).toLocaleString('en-US', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: 'numeric', minute: '2-digit', hour12: true
+            }) : 'Unknown date'
+        };
+    }
+
+    async function loadPage(targetPage) {
+        pageLoading = true;
+        try {
+            const cursor = pageCursors[targetPage - 1];
+            const postsQuery = cursor
+                ? query(collection(db, 'posts'), orderBy('createdAt', 'desc'), startAfter(cursor), limit(PAGE_SIZE + 1))
+                : query(collection(db, 'posts'), orderBy('createdAt', 'desc'), limit(PAGE_SIZE + 1));
             const snap = await getDocs(postsQuery);
-            posts = snap.docs.map(doc => {
-                const data = doc.data();
-                return {
-                    id: doc.id,
-                    ...data,
-                    formattedDate: data.createdAt ? new Date(data.createdAt.toDate()).toLocaleString('en-US', {
-                        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-                        hour: 'numeric', minute: '2-digit', hour12: true
-                    }) : 'Unknown date'
-                };
-            });
+            const docs = snap.docs.slice(0, PAGE_SIZE);
+            hasNextPage = snap.docs.length > PAGE_SIZE;
+            posts = docs.map(formatPost);
+            pageCursors[targetPage] = docs[docs.length - 1] ?? cursor;
+            page = targetPage;
         } catch (error) {
             console.error("Error loading posts:", error);
+        } finally {
+            pageLoading = false;
         }
+    }
+
+    function goToNextPage() {
+        if (hasNextPage && !pageLoading) loadPage(page + 1);
+    }
+
+    function goToPrevPage() {
+        if (page > 1 && !pageLoading) loadPage(page - 1);
     }
 
     function truncateId(id) {
@@ -65,7 +101,7 @@
                 <div class="flex justify-between items-end">
                     <div>
                         <h1 class="text-[2rem] font-bold text-white mb-1">Post</h1>
-                        <p class="text-sm text-gray-400">{posts.length} entries found</p>
+                        <p class="text-sm text-gray-400">{totalCount} entries found</p>
                     </div>
                     <div>
                         <a href="/admin/posts/new" class="px-4 py-2 bg-[#4945ff] hover:bg-[#6663ff] text-white rounded text-sm font-medium shadow-sm transition flex items-center gap-2">
@@ -149,17 +185,24 @@
                 {#if posts.length > 0}
                     <div class="p-4 border-t border-[#4a4a6a] flex justify-between items-center text-sm text-gray-400">
                         <div class="flex items-center gap-2">
-                            <span>10 per page</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <span>{PAGE_SIZE} per page</span>
                         </div>
                         <div class="flex gap-1">
-                            <button class="w-8 h-8 flex items-center justify-center rounded hover:bg-[#32324d] transition disabled:opacity-50" disabled>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded hover:bg-[#32324d] transition disabled:opacity-50"
+                                disabled={page === 1 || pageLoading}
+                                on:click={goToPrevPage}
+                            >
                                 &lt;
                             </button>
                             <button class="w-8 h-8 flex items-center justify-center rounded bg-[#4945ff] text-white">
-                                1
+                                {page}
                             </button>
-                            <button class="w-8 h-8 flex items-center justify-center rounded hover:bg-[#32324d] transition disabled:opacity-50" disabled>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded hover:bg-[#32324d] transition disabled:opacity-50"
+                                disabled={!hasNextPage || pageLoading}
+                                on:click={goToNextPage}
+                            >
                                 &gt;
                             </button>
                         </div>

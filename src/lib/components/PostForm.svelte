@@ -65,27 +65,26 @@
     }
 
     onMount(async () => {
-        await loadDropdownData();
-        if (postId) {
-            await loadPostData();
-        }
+        await Promise.all([
+            loadDropdownData(),
+            postId ? loadPostData() : Promise.resolve()
+        ]);
     });
 
     async function loadDropdownData() {
         try {
-            const authorsSnap = await getDocs(collection(db, 'authors'));
+            const [authorsSnap, tagsSnap, catsSnap, eventsSnap, postsSnap] = await Promise.all([
+                getDocs(collection(db, 'authors')),
+                getDocs(collection(db, 'tags')),
+                getDocs(collection(db, 'categories')),
+                getDocs(collection(db, 'events')),
+                getDocs(collection(db, 'posts'))
+            ]);
+
             dbAuthors = authorsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-            const tagsSnap = await getDocs(collection(db, 'tags'));
             dbTags = tagsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-            const catsSnap = await getDocs(collection(db, 'categories'));
             dbCategories = catsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-            const eventsSnap = await getDocs(collection(db, 'events'));
             dbEvents = eventsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-            const postsSnap = await getDocs(collection(db, 'posts'));
             dbPosts = postsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         } catch (error) {
             console.error("Error loading dropdown data:", error);
