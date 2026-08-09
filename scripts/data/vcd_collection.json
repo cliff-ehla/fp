@@ -1,0 +1,3372 @@
+[
+  {
+    "num": 1,
+    "index": "HK1980RED01-TVS",
+    "titleChinese": "浮生六劫 - 第一輯 (1-26)",
+    "titleEnglish": "Gone with the Wind 1",
+    "year": "1980",
+    "dirChinese": "江龍 / 黎大煒 / 司徒立光 / 張浩 / 李元科 / 李兆華 / 王心慰 / 吳喬頤 / 雷家培 / 區玉盛",
+    "dirEnglish": "",
+    "notes": "Redifusion麗的電視"
+  },
+  {
+    "num": 2,
+    "index": "HK1980RED02-TVS",
+    "titleChinese": "浮生六劫 - 第二輯",
+    "titleEnglish": "Gone with the Wind 2",
+    "year": "",
+    "dirChinese": "",
+    "dirEnglish": "",
+    "notes": ""
+  },
+  {
+    "num": 3,
+    "index": "HK1980RED03-TVS",
+    "titleChinese": "浮生六劫 - 第三輯",
+    "titleEnglish": "Gone with the Wind 3",
+    "year": "",
+    "dirChinese": "",
+    "dirEnglish": "",
+    "notes": ""
+  },
+  {
+    "num": 4,
+    "index": "HK1961FUNG01",
+    "titleChinese": "金大嫂",
+    "titleEnglish": "Mrs Kum",
+    "year": "1961",
+    "dirChinese": "馮志剛",
+    "dirEnglish": "Fung Chi-kong",
+    "notes": "Drama"
+  },
+  {
+    "num": 5,
+    "index": "HK1997KWOK01",
+    "titleChinese": "垃圾年頭",
+    "titleEnglish": "In the Dump",
+    "year": "1997",
+    "dirChinese": "郭偉倫",
+    "dirEnglish": "Kwok Wai-Lun William",
+    "notes": "Independent"
+  },
+  {
+    "num": 6,
+    "index": "HK1983FONG01",
+    "titleChinese": "半邊人",
+    "titleEnglish": "Ah Ying",
+    "year": "1983",
+    "dirChinese": "方育平",
+    "dirEnglish": "Fong Yuk-ping Allen",
+    "notes": "Drama"
+  },
+  {
+    "num": 7,
+    "index": "HK1983KO01",
+    "titleChinese": "碼頭",
+    "titleEnglish": "Pier, the",
+    "year": "1983",
+    "dirChinese": "高飛 / 唐基明",
+    "dirEnglish": "Ko Fei Phillip / Tong Gei Ming Terry",
+    "notes": "Action"
+  },
+  {
+    "num": 8,
+    "index": "HK1984MAK01",
+    "titleChinese": "省港奇兵",
+    "titleEnglish": "Long Arm of the Law",
+    "year": "1984",
+    "dirChinese": "麥當雄",
+    "dirEnglish": "Mak, Johnny",
+    "notes": "Cops and robbers"
+  },
+  {
+    "num": 9,
+    "index": "HK1981ZEN01",
+    "titleChinese": "忌廉溝鮮奶",
+    "titleEnglish": "Cream Soda and Milk",
+    "year": "1981",
+    "dirChinese": "單慧珠",
+    "dirEnglish": "Zen, Rachel",
+    "notes": "Drama"
+  },
+  {
+    "num": 10,
+    "index": "HK1968HOH01",
+    "titleChinese": "紅鸞星動",
+    "titleEnglish": "Incredible Rumour",
+    "year": "1968",
+    "dirChinese": "何建業",
+    "dirEnglish": "Hoh Gin-Yip",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 11,
+    "index": "HK1982MAKA01",
+    "titleChinese": "難兄難弟",
+    "titleEnglish": "It Takes Two",
+    "year": "1982",
+    "dirChinese": "麥嘉",
+    "dirEnglish": "Maka Karl",
+    "notes": "Comedy"
+  },
+  {
+    "num": 12,
+    "index": "HK1984HUI01",
+    "titleChinese": "鐵板燒",
+    "titleEnglish": "Teppanyaki",
+    "year": "1984",
+    "dirChinese": "許冠文",
+    "dirEnglish": "Hui, Michael",
+    "notes": "Comedy"
+  },
+  {
+    "num": 13,
+    "index": "HK1954NG02",
+    "titleChinese": "芸娘",
+    "titleEnglish": "Madam Yun",
+    "year": "1954",
+    "dirChinese": "吴回",
+    "dirEnglish": "Ng Wui",
+    "notes": "Historical drama"
+  },
+  {
+    "num": 14,
+    "index": "HK1954NG01",
+    "titleChinese": "父與子",
+    "titleEnglish": "Father and Son",
+    "year": "1954",
+    "dirChinese": "吳回",
+    "dirEnglish": "Ng Wui",
+    "notes": "Drama"
+  },
+  {
+    "num": 15,
+    "index": "HK1979CHEU01",
+    "titleChinese": "點指兵兵",
+    "titleEnglish": "Cops and Robbers",
+    "year": "1979",
+    "dirChinese": "章國明",
+    "dirEnglish": "Cheung Kwok Ming Alex",
+    "notes": "編劇：章國明、陳翹英"
+  },
+  {
+    "num": 16,
+    "index": "HK1981F0NG1",
+    "titleChinese": "父子情",
+    "titleEnglish": "Father and Son",
+    "year": "1981",
+    "dirChinese": "方育平",
+    "dirEnglish": "Fong Yuk-ping Allen",
+    "notes": "Drama"
+  },
+  {
+    "num": 17,
+    "index": "HK1989LAI01",
+    "titleChinese": "富貴開心鬼",
+    "titleEnglish": "Lost Souls",
+    "year": "1989",
+    "dirChinese": "黎大煒",
+    "dirEnglish": "Lai, David",
+    "notes": "Comedy"
+  },
+  {
+    "num": 18,
+    "index": "TN1992HSU01",
+    "titleChinese": "少年吔・安啦",
+    "titleEnglish": "Dust of Angels",
+    "year": "1992",
+    "dirChinese": "徐小明",
+    "dirEnglish": "Hsu Hsiao-ming",
+    "notes": "Drama"
+  },
+  {
+    "num": 19,
+    "index": "HK1991YAU01",
+    "titleChinese": "中環英雄",
+    "titleEnglish": "Don't Fool Me",
+    "year": "1991",
+    "dirChinese": "邱禮濤",
+    "dirEnglish": "Yau, Herman",
+    "notes": "Comedy"
+  },
+  {
+    "num": 20,
+    "index": "HK1982WOO01",
+    "titleChinese": "八彩林亞珍",
+    "titleEnglish": "Plain Jane to the Rescue",
+    "year": "1982",
+    "dirChinese": "吳宇森",
+    "dirEnglish": "Woo, John",
+    "notes": "吳宇森、劉鎮華編劇"
+  },
+  {
+    "num": 21,
+    "index": "HK1998YAU01",
+    "titleChinese": "非常突然",
+    "titleEnglish": "Expect the Unexpected",
+    "year": "1998",
+    "dirChinese": "游達志",
+    "dirEnglish": "Yau, Patrick",
+    "notes": "司徒錦源、游乃海和周燕嫻共同編劇"
+  },
+  {
+    "num": 22,
+    "index": "HK1998TO01",
+    "titleChinese": "真心英雄",
+    "titleEnglish": "A Hero Never Dies",
+    "year": "1998",
+    "dirChinese": "杜琪峯",
+    "dirEnglish": "To, Johnnie",
+    "notes": "游乃海、司徒錦源編劇"
+  },
+  {
+    "num": 23,
+    "index": "HK1996CHAN01",
+    "titleChinese": "甜蜜蜜",
+    "titleEnglish": "Comrades: Almost a Love Story",
+    "year": "1996",
+    "dirChinese": "陳可辛",
+    "dirEnglish": "Chan Ho-sun Peter",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 24,
+    "index": "HK1994CHAN01",
+    "titleChinese": "錯愛",
+    "titleEnglish": "Crossings",
+    "year": "1994",
+    "dirChinese": "陳耀成",
+    "dirEnglish": "Chan, Evans",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 25,
+    "index": "HK1992CHAN01",
+    "titleChinese": "浮世戀曲",
+    "titleEnglish": "To Liv(e)",
+    "year": "1992",
+    "dirChinese": "陳耀成",
+    "dirEnglish": "Chan, Evans",
+    "notes": "Independent film"
+  },
+  {
+    "num": 26,
+    "index": "HK1997LAM01",
+    "titleChinese": "高度戒備",
+    "titleEnglish": "Full Alert",
+    "year": "1997",
+    "dirChinese": "林嶺東",
+    "dirEnglish": "Lam, Ling-tung Ringo",
+    "notes": "cops and robbers"
+  },
+  {
+    "num": 27,
+    "index": "HK1995WONG01",
+    "titleChinese": "墮落天使",
+    "titleEnglish": "Fallen Angels",
+    "year": "1995",
+    "dirChinese": "王家衛",
+    "dirEnglish": "Wong Kar-wai",
+    "notes": "urban"
+  },
+  {
+    "num": 28,
+    "index": "HK1998YAU01",
+    "titleChinese": "暗花",
+    "titleEnglish": "Longest Nite, the",
+    "year": "1998",
+    "dirChinese": "游達志",
+    "dirEnglish": "Yau, Patrick",
+    "notes": "Crime, triad"
+  },
+  {
+    "num": 29,
+    "index": "HK2001CHOW01",
+    "titleChinese": "少林足球",
+    "titleEnglish": "Shaolin Soccer",
+    "year": "2001",
+    "dirChinese": "周星馳",
+    "dirEnglish": "Chow, Stephen",
+    "notes": "action comedy"
+  },
+  {
+    "num": 30,
+    "index": "HK1998LEE01",
+    "titleChinese": "我愛你",
+    "titleEnglish": "till death do us part",
+    "year": "1998",
+    "dirChinese": "李仁港",
+    "dirEnglish": "Lee Yan-Kong, Daniel",
+    "notes": "Romance"
+  },
+  {
+    "num": 31,
+    "index": "HK1990WONG01",
+    "titleChinese": "阿飛正傳",
+    "titleEnglish": "Days of Being Wild",
+    "year": "1990",
+    "dirChinese": "王家衛",
+    "dirEnglish": "Wong Kar-wai",
+    "notes": "Drama"
+  },
+  {
+    "num": 32,
+    "index": "HK997KWAN01",
+    "titleChinese": "飛一般的愛情小說",
+    "titleEnglish": "Love is Not a Game, but a Joke",
+    "year": "1997",
+    "dirChinese": "關錦鵬",
+    "dirEnglish": "Kwan, Stanley",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 33,
+    "index": "JN1984HAS01",
+    "titleChinese": "哥斯拉之怪獸王復活",
+    "titleEnglish": "Return of Gorzilla, the",
+    "year": "1984",
+    "dirChinese": "橋本幸冶",
+    "dirEnglish": "Hashimoto Koji",
+    "notes": "Godzilla"
+  },
+  {
+    "num": 34,
+    "index": "JN1964HON01",
+    "titleChinese": "哥斯拉之三大怪獸",
+    "titleEnglish": "Ghidorah, the Three-Headed Monster",
+    "year": "1964",
+    "dirChinese": "本多豬四郎",
+    "dirEnglish": "Honda, Ishiro",
+    "notes": "Godzilla"
+  },
+  {
+    "num": 35,
+    "index": "JN1972FUK01",
+    "titleChinese": "哥斯拉之決戰宇宙魔龍",
+    "titleEnglish": "Godzilla vs. Gigan",
+    "year": "1972",
+    "dirChinese": "福田純",
+    "dirEnglish": "Fukuda Jun",
+    "notes": "Godzilla"
+  },
+  {
+    "num": 36,
+    "index": "JN1991OMO01",
+    "titleChinese": "哥斯拉之魔龍復仇",
+    "titleEnglish": "Godzilla vs. King Ghidorah",
+    "year": "1991",
+    "dirChinese": "大森一樹",
+    "dirEnglish": "Omori Kazuki",
+    "notes": "Godzilla"
+  },
+  {
+    "num": 37,
+    "index": "HK1990LAW01",
+    "titleChinese": "愛在別鄉的季節",
+    "titleEnglish": "Farewell China",
+    "year": "1990",
+    "dirChinese": "羅卓瑤",
+    "dirEnglish": "Law, Clara",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 38,
+    "index": "TN1992TSAI01",
+    "titleChinese": "青少年哪吒",
+    "titleEnglish": "Rebels of the Neon God",
+    "year": "1992",
+    "dirChinese": "蔡明亮",
+    "dirEnglish": "Tsai Ming-liang",
+    "notes": "Drama"
+  },
+  {
+    "num": 39,
+    "index": "US1969HIT01",
+    "titleChinese": "諜・魄",
+    "titleEnglish": "Topaz",
+    "year": "1969",
+    "dirChinese": "希治閤",
+    "dirEnglish": "Hitchcock, Alfred",
+    "notes": "Spy"
+  },
+  {
+    "num": 40,
+    "index": "US1976DON01",
+    "titleChinese": "凶兆",
+    "titleEnglish": "Omen, The",
+    "year": "1976",
+    "dirChinese": "",
+    "dirEnglish": "Donner, Richard",
+    "notes": "Supernatural horror"
+  },
+  {
+    "num": 41,
+    "index": "US1981CRI01",
+    "titleChinese": "催眠",
+    "titleEnglish": "Looker",
+    "year": "1981",
+    "dirChinese": "",
+    "dirEnglish": "Crichton, Michael",
+    "notes": "Science fiction thriller"
+  },
+  {
+    "num": 42,
+    "index": "US1941HIT01",
+    "titleChinese": "深閨疑雲",
+    "titleEnglish": "Suspicion",
+    "year": "1941",
+    "dirChinese": "希治閤",
+    "dirEnglish": "Hitchcock, Alfred",
+    "notes": "Romantic psychological thriller"
+  },
+  {
+    "num": 43,
+    "index": "UK1939HIT01",
+    "titleChinese": "牙買加小店",
+    "titleEnglish": "Jamaioa Inn",
+    "year": "1939",
+    "dirChinese": "希治閤",
+    "dirEnglish": "Hitchcock, Alfred",
+    "notes": "adventure thriller"
+  },
+  {
+    "num": 44,
+    "index": "UK1938HIT01",
+    "titleChinese": "失蹤記",
+    "titleEnglish": "Lady Vanishes, the",
+    "year": "1938",
+    "dirChinese": "希治閤",
+    "dirEnglish": "Hitchcock, Alfred",
+    "notes": "Thriller"
+  },
+  {
+    "num": 45,
+    "index": "UK1972HIT01",
+    "titleChinese": "奪命狂兇",
+    "titleEnglish": "Frenzy",
+    "year": "1972",
+    "dirChinese": "希治閤",
+    "dirEnglish": "Hitchcock, Alfred",
+    "notes": "dark comedy / psychological thriller"
+  },
+  {
+    "num": 46,
+    "index": "US1946SIO01",
+    "titleChinese": "殺人者",
+    "titleEnglish": "Killers, The",
+    "year": "1946",
+    "dirChinese": "",
+    "dirEnglish": "Siodmak, Robert",
+    "notes": "Detective"
+  },
+  {
+    "num": 47,
+    "index": "US1951STE01",
+    "titleChinese": "郎心如鐵",
+    "titleEnglish": "A Place in the Sun",
+    "year": "1951",
+    "dirChinese": "",
+    "dirEnglish": "Stevens, George",
+    "notes": "Hollywood classics romance thriller"
+  },
+  {
+    "num": 48,
+    "index": "HK1999YIP01",
+    "titleChinese": "半支煙",
+    "titleEnglish": "Metade Fumaca",
+    "year": "1999",
+    "dirChinese": "葉錦鴻",
+    "dirEnglish": "Yip, Kam-Hung",
+    "notes": "Drama"
+  },
+  {
+    "num": 49,
+    "index": "HK1995CHAN01",
+    "titleChinese": "旺角的天空",
+    "titleEnglish": "Man Wanted",
+    "year": "1995",
+    "dirChinese": "陳木勝、鄭偉文",
+    "dirEnglish": "Chan, Benny / Cheng, Steve",
+    "notes": "Drama"
+  },
+  {
+    "num": 50,
+    "index": "HK1958LUNG01",
+    "titleChinese": "金殿福星",
+    "titleEnglish": "The Lucky Star of the Golden Palace",
+    "year": "1958",
+    "dirChinese": "龍圖",
+    "dirEnglish": "Lung Tou",
+    "notes": "Opera singing comedy"
+  },
+  {
+    "num": 51,
+    "index": "HK1992NG01",
+    "titleChinese": "辣手神探",
+    "titleEnglish": "Hard Boiled",
+    "year": "1992",
+    "dirChinese": "吳宇森",
+    "dirEnglish": "Wu, John",
+    "notes": "Cops, action"
+  },
+  {
+    "num": 52,
+    "index": "HK1970CHAN01",
+    "titleChinese": "總有一天捉到你",
+    "titleEnglish": "I'll Get You One Day",
+    "year": "1970",
+    "dirChinese": "陈烈品",
+    "dirEnglish": "Chan Lit-bun",
+    "notes": "Cantonese oldies contemporary"
+  },
+  {
+    "num": 53,
+    "index": "HK1959WONG01",
+    "titleChinese": "冤枉相思",
+    "titleEnglish": "Misguided Love",
+    "year": "1959",
+    "dirChinese": "黄鹤聲",
+    "dirEnglish": "Wong Hok-sing",
+    "notes": "Cantonese opera singing"
+  },
+  {
+    "num": 54,
+    "index": "HK1993YEE01",
+    "titleChinese": "新不了情",
+    "titleEnglish": "C'est la vie, mon cherie",
+    "year": "1993",
+    "dirChinese": "爾冬陞",
+    "dirEnglish": "Yee, Derek",
+    "notes": "romance contemporary"
+  },
+  {
+    "num": 55,
+    "index": "TN1977KIM01",
+    "titleChinese": "人虎戀",
+    "titleEnglish": "Tiger Love",
+    "year": "1977",
+    "dirChinese": "金翁",
+    "dirEnglish": "Kim Yung",
+    "notes": "Cop and Ganster romance"
+  },
+  {
+    "num": 56,
+    "index": "HK1998NG01",
+    "titleChinese": "9413",
+    "titleEnglish": "9413",
+    "year": "1998",
+    "dirChinese": "吳鎮宇",
+    "dirEnglish": "Ng, Francis",
+    "notes": "Cops, action"
+  },
+  {
+    "num": 57,
+    "index": "HK2001MA01",
+    "titleChinese": "九龍冰室",
+    "titleEnglish": "Goodbye Mr. Cool",
+    "year": "2001",
+    "dirChinese": "馬楚成",
+    "dirEnglish": "Ma, Jingle",
+    "notes": "Crime, triad"
+  },
+  {
+    "num": 58,
+    "index": "HK1995LEE01",
+    "titleChinese": "救世神棍",
+    "titleEnglish": "Heaven Can't Wait",
+    "year": "1995",
+    "dirChinese": "李志毅",
+    "dirEnglish": "Lee Chi-ngai",
+    "notes": "Urban / UFO"
+  },
+  {
+    "num": 59,
+    "index": "TN1987LIAO01",
+    "titleChinese": "期待你長大",
+    "titleEnglish": "Be My Lovely Child Again",
+    "year": "1987",
+    "dirChinese": "廖慶松",
+    "dirEnglish": "Ching-song LIAO",
+    "notes": "Drama"
+  },
+  {
+    "num": 60,
+    "index": "HK1999YU01",
+    "titleChinese": "天上人間",
+    "titleEnglish": "Love will tear us apart",
+    "year": "1999",
+    "dirChinese": "余力為",
+    "dirEnglish": "Yu Lik-wai Nelson",
+    "notes": "Independent / Urban"
+  },
+  {
+    "num": 61,
+    "index": "HK1994CHIU01",
+    "titleChinese": "沙甸鱼殺人事件",
+    "titleEnglish": "Mr. Sardine",
+    "year": "1994",
+    "dirChinese": "趙崇基",
+    "dirEnglish": "Chiu Sung-kee",
+    "notes": "Drama"
+  },
+  {
+    "num": 62,
+    "index": "TN1965CHANG01",
+    "titleChinese": "菟絲花",
+    "titleEnglish": "Dodder Flower",
+    "year": "1965",
+    "dirChinese": "張曾澤",
+    "dirEnglish": "Chang Tseng-chai",
+    "notes": "Drama"
+  },
+  {
+    "num": 63,
+    "index": "HK1990WU01",
+    "titleChinese": "西環的故事",
+    "titleEnglish": "Story of Kennedy Town",
+    "year": "1990",
+    "dirChinese": "午馬",
+    "dirEnglish": "Wu Ma",
+    "notes": "police and youth"
+  },
+  {
+    "num": 64,
+    "index": "HK1980WONG01",
+    "titleChinese": "籠裏雞",
+    "titleEnglish": "Desperado (aka The Cage)",
+    "year": "1980",
+    "dirChinese": "王希特",
+    "dirEnglish": "Wong, Hiter",
+    "notes": "Cops and robbers"
+  },
+  {
+    "num": 65,
+    "index": "TN1974TING01",
+    "titleChinese": "從地獄來的女人",
+    "titleEnglish": "Woman from the Hell, the",
+    "year": "1974",
+    "dirChinese": "丁強 / 歐陽俊",
+    "dirEnglish": "Ting Chiang, Au-Yeung Jun Ulysses",
+    "notes": "Mistery drama thriller"
+  },
+  {
+    "num": 66,
+    "index": "TN1976TSAI01",
+    "titleChinese": "三傻闖世界",
+    "titleEnglish": "Adventure of the three crazy boys, The",
+    "year": "1976",
+    "dirChinese": "蔡揚名",
+    "dirEnglish": "Tsai Yang-Ming",
+    "notes": "urban comedy"
+  },
+  {
+    "num": 67,
+    "index": "TN1964LI01",
+    "titleChinese": "狀元及第",
+    "titleEnglish": "Trouble on the Wedding Night",
+    "year": "1964",
+    "dirChinese": "李翰祥",
+    "dirEnglish": "Li Han-hsiang",
+    "notes": "黄梅調"
+  },
+  {
+    "num": 68,
+    "index": "HK1997KO01",
+    "titleChinese": "南海十三郎",
+    "titleEnglish": "Mad Phoenix",
+    "year": "1997",
+    "dirChinese": "高志森",
+    "dirEnglish": "Ko, Clifton",
+    "notes": "HK past anecdotes"
+  },
+  {
+    "num": 69,
+    "index": "HK1996CHA01",
+    "titleChinese": "去吧！渣FIT人兵團",
+    "titleEnglish": "Once Upon A Time in Triad Society 2",
+    "year": "1996",
+    "dirChinese": "查傳宜",
+    "dirEnglish": "Cha Chuen Yee",
+    "notes": "triad gangster"
+  },
+  {
+    "num": 70,
+    "index": "HK1953CHOW01",
+    "titleChinese": "再戀負心人",
+    "titleEnglish": "Another chance for love",
+    "year": "1953",
+    "dirChinese": "周詩祿",
+    "dirEnglish": "Chow Sze-luk",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 71,
+    "index": "HK1998CHAN01",
+    "titleChinese": "去年烟花特別多",
+    "titleEnglish": "Longest Summer, The",
+    "year": "1998",
+    "dirChinese": "陳果",
+    "dirEnglish": "Chan, Fruit",
+    "notes": "urban contemporary"
+  },
+  {
+    "num": 72,
+    "index": "HK1993CHAN01",
+    "titleChinese": "情人知己",
+    "titleEnglish": "Two of a Kind",
+    "year": "1993",
+    "dirChinese": "陳德森",
+    "dirEnglish": "Chan, Teddy",
+    "notes": "Urban romance comedy / UFO"
+  },
+  {
+    "num": 73,
+    "index": "HK1999LEE01",
+    "titleChinese": "喜劇之王",
+    "titleEnglish": "King of Comedy",
+    "year": "1999",
+    "dirChinese": "李力持",
+    "dirEnglish": "Lee Lik-chi",
+    "notes": "action comedy"
+  },
+  {
+    "num": 74,
+    "index": "HK1965WON01",
+    "titleChinese": "鐵金剛海空奪寶",
+    "titleEnglish": "Treasure Hunt",
+    "year": "1965",
+    "dirChinese": "黃堯",
+    "dirEnglish": "Wong Yiu",
+    "notes": "action comedy"
+  },
+  {
+    "num": 75,
+    "index": "HK1998YEE01",
+    "titleChinese": "安娜瑪德蓮娜",
+    "titleEnglish": "Anna Magdalena",
+    "year": "1998",
+    "dirChinese": "奚仲文",
+    "dirEnglish": "Yee Chung-man",
+    "notes": "urban romance / UFO"
+  },
+  {
+    "num": 76,
+    "index": "HK1988LEU01",
+    "titleChinese": "殺之戀",
+    "titleEnglish": "Fatal Love",
+    "year": "1988",
+    "dirChinese": "梁普智",
+    "dirEnglish": "Leung Po-Chi",
+    "notes": "romance thriller"
+  },
+  {
+    "num": 77,
+    "index": "HK1984LAM01",
+    "titleChinese": "君子好逑",
+    "titleEnglish": "Other Side of Gentleman, the",
+    "year": "1984",
+    "dirChinese": "林嶺東",
+    "dirEnglish": "Lam, Ringo",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 78,
+    "index": "HK1984MAK01",
+    "titleChinese": "省港旗兵",
+    "titleEnglish": "Long Arm of the Law",
+    "year": "1984",
+    "dirChinese": "麥當雄",
+    "dirEnglish": "Mak, Johnny",
+    "notes": "Cops and robbers"
+  },
+  {
+    "num": 79,
+    "index": "HK1980YU01",
+    "titleChinese": "救世者",
+    "titleEnglish": "Savior",
+    "year": "1980",
+    "dirChinese": "于仁泰",
+    "dirEnglish": "Yu, Ronny",
+    "notes": "police / 張堅庭編劇"
+  },
+  {
+    "num": 80,
+    "index": "HK1964SIU01",
+    "titleChinese": "萬變飛狐",
+    "titleEnglish": "Flying Fox, The",
+    "year": "1964",
+    "dirChinese": "蔡昌 / 簫笙",
+    "dirEnglish": "Siu Sang",
+    "notes": "粵語武俠片"
+  },
+  {
+    "num": 81,
+    "index": "HK1975LEE01",
+    "titleChinese": "老夫子",
+    "titleEnglish": "Old Master \"Q\"",
+    "year": "1975",
+    "dirChinese": "李鐵 / 朱日紅 / 金翁",
+    "dirEnglish": "Lee Tit, Chu Yat-Hung, King Weng",
+    "notes": "Comedy"
+  },
+  {
+    "num": 82,
+    "index": "HK1970YEU01",
+    "titleChinese": "我永遠記得你",
+    "titleEnglish": "Young Girl dares not homeward, the",
+    "year": "1970",
+    "dirChinese": "楊權",
+    "dirEnglish": "Yeung, Richard",
+    "notes": "Drama"
+  },
+  {
+    "num": 83,
+    "index": "HK2001YAU01",
+    "titleChinese": "等候董建華發落",
+    "titleEnglish": "From the Queen to the Chief Executive",
+    "year": "2001",
+    "dirChinese": "邱禮濤",
+    "dirEnglish": "Yau, Herman",
+    "notes": "Drama"
+  },
+  {
+    "num": 84,
+    "index": "HK1953CHU01",
+    "titleChinese": "千萬人家",
+    "titleEnglish": "A Myriad Homes",
+    "year": "1953",
+    "dirChinese": "珠璣",
+    "dirEnglish": "Chu Kei",
+    "notes": "Drama"
+  },
+  {
+    "num": 85,
+    "index": "HK1986KWAN01",
+    "titleChinese": "地下情",
+    "titleEnglish": "Love Unto Wastes",
+    "year": "1986",
+    "dirChinese": "關錦鵬",
+    "dirEnglish": "Kwan, Stanley",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 86,
+    "index": "HK1997CHAN01",
+    "titleChinese": "香港製造",
+    "titleEnglish": "Made in Hong Kong",
+    "year": "1997",
+    "dirChinese": "陳果",
+    "dirEnglish": "Chan, Fruit",
+    "notes": "indenpent"
+  },
+  {
+    "num": 87,
+    "index": "HK1993PANG01",
+    "titleChinese": "玫瑰玫瑰我愛你",
+    "titleEnglish": "Rose Rose I Love You",
+    "year": "1993",
+    "dirChinese": "彭綺華",
+    "dirEnglish": "Pang  Yi-Wah Jacky",
+    "notes": "Comedy"
+  },
+  {
+    "num": 88,
+    "index": "HK2004CHOW01",
+    "titleChinese": "功夫",
+    "titleEnglish": "Kung Fu Hustle",
+    "year": "2004",
+    "dirChinese": "周星馳",
+    "dirEnglish": "Chow, Stephen",
+    "notes": "Comedy"
+  },
+  {
+    "num": 89,
+    "index": "HK1998CHEUNG01",
+    "titleChinese": "全職大盜",
+    "titleEnglish": "Group, the",
+    "year": "1998",
+    "dirChinese": "張堅庭",
+    "dirEnglish": "Cheung, Alfred",
+    "notes": "Cops and robbers"
+  },
+  {
+    "num": 90,
+    "index": "HK1998LAU01",
+    "titleChinese": "98古惑仔龍爭虎鬥",
+    "titleEnglish": "Young and Dangerous V",
+    "year": "1998",
+    "dirChinese": "劉偉強",
+    "dirEnglish": "Lau, Andrew",
+    "notes": "Gangster"
+  },
+  {
+    "num": 91,
+    "index": "HK2003TO01",
+    "titleChinese": "PTU",
+    "titleEnglish": "Into the Perilous Night PTU",
+    "year": "2003",
+    "dirChinese": "杜琪峰",
+    "dirEnglish": "To, Jonnie",
+    "notes": "Cops and robbers"
+  },
+  {
+    "num": 92,
+    "index": "HK1954LEE01",
+    "titleChinese": "漢武帝夢會衛夫人",
+    "titleEnglish": "Dream Meeting between Emperor Wu of Han and Lady Wei, the",
+    "year": "1954",
+    "dirChinese": "李鐵 / 唐滌生",
+    "dirEnglish": "Lee Tit, Tong Tik-Sang",
+    "notes": "Cantonese opera singing"
+  },
+  {
+    "num": 93,
+    "index": "TN1998XIE01",
+    "titleChinese": "花橋榮記",
+    "titleEnglish": "My Rice Noodle Shop",
+    "year": "1998",
+    "dirChinese": "謝衍",
+    "dirEnglish": "Xie Yan",
+    "notes": "Drama"
+  },
+  {
+    "num": 94,
+    "index": "HK1988CHOR01",
+    "titleChinese": "大丈夫日記",
+    "titleEnglish": "Diary of a Big Man, the",
+    "year": "1988",
+    "dirChinese": "楚原",
+    "dirEnglish": "Chor Yuen",
+    "notes": "Comedy"
+  },
+  {
+    "num": 95,
+    "index": "HK2000LOR01",
+    "titleChinese": "沒有你沒有我",
+    "titleEnglish": "Eternal Love",
+    "year": "2000",
+    "dirChinese": "羅惠德",
+    "dirEnglish": "Lor Wai-Tak Tommy",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 96,
+    "index": "HK1997LO01",
+    "titleChinese": "香港仔+青青河邊草",
+    "titleEnglish": "What is a YOUTH? + Colour is Green, the",
+    "year": "1997 1998",
+    "dirChinese": "盧海鷹 / 區華熙 / 李永祥",
+    "dirEnglish": "Lo Hoi-Ying Leo, AU Wah-hei, Lee Wing-Cheung",
+    "notes": "HK Indenpent short film"
+  },
+  {
+    "num": 97,
+    "index": "HK1991CHAN01",
+    "titleChinese": "雙城故事",
+    "titleEnglish": "Alan & Eric:  between hello and goodbyi",
+    "year": "1991",
+    "dirChinese": "陳可辛",
+    "dirEnglish": "Chan Ho-sun Peter",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 98,
+    "index": "HK1965CHU01",
+    "titleChinese": "詩禮傳家(上集)",
+    "titleEnglish": "Family Doctrine (Part 1) aka An Old Family",
+    "year": "1965",
+    "dirChinese": "珠璣",
+    "dirEnglish": "Chu Kei",
+    "notes": "Family drama"
+  },
+  {
+    "num": 99,
+    "index": "HK1965CHU02",
+    "titleChinese": "詩禮傳家(下集)青山依舊夕陽紅",
+    "titleEnglish": "Family Doctrine (Part 2) aka A Setting Sun on the Green Hill",
+    "year": "1965",
+    "dirChinese": "珠璣",
+    "dirEnglish": "Chu Kei",
+    "notes": "Family drama"
+  },
+  {
+    "num": 100,
+    "index": "HK1970YEUNG01",
+    "titleChinese": "不敢回家的少女",
+    "titleEnglish": "Girl Wanders Around",
+    "year": "1970",
+    "dirChinese": "楊權",
+    "dirEnglish": "Yeung Kuen Richard",
+    "notes": "Family drama"
+  },
+  {
+    "num": 101,
+    "index": "HK1972FAN01",
+    "titleChinese": "柳暗花明又一村",
+    "titleEnglish": "Stealing Love, the / aka What A Surprise",
+    "year": "1972",
+    "dirChinese": "范丹",
+    "dirEnglish": "Fan Dan",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 102,
+    "index": "HK1968CHOR01",
+    "titleChinese": "玉女添丁",
+    "titleEnglish": "Young, Pregnant and Unmarried",
+    "year": "1968",
+    "dirChinese": "楚原",
+    "dirEnglish": "Chor Yuen",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 103,
+    "index": "HK!993WONG01",
+    "titleChinese": "重案組",
+    "titleEnglish": "Crime Story",
+    "year": "1993",
+    "dirChinese": "黃志強",
+    "dirEnglish": "Wong, Kirk",
+    "notes": "Cops and robbers"
+  },
+  {
+    "num": 104,
+    "index": "HK1997YUEN0",
+    "titleChinese": "馬永貞",
+    "titleEnglish": "HERO",
+    "year": "1997",
+    "dirChinese": "元奎",
+    "dirEnglish": "Yuen Kwai Corey",
+    "notes": "Martial arts"
+  },
+  {
+    "num": 105,
+    "index": "HK2000TO01",
+    "titleChinese": "辣手回春",
+    "titleEnglish": "HELP!!!",
+    "year": "2000",
+    "dirChinese": "杜琪峰 / 韋家輝",
+    "dirEnglish": "To, Jonnie To / Wai Ka Fai",
+    "notes": "Comedy"
+  },
+  {
+    "num": 106,
+    "index": "HK1968HOH01",
+    "titleChinese": "紅鸞星動",
+    "titleEnglish": "Incredible Rumour",
+    "year": "1968",
+    "dirChinese": "何建業",
+    "dirEnglish": "Hoh Gin-Yip",
+    "notes": "Comedy"
+  },
+  {
+    "num": 107,
+    "index": "HK1990WONG01",
+    "titleChinese": "風雨同路",
+    "titleEnglish": "Unmatchable Match",
+    "year": "1990",
+    "dirChinese": "黃柏文",
+    "dirEnglish": "Wong, Parkman Raphael",
+    "notes": "Cops and robbers"
+  },
+  {
+    "num": 108,
+    "index": "HK1968WONG01",
+    "titleChinese": "給我一個吻",
+    "titleEnglish": "Won't You Give Me A Kiss",
+    "year": "1968",
+    "dirChinese": "黃堯",
+    "dirEnglish": "Wong Yiu",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 109,
+    "index": "HK1986TSANG01",
+    "titleChinese": "兩公婆八條心",
+    "titleEnglish": "Strange Bedfellow",
+    "year": "1986",
+    "dirChinese": "曾志偉 / 盧堅 / 張堅庭",
+    "dirEnglish": "Tsang, Eric / Lo Kin / Cheung, Alfred",
+    "notes": "Sci-fi comedy"
+  },
+  {
+    "num": 110,
+    "index": "HK1966WONG01",
+    "titleChinese": "姑娘十八一枝花",
+    "titleEnglish": "Go neung sap baat yat do fa",
+    "year": "1966",
+    "dirChinese": "黃堯",
+    "dirEnglish": "Wong Yiu",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 111,
+    "index": "HK1981CHEUNG01",
+    "titleChinese": "邊緣人",
+    "titleEnglish": "Man on the Brink",
+    "year": "1981",
+    "dirChinese": "章國明",
+    "dirEnglish": "Cheung Kwok Ming Alex",
+    "notes": "Undercover"
+  },
+  {
+    "num": 112,
+    "index": "HK1998YIP01",
+    "titleChinese": "洪興十三妹",
+    "titleEnglish": "Portland Street Blues",
+    "year": "1998",
+    "dirChinese": "葉偉民",
+    "dirEnglish": "Yip, Raymond",
+    "notes": "Gangster"
+  },
+  {
+    "num": 113,
+    "index": "HK1999KWOK01",
+    "titleChinese": "迷失森林",
+    "titleEnglish": "Mistress, the",
+    "year": "1999",
+    "dirChinese": "郭錦恩",
+    "dirEnglish": "Kwok Gam-Yan Crystal",
+    "notes": "Drama"
+  },
+  {
+    "num": 114,
+    "index": "HK1964YUEH01",
+    "titleChinese": "妲己",
+    "titleEnglish": "Last Woman of Shang, the",
+    "year": "1964",
+    "dirChinese": "岳楓",
+    "dirEnglish": "Yueh Feng Griffin",
+    "notes": "Historical Drama, Co-produced by Shaw Brothers and Korean company 申氏公司 founded by director Shin Sang-ok 申相玉"
+  },
+  {
+    "num": 115,
+    "index": "HK1954CHAN01",
+    "titleChinese": "桃紅柳綠喜迎春",
+    "titleEnglish": "Swallows in Spring",
+    "year": "1954",
+    "dirChinese": "陳皮",
+    "dirEnglish": "Chan Pei",
+    "notes": "Comedy"
+  },
+  {
+    "num": 116,
+    "index": "HK1951CHU01",
+    "titleChinese": "誰憐天下後母心",
+    "titleEnglish": "Who Will Sympathize with Stepmother",
+    "year": "1951",
+    "dirChinese": "珠璣",
+    "dirEnglish": "Chu Kei",
+    "notes": "Family drama"
+  },
+  {
+    "num": 117,
+    "index": "HK2004YAU01",
+    "titleChinese": "失驚無神",
+    "titleEnglish": "Dating Death",
+    "year": "2004",
+    "dirChinese": "邱禮濤",
+    "dirEnglish": "Yau, Herman",
+    "notes": "Thriller film"
+  },
+  {
+    "num": 118,
+    "index": "HK1978CHIN01",
+    "titleChinese": "新紅樓夢",
+    "titleEnglish": "Dream of the Red Chamber",
+    "year": "1978",
+    "dirChinese": "金漢",
+    "dirEnglish": "Chin Han",
+    "notes": "Historical Drama"
+  },
+  {
+    "num": 119,
+    "index": "HK1953LAM01",
+    "titleChinese": "玉碎花殘（上、下集）",
+    "titleEnglish": "Death of a Beauty",
+    "year": "1953",
+    "dirChinese": "林川",
+    "dirEnglish": "Lam Chuen",
+    "notes": "Drama"
+  },
+  {
+    "num": 120,
+    "index": "HK1953CHIANG01",
+    "titleChinese": "初入情場",
+    "titleEnglish": "A Cadet in Love's Battle",
+    "year": "1953",
+    "dirChinese": "蔣偉光",
+    "dirEnglish": "Chiang Wai-Kwong",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 121,
+    "index": "HK1963YAN01",
+    "titleChinese": "七仙女",
+    "titleEnglish": "Seven Immortal Woman, the",
+    "year": "1963",
+    "dirChinese": "嚴俊 / 陳又新 / 何夢華",
+    "dirEnglish": "Yan Jun, Chen Yu-Hsin, Ho Meng-Hua",
+    "notes": "Famous Love Story"
+  },
+  {
+    "num": 122,
+    "index": "HK1960WONG01",
+    "titleChinese": "哪吒救母 (又名《哪吒蛇山救母》)",
+    "titleEnglish": "How Na Zha Rescued His Mother from the Snake Mountain",
+    "year": "1960",
+    "dirChinese": "王風",
+    "dirEnglish": "Wong Fung",
+    "notes": "Myth Story"
+  },
+  {
+    "num": 123,
+    "index": "HK1956WU01",
+    "titleChinese": "黃飛鴻 醒獅會金龍",
+    "titleEnglish": "Wong Fei-Hung's Lion Dance Versus the Golden Dragon",
+    "year": "1956",
+    "dirChinese": "胡鵬",
+    "dirEnglish": "Wu Pang",
+    "notes": "Martial arts"
+  },
+  {
+    "num": 124,
+    "index": "HK1967LING01",
+    "titleChinese": "包公審烏盆",
+    "titleEnglish": "Judge Bao Tries Wu Pen",
+    "year": "1967",
+    "dirChinese": "淩雲",
+    "dirEnglish": "Ling Yun",
+    "notes": "Chinese Opera"
+  },
+  {
+    "num": 125,
+    "index": "HK1961WONG01",
+    "titleChinese": "漢宮淚史",
+    "titleEnglish": "In the Palace",
+    "year": "1961",
+    "dirChinese": "黃鶴聲",
+    "dirEnglish": "Wong Hok-Sing",
+    "notes": "Chinese Opera"
+  },
+  {
+    "num": 126,
+    "index": "HK1955WU01",
+    "titleChinese": "銀河抱月（上、下集）",
+    "titleEnglish": "",
+    "year": "1955",
+    "dirChinese": "胡鵬",
+    "dirEnglish": "Wu Pang",
+    "notes": "Comedy"
+  },
+  {
+    "num": 127,
+    "index": "HK1966CHAN01",
+    "titleChinese": "孝女珠珠",
+    "titleEnglish": "Dutiful Daughter Chu Chu, the",
+    "year": "1966",
+    "dirChinese": "陳雲",
+    "dirEnglish": "Chan Wan",
+    "notes": "Family drama"
+  },
+  {
+    "num": 128,
+    "index": "HK1998CHUNG01",
+    "titleChinese": "史丹利 + 心灰",
+    "titleEnglish": "Stanley Beloved + First Love & Other Pains",
+    "year": "1998, 1999",
+    "dirChinese": "鐘德勝",
+    "dirEnglish": "Chung, Simon",
+    "notes": "Gay Story"
+  },
+  {
+    "num": 129,
+    "index": "HK1982LAI01",
+    "titleChinese": "靚妹仔",
+    "titleEnglish": "Lonely Fifteen",
+    "year": "1982",
+    "dirChinese": "黎大煒",
+    "dirEnglish": "Lai, David",
+    "notes": "Drama"
+  },
+  {
+    "num": 130,
+    "index": "HK1950TONG01",
+    "titleChinese": "董小苑",
+    "titleEnglish": "Story of Tung Siu-Yen, the",
+    "year": "1950",
+    "dirChinese": "唐滌生",
+    "dirEnglish": "Tong Tik-Sang",
+    "notes": "Chinese Opera"
+  },
+  {
+    "num": 131,
+    "index": "HK1968CHAN01",
+    "titleChinese": "玉女心",
+    "titleEnglish": "Teenage Love",
+    "year": "1968",
+    "dirChinese": "陳烈品",
+    "dirEnglish": "Chan Lit-Ban",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 132,
+    "index": "HK1968FAN01",
+    "titleChinese": "野蜜桃",
+    "titleEnglish": "Wild Cherry",
+    "year": "1968",
+    "dirChinese": "范丹",
+    "dirEnglish": "Fan Dan",
+    "notes": "Porn film"
+  },
+  {
+    "num": 133,
+    "index": "HK1972FAN01",
+    "titleChinese": "柳暗花明又一舂",
+    "titleEnglish": "What A Surprise",
+    "year": "1972",
+    "dirChinese": "范丹",
+    "dirEnglish": "Fan Dan",
+    "notes": "Adult"
+  },
+  {
+    "num": 134,
+    "index": "HK1959NG01",
+    "titleChinese": "路",
+    "titleEnglish": "Road, the",
+    "year": "1959",
+    "dirChinese": "吳回",
+    "dirEnglish": "Ng Wui",
+    "notes": "Drama War"
+  },
+  {
+    "num": 135,
+    "index": "HK1959NG02",
+    "titleChinese": "錢",
+    "titleEnglish": "Money",
+    "year": "1959",
+    "dirChinese": "吳回",
+    "dirEnglish": "Ng Wui",
+    "notes": "Comedy"
+  },
+  {
+    "num": 136,
+    "index": "HK1995TSUI01",
+    "titleChinese": "刀",
+    "titleEnglish": "Blade, the",
+    "year": "1995",
+    "dirChinese": "徐克",
+    "dirEnglish": "Tsui Hark",
+    "notes": "Martial arts"
+  },
+  {
+    "num": 137,
+    "index": "HK1990HUNG01",
+    "titleChinese": "脂粉雙雄",
+    "titleEnglish": "Pantyhose Hero",
+    "year": "1990",
+    "dirChinese": "洪金寶",
+    "dirEnglish": "Hung Kam-Bo Sammo",
+    "notes": "Comedy"
+  },
+  {
+    "num": 138,
+    "index": "HK1982TSANG01",
+    "titleChinese": "最佳拍檔",
+    "titleEnglish": "Aces Go Places",
+    "year": "1982",
+    "dirChinese": "曾志偉",
+    "dirEnglish": "Tsang, Eric",
+    "notes": "Comedy"
+  },
+  {
+    "num": 139,
+    "index": "HK1991CHIANG01",
+    "titleChinese": "黑雪",
+    "titleEnglish": "Will of Iron",
+    "year": "1991",
+    "dirChinese": "姜大衛",
+    "dirEnglish": "David Chiang Da-Wei",
+    "notes": "Action"
+  },
+  {
+    "num": 140,
+    "index": "HK1989AU01",
+    "titleChinese": "說謊的女人",
+    "titleEnglish": "I am Sorry",
+    "year": "1989",
+    "dirChinese": "區丁平",
+    "dirEnglish": "Au Ting-Ping Tony",
+    "notes": "Drama"
+  },
+  {
+    "num": 141,
+    "index": "HK1999LEE01",
+    "titleChinese": "四個廚師一圍菜",
+    "titleEnglish": "Four Chefs and A Feast",
+    "year": "1999",
+    "dirChinese": "李國立",
+    "dirEnglish": "Lee Kwok-Laap",
+    "notes": "Drama"
+  },
+  {
+    "num": 142,
+    "index": "HK1982TONG01",
+    "titleChinese": "殺出西營盤",
+    "titleEnglish": "Coolie Killer",
+    "year": "1982",
+    "dirChinese": "唐基明",
+    "dirEnglish": "Terry Tong Gei-Ming",
+    "notes": "Action"
+  },
+  {
+    "num": 143,
+    "index": "HK1959LEE01",
+    "titleChinese": "六月雪",
+    "titleEnglish": "Snow Storm in June",
+    "year": "1959",
+    "dirChinese": "李鐵",
+    "dirEnglish": "Lee Tit",
+    "notes": "Chinese Opera"
+  },
+  {
+    "num": 144,
+    "index": "HK1970NG01",
+    "titleChinese": "學府新潮",
+    "titleEnglish": "Modern School Life",
+    "year": "1970",
+    "dirChinese": "吳丹",
+    "dirEnglish": "Ng Tan",
+    "notes": "Drama"
+  },
+  {
+    "num": 145,
+    "index": "HK1977BAO01",
+    "titleChinese": "屈原",
+    "titleEnglish": "Chu Yuan",
+    "year": "1977",
+    "dirChinese": "鮑方",
+    "dirEnglish": "Bao Fang",
+    "notes": "Historical Drama"
+  },
+  {
+    "num": 146,
+    "index": "HK1964LI01",
+    "titleChinese": "三笑",
+    "titleEnglish": "Three Charming Smile",
+    "year": "1964",
+    "dirChinese": "李萍倩",
+    "dirEnglish": "Li, Ping-Qian Jack",
+    "notes": "Chinese Opera"
+  },
+  {
+    "num": 147,
+    "index": "HK1954CHIANG01",
+    "titleChinese": "長使我郎淚滿襟",
+    "titleEnglish": "Grief Stricken for Me",
+    "year": "1954",
+    "dirChinese": "蔣偉光",
+    "dirEnglish": "Chiang Wai-Kwong",
+    "notes": "Family drama"
+  },
+  {
+    "num": 148,
+    "index": "HK1999YAU01",
+    "titleChinese": "陰陽路（五）之一見發財",
+    "titleEnglish": "Troublesome Night 5",
+    "year": "1999",
+    "dirChinese": "邱禮濤",
+    "dirEnglish": "Yau, Herman",
+    "notes": "Ghost Film"
+  },
+  {
+    "num": 149,
+    "index": "HK1986KO01",
+    "titleChinese": "痴心的我",
+    "titleEnglish": "Devoted to You",
+    "year": "1986",
+    "dirChinese": "高志森",
+    "dirEnglish": "Clifton Ko Chi-Sum",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 150,
+    "index": "HK1999LEE01",
+    "titleChinese": "星月童話",
+    "titleEnglish": "Moonlight Express",
+    "year": "1999",
+    "dirChinese": "李仁港",
+    "dirEnglish": "Lee, Daniel Yan-Kong",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 151,
+    "index": "HK2000WONG01",
+    "titleChinese": "青梅竹馬 + 唐狗與北京狗",
+    "titleEnglish": "Bamboo Doors, Bamboo doors + Dogs, the",
+    "year": "2000",
+    "dirChinese": "黃精甫",
+    "dirEnglish": "Wong Ching-Po",
+    "notes": "Drama short film"
+  },
+  {
+    "num": 152,
+    "index": "HK2000YEUNG01",
+    "titleChinese": "甜美生活",
+    "titleEnglish": "Sweet Sweet Life",
+    "year": "2000",
+    "dirChinese": "楊文輝",
+    "dirEnglish": "Yong, Marcus / Yeung, Fai",
+    "notes": "Drama"
+  },
+  {
+    "num": 153,
+    "index": "HK1987WONG01",
+    "titleChinese": "呷醋大丈夫",
+    "titleEnglish": "Goodbye Darling",
+    "year": "1987",
+    "dirChinese": "黃百鳴",
+    "dirEnglish": "Raymond Wong Pak-Ming",
+    "notes": "Comedy"
+  },
+  {
+    "num": 154,
+    "index": "HK1981TSUI01",
+    "titleChinese": "鬼馬智多星",
+    "titleEnglish": "All the Wrong Clues",
+    "year": "1981",
+    "dirChinese": "徐克",
+    "dirEnglish": "Tsui Hark",
+    "notes": "Comedy"
+  },
+  {
+    "num": 155,
+    "index": "HK1998FONG01",
+    "titleChinese": "一生一台戲",
+    "titleEnglish": "A Little Life-Opera",
+    "year": "1998",
+    "dirChinese": "方育平",
+    "dirEnglish": "Fong, Yuk-Ping Allen",
+    "notes": "Drama"
+  },
+  {
+    "num": 156,
+    "index": "HK1987KAM01",
+    "titleChinese": "神奇兩女俠",
+    "titleEnglish": "Wonder Women",
+    "year": "1987",
+    "dirChinese": "甘國亮",
+    "dirEnglish": "Kam Kwok-Leung",
+    "notes": "Comedy"
+  },
+  {
+    "num": 157,
+    "index": "HK1973TANG01",
+    "titleChinese": "鐵牛",
+    "titleEnglish": "Iron Bull, the",
+    "year": "1973",
+    "dirChinese": "唐迪",
+    "dirEnglish": "Tang Ti",
+    "notes": "Martial arts"
+  },
+  {
+    "num": 158,
+    "index": "HK1979WOO01",
+    "titleChinese": "豪俠",
+    "titleEnglish": "Last Hurrah for Chivary",
+    "year": "1979",
+    "dirChinese": "吳宇森",
+    "dirEnglish": "Woo John",
+    "notes": "Martial arts"
+  },
+  {
+    "num": 159,
+    "index": "HK1982LAU01",
+    "titleChinese": "再見江湖",
+    "titleEnglish": "Head Hunter, the",
+    "year": "1982",
+    "dirChinese": "劉成漢",
+    "dirEnglish": "Lau Shing-Hon",
+    "notes": "Action"
+  },
+  {
+    "num": 160,
+    "index": "HK1992LEE01",
+    "titleChinese": "新龍門客棧",
+    "titleEnglish": "Dragon Inn",
+    "year": "1992",
+    "dirChinese": "李惠民",
+    "dirEnglish": "Lee Raymond Wai-Man",
+    "notes": "Period martial arts"
+  },
+  {
+    "num": 161,
+    "index": "HK1964WONG01",
+    "titleChinese": "工廠玫瑰",
+    "titleEnglish": "Steel Rose",
+    "year": "1964",
+    "dirChinese": "黃岱",
+    "dirEnglish": "Wong Toi",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 162,
+    "index": "HK1999YAU02",
+    "titleChinese": "愛情夢幻號",
+    "titleEnglish": "Fascination Amour",
+    "year": "1999",
+    "dirChinese": "邱禮濤",
+    "dirEnglish": "Yau Herman",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 163,
+    "index": "HK1990FONG01",
+    "titleChinese": "舞牛",
+    "titleEnglish": "WUMIU Dancing Bull",
+    "year": "1990",
+    "dirChinese": "方育平",
+    "dirEnglish": "Fong Yuk-Ping Allen",
+    "notes": "Drama"
+  },
+  {
+    "num": 164,
+    "index": "HK1992LAM01",
+    "titleChinese": "四大探長",
+    "titleEnglish": "Powerful Four",
+    "year": "1992",
+    "dirChinese": "林德祿",
+    "dirEnglish": "Lam Tak- Luk David",
+    "notes": "Gangster"
+  },
+  {
+    "num": 165,
+    "index": "HK1981WU01",
+    "titleChinese": "歡樂神仙窩",
+    "titleEnglish": "Beware of Pickets",
+    "year": "1981",
+    "dirChinese": "午馬",
+    "dirEnglish": "Wu Ma",
+    "notes": "Comedy"
+  },
+  {
+    "num": 166,
+    "index": "HK1955WONG01",
+    "titleChinese": "魂斷望夫山",
+    "titleEnglish": "Tragedy on the Hill of the Waiting Wife",
+    "year": "1955",
+    "dirChinese": "黃岱",
+    "dirEnglish": "Wong Toi",
+    "notes": "Drama"
+  },
+  {
+    "num": 167,
+    "index": "HK1960CHU01",
+    "titleChinese": "龍鳳合歡花",
+    "titleEnglish": "Joyful Matrimony, the",
+    "year": "1960",
+    "dirChinese": "珠璣",
+    "dirEnglish": "Chu Kei",
+    "notes": "Comedy"
+  },
+  {
+    "num": 168,
+    "index": "HK1948YEUNG01",
+    "titleChinese": "審死官",
+    "titleEnglish": "Judge Goes to Pieces, the",
+    "year": "1948",
+    "dirChinese": "楊工良",
+    "dirEnglish": "Yeung Kung-Leung",
+    "notes": "Historical drama comedy"
+  },
+  {
+    "num": 169,
+    "index": "HK1980KAM01-TVS",
+    "titleChinese": "執到寶",
+    "titleEnglish": "Don't Look Now (14-episode TV series)",
+    "year": "1980",
+    "dirChinese": "甘國亮",
+    "dirEnglish": "Kam Kwok-Leung",
+    "notes": "supernatural horror black comedy 靈異時裝溫情黑色喜劇 (TVB)"
+  },
+  {
+    "num": 170,
+    "index": "HK1980CHOI01",
+    "titleChinese": "喝采",
+    "titleEnglish": "Encore",
+    "year": "1980",
+    "dirChinese": "蔡繼光",
+    "dirEnglish": "Choi, Clifford",
+    "notes": "Danny Chan in lead role, key scene shot at Landmark atrium"
+  },
+  {
+    "num": 171,
+    "index": "HKBEL1996YU01-D",
+    "titleChinese": "美麗的魂魄",
+    "titleEnglish": "Yeon Goddesses",
+    "year": "1996",
+    "dirChinese": "余力為",
+    "dirEnglish": "Yu Lik-wai",
+    "notes": "46-minute documentary, a Belgium-HK co-production"
+  },
+  {
+    "num": 172,
+    "index": "HKCN1963WANG01",
+    "titleChinese": "七十二家房客",
+    "titleEnglish": "House of 72 Tenant, the",
+    "year": "1963",
+    "dirChinese": "王為一",
+    "dirEnglish": "Wang Weiyi",
+    "notes": "珠江電影製片厰、香港鴻圖影業公司聯合攝製/諷刺喜劇"
+  },
+  {
+    "num": 173,
+    "index": "HK1954YEUNG01",
+    "titleChinese": "萬里行屍",
+    "titleEnglish": "Voyage of the Dead, the",
+    "year": "1954",
+    "dirChinese": "楊工良",
+    "dirEnglish": "Yeung Kung-Leung",
+    "notes": "Historical drama vampire"
+  },
+  {
+    "num": 174,
+    "index": "HK1954MOK01",
+    "titleChinese": "大觀園",
+    "titleEnglish": "Grand View Garden",
+    "year": "1954",
+    "dirChinese": "莫康時",
+    "dirEnglish": "Mok Hong-See",
+    "notes": "Musical romance"
+  },
+  {
+    "num": 175,
+    "index": "HK1954MOK02",
+    "titleChinese": "大觀園（續集大結局） 林黛玉魂歸離恨天",
+    "titleEnglish": "Tragic Death of Lin Daiyu, the",
+    "year": "1954",
+    "dirChinese": "莫康時",
+    "dirEnglish": "Mok Hong-See",
+    "notes": "Musical romance"
+  },
+  {
+    "num": 176,
+    "index": "HK1957CHU01",
+    "titleChinese": "霸王別姬",
+    "titleEnglish": "War Between Chu and Han, the",
+    "year": "1957",
+    "dirChinese": "珠璣",
+    "dirEnglish": "Chu Kei",
+    "notes": "Historical Drama"
+  },
+  {
+    "num": 177,
+    "index": "HK2000MAK01",
+    "titleChinese": "愛與誠",
+    "titleEnglish": "A War Named Desire",
+    "year": "2000",
+    "dirChinese": "麥兆輝",
+    "dirEnglish": "Mak Siu-Fai",
+    "notes": "Crime, triad"
+  },
+  {
+    "num": 178,
+    "index": "HK1964WONG01",
+    "titleChinese": "工廠玫瑰",
+    "titleEnglish": "Steel Rose",
+    "year": "1964",
+    "dirChinese": "黃岱",
+    "dirEnglish": "Wong Toi",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 179,
+    "index": "TN1997WANG01",
+    "titleChinese": "我的神經病",
+    "titleEnglish": "Yours and Mine",
+    "year": "1997",
+    "dirChinese": "王小棣",
+    "dirEnglish": "Wang Xiaodi",
+    "notes": "Comedy"
+  },
+  {
+    "num": 180,
+    "index": "HK1998LAW01",
+    "titleChinese": "秋月",
+    "titleEnglish": "Autumn Moon",
+    "year": "1992",
+    "dirChinese": "羅卓瑤",
+    "dirEnglish": "Law, Clara",
+    "notes": "Drama"
+  },
+  {
+    "num": 181,
+    "index": "HK1998LAU-LAI01",
+    "titleChinese": "甚麽風光 / 爸爸的玩具",
+    "titleEnglish": "What is the view like? (37m) / Father's Toy (51m)",
+    "year": "1998",
+    "dirChinese": "劉少玲 / 黎妙雪",
+    "dirEnglish": "Lau Siu-ling / Lai Miu-suet",
+    "notes": "double-feature / IFVA outstanding works"
+  },
+  {
+    "num": 182,
+    "index": "HK1980TVB01-TVS",
+    "titleChinese": "上海灘 （16集）",
+    "titleEnglish": "The Bund",
+    "year": "1980",
+    "dirChinese": "TVB",
+    "dirEnglish": "TVB",
+    "notes": "Old Shanghai ganster"
+  },
+  {
+    "num": 183,
+    "index": "HK1981TVB01-TVS",
+    "titleChinese": "逐個捉 (10集)",
+    "titleEnglish": "No one is Innocent",
+    "year": "1981",
+    "dirChinese": "TVB",
+    "dirEnglish": "TVB",
+    "notes": "producer: Johnnie To, Yiu-leung Fok"
+  },
+  {
+    "num": 184,
+    "index": "HK1983TVB01-TVS",
+    "titleChinese": "射鵰英雄傳之鐵血丹心 (11 discs)",
+    "titleEnglish": "Legend of the Condor Heroes",
+    "year": "1983",
+    "dirChinese": "TVB",
+    "dirEnglish": "TVB",
+    "notes": "producer: WONG Tin-lam"
+  },
+  {
+    "num": 185,
+    "index": "TN1947LI01",
+    "titleChinese": "乘龍快婿",
+    "titleEnglish": "Ideal Son-in-law",
+    "year": "1947",
+    "dirChinese": "李恩杰 / 張駿祥",
+    "dirEnglish": "Li Enjie / Zhang Jun Xiang",
+    "notes": "Romance drama"
+  },
+  {
+    "num": 186,
+    "index": "HK1993WONG01",
+    "titleChinese": "大路",
+    "titleEnglish": "Trail",
+    "year": "1993",
+    "dirChinese": "文雋 / 周曉文",
+    "dirEnglish": "Wong Man-Chun Manfred / Zhou Xiaowen",
+    "notes": "Drama"
+  },
+  {
+    "num": 187,
+    "index": "HK1997ZHANG01",
+    "titleChinese": "椅子",
+    "titleEnglish": "Chair, the",
+    "year": "1997",
+    "dirChinese": "張鐵林",
+    "dirEnglish": "Zhang Tielin",
+    "notes": "Drama"
+  },
+  {
+    "num": 188,
+    "index": "HK1994LAU01",
+    "titleChinese": "紅粉",
+    "titleEnglish": "Rouge, the",
+    "year": "1994",
+    "dirChinese": "劉國偉",
+    "dirEnglish": "Lau Kwok Wai, Martin",
+    "notes": "Drama"
+  },
+  {
+    "num": 189,
+    "index": "HK2001TANG01",
+    "titleChinese": "動詞變位",
+    "titleEnglish": "Conjugation",
+    "year": "2001",
+    "dirChinese": "唐曉白",
+    "dirEnglish": "Tang Xiaobai, Emily",
+    "notes": "Drama"
+  },
+  {
+    "num": 190,
+    "index": "JN2002FUM01",
+    "titleChinese": "乒乓",
+    "titleEnglish": "Ping Pong",
+    "year": "2002",
+    "dirChinese": "曾利文彥",
+    "dirEnglish": "Fumihiko Son",
+    "notes": "Sports film"
+  },
+  {
+    "num": 191,
+    "index": "HK2003LAM01",
+    "titleChinese": "奇逢敵手",
+    "titleEnglish": "Looking for Mister Perfect",
+    "year": "2003",
+    "dirChinese": "林嶺東",
+    "dirEnglish": "Lam Ling-tung Ringo",
+    "notes": "Action"
+  },
+  {
+    "num": 192,
+    "index": "HK1983LI01",
+    "titleChinese": "垂簾聽政",
+    "titleEnglish": "Reign Behind a Curtain",
+    "year": "1983",
+    "dirChinese": "李翰祥",
+    "dirEnglish": "Li Han-hsiang",
+    "notes": "Historical Drama"
+  },
+  {
+    "num": 193,
+    "index": "HK1990POON01",
+    "titleChinese": "龍鳳茶樓",
+    "titleEnglish": "Lung Fung Restaurant",
+    "year": "1990",
+    "dirChinese": "潘文傑",
+    "dirEnglish": "Poon Man Kit",
+    "notes": "Ganster rom-com"
+  },
+  {
+    "num": 194,
+    "index": "HK2004TO01",
+    "titleChinese": "柔道龍虎榜",
+    "titleEnglish": "Throw Down",
+    "year": "2004",
+    "dirChinese": "杜琪峰",
+    "dirEnglish": "To Kei-Fung Johnnie",
+    "notes": "Martial arts"
+  },
+  {
+    "num": 195,
+    "index": "HK1984LAM02",
+    "titleChinese": "君子好逑",
+    "titleEnglish": "Other Side of Gentleman, the",
+    "year": "1984",
+    "dirChinese": "林嶺東",
+    "dirEnglish": "Lam Ling-tung Ringo",
+    "notes": "Romance contemporary"
+  },
+  {
+    "num": 196,
+    "index": "HK2000KO01",
+    "titleChinese": "創業玩家",
+    "titleEnglish": "Funny Business",
+    "year": "2000",
+    "dirChinese": "高志森",
+    "dirEnglish": "Ko Chi-Sum Clifton",
+    "notes": "Comedy"
+  },
+  {
+    "num": 197,
+    "index": "UK1989JOHN01-TVS",
+    "titleChinese": "戇豆先生",
+    "titleEnglish": "Mr. Bean (episode 1-3)",
+    "year": "1989-1997",
+    "dirChinese": "",
+    "dirEnglish": "Birkin, John / Weiland, Paul",
+    "notes": "Comedy"
+  },
+  {
+    "num": 198,
+    "index": "CN1994PEK01-TVS",
+    "titleChinese": "北京人在紐約（1-12集）",
+    "titleEnglish": "Native of Beijing in New York",
+    "year": "1994",
+    "dirChinese": "鄭曉龍 / 馮小剛",
+    "dirEnglish": "Zheng Xiaolong, Feng Xiaogang",
+    "notes": "Drama"
+  },
+  {
+    "num": 199,
+    "index": "CN2000PEK01-TVS",
+    "titleChinese": "家和萬事興之情歸龍年",
+    "titleEnglish": "",
+    "year": "2000",
+    "dirChinese": "張惠中",
+    "dirEnglish": "Zhang Huizhong",
+    "notes": "Comedy"
+  },
+  {
+    "num": 200,
+    "index": "CN1991PEK01-TVS",
+    "titleChinese": "編輯部的故事（1-12集）",
+    "titleEnglish": "",
+    "year": "1991-1991",
+    "dirChinese": "趙寶剛 / 金炎",
+    "dirEnglish": "Zhao Baogang, Chin Yen",
+    "notes": "Drama"
+  },
+  {
+    "num": 201,
+    "index": "CN1997PEK01-TVS",
+    "titleChinese": "月亮背面（1-10集）",
+    "titleEnglish": "Dark Side of Moon",
+    "year": "1997",
+    "dirChinese": "馮小剛",
+    "dirEnglish": "Feng Xiaogang",
+    "notes": "Drama"
+  },
+  {
+    "num": 202,
+    "index": "CN1948SHEN01",
+    "titleChinese": "萬家燈火",
+    "titleEnglish": "Myriad of Lights",
+    "year": "1948",
+    "dirChinese": "沈浮",
+    "dirEnglish": "Shen Fou",
+    "notes": "Drama"
+  },
+  {
+    "num": 203,
+    "index": "CN2003ZHANG01",
+    "titleChinese": "綠茶",
+    "titleEnglish": "Green Tea",
+    "year": "2003",
+    "dirChinese": "張元",
+    "dirEnglish": "Zhang Yuan",
+    "notes": "Cinematographer: Chris Dolye 杜可風"
+  },
+  {
+    "num": 204,
+    "index": "CN1949WU01",
+    "titleChinese": "莫負青春",
+    "titleEnglish": "Treasure the Youth",
+    "year": "1949",
+    "dirChinese": "吳祖光",
+    "dirEnglish": "Wu Zuguang",
+    "notes": "周璇主演"
+  },
+  {
+    "num": 205,
+    "index": "CN1937SHEN01",
+    "titleChinese": "十字街頭",
+    "titleEnglish": "Crossroads",
+    "year": "1937",
+    "dirChinese": "沈西苓",
+    "dirEnglish": "Shen Xiling",
+    "notes": "Tragicomedy"
+  },
+  {
+    "num": 206,
+    "index": "CN1937YUAN01",
+    "titleChinese": "馬路天使",
+    "titleEnglish": "Street Angel",
+    "year": "1937",
+    "dirChinese": "袁牧之",
+    "dirEnglish": "Yuan Muzhi",
+    "notes": "Social drama"
+  },
+  {
+    "num": 207,
+    "index": "CN1947TANG01",
+    "titleChinese": "天堂春夢",
+    "titleEnglish": "Ding's Spring Dream",
+    "year": "1947",
+    "dirChinese": "湯曉丹",
+    "dirEnglish": "Tang Xiaodan",
+    "notes": "Drama"
+  },
+  {
+    "num": 208,
+    "index": "CN1958WONG01",
+    "titleChinese": "畫中人",
+    "titleEnglish": "Beauty in the Picture, The",
+    "year": "1958",
+    "dirChinese": "王濱",
+    "dirEnglish": "Wang Bin",
+    "notes": "Mythical love story"
+  },
+  {
+    "num": 209,
+    "index": "CN1947HU01",
+    "titleChinese": "太太萬歲",
+    "titleEnglish": "Long Live the Missus!",
+    "year": "1947",
+    "dirChinese": "桑弧",
+    "dirEnglish": "Hu Sang",
+    "notes": "screenplay by Eileen Chang"
+  },
+  {
+    "num": 210,
+    "index": "CN1980ZHANG01",
+    "titleChinese": "小花",
+    "titleEnglish": "Little Flower",
+    "year": "1980",
+    "dirChinese": "張錚",
+    "dirEnglish": "Zhang Zheng",
+    "notes": "Drama"
+  },
+  {
+    "num": 211,
+    "index": "CN1962XIE01",
+    "titleChinese": "大李小李和老李",
+    "titleEnglish": "Big Li, Little Li and Old Li",
+    "year": "1962",
+    "dirChinese": "謝晉",
+    "dirEnglish": "Xie Jin",
+    "notes": "Sports comedy"
+  },
+  {
+    "num": 212,
+    "index": "CN1961XIE01",
+    "titleChinese": "暴風驟雨",
+    "titleEnglish": "Hurricane, The",
+    "year": "1961",
+    "dirChinese": "謝鐵驪",
+    "dirEnglish": "Xie Tieli",
+    "notes": "Drama"
+  },
+  {
+    "num": 213,
+    "index": "CN1981SHUI01",
+    "titleChinese": "傷逝",
+    "titleEnglish": "Shang Shi",
+    "year": "1981",
+    "dirChinese": "水華",
+    "dirEnglish": "Shui Hua",
+    "notes": "Romance drama"
+  },
+  {
+    "num": 214,
+    "index": "CN1986WU01",
+    "titleChinese": "苦藏的戀情",
+    "titleEnglish": "Love Hurts",
+    "year": "1986",
+    "dirChinese": "吳建新 / 聶欣如",
+    "dirEnglish": "Wu Jianxin, Nie Xinru",
+    "notes": "Romance drama"
+  },
+  {
+    "num": 215,
+    "index": "CN1956SHEN01",
+    "titleChinese": "李時珍",
+    "titleEnglish": "Li Shizhen",
+    "year": "1956",
+    "dirChinese": "沈浮",
+    "dirEnglish": "Shen Fu",
+    "notes": "Historical drama"
+  },
+  {
+    "num": 216,
+    "index": "CN1963XIE01",
+    "titleChinese": "早春二月",
+    "titleEnglish": "Early Spring in February",
+    "year": "1963",
+    "dirChinese": "謝鐵驪",
+    "dirEnglish": "Xie Tieli",
+    "notes": "Drama"
+  },
+  {
+    "num": 217,
+    "index": "CN1951WAND01",
+    "titleChinese": "白毛女",
+    "titleEnglish": "White-Haired Girl, the",
+    "year": "1951",
+    "dirChinese": "王濱 / 水華",
+    "dirEnglish": "Wang Bin / Shui Hua",
+    "notes": "Drama"
+  },
+  {
+    "num": 218,
+    "index": "CN1979XIE01",
+    "titleChinese": "啊！搖籃",
+    "titleEnglish": "Ah！ Cradle",
+    "year": "1979",
+    "dirChinese": "謝晉",
+    "dirEnglish": "Xie Jin",
+    "notes": "War drama"
+  },
+  {
+    "num": 219,
+    "index": "CN1959YAN01",
+    "titleChinese": "海鷹",
+    "titleEnglish": "",
+    "year": "1959",
+    "dirChinese": "嚴寄洲",
+    "dirEnglish": "Yan Jizhou",
+    "notes": "War drama"
+  },
+  {
+    "num": 220,
+    "index": "CN1959CUI01",
+    "titleChinese": "青春之歌（2 discs）",
+    "titleEnglish": "Song of Youth",
+    "year": "1959",
+    "dirChinese": "崔嵬 / 陳懷愷",
+    "dirEnglish": "Cui Wei, Chen Huaiai",
+    "notes": "Drama"
+  },
+  {
+    "num": 221,
+    "index": "CN1966YI01",
+    "titleChinese": "大浪淘沙",
+    "titleEnglish": "da Lang tao sha",
+    "year": "1966",
+    "dirChinese": "伊琳",
+    "dirEnglish": "Yi Lin",
+    "notes": "Drama"
+  },
+  {
+    "num": 222,
+    "index": "CN1964ZHANG01",
+    "titleChinese": "白求恩大夫",
+    "titleEnglish": "Doctor Bethune",
+    "year": "1964",
+    "dirChinese": "張駿洋 / 李舒田 / 高正",
+    "dirEnglish": "Zhang Junxiang, Li Shutian, Gao Zheng",
+    "notes": "Drama"
+  },
+  {
+    "num": 223,
+    "index": "CN1961SU01",
+    "titleChinese": "劉三姐",
+    "titleEnglish": "Third Sister Liu",
+    "year": "1961",
+    "dirChinese": "蘇里",
+    "dirEnglish": "Su Li",
+    "notes": "Folklore"
+  },
+  {
+    "num": 224,
+    "index": "CN1958WANG01",
+    "titleChinese": "永不消逝的電波",
+    "titleEnglish": "Eternal Wave, the",
+    "year": "1958",
+    "dirChinese": "王苹",
+    "dirEnglish": "Wang Ping",
+    "notes": "Drama"
+  },
+  {
+    "num": 225,
+    "index": "CN1947KING01",
+    "titleChinese": "松花江上",
+    "titleEnglish": "Along the Sungari River",
+    "year": "1947",
+    "dirChinese": "金山",
+    "dirEnglish": "King San",
+    "notes": "Drama"
+  },
+  {
+    "num": 226,
+    "index": "CN1960XIE01",
+    "titleChinese": "紅色娘子軍",
+    "titleEnglish": "Red Detachment of Women, the",
+    "year": "1960",
+    "dirChinese": "謝晉",
+    "dirEnglish": "Xie Jin",
+    "notes": "War drama"
+  },
+  {
+    "num": 227,
+    "index": "CN1990GU01",
+    "titleChinese": "老店",
+    "titleEnglish": "Peking Duck Restaurant",
+    "year": "1990",
+    "dirChinese": "古榕",
+    "dirEnglish": "Gu Rong",
+    "notes": "Drama"
+  },
+  {
+    "num": 228,
+    "index": "CN1986TIAN01",
+    "titleChinese": "盜馬賊",
+    "titleEnglish": "Horse Thief",
+    "year": "1986",
+    "dirChinese": "田壯壯",
+    "dirEnglish": "Tian Zhuangzhuang",
+    "notes": "Martial arts"
+  },
+  {
+    "num": 229,
+    "index": "CN1987CHEN01",
+    "titleChinese": "大清砲隊",
+    "titleEnglish": "Imperial Cannon Tean, the",
+    "year": "1987",
+    "dirChinese": "陳國軍",
+    "dirEnglish": "Chen Guojun",
+    "notes": "War drama"
+  },
+  {
+    "num": 230,
+    "index": "CN1993LIU01",
+    "titleChinese": "家醜",
+    "titleEnglish": "Family Feud",
+    "year": "1993",
+    "dirChinese": "劉苗苗",
+    "dirEnglish": "Liu Miaomiao",
+    "notes": "Drama"
+  },
+  {
+    "num": 231,
+    "index": "CN1989WU01",
+    "titleChinese": "陰陽界",
+    "titleEnglish": "Realm Between Life and Death",
+    "year": "1989",
+    "dirChinese": "吳子牛",
+    "dirEnglish": "Wu Zi Niu",
+    "notes": "Drama"
+  },
+  {
+    "num": 232,
+    "index": "CN1957TONG01",
+    "titleChinese": "不夜城",
+    "titleEnglish": "City Without Night",
+    "year": "1957",
+    "dirChinese": "湯曉丹",
+    "dirEnglish": "Tong Xiadan",
+    "notes": "Drama"
+  },
+  {
+    "num": 233,
+    "index": "CN1963YAN01",
+    "titleChinese": "滿意不滿意",
+    "titleEnglish": "Satisfied or Not / Are You Satisfied or Not?",
+    "year": "1963",
+    "dirChinese": "嚴恭",
+    "dirEnglish": "Yan Gong",
+    "notes": "Comedy"
+  },
+  {
+    "num": 234,
+    "index": "CN1953GUO01",
+    "titleChinese": "智取華山",
+    "titleEnglish": "Ingeniously Taking Mount Hua / Taking Mount Hua by Strategy",
+    "year": "1953",
+    "dirChinese": "郭維",
+    "dirEnglish": "Guo Wei",
+    "notes": "War drama"
+  },
+  {
+    "num": 235,
+    "index": "CN1955WU01",
+    "titleChinese": "洛神",
+    "titleEnglish": "Goddess of the Luo River",
+    "year": "1955",
+    "dirChinese": "吳祖光",
+    "dirEnglish": "Wu Zuguang",
+    "notes": "Beijing opera"
+  },
+  {
+    "num": 236,
+    "index": "CN1957SHI01",
+    "titleChinese": "紅霞",
+    "titleEnglish": "Hong Xia",
+    "year": "1957",
+    "dirChinese": "石漢",
+    "dirEnglish": "Shi Han",
+    "notes": "August First Film Studio (八一電影製片廠), adapted from the stage opera of the same name."
+  },
+  {
+    "num": 237,
+    "index": "CN1956HUANG01",
+    "titleChinese": "為了和平",
+    "titleEnglish": "For Peace",
+    "year": "1956",
+    "dirChinese": "黃佐臨",
+    "dirEnglish": "Huang Zuolin",
+    "notes": "Drama"
+  },
+  {
+    "num": 238,
+    "index": "CN1958LIN01",
+    "titleChinese": "黨的女兒",
+    "titleEnglish": "Daugther of the Party, the",
+    "year": "1958",
+    "dirChinese": "林農",
+    "dirEnglish": "Lin Nong",
+    "notes": "Drama"
+  },
+  {
+    "num": 239,
+    "index": "CN1957YU01",
+    "titleChinese": "蘆笙戀歌",
+    "titleEnglish": "Lu Sheng Love Story",
+    "year": "1957",
+    "dirChinese": "于彥夫",
+    "dirEnglish": "Yu Yan Fu",
+    "notes": "Romance drama"
+  },
+  {
+    "num": 240,
+    "index": "CN1964LIU01",
+    "titleChinese": "阿詩瑪",
+    "titleEnglish": "Ashima",
+    "year": "1964",
+    "dirChinese": "劉瓊",
+    "dirEnglish": "Liu Qiong",
+    "notes": "Musical"
+  },
+  {
+    "num": 241,
+    "index": "CN1959SHEN01",
+    "titleChinese": "萬紫千紅總是春",
+    "titleEnglish": "Myriad of Colors of Spring, the",
+    "year": "1959",
+    "dirChinese": "沈浮",
+    "dirEnglish": "Shen Fu",
+    "notes": "Drama"
+  },
+  {
+    "num": 242,
+    "index": "CN1981YANG01",
+    "titleChinese": "小街",
+    "titleEnglish": "Narrow Street",
+    "year": "1981",
+    "dirChinese": "楊延晉",
+    "dirEnglish": "Yang Yan Jin",
+    "notes": "Drama"
+  },
+  {
+    "num": 243,
+    "index": "CN1988TE01",
+    "titleChinese": "山水情",
+    "titleEnglish": "Feeling from Mountain and Water",
+    "year": "1988",
+    "dirChinese": "特偉 / 閻善春 / 馬克宣",
+    "dirEnglish": "Te Wei, Yen Shan Chun, Ma Kexuan",
+    "notes": "Animated short film"
+  },
+  {
+    "num": 244,
+    "index": "CN1948FEI01",
+    "titleChinese": "小城之春",
+    "titleEnglish": "Spring in a Small Town",
+    "year": "1948",
+    "dirChinese": "費穆",
+    "dirEnglish": "Fei Mu",
+    "notes": "Romance drama"
+  },
+  {
+    "num": 245,
+    "index": "CN1954SANG01",
+    "titleChinese": "梁山伯與祝英臺",
+    "titleEnglish": "Butterfly Lovers, the / Liang Sha Bo and Zhu Ying Tai",
+    "year": "1954",
+    "dirChinese": "桑弧 / 黃沙",
+    "dirEnglish": "Sang  Hu, Huang Sha",
+    "notes": "Yue opera"
+  },
+  {
+    "num": 246,
+    "index": "CN1947ZHU01",
+    "titleChinese": "各有千秋",
+    "titleEnglish": "You're Smart in One Way, I'm in Another",
+    "year": "1947",
+    "dirChinese": "朱石麟",
+    "dirEnglish": "Zhu Shilin",
+    "notes": "Drama"
+  },
+  {
+    "num": 247,
+    "index": "CN1944BU01",
+    "titleChinese": "紅樓夢",
+    "titleEnglish": "Dream of the Red Mansions",
+    "year": "1944",
+    "dirChinese": "卜萬蒼",
+    "dirEnglish": "Bu Wancang",
+    "notes": "Ancient opera"
+  },
+  {
+    "num": 248,
+    "index": "CN1928ZHANG01",
+    "titleChinese": "少奶奶的扇子",
+    "titleEnglish": "Young Mistress' Fan, the",
+    "year": "1928",
+    "dirChinese": "張石川 / 洪深",
+    "dirEnglish": "Zhang Shichuan, Hong Shen",
+    "notes": "Drama"
+  },
+  {
+    "num": 249,
+    "index": "CN1986WUTIAN01",
+    "titleChinese": "老井",
+    "titleEnglish": "Old Well",
+    "year": "1986",
+    "dirChinese": "吳天明",
+    "dirEnglish": "Wu Tianming",
+    "notes": "Drama"
+  },
+  {
+    "num": 250,
+    "index": "CN1952LU01",
+    "titleChinese": "六號門",
+    "titleEnglish": "Gate Number Six",
+    "year": "1952",
+    "dirChinese": "呂班",
+    "dirEnglish": "Lu Ban",
+    "notes": "Drama"
+  },
+  {
+    "num": 251,
+    "index": "CN1958GUO01",
+    "titleChinese": "花好月圓",
+    "titleEnglish": "",
+    "year": "1958",
+    "dirChinese": "郭維",
+    "dirEnglish": "Guo Wei",
+    "notes": "Drama"
+  },
+  {
+    "num": 252,
+    "index": "CN1962DING01",
+    "titleChinese": "女理髮師",
+    "titleEnglish": "Woman Barber",
+    "year": "1962",
+    "dirChinese": "丁然",
+    "dirEnglish": "Ding Ran",
+    "notes": "Drama"
+  },
+  {
+    "num": 253,
+    "index": "CN1980WANG01",
+    "titleChinese": "霧都茫茫",
+    "titleEnglish": "",
+    "year": "1980",
+    "dirChinese": "王進 / 張波",
+    "dirEnglish": "Wang Jin, Zhang Bo",
+    "notes": "Spy movie"
+  },
+  {
+    "num": 254,
+    "index": "CN1980LIN01",
+    "titleChinese": "與魔鬼打交道的人",
+    "titleEnglish": "Dealing with the Devil",
+    "year": "1980",
+    "dirChinese": "林嵐",
+    "dirEnglish": "Lin Lan",
+    "notes": "Spy movie"
+  },
+  {
+    "num": 255,
+    "index": "HK1948FANG01",
+    "titleChinese": "花外流鶯",
+    "titleEnglish": "Orioles Banished from the Flowers",
+    "year": "1948",
+    "dirChinese": "方沛霖",
+    "dirEnglish": "Fang Pei Lin",
+    "notes": "戰後不少上海電影人南下，戲院巨頭蔣伯英於1946年在香港成立大中華，邀請大批上海幕前幕後精英加入，延續海拍鳳格。本片由鳳凰公司出品。"
+  },
+  {
+    "num": 256,
+    "index": "CN1937ZHANG01",
+    "titleChinese": "壓歲錢",
+    "titleEnglish": "New Year's Coin",
+    "year": "1937",
+    "dirChinese": "張石川",
+    "dirEnglish": "Zhang Shichuan",
+    "notes": "Musical"
+  },
+  {
+    "num": 257,
+    "index": "CN1936WU01",
+    "titleChinese": "浪淘沙",
+    "titleEnglish": "Desert Island, the",
+    "year": "1936",
+    "dirChinese": "吳永剛",
+    "dirEnglish": "Wu Yong Gang",
+    "notes": "Drama"
+  },
+  {
+    "num": 258,
+    "index": "CN1947HUANG01",
+    "titleChinese": "夜店",
+    "titleEnglish": "Night Hotel",
+    "year": "1947",
+    "dirChinese": "黃佐臨",
+    "dirEnglish": "Huang Zuolin",
+    "notes": "Drama"
+  },
+  {
+    "num": 259,
+    "index": "CN1947CHEN01",
+    "titleChinese": "遙遠的愛",
+    "titleEnglish": "Remote Love",
+    "year": "1947",
+    "dirChinese": "陳鯉庭",
+    "dirEnglish": "Chen Liting",
+    "notes": "Drama"
+  },
+  {
+    "num": 260,
+    "index": "CN1935SHEN01",
+    "titleChinese": "船家女",
+    "titleEnglish": "Boatman's Daugther, the",
+    "year": "1935",
+    "dirChinese": "沈西苓",
+    "dirEnglish": "Shen Xiling",
+    "notes": "Drama"
+  },
+  {
+    "num": 261,
+    "index": "CN1939BU01",
+    "titleChinese": "木蘭從軍",
+    "titleEnglish": "Mulan Joins the Army",
+    "year": "1939",
+    "dirChinese": "蔔萬蒼",
+    "dirEnglish": "Bu Wan Cang",
+    "notes": "Period drama"
+  },
+  {
+    "num": 262,
+    "index": "CN1947HE01",
+    "titleChinese": "長相思",
+    "titleEnglish": "All-Consuming Love, an",
+    "year": "1947",
+    "dirChinese": "何兆璋",
+    "dirEnglish": "He Zhaozhang",
+    "notes": "Drama"
+  },
+  {
+    "num": 263,
+    "index": "CN1949CHEN01",
+    "titleChinese": "麗人行",
+    "titleEnglish": "Three Girls",
+    "year": "1949",
+    "dirChinese": "陳鯉庭",
+    "dirEnglish": "Chen Liting",
+    "notes": "Drama"
+  },
+  {
+    "num": 264,
+    "index": "CN1934ZHENG01",
+    "titleChinese": "姐妹花",
+    "titleEnglish": "Twin Sisters",
+    "year": "1934",
+    "dirChinese": "鄭正秋",
+    "dirEnglish": "Zheng Zhengqiu",
+    "notes": "Drama"
+  },
+  {
+    "num": 265,
+    "index": "CN1934SUN01",
+    "titleChinese": "大路",
+    "titleEnglish": "Highway, the",
+    "year": "1934",
+    "dirChinese": "孫瑜",
+    "dirEnglish": "Sun Yu",
+    "notes": "Silent film"
+  },
+  {
+    "num": 266,
+    "index": "CN1956CHEN01",
+    "titleChinese": "家",
+    "titleEnglish": "Family, the",
+    "year": "1956",
+    "dirChinese": "陳西禾 / 葉明",
+    "dirEnglish": "Chen Xiehe, Ye Ming",
+    "notes": "編導陳西禾是巴金好友。巴金在電影拍攝前也看過劇本初稿和第四稿，卻仍指編導過度忠於原著，缺乏創造性，戲中角色描寫篇幅也不足。"
+  },
+  {
+    "num": 267,
+    "index": "CN1948SHEN02",
+    "titleChinese": "萬家燈火",
+    "titleEnglish": "Myriads of Lights",
+    "year": "1948",
+    "dirChinese": "沈浮",
+    "dirEnglish": "Shen Fu",
+    "notes": "Drama"
+  },
+  {
+    "num": 268,
+    "index": "CN1948ZHU01",
+    "titleChinese": "清宮秘史",
+    "titleEnglish": "Sorrows of the Forbiden City",
+    "year": "1948",
+    "dirChinese": "朱石麟",
+    "dirEnglish": "Zhu Shi Lin",
+    "notes": "Period drama"
+  },
+  {
+    "num": 269,
+    "index": "CN1934YING01",
+    "titleChinese": "桃李劫",
+    "titleEnglish": "Plunder of Peach and Plum",
+    "year": "1934",
+    "dirChinese": "應雲衛",
+    "dirEnglish": "Ying Yun Wei",
+    "notes": "Drama"
+  },
+  {
+    "num": 270,
+    "index": "CN1936WU02",
+    "titleChinese": "壯志淩雲",
+    "titleEnglish": "Soaring Aspiration",
+    "year": "1936",
+    "dirChinese": "吳永剛",
+    "dirEnglish": "Wu Yonggang",
+    "notes": "Drama"
+  },
+  {
+    "num": 271,
+    "index": "CN1931SHI01",
+    "titleChinese": "銀漢雙星",
+    "titleEnglish": "Actor and an Actress, an",
+    "year": "1931",
+    "dirChinese": "史東山",
+    "dirEnglish": "Shi Dongshan",
+    "notes": "Silent film"
+  },
+  {
+    "num": 272,
+    "index": "CN1935LUO01",
+    "titleChinese": "國風",
+    "titleEnglish": "National Customs",
+    "year": "1935",
+    "dirChinese": "羅明佑 / 朱石麟",
+    "dirEnglish": "Luo Mingyou, Zhu Shilin",
+    "notes": "Silent film"
+  },
+  {
+    "num": 273,
+    "index": "CN1940ZHANG01",
+    "titleChinese": "西廂記",
+    "titleEnglish": "West Chamber, the",
+    "year": "1940",
+    "dirChinese": "張石川",
+    "dirEnglish": "Zhang Shichuan",
+    "notes": "Historical drama"
+  },
+  {
+    "num": 274,
+    "index": "CN1935XU01",
+    "titleChinese": "風雲兒女",
+    "titleEnglish": "Children of Trouble Times",
+    "year": "1935",
+    "dirChinese": "許幸之",
+    "dirEnglish": "Xu Xingzhi",
+    "notes": "Drama"
+  },
+  {
+    "num": 275,
+    "index": "CN1999HUO01",
+    "titleChinese": "那山那人那狗",
+    "titleEnglish": "Postmen in the Mountains",
+    "year": "1999",
+    "dirChinese": "霍建起",
+    "dirEnglish": "Huo Jianqi",
+    "notes": "Drama"
+  },
+  {
+    "num": 276,
+    "index": "CN1999XU01",
+    "titleChinese": "草房子",
+    "titleEnglish": "Thatched Memories",
+    "year": "1999",
+    "dirChinese": "徐耿",
+    "dirEnglish": "Xu Geng",
+    "notes": "Drama"
+  },
+  {
+    "num": 277,
+    "index": "CN2000HUO01",
+    "titleChinese": "藍色愛情",
+    "titleEnglish": "Love of Blueness, a",
+    "year": "2000",
+    "dirChinese": "霍建起",
+    "dirEnglish": "Huo Jianqi",
+    "notes": "Drama"
+  },
+  {
+    "num": 278,
+    "index": "CN1999ZHANG01",
+    "titleChinese": "洗澡",
+    "titleEnglish": "Shower",
+    "year": "1999",
+    "dirChinese": "張揚",
+    "dirEnglish": "Zhang Yang",
+    "notes": "Comedy"
+  },
+  {
+    "num": 279,
+    "index": "CN1999WANG01",
+    "titleChinese": "朗朗星空",
+    "titleEnglish": "Stars in the Sky",
+    "year": "1999",
+    "dirChinese": "王坪",
+    "dirEnglish": "Wang Ping",
+    "notes": "Drama"
+  },
+  {
+    "num": 280,
+    "index": "CN1964ZHAO01",
+    "titleChinese": "姊妹易嫁",
+    "titleEnglish": "She Marries Her Sister's Fiance",
+    "year": "1964",
+    "dirChinese": "趙一山 / 雷鳴",
+    "dirEnglish": "Zhao Yishan, Lui Ming",
+    "notes": "Drama"
+  },
+  {
+    "num": 281,
+    "index": "CN1998FENG01",
+    "titleChinese": "不見不散",
+    "titleEnglish": "Be There or Be Square",
+    "year": "1998",
+    "dirChinese": "馮小剛",
+    "dirEnglish": "Feng Xiaogang",
+    "notes": "Drama"
+  },
+  {
+    "num": 282,
+    "index": "CN1988HUANG01",
+    "titleChinese": "落山風",
+    "titleEnglish": "Autumn Tempest",
+    "year": "1988",
+    "dirChinese": "黃玉珊",
+    "dirEnglish": "Huang Yushan",
+    "notes": "Drama"
+  },
+  {
+    "num": 283,
+    "index": "CN1993WANG01",
+    "titleChinese": "深山船家",
+    "titleEnglish": "Boatman of the Baili Gorge, the",
+    "year": "1993",
+    "dirChinese": "王海兵",
+    "dirEnglish": "Wang Haibing",
+    "notes": "Documentary"
+  },
+  {
+    "num": 284,
+    "index": "CN1998DING01",
+    "titleChinese": "黃蓮、厚朴",
+    "titleEnglish": "Beijing Herbs",
+    "year": "1998",
+    "dirChinese": "丁蔭楠",
+    "dirEnglish": "Ding Yingnan",
+    "notes": "Drama"
+  },
+  {
+    "num": 285,
+    "index": "CN1991ZHOU01",
+    "titleChinese": "南行記",
+    "titleEnglish": "Heading South",
+    "year": "1991",
+    "dirChinese": "周力",
+    "dirEnglish": "Zhou Li",
+    "notes": "Drama"
+  },
+  {
+    "num": 286,
+    "index": "CN1981WONG01",
+    "titleChinese": "末代皇帝-溥儀",
+    "titleEnglish": "Last Emperor of China - Pu Yi, the",
+    "year": "1981",
+    "dirChinese": "王秀",
+    "dirEnglish": "Wong Sau",
+    "notes": "Documentary"
+  },
+  {
+    "num": 287,
+    "index": "CN1991TIAN01",
+    "titleChinese": "大太監李蓮英",
+    "titleEnglish": "Li Lianying, the Imperial Eunuch",
+    "year": "1991",
+    "dirChinese": "田壯壯",
+    "dirEnglish": "Tian Zhuangzhuang",
+    "notes": "Drama"
+  },
+  {
+    "num": 288,
+    "index": "CN1992ZHU01",
+    "titleChinese": "蔣築英",
+    "titleEnglish": "Jiang Zhu Ying",
+    "year": "1992",
+    "dirChinese": "朱江波",
+    "dirEnglish": "Zhu Jiangbo",
+    "notes": "Drama"
+  },
+  {
+    "num": 289,
+    "index": "CN1994YAN01",
+    "titleChinese": "天生膽小",
+    "titleEnglish": "Yellow Belly",
+    "year": "1994",
+    "dirChinese": "彥小追",
+    "dirEnglish": "Yan Xiaozhui",
+    "notes": "Drama"
+  },
+  {
+    "num": 290,
+    "index": "CN1991HU01",
+    "titleChinese": "留守女士",
+    "titleEnglish": "Those Left Behind",
+    "year": "1991",
+    "dirChinese": "胡雪揚",
+    "dirEnglish": "Hu Xueyang",
+    "notes": "Drama"
+  },
+  {
+    "num": 291,
+    "index": "CN1999ZHANG02",
+    "titleChinese": "瘋狂英語",
+    "titleEnglish": "Crazy English",
+    "year": "1999",
+    "dirChinese": "張元",
+    "dirEnglish": "Zhang Yian",
+    "notes": "Documentary, comedy"
+  },
+  {
+    "num": 292,
+    "index": "CN1993XIA01",
+    "titleChinese": "大撒把",
+    "titleEnglish": "After Separation",
+    "year": "1993",
+    "dirChinese": "夏鋼",
+    "dirEnglish": "Xia Gang",
+    "notes": "Drama"
+  },
+  {
+    "num": 293,
+    "index": "CN1996WANG01",
+    "titleChinese": "一個闖進我生命中的女人",
+    "titleEnglish": "After Divorce",
+    "year": "1996",
+    "dirChinese": "王瑞",
+    "dirEnglish": "Wang Rui",
+    "notes": "Drama"
+  },
+  {
+    "num": 294,
+    "index": "CN2000SUN01",
+    "titleChinese": "漂亮媽媽",
+    "titleEnglish": "Breaking the Silence",
+    "year": "2000",
+    "dirChinese": "孫周",
+    "dirEnglish": "Sun Zhou",
+    "notes": "Drama"
+  },
+  {
+    "num": 295,
+    "index": "CN2000LI01",
+    "titleChinese": "紅西服",
+    "titleEnglish": "Red Suit, the",
+    "year": "2000",
+    "dirChinese": "李少紅",
+    "dirEnglish": "Li Shaohong",
+    "notes": "Drama"
+  },
+  {
+    "num": 296,
+    "index": "CN1997FENG01",
+    "titleChinese": "甲方乙方",
+    "titleEnglish": "Dream Factory, the",
+    "year": "1997",
+    "dirChinese": "馮小剛",
+    "dirEnglish": "Feng Xiaogang",
+    "notes": "Comedy"
+  },
+  {
+    "num": 297,
+    "index": "CN1998ZHOU01",
+    "titleChinese": "背著爸爸上學去",
+    "titleEnglish": "Going to School with Father on My Back",
+    "year": "1998",
+    "dirChinese": "周友蒲",
+    "dirEnglish": "Zhou Youchao",
+    "notes": "Drama"
+  },
+  {
+    "num": 298,
+    "index": "HKCN1988CHANG01",
+    "titleChinese": "黃河大俠",
+    "titleEnglish": "Yellow River Fighter",
+    "year": "1988",
+    "dirChinese": "張鑫炎 / 張子恩",
+    "dirEnglish": "Chang Hsin-yan Chang / Zhang Zien",
+    "notes": "Period action film / 西安電影制片厰、香港中原電影有限公司和香港銀都機構有限公司制作"
+  },
+  {
+    "num": 299,
+    "index": "CN1995XIE01",
+    "titleChinese": "落難俏佳人",
+    "titleEnglish": "Penitentiary Angel",
+    "year": "1995",
+    "dirChinese": "謝晉",
+    "dirEnglish": "Xie Jin",
+    "notes": "Drama"
+  },
+  {
+    "num": 300,
+    "index": "CN1986YANG01",
+    "titleChinese": "T省大風暴",
+    "titleEnglish": "T Province in 84' & 85'",
+    "year": "1986",
+    "dirChinese": "楊延晉",
+    "dirEnglish": "Yang Yanjin",
+    "notes": "Drama"
+  },
+  {
+    "num": 301,
+    "index": "CN1994ZHANG01",
+    "titleChinese": "雲南故事",
+    "titleEnglish": "Yunnan Story",
+    "year": "1994",
+    "dirChinese": "張暖忻",
+    "dirEnglish": "Zhang Nuanxin",
+    "notes": "Drama"
+  },
+  {
+    "num": 302,
+    "index": "CN1985CONG01",
+    "titleChinese": "小巷名流",
+    "titleEnglish": "Back Alley Celebrities",
+    "year": "1985",
+    "dirChinese": "從連文",
+    "dirEnglish": "Cong Lianwen",
+    "notes": "Drama"
+  },
+  {
+    "num": 303,
+    "index": "CNUS1986WANG01",
+    "titleChinese": "北京故事",
+    "titleEnglish": "Great Wall, a",
+    "year": "1986",
+    "dirChinese": "王正方",
+    "dirEnglish": "Wang Zheng Fang Peter",
+    "notes": "Comedy"
+  },
+  {
+    "num": 304,
+    "index": "CN1997XIA01",
+    "titleChinese": "生命如歌",
+    "titleEnglish": "Concerto of Life",
+    "year": "1997",
+    "dirChinese": "夏鋼",
+    "dirEnglish": "Xia Gang",
+    "notes": "Drama"
+  },
+  {
+    "num": 305,
+    "index": "CN1996HE01",
+    "titleChinese": "混在北京",
+    "titleEnglish": "Stranger in Beljing, the",
+    "year": "1996",
+    "dirChinese": "何群",
+    "dirEnglish": "He Qun",
+    "notes": "Drama"
+  },
+  {
+    "num": 306,
+    "index": "CN1987LU01",
+    "titleChinese": "紅與白",
+    "titleEnglish": "",
+    "year": "1987",
+    "dirChinese": "陸小雅",
+    "dirEnglish": "Lu Xiaoya",
+    "notes": "Drama"
+  },
+  {
+    "num": 307,
+    "index": "CN2000WANG01",
+    "titleChinese": "超導",
+    "titleEnglish": "Journey to Wonderland",
+    "year": "2000",
+    "dirChinese": "王冀邢",
+    "dirEnglish": "Wang Jixing",
+    "notes": "Drama"
+  },
+  {
+    "num": 308,
+    "index": "CN1985XIE01",
+    "titleChinese": "衛國軍魂",
+    "titleEnglish": "Wreaths at the Foot of Mountain",
+    "year": "1985",
+    "dirChinese": "謝晉",
+    "dirEnglish": "Xie Jin",
+    "notes": "War drama"
+  },
+  {
+    "num": 309,
+    "index": "CN2001HUANG01",
+    "titleChinese": "結婚証",
+    "titleEnglish": "Marriage Certificate, the",
+    "year": "2001",
+    "dirChinese": "黃建新",
+    "dirEnglish": "Huang Jianxin",
+    "notes": "Drama"
+  },
+  {
+    "num": 310,
+    "index": "CN1990WANG01",
+    "titleChinese": "中國霸王花",
+    "titleEnglish": "Chinese Armed Policewomen",
+    "year": "1990",
+    "dirChinese": "王曉民 / 龔藝群",
+    "dirEnglish": "Wang Xiaomin, Gong Yiqun",
+    "notes": "Action"
+  },
+  {
+    "num": 311,
+    "index": "CN1989JIN01",
+    "titleChinese": "辣手霸王花",
+    "titleEnglish": "Woman Commando, a",
+    "year": "1989",
+    "dirChinese": "金作信 / 王連平",
+    "dirEnglish": "Jin Zuoxin, Wang Lianping",
+    "notes": "Action"
+  },
+  {
+    "num": 312,
+    "index": "CN1993WANG02",
+    "titleChinese": "高朋滿座",
+    "titleEnglish": "Weddings, the",
+    "year": "1993",
+    "dirChinese": "王鳳奎",
+    "dirEnglish": "Wang Fengkui",
+    "notes": "Comedy"
+  },
+  {
+    "num": 313,
+    "index": "CN1988TIAN01",
+    "titleChinese": "搖滾青年",
+    "titleEnglish": "Rock Kids",
+    "year": "1988",
+    "dirChinese": "田壯壯",
+    "dirEnglish": "Tian Zhuangzhuang",
+    "notes": "Musical"
+  },
+  {
+    "num": 314,
+    "index": "CN1990ZHANG01",
+    "titleChinese": "媽媽",
+    "titleEnglish": "Mum",
+    "year": "1990",
+    "dirChinese": "張元",
+    "dirEnglish": "Zhang Yuan",
+    "notes": "Drama"
+  },
+  {
+    "num": 315,
+    "index": "CN1995HUANG01",
+    "titleChinese": "過年",
+    "titleEnglish": "Spring Festival, the",
+    "year": "1995",
+    "dirChinese": "黃健中",
+    "dirEnglish": "Huang Jianzhong",
+    "notes": "Drama"
+  },
+  {
+    "num": 316,
+    "index": "CN1987HUANG01",
+    "titleChinese": "人鬼情",
+    "titleEnglish": "Woman, Demon, Human",
+    "year": "1987",
+    "dirChinese": "黃蜀芹",
+    "dirEnglish": "Huang Shuqin",
+    "notes": "Drama"
+  },
+  {
+    "num": 317,
+    "index": "CN1991SUN01",
+    "titleChinese": "心香",
+    "titleEnglish": "True Hearted, the",
+    "year": "1991",
+    "dirChinese": "孫周",
+    "dirEnglish": "Sun Zhou",
+    "notes": "Drama"
+  },
+  {
+    "num": 318,
+    "index": "CN1995WANG01",
+    "titleChinese": "離婚",
+    "titleEnglish": "Divorce",
+    "year": "1995",
+    "dirChinese": "王好為",
+    "dirEnglish": "Wang Haowei",
+    "notes": "Drama"
+  },
+  {
+    "num": 319,
+    "index": "CN1986SHI01",
+    "titleChinese": "失蹤的女中學生",
+    "titleEnglish": "Missing Girl Student, the",
+    "year": "1986",
+    "dirChinese": "史蜀君",
+    "dirEnglish": "Shi Shujun",
+    "notes": "Drama"
+  },
+  {
+    "num": 320,
+    "index": "CN2000ZHANG01",
+    "titleChinese": "幸福時光",
+    "titleEnglish": "Happy Times",
+    "year": "2000",
+    "dirChinese": "張藝謀",
+    "dirEnglish": "Zhang Yimou",
+    "notes": "Comedy"
+  },
+  {
+    "num": 321,
+    "index": "CN2002HUO01",
+    "titleChinese": "生活秀",
+    "titleEnglish": "Life Show",
+    "year": "2002",
+    "dirChinese": "霍建起",
+    "dirEnglish": "Huo Jianqi",
+    "notes": "Drama"
+  },
+  {
+    "num": 322,
+    "index": "CN1989WANG01",
+    "titleChinese": "哦，香雪",
+    "titleEnglish": "Oh! Sweet Snow",
+    "year": "1989",
+    "dirChinese": "王好為",
+    "dirEnglish": "Wang Haowei",
+    "notes": "Drama"
+  },
+  {
+    "num": 323,
+    "index": "CN1992LI01",
+    "titleChinese": "血色清晨",
+    "titleEnglish": "Bloody Morning, the",
+    "year": "1992",
+    "dirChinese": "李少紅",
+    "dirEnglish": "Li Shaohong",
+    "notes": "Crime movie"
+  },
+  {
+    "num": 324,
+    "index": "CN1997HU01",
+    "titleChinese": "安居",
+    "titleEnglish": "Live at Peace",
+    "year": "1997",
+    "dirChinese": "胡炳榴",
+    "dirEnglish": "Hu Bing Liu",
+    "notes": "Drama"
+  },
+  {
+    "num": 325,
+    "index": "CN1993HE01",
+    "titleChinese": "消失的女人",
+    "titleEnglish": "Disappered Woman, the",
+    "year": "1993",
+    "dirChinese": "何群 / 劉寶林",
+    "dirEnglish": "He Qun, Liu Bao Lin",
+    "notes": "Drama"
+  },
+  {
+    "num": 326,
+    "index": "CN1988ZHOU01",
+    "titleChinese": "瘋狂的代價",
+    "titleEnglish": "Obsession",
+    "year": "1988",
+    "dirChinese": "周曉文",
+    "dirEnglish": "Zhou Xiaowen",
+    "notes": "Drama"
+  },
+  {
+    "num": 327,
+    "index": "CN1996CHEN01",
+    "titleChinese": "風月",
+    "titleEnglish": "Temptress Moon",
+    "year": "1996",
+    "dirChinese": "陳凱歌",
+    "dirEnglish": "Chen Kaige",
+    "notes": "Romatic film"
+  },
+  {
+    "num": 328,
+    "index": "CN1997LU01",
+    "titleChinese": "長大成人",
+    "titleEnglish": "Making of Steel",
+    "year": "1997",
+    "dirChinese": "路學長",
+    "dirEnglish": "Lu Xuechang",
+    "notes": "drama"
+  },
+  {
+    "num": 329,
+    "index": "CN1957XIE01",
+    "titleChinese": "女籃五號",
+    "titleEnglish": "Woman Basketball Player No.5",
+    "year": "1957",
+    "dirChinese": "謝晉",
+    "dirEnglish": "Xie Jin",
+    "notes": "Sports comedy"
+  },
+  {
+    "num": 330,
+    "index": "CN1996ZHOU01",
+    "titleChinese": "秦頌",
+    "titleEnglish": "Emperor's Shadow, the",
+    "year": "1996",
+    "dirChinese": "周曉文",
+    "dirEnglish": "Zhou Xiaowen",
+    "notes": "Period martial arts"
+  },
+  {
+    "num": 331,
+    "index": "CN2001WANG01",
+    "titleChinese": "十七歲的單車",
+    "titleEnglish": "Beijing Bicycle",
+    "year": "2001",
+    "dirChinese": "王小帥",
+    "dirEnglish": "Wang Xiaoshuai",
+    "notes": "drama"
+  },
+  {
+    "num": 332,
+    "index": "CN2000ZHANG02",
+    "titleChinese": "幸福時光",
+    "titleEnglish": "Happy Times",
+    "year": "2000",
+    "dirChinese": "張藝謀",
+    "dirEnglish": "Zhang Yimou",
+    "notes": "Comedy"
+  },
+  {
+    "num": 333,
+    "index": "HK1961TANG01",
+    "titleChinese": "體育皇后",
+    "titleEnglish": "Beauty Parade",
+    "year": "1961",
+    "dirChinese": "唐煌",
+    "dirEnglish": "Tang Huang",
+    "notes": "Comedy"
+  },
+  {
+    "num": 334,
+    "index": "CN1934SUN02",
+    "titleChinese": "體育皇后",
+    "titleEnglish": "Queen of Sports",
+    "year": "1934",
+    "dirChinese": "孫瑜",
+    "dirEnglish": "Sun Yu",
+    "notes": "Sports comedy"
+  },
+  {
+    "num": 335,
+    "index": "CN1927SUN01",
+    "titleChinese": "西廂記",
+    "titleEnglish": "Way Down West",
+    "year": "1927",
+    "dirChinese": "侯曜",
+    "dirEnglish": "Hou Yao",
+    "notes": "Silent film"
+  },
+  {
+    "num": 336,
+    "index": "CN2000LOU01",
+    "titleChinese": "蘇州河",
+    "titleEnglish": "Suzhou River",
+    "year": "2000",
+    "dirChinese": "婁燁",
+    "dirEnglish": "Lou Ye",
+    "notes": "drama"
+  },
+  {
+    "num": 337,
+    "index": "TN1982YANG01",
+    "titleChinese": "瘋狂年輕人",
+    "titleEnglish": "Crazy Youth",
+    "year": "1982",
+    "dirChinese": "楊家雲",
+    "dirEnglish": "Yang Chia-Yun",
+    "notes": "國語、台語 Mandarin and Taiwan dialect (Minnan)"
+  }
+]

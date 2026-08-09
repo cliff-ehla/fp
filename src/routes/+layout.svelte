@@ -24,6 +24,10 @@
 			title: '關於我們',
 			subtitle: 'About',
 			href: '/about/introduction'
+		},{
+			title: 'VCD館藏',
+			subtitle: 'VCD Collection',
+			href: '/vcd-collection'
 		},
 	]
 </script>

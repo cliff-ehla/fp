@@ -519,6 +519,41 @@ const handleAuthors = async (req, res) => {
 app.get('/authors', handleAuthors);
 app.get('/api/authors', handleAuthors);
 
+// Handle /vcd-collection and /api/vcd-collection
+const handleVcdCollection = async (req, res) => {
+    try {
+        const filters = req.query.filters || {};
+        const search = getFilterVal(filters, ['search']);
+
+        let snapshot = await db.collection('vcd_collection').orderBy('index').get();
+        let docs = snapshot.docs;
+
+        if (search) {
+            const sq = search.toLowerCase();
+            docs = docs.filter(doc => {
+                const d = doc.data();
+                return (d.titleChinese && d.titleChinese.toLowerCase().includes(sq)) ||
+                    (d.titleEnglish && d.titleEnglish.toLowerCase().includes(sq)) ||
+                    (d.dirChinese && d.dirChinese.toLowerCase().includes(sq)) ||
+                    (d.dirEnglish && d.dirEnglish.toLowerCase().includes(sq));
+            });
+        }
+
+        const data = docs.map(doc => ({
+            id: doc.id,
+            attributes: doc.data()
+        }));
+
+        res.json({ data });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error.message);
+    }
+};
+
+app.get('/vcd-collection', handleVcdCollection);
+app.get('/api/vcd-collection', handleVcdCollection);
+
 exports.api = functions
     .region('asia-east2')
     .runWith({
