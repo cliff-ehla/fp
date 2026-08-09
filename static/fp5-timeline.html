@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floating Projects 5.0 — 三年活動地圖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1EEE6;
+  --card:#FBFAF5;
+  --ink:#26241F;
+  --gray:#77746A;
+  --faint:#A9A69B;
+  --line:#D9D5C8;
+  --cinnabar:#B8401D;
+  --cinnabar-soft:#F3DED4;
+  --teal:#1F6B5A;
+  --teal-soft:#DDE9E2;
+  --serif:'Noto Serif TC', serif;
+  --sans:'Noto Sans TC', sans-serif;
+  --mono:'IBM Plex Mono', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.7;
+  background-image:radial-gradient(rgba(38,36,31,.045) 1px, transparent 1px);
+  background-size:22px 22px;
+}
+
+/* ============ masthead ============ */
+header{max-width:1020px;margin:0 auto;padding:64px 24px 20px;text-align:center}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.3em;color:var(--gray);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(34px,6vw,60px);line-height:1.15;margin:14px 0 6px}
+h1 .num{color:var(--cinnabar)}
+.sub{font-family:var(--serif);font-size:17px;color:var(--gray);max-width:560px;margin:0 auto}
+.mast-rule{max-width:1020px;margin:28px auto 0;padding:0 24px;display:flex;align-items:center;gap:14px}
+.mast-rule::before,.mast-rule::after{content:"";flex:1;border-top:1px solid var(--ink)}
+.mast-rule span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--gray)}
+
+/* ============ legend ============ */
+.legend{max-width:760px;margin:26px auto 10px;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;font-size:12.5px;color:var(--gray)}
+.legend .it{display:flex;align-items:center;gap:8px}
+.dot{width:11px;height:11px;border-radius:50%;flex:none}
+.dot.solid{background:var(--cinnabar)}
+.dot.hollow{background:transparent;border:1.6px solid var(--gray)}
+.swatch-line{width:26px;flex:none;border-top:1.6px solid var(--ink)}
+.swatch-dash{width:26px;flex:none;border-top:1.6px dashed var(--faint)}
+
+/* ============ timeline layout ============ */
+.tl{max-width:1020px;margin:36px auto 0;padding:0 24px;position:relative}
+.spine{
+  position:absolute;top:0;bottom:0;left:50%;width:6px;margin-left:-3px;
+  background:linear-gradient(var(--line), var(--line));
+  border-radius:3px;
+}
+.spine::before{
+  content:"";position:absolute;top:0;bottom:0;left:50%;width:14px;margin-left:-7px;
+  background-image:repeating-linear-gradient(to bottom, transparent 0 34px, rgba(38,36,31,.16) 34px 36px);
+  border-radius:7px;
+}
+.row{display:grid;grid-template-columns:1fr 90px 1fr;align-items:center;position:relative;margin:0 0 34px}
+.row.tight{margin-bottom:22px}
+
+/* year node on spine */
+.year{grid-column:2;justify-self:center;position:relative;z-index:2}
+.year .badge{
+  font-family:var(--mono);font-weight:500;font-size:15px;letter-spacing:.06em;
+  background:var(--ink);color:var(--paper);padding:7px 13px;border-radius:999px;
+  box-shadow:0 0 0 5px var(--paper);
+  display:inline-block;
+}
+.year.minor .badge{background:var(--paper);color:var(--gray);border:1.4px solid var(--line);box-shadow:0 0 0 5px var(--paper)}
+.year-note{grid-column:3;font-family:var(--mono);font-size:11.5px;color:var(--faint);padding-left:18px;letter-spacing:.08em}
+.year-note.l{grid-column:1;text-align:right;padding:0 18px 0 0}
+
+/* connector cell */
+.conn{grid-column:2;position:relative;height:100%;min-height:44px;z-index:1}
+.conn .pin{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:14px;height:14px;border-radius:50%;background:var(--cinnabar);
+  box-shadow:0 0 0 4px var(--paper), 0 0 0 5.5px var(--cinnabar);
+}
+.conn .pin.approx{background:var(--paper);border:2px solid var(--gray);box-shadow:0 0 0 4px var(--paper);width:12px;height:12px;transform:translate(-50%,-50%) rotate(45deg);border-radius:2px}
+.conn .wire{position:absolute;top:50%;height:0;border-top:1.8px solid var(--ink)}
+.conn .wire.dash{border-top:1.8px dashed var(--faint)}
+.conn.to-l .wire{right:50%;width:calc(50% + 26px)}
+.conn.to-r .wire{left:50%;width:calc(50% + 26px)}
+
+/* span bracket for recurring series (year 1) */
+.spanmark{position:absolute;left:50%;width:22px;margin-left:-11px;border:1.8px dashed var(--faint);border-radius:11px;background:rgba(31,107,90,.06)}
+
+/* ============ cards ============ */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px 18px 14px;
+  cursor:pointer;
+  position:relative;
+  transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  max-width:420px;
+}
+.card:hover,.card:focus-visible{transform:translateY(-2px);border-color:var(--ink);box-shadow:0 6px 18px rgba(38,36,31,.09)}
+.card:focus-visible{outline:2px solid var(--cinnabar);outline-offset:2px}
+.card.side-l{grid-column:1;justify-self:end}
+.card.side-r{grid-column:3;justify-self:start}
+.card.anchored{border-left:4px solid var(--cinnabar)}
+.card.anchored.side-l{border-left:1px solid var(--line);border-right:4px solid var(--cinnabar)}
+.card .top{display:flex;gap:13px;align-items:flex-start}
+.card .icon{
+  flex:none;width:46px;height:46px;border-radius:11px;
+  border:1.4px solid var(--ink);background:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+}
+.card .icon svg{width:27px;height:27px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-family:var(--serif);font-weight:700;font-size:16.5px;line-height:1.35}
+.card .date{font-family:var(--mono);font-size:12px;color:var(--cinnabar);font-weight:500;letter-spacing:.04em;margin-bottom:1px}
+.card .short{font-size:12.8px;color:var(--gray);line-height:1.6;margin-top:2px}
+.card .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:11px;padding-top:10px;border-top:1px dashed var(--line)}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.rec{background:var(--teal-soft);color:var(--teal)}
+.pill.once{background:var(--cinnabar-soft);color:var(--cinnabar)}
+.pics{display:flex}
+.av{
+  width:52px;height:52px;border-radius:50%;flex:none;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--mono);font-size:20px;font-weight:500;
+  display:flex;align-items:center;justify-content:center;
+  border:4px solid var(--card);margin-left:-14px;overflow:hidden;
+}
+.av:first-child{margin-left:0}
+.av img{width:100%;height:100%;object-fit:cover}
+
+/* section headers inside timeline */
+.tl-sec{display:grid;grid-template-columns:1fr 90px 1fr;margin:8px 0 26px;position:relative}
+.tl-sec .lab{
+  grid-column:1 / -1;justify-self:center;z-index:2;
+  font-family:var(--serif);font-weight:700;font-size:15px;
+  background:var(--paper);padding:4px 18px;color:var(--gray);
+  border:1px solid var(--line);border-radius:999px;
+}
+
+/* ============ modal ============ */
+.overlay{
+  position:fixed;inset:0;background:rgba(38,36,31,.45);
+  display:none;align-items:center;justify-content:center;padding:22px;z-index:50;
+}
+.overlay.open{display:flex}
+.modal{
+  background:var(--card);border:1px solid var(--ink);border-radius:18px;
+  max-width:560px;width:100%;max-height:86vh;overflow:auto;
+  padding:26px 28px 24px;position:relative;
+  box-shadow:0 20px 50px rgba(38,36,31,.25);
+}
+.modal .x{
+  position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;
+  border:1.4px solid var(--line);background:var(--card);cursor:pointer;
+  font-size:16px;color:var(--gray);line-height:1;
+}
+.modal .x:hover{border-color:var(--ink);color:var(--ink)}
+.modal .head{display:flex;gap:15px;align-items:center;margin-bottom:6px}
+.modal .icon{width:56px;height:56px;border-radius:13px;border:1.5px solid var(--ink);background:var(--paper);display:flex;align-items:center;justify-content:center;flex:none}
+.modal .icon svg{width:33px;height:33px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.modal h2{font-family:var(--serif);font-weight:900;font-size:22px;line-height:1.3}
+.modal .meta{font-family:var(--mono);font-size:12px;color:var(--gray);letter-spacing:.04em;margin-top:2px}
+.modal .meta b{color:var(--cinnabar);font-weight:500}
+.modal .tags{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0}
+.tag{font-size:11.5px;padding:3px 11px;border-radius:999px;border:1px solid var(--line);color:var(--gray);background:var(--paper)}
+.modal p{font-size:14px;color:#45423A;margin:0 0 12px}
+.modal .pic-block{border-top:1px dashed var(--line);padding-top:14px;margin-top:4px}
+.modal .pic-block .lab{font-family:var(--mono);font-size:11px;letter-spacing:.15em;color:var(--faint);margin-bottom:9px}
+.person{display:inline-flex;align-items:center;gap:8px;margin:0 14px 8px 0}
+.person .av{width:68px;height:68px;font-size:24px;margin-left:0;border-color:var(--paper)}
+.person span{font-size:13.5px}
+
+footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:center;font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.1em}
+
+/* ============ mobile ============ */
+@media (max-width:760px){
+  .row,.tl-sec{grid-template-columns:44px 1fr}
+  .spine{left:44px}
+  .year{grid-column:1;justify-self:center}
+  .year .badge{font-size:12.5px;padding:5px 9px}
+  .year-note,.year-note.l{grid-column:2;text-align:left;padding-left:16px}
+  .conn{grid-column:1}
+  .conn.to-l .wire,.conn.to-r .wire{left:50%;right:auto;width:calc(100% - 6px)}
+  .card.side-l,.card.side-r{grid-column:2;justify-self:stretch;max-width:none;margin-left:14px}
+  .card.anchored.side-l{border-right:1px solid var(--line);border-left:4px solid var(--cinnabar)}
+  .spanmark{left:44px}
+  .tl-sec .lab{grid-column:2;justify-self:start;margin-left:14px}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .card{transition:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="ic-teacup" viewBox="0 0 24 24"><path d="M4 10h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 7c0-1.2 1-1.4 1-2.6M12 7c0-1.2 1-1.4 1-2.6"/></symbol>
+<symbol id="ic-crt" viewBox="0 0 24 24"><rect x="3" y="5" width="15" height="12" rx="2"/><rect x="5.5" y="7.5" width="10" height="7" rx="1"/><circle cx="20.2" cy="9" r="1"/><circle cx="20.2" cy="13" r="1"/><path d="M7 20h8M9 17v3M13 17v3"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="9" rx="1.4"/><path d="M3 18h18l-2-4H5l-2 4z"/><path d="M10.5 16.5h3"/></symbol>
+<symbol id="ic-net" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="12" r="2"/><path d="M6.8 10.9 10.3 6.4M6.8 13.1l3.5 4.5M13.7 6.4l3.5 4.5M13.7 17.6l3.5-4.5"/></symbol>
+<symbol id="ic-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10" y="10" width="4" height="4"/><path d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3M7 9H4M7 12H4M7 15H4M20 9h-3M20 12h-3M20 15h-3"/></symbol>
+<symbol id="ic-speaker" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10"/></symbol>
+<symbol id="ic-knobs" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="12" r="2.2"/><path d="M8 12l1.4-1.4"/><circle cx="16" cy="12" r="2.2"/><path d="M16 12v-2.2"/></symbol>
+<symbol id="ic-cassette" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="9" cy="12" r="2"/><circle cx="15" cy="12" r="2"/><path d="M9 12h6"/><path d="M6 18l1.5-2.5h9L18 18"/></symbol>
+<symbol id="ic-disc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3.5A8.5 8.5 0 0 1 20.5 12" stroke-dasharray="2 2.4"/></symbol>
+<symbol id="ic-motion" viewBox="0 0 24 24"><circle cx="8" cy="12" r="2.4"/><path d="M13.5 7.5a7 7 0 0 1 0 9M16.5 5a11 11 0 0 1 0 14"/><path d="M8 14.5v4M8 9.5v-3"/></symbol>
+<symbol id="ic-wall" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></symbol>
+<symbol id="ic-board" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><circle cx="12" cy="12" r="1.6"/><circle cx="7.5" cy="7.5" r="1.2"/><circle cx="16.5" cy="7.5" r="1.2"/><circle cx="7.5" cy="16.5" r="1.2"/><circle cx="16.5" cy="16.5" r="1.2"/><path d="M13.5 6c1.6.8 2.8 2 3.4 3.6" stroke-dasharray="1.6 2"/></symbol>
+<symbol id="ic-robot" viewBox="0 0 24 24"><rect x="6" y="8" width="12" height="10" rx="2.5"/><circle cx="10" cy="12.5" r="1.1"/><circle cx="14" cy="12.5" r="1.1"/><path d="M10.5 15.8h3"/><path d="M12 8V5.5M12 5.5a1.2 1.2 0 1 1 .1-2.4"/><path d="M6 12H4M20 12h-2"/></symbol>
+<symbol id="ic-books" viewBox="0 0 24 24"><rect x="5" y="15.5" width="14" height="4" rx="1"/><rect x="7" y="10.5" width="12" height="4" rx="1" transform="rotate(-3 13 12.5)"/><rect x="6" y="5.5" width="11" height="4" rx="1" transform="rotate(2 11.5 7.5)"/></symbol>
+<symbol id="ic-shuffle" viewBox="0 0 24 24"><path d="M4 7h4l8 10h4M4 17h4l2.5-3.1M13.5 10.1 16 7h4"/><path d="M18 5l2.5 2L18 9M18 15l2.5 2L18 19"/></symbol>
+<symbol id="ic-film" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 5v14M16 5v14"/><path d="M4 9h4M4 13h4M4 17h4M16 9h4M16 13h4M16 17h4" stroke-width="1.1"/></symbol>
+</defs>
+</svg>
+
+<header>
+  <div class="kicker">Floating Projects Collective · 據點。句點</div>
+  <h1>FP <span class="num">5.0</span> 三年活動地圖</h1>
+  <p class="sub">一個藝術家自營媒體藝術空間嘅節目藍圖 — 由 2026 年秋開始，向 2029 伸展。</p>
+  <div class="mast-rule"><span>2026 → 2029 · JOCKEY CLUB CREATIVE ARTS CENTRE</span></div>
+</header>
+
+<div class="legend">
+  <div class="it"><span class="swatch-line"></span><span class="dot solid"></span> 日期已確定，實線釘喺時間軸</div>
+  <div class="it"><span class="swatch-dash"></span><span class="dot hollow"></span> 未定日期，虛線大約指向年份</div>
+  <div class="it"><span class="pill rec">循環系列</span> 會不斷重複發生</div>
+  <div class="it"><span class="pill once">一次性</span> 有頭有尾嘅項目</div>
+</div>
+
+<div class="tl">
+  <div class="spine" aria-hidden="true"></div>
+
+  <!-- ====== 2026 ====== -->
+  <div class="row tight">
+    <div class="year"><span class="badge">2026</span></div>
+    <div class="year-note">AUTUMN · FP5.0 開波</div>
+  </div>
+
+  <!-- anchored: May Fung -->
+  <div class="row">
+    <div class="card anchored side-l" data-id="mayfung" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-teacup"/></svg></div>
+        <div>
+          <div class="date">2026.10.17 · 日期已定</div>
+          <h3>May Fung amid Meshes of The Afternoon</h3>
+          <div class="short">Fountain Teatime 開幕場 — 馮美華以 Maya Deren 對照自己嘅實驗人生</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">馮</span><span class="av">L</span></div><span class="pill once">茶聚 · 第一場</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire"></span><span class="pin"></span></div>
+  </div>
+
+  <!-- anchored: Hector halloween -->
+  <div class="row">
+    <div class="conn to-r"><span class="wire"></span><span class="pin"></span></div>
+    <div class="card anchored side-r" data-id="halloween" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-disc"/></svg></div>
+        <div>
+          <div class="date">2026.10.30 · 日期已定</div>
+          <h3>萬聖節 Laserdisc 放映</h3>
+          <div class="short">Private Cine Club 首場：《變形邪魔》1956 + 1978 兩個版本連放</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 第一場</span></div>
+    </div>
+  </div>
+
+  <!-- ====== recurring series, pointing at year 1 ====== -->
+  <div class="tl-sec"><span class="lab">循環系列 — 由第一年開始，不斷重複</span></div>
+
+  <div class="row" style="min-height:120px">
+    <div class="spanmark" style="top:-6px;height:calc(100% + 500px)" aria-hidden="true"></div>
+    <div class="card side-l" data-id="teatime" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-teacup"/></svg></div>
+        <div>
+          <h3>Fountain Teatime 茶聚噴泉</h3>
+          <div class="short">請唔同嘉賓嚟講 being / living / doing / survival — 一年長嘅講座系列</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill rec">≈ 每月 ×1</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="cineclub" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-crt"/></svg></div>
+        <div>
+          <h3>Private Cine Club 私人放映會</h3>
+          <div class="short">幾部 CRT 電視同步播同一畫面，觀眾散落空間各角 — 即興、按主題</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill rec">≈ 兩個月 ×1</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="adminnight" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-laptop"/></svg></div>
+        <div>
+          <h3>Admin Night</h3>
+          <div class="short">帶部電腦上嚟做自己嘢，安靜如自修室，夾雜小型分享</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">A</span></div><span class="pill rec">≈ 每月 ×1</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="spatial" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-speaker"/></svg></div>
+        <div>
+          <h3>Spatial Calibration 空間校正</h3>
+          <div class="short">聲音表演試煉場 — 俾未夠經驗嘅 sound artist 落場</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">A</span></div><span class="pill rec">≈ 三個月 ×1</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="workshop" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-chip"/></svg></div>
+        <div>
+          <h3>Workshop 工作坊</h3>
+          <div class="short">Device-making 四節系列＋一至兩日 AI 起藝術家個人網站</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">A</span><span class="av">FK</span></div><span class="pill rec">不定期</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="modular" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-knobs"/></svg></div>
+        <div>
+          <h3>Synth / DAW / Modular 玩聲角</h3>
+          <div class="short">唔係活動，係 play room — 上嚟玩聲、錄聲</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">A</span><span class="av">FK</span></div><span class="pill rec">≈ 半年 ×1</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="mediaarch" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
+        <div>
+          <h3>媒體考古 Media Archaeology</h3>
+          <div class="short">Pop-up 展、講座、三個工作坊 — 貫穿全期嘅研究線</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">L</span><span class="av">H</span></div><span class="pill rec">分階段</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="stc" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-shuffle"/></svg></div>
+        <div>
+          <h3>Subject to Change</h3>
+          <div class="short">由三個字嘅重新排列衍生活動 — 刻意保持流動、未定形</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">HC</span></div><span class="pill rec">流動</span></div>
+    </div>
+  </div>
+
+  <!-- ====== 2027 ====== -->
+  <div class="row tight">
+    <div class="year-note l">一次性項目 · 大約落喺呢一年</div>
+    <div class="year"><span class="badge">2027</span></div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="ml" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-net"/></svg></div>
+        <div>
+          <h3>ML Series 學習系統的詩學</h3>
+          <div class="short">12 週兩軌課程：基礎編程＋ML 實作，配前後公開講座</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">H</span><span class="av">HG</span><span class="av">L</span></div><span class="pill once">12週 · 待批款</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="vcd" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-film"/></svg></div>
+        <div>
+          <h3>VCD Found-footage 公開徵集</h3>
+          <div class="short">用 FP 嘅 VCD 收藏創作：徵集 → 比賽 → 放映 → 書寫</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">W</span><span class="av">L</span></div><span class="pill once">一次性項目</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="fkinstall" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-motion"/></svg></div>
+        <div>
+          <h3>動作追蹤聲音裝置</h3>
+          <div class="short">Motion gesture tracking 聲音裝置展 — 大約一年後發生</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">FK</span></div><span class="pill once">展期 3–4 週</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="crtwall" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-wall"/></svg></div>
+        <div>
+          <h3>CRT TV Wall</h3>
+          <div class="short">流動影像 CRT 牆裝置，帶參與式成分 — 大約一年後發生</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">S</span></div><span class="pill once">展期 3–4 週</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="board" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-board"/></svg></div>
+        <div>
+          <h3>地形康樂棋</h3>
+          <div class="short">自己鬥木整嘅康樂棋 — 有山、草地、障礙物同特別規則</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">FP</span></div><span class="pill once">2027 · 製作＋開玩</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <!-- ====== 2028 ====== -->
+  <div class="row tight">
+    <div class="year"><span class="badge">2028</span></div>
+    <div class="year-note">第二至第三年 · 招牌項目回歸</div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="toy" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-robot"/></svg></div>
+        <div>
+          <h3>Toy as Medium #4</h3>
+          <div class="short">FP 招牌研究型項目第四輯 — 觀眾可以用手觸碰嘅玩具機器展</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">A</span></div><span class="pill once">展覽</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="tsundoku" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-books"/></svg></div>
+        <div>
+          <h3>Tsundoku 負載讀取</h3>
+          <div class="short">書山堆喺 FP 空間 — 開放周末做裝置同再創造</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">L</span><span class="av">FP</span></div><span class="pill once">開放周末</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <!-- ====== 2029 ====== -->
+  <div class="row tight">
+    <div class="year minor"><span class="badge">2029</span></div>
+    <div class="year-note">三年 line-up 收尾 · 下一個循環</div>
+  </div>
+
+</div>
+
+<footer>FLOATING PROJECTS 5.0 · 更新於 2026.08 · 內容按 FP 內部工作紙整理，日期以最新公佈為準</footer>
+
+<!-- ============ modal ============ -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="modal">
+    <button class="x" id="m-close" aria-label="關閉">✕</button>
+    <div class="head">
+      <div class="icon" id="m-icon"></div>
+      <div>
+        <h2 id="m-title"></h2>
+        <div class="meta" id="m-meta"></div>
+      </div>
+    </div>
+    <div class="tags" id="m-tags"></div>
+    <p id="m-desc"></p>
+    <div class="pic-block">
+      <div class="lab">PERSON(S) IN CHARGE</div>
+      <div id="m-pics"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CDN = 'https://fpchk.s3.ap-southeast-1.amazonaws.com/';
+const PEOPLE = {
+  L:  {name:'Linda Chiu-han Lai 黎肖嫻', init:'L',  photo:CDN+'2015/07/B-W_Linda_London2015_square.jpg'},
+  H:  {name:'Hector Rodriguez', init:'H'},
+  A:  {name:'LAI Chung-man Andio 黎仲民', init:'A', photo:CDN+'2015/07/10600667_10154046082295616_7776628200158255836_n.jpg'},
+  FK: {name:'WONG Fuk-kuen 黃福權', init:'FK',      photo:CDN+'fuk2022_7878ce00a9.jpg'},
+  W:  {name:'LAI Wai-leung 黎偉亮', init:'W',       photo:CDN+'2015/08/Wai_image02_sq-bw.jpg'},
+  S:  {name:'NG Sing-yiu Stanley 伍昇耀', init:'S', photo:CDN+'Stan_Ng_profile_image_026a672b60.jpg'},
+  HC: {name:'LAU Ho-chi 劉浩知', init:'HC',         photo:CDN+'Lau_Hochi_profile_1_8e5de784b5.jpg'},
+  HG: {name:'Hugo Yeung 楊鳴謙', init:'HG',         photo:CDN+'2015/07/Profile_BW_RGB-300dpi.jpg'},
+  MF: {name:'May Fung 馮美華', init:'馮'},
+  FP: {name:'FP 集體', init:'FP', photo:'https://floatingprojectscollective.net/fp-icon.png'}
+};
+function avHTML(k){
+  const p = PEOPLE[k];
+  if(!p) return '';
+  const inner = p.photo ? '<img src="'+p.photo+'" alt="'+p.name+'" loading="lazy">' : p.init;
+  return '<span class="av" data-person="'+k+'" title="'+p.name+'">'+inner+'</span>';
+}
+
+const DATA = {
+  mayfung: {icon:'ic-teacup', title:'May Fung amid Meshes of The Afternoon',
+    meta:'<b>2026.10.17</b> · Fountain Teatime 開幕場 · 日期已確定',
+    tags:['社群連結','標誌系列','講座'],
+    desc:'馮美華借 Maya Deren 嘅實驗短片《Meshes of the Afternoon》做參照，回望自己一路行過嚟嘅生活同存在方式 — 有時真實、有時超現實嘅一連串夢，交纏成一個以實驗精神為軸嘅存在。佢會放自己第一條短片《The Sea》（super 8，4 分鐘，數碼檔播放）打開話題。',
+    pics:['MF','L']},
+  halloween: {icon:'ic-disc', title:'萬聖節 Laserdisc 放映',
+    meta:'<b>2026.10.30</b> · Private Cine Club 首場 · 日期已確定',
+    tags:['有收入','社群連結','放映'],
+    desc:'Hector 從佢過百隻嘅 laserdisc 收藏揀片：《變形邪魔 Invasion of the Body Snatchers》1956 同 1978 兩個版本連放。技術上跟足 D1 規格 — 用分配放大器推幾部 CRT，唔用被動分線，保住每部電視都收到足電壓嘅訊號。',
+    pics:['H']},
+  teatime: {icon:'ic-teacup', title:'Fountain Teatime 茶聚噴泉',
+    meta:'循環系列 · ≈ 每月一次 · 一年長',
+    tags:['社群連結','標誌系列','實驗性'],
+    desc:'請唔同嘉賓嚟傾 being、living、doing、survival 同 interdisciplinarity。已接受邀請未定期：Jen Lee（跨物種思維）、Ocean Leung + Mark Chung（新藝術空間嘅孕育）、Lau Ho-chi（展覽製作作為職業）。待邀名單仲有 Elliot Leung、Lo Lai-lai、Ding Cheuk-laam、Zhang Zimu、Ryo 等；Jerry & Mandy（遊戲）留第二年。',
+    pics:['L']},
+  cineclub: {icon:'ic-crt', title:'Private Cine Club 私人放映會',
+    meta:'循環系列 · ≈ 兩個月一次 · 即興按主題',
+    tags:['有收入','社群連結','實驗性'],
+    desc:'唔係戲院式放映：三至四部舊 CRT 電視散落空間，同步播同一畫面，觀眾喺唔同角落各自圍住細電視睇 — 親密、可以傾偈、似裝置多過似戲院。強調 laserdisc / VCD 呢啲類比格式嘅暖度同質感。以會員制 cine-club 結構運作（法律細節仍需本地確認）。',
+    pics:['H']},
+  adminnight: {icon:'ic-laptop', title:'Admin Night',
+    meta:'循環系列 · ≈ 每月一次',
+    tags:['社群連結'],
+    desc:'空間閒置嘅時候開放：大家帶部電腦上嚟做自己積落嘅嘢，中間夾雜小型 presentation、書同動漫分享 — 參加者可做嘢可淨聽。基調安靜，似自修室，唔會有打機嘈吵環節。提供咖啡同 wifi，收入靠 donation。',
+    pics:['A']},
+  spatial: {icon:'ic-speaker', title:'Spatial Calibration 空間校正',
+    meta:'循環系列 · ≈ 三個月一次 · 聲音表演',
+    tags:['社群連結','實驗性','有收入'],
+    desc:'名字嚟自以前喺工廠大廈唔可以做公開演出，於是叫「聲壓測試」。重點係提供一個試煉場，俾經驗未夠嘅 sound artist 落場表演 — FP 負責場地、觀眾、海報設計同宣傳。',
+    pics:['A']},
+  workshop: {icon:'ic-chip', title:'Workshop 工作坊',
+    meta:'不定期 · 睇人手同檔期',
+    tags:['有收入','實驗性','社群連結'],
+    desc:'兩條線：Andio 嘅 device-making，暫定四節系列（仍待佢確認），教藝術家落手做硬件；Fuk-kuen 嘅藝術家個人網站工作坊 — 仲月月俾錢 WIX？用 AI 自己起一個，一日內或最多連續兩日搞掂。呢條線係最直接嘅收入來源。',
+    pics:['A','FK']},
+  modular: {icon:'ic-knobs', title:'Synth / DAW / Modular 玩聲角',
+    meta:'≈ 半年一次 · Play room',
+    tags:['實驗性','有收入'],
+    desc:'唔算係一個活動 — 係一個 play room：FP 擺出器材（FK 會帶埋自己嘅 modular），俾人上嚟玩聲、錄聲。現場租器材同 donation 做收入。可以同 artefact corner 合埋一齊做。',
+    pics:['A','FK']},
+  mediaarch: {icon:'ic-cassette', title:'媒體考古 Media Archaeology',
+    meta:'研究線 · 分階段展開',
+    tags:['實驗性','標誌系列'],
+    desc:'Linda 學術書寫嘅延伸：免費 pop-up 展（用返舊作材料）、講座「日常生活中嘅媒體考古時刻」、三個工作坊 — 影像地圖、驅動工具發明嘅「慾望」研究、追溯自己嘅創作系譜。同 Hector 嘅 laserdisc 線、香港媒體藝術調查出版計劃互相扣連。',
+    pics:['L','H']},
+  stc: {icon:'ic-shuffle', title:'Subject to Change',
+    meta:'流動 · 未定形',
+    tags:['實驗性'],
+    desc:'Ho-chi 嘅開放式新計劃：由 "subject"、"to"、"change" 三個字嘅重新排列衍生活動。刻意保持流動、未定形 — 所以喺呢張地圖上只標到節奏，標唔到內容。',
+    pics:['HC']},
+  ml: {icon:'ic-net', title:'ML Series 學習系統的詩學',
+    meta:'12 週課程 · 待 ADC 批款（申請 2026.12 交）',
+    tags:['有收入','社群連結','標誌系列'],
+    desc:'兩條平行軌道：Track 1 基礎編程（4 週）、Track 2 ML 實作（4 週），每節 3 小時，上限 30 人，用 Python / scikit-learn / PyTorch。Hector 主教；Linda 負責前置嘅「影像作為數據」講座（非技術）；Winnie Soon + Fiona Lau 嘅 lecture-performance；收尾係公開講座「Poetics of Infrastructure」。',
+    pics:['H','HG','L']},
+  vcd: {icon:'ic-film', title:'VCD Found-footage 公開徵集',
+    meta:'一次性項目 · 徵集 → 比賽 → 放映',
+    tags:['社群連結','標誌系列'],
+    desc:'用 FP 自己嘅 VCD 收藏做 found-footage 創作：講座打頭，然後公開徵集、比賽、放映、書寫。同 Wai 嘅 VCD shop 同 zine 系列「Wanna watch again」係同一條線。',
+    pics:['W','L']},
+  fkinstall: {icon:'ic-motion', title:'動作追蹤聲音裝置',
+    meta:'一次性展覽 · 展期 3–4 週 · 約 2027',
+    tags:['實驗性'],
+    desc:'Motion gesture tracking 聲音裝置，可以同 modular 一齊展出。一次性展覽，大約一年之後先發生 — 確實日期未定，所以喺呢度只虛指住 2027 呢條地平線。',
+    pics:['FK']},
+  crtwall: {icon:'ic-wall', title:'CRT TV Wall',
+    meta:'一次性展覽 · 展期 3–4 週 · 約 2027',
+    tags:['實驗性','社群連結'],
+    desc:'Sing 嘅流動影像 CRT 牆，帶參與式成分，FP 提供場地同 CRT。排期要留意：同 Private Cine Club 用緊同一批電視機 — 展覽霸機嗰段時間，放映要停或改單一投影。',
+    pics:['S']},
+  board: {icon:'ic-board', title:'地形康樂棋',
+    meta:'一次性 · 2027 · 製作＋開玩',
+    tags:['社群連結','實驗性'],
+    desc:'自己鬥木整嘅康樂棋：棋盤唔係普通正方形 — 上面有山、草地、障礙物；唔止四個窿，中間仲有好多窿；另加特別規則，例如用三隻棋圍住對手中間會死。邊個認頭做 lead 仲未定。',
+    pics:['FP']},
+  toy: {icon:'ic-robot', title:'Toy as Medium #4',
+    meta:'一次性展覽 · 約 2028',
+    tags:['標誌系列','社群連結','有收入'],
+    desc:'FP 招牌研究型項目，2016–2023 已做三輯。第四輯強調跨學科同媒體考古視角 — 觀眾可以用手觸碰物件嘅玩具機器展，由硬件工作坊長出嚟。',
+    pics:['A']},
+  tsundoku: {icon:'ic-books', title:'Tsundoku 負載讀取',
+    meta:'一次性 · 開放周末 · 約 2028–29',
+    tags:['社群連結'],
+    desc:'「積書」：一座書山堆喺 FP 空間度。開放周末做現場裝置；再嚟嘅周末做再創造 — 分類、堆山丘、另類閱讀方法、造新書。可以做 JCCAC 合作項目。',
+    pics:['L','FP']}
+};
+
+const overlay = document.getElementById('overlay');
+const mIcon = document.getElementById('m-icon');
+const mTitle = document.getElementById('m-title');
+const mMeta = document.getElementById('m-meta');
+const mTags = document.getElementById('m-tags');
+const mDesc = document.getElementById('m-desc');
+const mPics = document.getElementById('m-pics');
+let lastFocus = null;
+
+function openModal(id){
+  const d = DATA[id];
+  if(!d) return;
+  mIcon.innerHTML = '<svg><use href="#'+d.icon+'"/></svg>';
+  mTitle.textContent = d.title;
+  mMeta.innerHTML = d.meta;
+  mTags.innerHTML = d.tags.map(t=>'<span class="tag">'+t+'</span>').join('');
+  mDesc.textContent = d.desc;
+  mPics.innerHTML = d.pics.map(k=>{
+    const p = PEOPLE[k];
+    return '<span class="person">'+avHTML(k)+'<span>'+p.name+'</span></span>';
+  }).join('');
+  lastFocus = document.activeElement;
+  overlay.classList.add('open');
+  document.getElementById('m-close').focus();
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  if(lastFocus) lastFocus.focus();
+}
+
+document.querySelectorAll('.card').forEach(c=>{
+  const d = DATA[c.dataset.id];
+  const picsEl = c.querySelector('.pics');
+  if(d && picsEl) picsEl.innerHTML = d.pics.map(avHTML).join('');
+  c.addEventListener('click', ()=>openModal(c.dataset.id));
+  c.addEventListener('keydown', e=>{
+    if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openModal(c.dataset.id); }
+  });
+});
+document.getElementById('m-close').addEventListener('click', closeModal);
+overlay.addEventListener('click', e=>{ if(e.target===overlay) closeModal(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+</script>
+</body>
+</html>
