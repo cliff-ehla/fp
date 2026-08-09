@@ -2,11 +2,14 @@
     import { auth } from '$lib/firebase.js';
     import { onAuthStateChanged } from 'firebase/auth';
     import { onMount } from 'svelte';
+    import { page } from '$app/stores';
     import PostForm from '$lib/components/PostForm.svelte';
     
     let isAdmin = false;
     let loading = true;
     const ADMIN_EMAILS = ['fukkuen.work@gmail.com'];
+    
+    $: postId = $page.params.id;
 
     onMount(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -27,7 +30,7 @@
         <div class="flex items-center justify-center h-full text-gray-400 mt-20">Loading...</div>
     {:else if isAdmin}
         <div class="max-w-[1200px] mx-auto">
-            <PostForm />
+            <PostForm {postId} />
         </div>
     {/if}
 </div>
