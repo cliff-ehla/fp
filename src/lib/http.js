@@ -1,31 +1,28 @@
-const env = import.meta.env.VITE_ENV
-const VITE_API_BASE = env === 'dev' ? import.meta.env.VITE_DEV_API_BASE : import.meta.env.VITE_API_BASE
-const VITE_STRAPI_TOKEN = env === 'dev' ? import.meta.env.VITE_DEV_STRAPI_TOKEN : import.meta.env.VITE_STRAPI_TOKEN
 import qs from "qs"
 
+const VITE_API_BASE = import.meta.env.VITE_API_BASE || 'https://asia-east2-empower-b4b4a.cloudfunctions.net'
+const VITE_STRAPI_TOKEN = import.meta.env.VITE_STRAPI_TOKEN
+
 const onRes = async (res) => {
+	if (!res.ok) {
+		const text = await res.text()
+		throw new Error(`HTTP ${res.status}: ${text}`)
+	}
 	return await res.json()
 }
 
 const getQueryUrl = (resource, query) => {
-	let url = `${resource}?${qs.stringify(query, {
-		encodeValuesOnly: true, // prettify URL
+	if (!query || Object.keys(query).length === 0) return resource
+	return `${resource}?${qs.stringify(query, {
+		encodeValuesOnly: true
 	})}`
-	console.log('AAA', url)
-	if (query) {
-		for (const property in query) {
-			let char = resource.includes('?') ? '&' : '?'
-			resource += `${char}${property}=${query[property]}`
-		}
-	}
-	console.log('BBB', resource)
-	return url
 }
 
 const http = (() => {
-	async function get (fetch, resource, query) {
-		resource = getQueryUrl(resource, query)
-		const res = await fetch(`${VITE_API_BASE}/api` + resource, {
+	async function get (fetchFn, resource, query) {
+		const urlPath = getQueryUrl(resource, query)
+		const fullUrl = `${VITE_API_BASE}/api${urlPath}`
+		const res = await (fetchFn || fetch)(fullUrl, {
 			headers: {
 				'Authorization': `bearer ${VITE_STRAPI_TOKEN}`
 			}
@@ -33,15 +30,15 @@ const http = (() => {
 		return onRes(res)
 	}
 
-	// an empty object is necessary, otherwise result fatal error when not passing body params
-	async function post (fetch, resource, body = {}, config = {}) {
-		const res = await fetch(`${VITE_API_BASE}/api` + resource, {
+	async function post (fetchFn, resource, body = {}) {
+		const fullUrl = `${VITE_API_BASE}/api${resource}`
+		const res = await (fetchFn || fetch)(fullUrl, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 				'Authorization': `bearer ${VITE_STRAPI_TOKEN}`
 			},
-			body: body && JSON.stringify(body)
+			body: JSON.stringify(body)
 		})
 		return onRes(res)
 	}
