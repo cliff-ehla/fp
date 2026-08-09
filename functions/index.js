@@ -236,70 +236,72 @@ const handlePosts = async (req, res) => {
             searchQuery = firstOr?.title?.$containsi || firstOr?.content?.$containsi;
         }
 
-        let snapshot = await db.collection('posts').get();
-        let docs = snapshot.docs;
+        let query = db.collection('posts');
 
-        // Apply filters in memory for max flexibility across composite objects
         if (slug) {
-            docs = docs.filter(doc => doc.data().slug === slug);
+            query = query.where('slug', '==', slug);
         }
         if (categorySlug) {
-            docs = docs.filter(doc => doc.data().category?.slug === categorySlug);
+            query = query.where('category.slug', '==', categorySlug);
         }
         if (authorSlug) {
-            docs = docs.filter(doc => {
-                const authors = doc.data().authors || [];
-                return authors.some(a => a.slug === authorSlug);
-            });
+            query = query.where('author_slugs', 'array-contains', authorSlug);
         }
         if (tagSlug) {
-            docs = docs.filter(doc => {
-                const tags = doc.data().tags || [];
-                return tags.some(t => t.slug === tagSlug);
-            });
+            query = query.where('tag_slugs', 'array-contains', tagSlug);
         }
+
+        const sort = req.query.sort;
+        let [field, direction] = sort ? sort.split(':') : ['createdAt', 'desc'];
+        if (field === 'created_at') field = 'createdAt';
+        const isDesc = direction === 'desc';
+
+        const pageSize = parseInt(req.query.pagination?.pageSize) || 10;
+        const page = parseInt(req.query.pagination?.page) || 1;
+        const pageCountFn = (t) => Math.ceil(t / pageSize) || 1;
+
+        let docs = [];
+        let total = 0;
+
         if (searchQuery) {
+            // Fallback: Firestore lacks full-text search, so download filtered subset & search in memory
+            const snapshot = await query.get();
+            let allDocs = snapshot.docs;
+
             const sq = searchQuery.toLowerCase();
-            docs = docs.filter(doc => {
+            allDocs = allDocs.filter(doc => {
                 const data = doc.data();
                 return (data.title && data.title.toLowerCase().includes(sq)) || 
                        (data.content && data.content.toLowerCase().includes(sq));
             });
-        }
 
-        // Handle sort
-        const sort = req.query.sort;
-        if (sort) {
-            const [field, direction] = sort.split(':');
-            const isDesc = direction === 'desc';
-            docs.sort((a, b) => {
+            allDocs.sort((a, b) => {
                 let valA = a.data()[field] || a.data()[field === 'createdAt' ? 'created_at' : field] || '';
                 let valB = b.data()[field] || b.data()[field === 'createdAt' ? 'created_at' : field] || '';
                 if (valA < valB) return isDesc ? 1 : -1;
                 if (valA > valB) return isDesc ? -1 : 1;
                 return 0;
             });
+
+            total = allDocs.length;
+            docs = allDocs.slice((page - 1) * pageSize, page * pageSize);
         } else {
-            docs.sort((a, b) => {
-                let valA = a.data().createdAt || a.data().created_at || '';
-                let valB = b.data().createdAt || b.data().created_at || '';
-                return valA < valB ? 1 : (valA > valB ? -1 : 0);
-            });
+            // Native highly-optimized Firestore query
+            query = query.orderBy(field, direction);
+            
+            const countSnapshot = await query.count().get();
+            total = countSnapshot.data().count;
+
+            const snapshot = await query.offset((page - 1) * pageSize).limit(pageSize).get();
+            docs = snapshot.docs;
         }
 
-        // Pagination
-        const total = docs.length;
-        const pageSize = parseInt(req.query.pagination?.pageSize) || 10;
-        const page = parseInt(req.query.pagination?.page) || 1;
-        const pageCount = Math.ceil(total / pageSize) || 1;
-        const paginatedDocs = docs.slice((page - 1) * pageSize, page * pageSize);
-
-        const formattedData = paginatedDocs.map(formatStrapiPost);
+        const formattedData = docs.map(formatStrapiPost);
 
         res.json({
             data: formattedData,
             meta: {
-                pagination: { page, pageSize, total, pageCount }
+                pagination: { page, pageSize, total, pageCount: pageCountFn(total) }
             }
         });
     } catch (error) {
@@ -325,63 +327,67 @@ const handleEvents = async (req, res) => {
             searchQuery = firstOr?.title?.$containsi || firstOr?.content?.$containsi;
         }
 
-        let snapshot = await db.collection('events').get();
-        let docs = snapshot.docs;
+        let query = db.collection('events');
 
         if (slug) {
-            docs = docs.filter(doc => doc.data().slug === slug);
+            query = query.where('slug', '==', slug);
         }
         if (categorySlug) {
-            docs = docs.filter(doc => doc.data().category?.slug === categorySlug);
+            query = query.where('category.slug', '==', categorySlug);
         }
         if (artistSlug) {
-            docs = docs.filter(doc => {
-                const artists = doc.data().artists || [];
-                return artists.some(a => a.slug === artistSlug);
-            });
+            query = query.where('artist_slugs', 'array-contains', artistSlug);
         }
+
+        const sort = req.query.sort;
+        let [field, direction] = sort ? sort.split(':') : ['startDate', 'desc'];
+        if (field === 'start_date') field = 'startDate';
+        const isDesc = direction === 'desc';
+
+        const pageSize = parseInt(req.query.pagination?.pageSize) || 10;
+        const page = parseInt(req.query.pagination?.page) || 1;
+        const pageCountFn = (t) => Math.ceil(t / pageSize) || 1;
+
+        let docs = [];
+        let total = 0;
+
         if (searchQuery) {
+            const snapshot = await query.get();
+            let allDocs = snapshot.docs;
+
             const sq = searchQuery.toLowerCase();
-            docs = docs.filter(doc => {
+            allDocs = allDocs.filter(doc => {
                 const data = doc.data();
                 return (data.title && data.title.toLowerCase().includes(sq)) || 
                        (data.content && data.content.toLowerCase().includes(sq));
             });
-        }
 
-        // Sort
-        const sort = req.query.sort;
-        if (sort) {
-            let [field, direction] = sort.split(':');
-            if (field === 'start_date') field = 'startDate';
-            const isDesc = direction === 'desc';
-            docs.sort((a, b) => {
+            allDocs.sort((a, b) => {
                 let valA = a.data()[field] || a.data()[field === 'startDate' ? 'start_date' : field] || '';
                 let valB = b.data()[field] || b.data()[field === 'startDate' ? 'start_date' : field] || '';
                 if (valA < valB) return isDesc ? 1 : -1;
                 if (valA > valB) return isDesc ? -1 : 1;
                 return 0;
             });
+
+            total = allDocs.length;
+            docs = allDocs.slice((page - 1) * pageSize, page * pageSize);
         } else {
-            docs.sort((a, b) => {
-                let valA = a.data().startDate || a.data().start_date || '';
-                let valB = b.data().startDate || b.data().start_date || '';
-                return valA < valB ? 1 : (valA > valB ? -1 : 0);
-            });
+            query = query.orderBy(field, direction);
+            
+            const countSnapshot = await query.count().get();
+            total = countSnapshot.data().count;
+
+            const snapshot = await query.offset((page - 1) * pageSize).limit(pageSize).get();
+            docs = snapshot.docs;
         }
 
-        const total = docs.length;
-        const pageSize = parseInt(req.query.pagination?.pageSize) || 10;
-        const page = parseInt(req.query.pagination?.page) || 1;
-        const pageCount = Math.ceil(total / pageSize) || 1;
-        const paginatedDocs = docs.slice((page - 1) * pageSize, page * pageSize);
-
-        const formattedData = paginatedDocs.map(formatStrapiEvent);
+        const formattedData = docs.map(formatStrapiEvent);
 
         res.json({
             data: formattedData,
             meta: {
-                pagination: { page, pageSize, total, pageCount }
+                pagination: { page, pageSize, total, pageCount: pageCountFn(total) }
             }
         });
     } catch (error) {
