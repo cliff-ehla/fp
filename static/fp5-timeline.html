@@ -44,6 +44,19 @@ h1 .num{color:var(--cinnabar)}
 .mast-rule::before,.mast-rule::after{content:"";flex:1;border-top:1px solid var(--ink)}
 .mast-rule span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--gray)}
 
+/* ============ artist bar ============ */
+.artist-bar{max-width:760px;margin:20px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:center}
+.artist-bar-label{font-family:var(--mono);font-size:11px;letter-spacing:.15em;color:var(--faint);text-transform:uppercase}
+.artist-avs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.artist-av{
+  width:44px;height:44px;border-radius:50%;flex:none;padding:0;
+  border:2px solid var(--card);box-shadow:0 0 0 1.5px var(--line);
+  background:var(--card);cursor:pointer;overflow:hidden;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.artist-av:hover,.artist-av:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 2px var(--cinnabar)}
+.artist-av img{width:100%;height:100%;object-fit:cover;display:block}
+
 /* ============ legend ============ */
 .legend{max-width:760px;margin:26px auto 10px;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;font-size:12.5px;color:var(--gray)}
 .legend .it{display:flex;align-items:center;gap:8px}
@@ -190,6 +203,26 @@ h1 .num{color:var(--cinnabar)}
 .person .av{width:68px;height:68px;font-size:24px;margin-left:0;border-color:var(--paper)}
 .person span{font-size:13.5px}
 
+/* ============ person modal list ============ */
+.person-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.person-item{
+  display:flex;align-items:center;gap:12px;text-align:left;width:100%;
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  padding:9px 13px;cursor:pointer;font-family:var(--sans);
+  transition:border-color .15s ease, transform .15s ease;
+}
+.person-item:hover,.person-item:focus-visible{border-color:var(--ink);transform:translateX(2px)}
+.pi-icon{flex:none;width:34px;height:34px;border-radius:9px;border:1.2px solid var(--ink);background:var(--card);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pi-icon svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pi-icon img{width:100%;height:100%;object-fit:contain}
+.pi-title{font-size:14px;color:var(--ink);line-height:1.4}
+
+@keyframes cardFlash{
+  0%,100%{box-shadow:0 0 0 0 rgba(184,64,29,0)}
+  25%,75%{box-shadow:0 0 0 4px rgba(184,64,29,.35)}
+}
+.card.flash{animation:cardFlash 1.4s ease}
+
 footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:center;font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.1em}
 
 /* ============ mobile ============ */
@@ -241,6 +274,11 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
   <p class="sub">一個藝術家自營媒體藝術空間嘅節目藍圖 — 由 2026 年秋開始，向 2029 伸展。</p>
   <div class="mast-rule"><span>2026 → 2029 · JOCKEY CLUB CREATIVE ARTS CENTRE</span></div>
 </header>
+
+<div class="artist-bar">
+  <span class="artist-bar-label">按人物睇節目</span>
+  <div class="artist-avs" id="artist-avs"></div>
+</div>
 
 <div class="legend">
   <div class="it"><span class="swatch-line"></span><span class="dot solid"></span> 日期已確定，實線釘喺時間軸</div>
@@ -477,7 +515,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
           <div class="short">自己鬥木整嘅康樂棋 — 有山、草地、障礙物同特別規則</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">FP</span></div><span class="pill once">2027 · 製作＋開玩</span></div>
+      <div class="foot"><div class="pics"><span class="av">S</span><span class="av">FK</span></div><span class="pill once">2027 · 製作＋開玩</span></div>
     </div>
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
@@ -543,6 +581,21 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       <div class="lab">PERSON(S) IN CHARGE</div>
       <div id="m-pics"></div>
     </div>
+  </div>
+</div>
+
+<!-- ============ person modal ============ -->
+<div class="overlay" id="p-overlay" role="dialog" aria-modal="true" aria-labelledby="p-title">
+  <div class="modal">
+    <button class="x" id="p-close" aria-label="關閉">✕</button>
+    <div class="head">
+      <div class="icon img-icon" id="p-icon"></div>
+      <div>
+        <h2 id="p-title"></h2>
+        <div class="meta" id="p-meta"></div>
+      </div>
+    </div>
+    <div id="p-list" class="person-list"></div>
   </div>
 </div>
 
@@ -676,8 +729,8 @@ const DATA = {
   board: {icon:'ic-board', title:'地形康樂棋',
     meta:'一次性 · 2027 · 製作＋開玩',
     tags:['社群連結','實驗性'],
-    desc:'自己鬥木整嘅康樂棋：棋盤唔係普通正方形 — 上面有山、草地、障礙物；唔止四個窿，中間仲有好多窿；另加特別規則，例如用三隻棋圍住對手中間會死。邊個認頭做 lead 仲未定。',
-    pics:['FP']},
+    desc:'自己鬥木整嘅康樂棋：棋盤唔係普通正方形 — 上面有山、草地、障礙物；唔止四個窿，中間仲有好多窿；另加特別規則，例如用三隻棋圍住對手中間會死。由 Ng Sing 同 Fuk-kuen 認頭做 lead。',
+    pics:['S','FK']},
   toy: {icon:'ic-robot', title:'Toy as Medium #4',
     meta:'一次性展覽 · 約 2028',
     tags:['標誌系列','社群連結','有收入'],
@@ -755,7 +808,86 @@ document.querySelectorAll('.card').forEach(c=>{
 });
 document.getElementById('m-close').addEventListener('click', closeModal);
 overlay.addEventListener('click', e=>{ if(e.target===overlay) closeModal(); });
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+
+/* ============ artist bar + person modal ============ */
+const PERSON_ITEMS = {};
+Object.keys(DATA).forEach(id=>{
+  (DATA[id].pics || []).forEach(k=>{
+    (PERSON_ITEMS[k] = PERSON_ITEMS[k] || []).push(id);
+  });
+});
+
+const pOverlay = document.getElementById('p-overlay');
+const pIcon = document.getElementById('p-icon');
+const pTitle = document.getElementById('p-title');
+const pMeta = document.getElementById('p-meta');
+const pList = document.getElementById('p-list');
+let lastFocusP = null;
+
+function scrollToCard(id){
+  const card = document.querySelector('.card[data-id="'+id+'"]');
+  if(!card) return;
+  card.scrollIntoView({behavior:'smooth', block:'center'});
+  card.classList.remove('flash');
+  // restart animation even if triggered twice in a row
+  void card.offsetWidth;
+  card.classList.add('flash');
+  setTimeout(()=>card.classList.remove('flash'), 1500);
+}
+
+function openPersonModal(k){
+  const p = PEOPLE[k];
+  const ids = PERSON_ITEMS[k] || [];
+  if(!p || !ids.length) return;
+  pIcon.innerHTML = '<img src="'+p.photo+'" alt="'+p.name+'">';
+  pTitle.textContent = p.name;
+  pMeta.textContent = ids.length + ' 個相關節目';
+  pList.innerHTML = ids.map(id=>{
+    const d = DATA[id];
+    return '<button class="person-item" type="button" data-target="'+id+'">'
+      + '<span class="pi-icon">'+iconHTML(id, d.icon)+'</span>'
+      + '<span class="pi-title">'+d.title+'</span>'
+      + '</button>';
+  }).join('');
+  pList.querySelectorAll('.person-item').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const target = btn.dataset.target;
+      closePersonModal();
+      setTimeout(()=>scrollToCard(target), 50);
+    });
+  });
+  lastFocusP = document.activeElement;
+  pOverlay.classList.add('open');
+  document.getElementById('p-close').focus();
+  document.body.style.overflow = 'hidden';
+}
+function closePersonModal(){
+  pOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+  if(lastFocusP) lastFocusP.focus();
+}
+document.getElementById('p-close').addEventListener('click', closePersonModal);
+pOverlay.addEventListener('click', e=>{ if(e.target===pOverlay) closePersonModal(); });
+
+const artistAvs = document.getElementById('artist-avs');
+Object.keys(PEOPLE).forEach(k=>{
+  const p = PEOPLE[k];
+  if(!p.photo || !(PERSON_ITEMS[k] || []).length) return;
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'artist-av';
+  btn.title = p.name;
+  btn.setAttribute('aria-label', p.name);
+  btn.innerHTML = '<img src="'+p.photo+'" alt="'+p.name+'" loading="lazy">';
+  btn.addEventListener('click', ()=>openPersonModal(k));
+  artistAvs.appendChild(btn);
+});
+
+document.addEventListener('keydown', e=>{
+  if(e.key !== 'Escape') return;
+  if(pOverlay.classList.contains('open')) closePersonModal();
+  else if(overlay.classList.contains('open')) closeModal();
+});
 </script>
 </body>
 </html>
