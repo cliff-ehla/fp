@@ -18,3 +18,5 @@ vite.config.ts.timestamp-*
 *.sql
 error_temp.html
 scratch/
+# Firebase deploy cache
+.firebase/
