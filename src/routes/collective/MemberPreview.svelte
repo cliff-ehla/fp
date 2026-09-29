@@ -16,8 +16,5 @@
 	{#if member.attributes.founding_member}
 		<div class="uppercase text-center text-[11px] bg-black bg-opacity-60 text-white px-2 py-0.5 absolute transform -translate-x-1/2 left-1/2 bottom-8">Founding member</div>
 	{/if}
-	{#if member.attributes.oversea_affiliate}
-		<div class="uppercase text-center text-[11px] bg-white border border-gray-400 bg-opacity-90 px-2 py-0.5 absolute transform -translate-x-1/2 left-1/2 bottom-8">Oversea Affiliate</div>
-	{/if}
 	<p class="text-center mt-1 text-xl text-gray-700">{member.attributes.name}</p>
 </a>
