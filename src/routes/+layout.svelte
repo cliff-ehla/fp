@@ -21,6 +21,10 @@
 			subtitle: 'Signature Projects',
 			href: '/signature-projects'
 		},{
+			title: '三年活動地圖',
+			subtitle: 'Timeline',
+			href: '/timeline'
+		},{
 			title: '關於我們',
 			subtitle: 'About',
 			href: '/about/introduction'
