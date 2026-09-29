@@ -9,6 +9,7 @@
 	   also the display order. */
 	const active_player_slugs = [
 		'linda',         // Linda Chiu-han Lai 黎肖嫻
+		'hector',        // Hector Rodriguez 羅海德
 		'fkwong',        // WONG Fuk-kuen 黃福權
 		'andiolai',      // LAI Chung-man Andio 黎仲民
 		'hugoyeung',     // Hugo Yeung 楊鳴謙
@@ -17,7 +18,6 @@
 		'kinchoi',       // Kin-choi Lam 林建才
 		'stanley-ng',    // NG Sing-yiu Stanley 伍昇耀
 		'kel',           // Kel Lok 駱敏聰
-		'hector',        // Hector Rodriguez 羅海德 — needs is_member set on his record
 		'lau-ho-chi',    // LAU Ho-chi 劉浩知
 		'wai'            // LAI Wai-leung 黎偉亮
 	]

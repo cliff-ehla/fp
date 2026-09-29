@@ -18,6 +18,14 @@ MANIFEST="src/lib/member-thumbs.json"
 SIZE=384
 QUALITY=80
 
+# Members whose photo is not in the CMS, so there is nothing for the API to
+# hand us. Paths are relative to the repo root. Used only when the API has no
+# image for that slug, so adding the photo to the CMS later wins automatically.
+LOCAL_SOURCES=$(cat <<'EOF'
+hector	static/fp5icon/hector.jpg
+EOF
+)
+
 command -v cwebp >/dev/null || { echo "cwebp not found — brew install webp"; exit 1; }
 command -v sips  >/dev/null || { echo "sips not found — this script needs macOS"; exit 1; }
 
@@ -45,6 +53,17 @@ const imageBase = process.argv[2];
 });
 ' "$TMP/authors.json" "$IMAGE_BASE" > "$TMP/list.tsv"
 
+# fill the gaps the CMS cannot
+while IFS=$'\t' read -r slug path; do
+  [ -z "$slug" ] && continue
+  if cut -f1 "$TMP/list.tsv" | grep -qx "$slug"; then continue; fi
+  if [ -f "$path" ]; then
+    printf '%s\t%s\n' "$slug" "$path" >> "$TMP/list.tsv"
+  else
+    echo "  local source for $slug missing: $path"
+  fi
+done <<< "$LOCAL_SOURCES"
+
 mkdir -p "$OUT_DIR"
 made=0
 : > "$TMP/manifest.tsv"
@@ -54,10 +73,17 @@ while IFS=$'\t' read -r slug url; do
   # sips picks its output format from the file extension, so every
   # intermediate here stays .jpg
   src="$TMP/$slug.src.jpg"
-  if ! curl -sfL "$url" --max-time 60 -o "$src"; then
-    echo "  skip $slug — could not fetch"
-    continue
-  fi
+  case "$url" in
+    http*)
+      if ! curl -sfL "$url" --max-time 60 -o "$src"; then
+        echo "  skip $slug — could not fetch"
+        continue
+      fi
+      ;;
+    *)
+      cp "$url" "$src"
+      ;;
+  esac
 
   # scale the short edge up to SIZE, then crop the long edge off centre,
   # so the circle is filled rather than letterboxed
