@@ -1,32 +1,40 @@
 <script>
 	export let data
 	import dayjs from "dayjs";
+	import thumbs from '../../../lib/member-thumbs.json'
 	$: member = data.member
 	$: posts = data.posts.data
 	$: events = data.events.data
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
+	$: a = member.attributes
+	$: src = thumbs[a.slug]
+		|| (a.image && a.image.data ? a.image.data.attributes.url : null)
+		|| (a.wp_url ? VITE_IMAGE_BASE + a.wp_url : null)
 </script>
 
 <div class="container py-8">
-	<a href="/collective/{member.attributes.slug}">
-		{#if member.attributes.image.data}
-			<div style="background-image: url({member.attributes.image.data.attributes.url})"
-			     class="rounded-full shadow-lg mx-auto w-48 h-48 bg-gray-100 border-8 border-gray-300 bg-center bg-cover"></div>
-		{:else if member.attributes.wp_url}
-			<div style="background-image: url({VITE_IMAGE_BASE}{member.attributes.wp_url})"
-			     class="rounded-full shadow-lg mx-auto w-48 h-48 bg-gray-100 border-8 border-gray-300 bg-center bg-cover"></div>
+	<a href="/collective/{a.slug}">
+		{#if src}
+			<img
+				{src}
+				alt={a.name}
+				width="384"
+				height="384"
+				class="rounded-full shadow-lg mx-auto w-48 h-48 bg-gray-100 border-8 border-gray-300 object-cover"/>
 		{:else}
 			<div class="rounded-full shadow-lg mx-auto w-48 h-48 bg-gray-100 border-8 border-gray-300"></div>
 		{/if}
 	</a>
 	<div class="max-w-md mx-auto mt-4">
-		<p class="text-center text-2xl">{member.attributes.name}</p>
-		{#if member.attributes.title}
-			<p class="text-center">{member.attributes.title}</p>
+		<p class="text-center text-2xl">{a.name}</p>
+		{#if a.title}
+			<p class="text-center">{a.title}</p>
 		{/if}
-		<div class="text-center text-gray-500 underline my-2">
-			<a href={member.attributes.external_url} target="_blank">{member.attributes.external_url}</a>
-		</div>
+		{#if a.external_url}
+			<div class="text-center text-gray-500 underline my-2">
+				<a href={a.external_url} target="_blank" rel="noopener noreferrer">{a.external_url}</a>
+			</div>
+		{/if}
 		<p class="mt-4 leading-loose text-gray-600">{@html member.attributes.profile}</p>
 
 		<div class="my-4">
