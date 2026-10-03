@@ -217,9 +217,16 @@
 .fp5-timeline .modal .desc{margin-top:14px}
 .fp5-timeline .modal .club-desc{margin:4px 0 16px;padding-top:14px;border-top:1px dashed var(--line)}
 .fp5-timeline .modal .club-desc:empty{display:none;margin:0;padding:0;border:none}
-.fp5-timeline .club-desc-lab{font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--cinnabar);text-transform:uppercase;margin-bottom:8px}
+.fp5-timeline .club-desc-lab{font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--cinnabar);text-transform:uppercase;margin-bottom:10px}
+.fp5-timeline .club-desc-row{display:flex;align-items:flex-start;gap:16px}
+.fp5-timeline .club-desc-img{flex:none;width:128px;height:auto;border-radius:8px;object-fit:contain;background:var(--paper)}
+.fp5-timeline .club-desc-copy{min-width:0;flex:1}
 .fp5-timeline .modal .club-desc p{font-size:14px;color:#45423A;margin:0 0 12px}
 .fp5-timeline .modal .club-desc p:last-child{margin-bottom:0}
+@media (max-width:760px){
+  .fp5-timeline .club-desc-row{flex-direction:column;gap:12px}
+  .fp5-timeline .club-desc-img{width:160px}
+}
 .fp5-timeline .modal .tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 8px;padding-top:14px;border-top:1px dashed var(--line)}
 .fp5-timeline .modal .tags:empty{display:none;margin:0;padding:0;border:none}
 .fp5-timeline .tag{font-size:11.5px;padding:3px 11px;border-radius:999px;border:1px solid var(--line);color:var(--gray);background:var(--paper)}

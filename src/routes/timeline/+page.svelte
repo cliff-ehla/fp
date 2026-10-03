@@ -335,6 +335,7 @@
 		const CLUBS = {
 		  laserframes: {
 		    en:'LaserFrames Cine Club', zh:'雷射視盤',
+		    img:'/fp5icon/F_Club_LaserFrames.jpg',
 		    desc:[
 		      'In the form of a private cine club, visitors register for an FP private club membership to join discussion and media sharing events. They may join by season to participate in all events.',
 		      '以 private cine club 形式運作：參加者須預先登記會籍，方可參與討論同 media sharing。可以按季加入，參與該季全部場次。放映用三至四部 CRT 電視散落空間同步播放，似裝置多過似戲院。'
@@ -342,6 +343,7 @@
 		  },
 		  clubma: {
 		    en:'Club-MA', zh:'媒體考古',
+		    img:'/fp5icon/F_Club_MA.jpg',
 		    desc:[
 		      'Club Media Archaeology proceeds in 3 phases: (1) lectures as tale-telling; (2) workshops with research and an introspective look at one\'s own artistic journeys; (3) a group exhibition of two-year learning. Each phase has 3–4 three-hour meetings. Members may join one, two, or all three phases.',
 		      'Club-MA 由 Linda Lai 主持，分三個 phase：講座 → 展覽製作工作坊 → 在地群展。每個 phase 3–4 次、每次 3 小時；可以揀參加一個、兩個或全部 phase。'
@@ -402,7 +404,10 @@
 		  const isClubOverview = id === 'cineclub' || id === 'mediaarch';
 		  if(club && !isClubOverview){
 		    mClub.innerHTML = '<div class="club-desc-lab">'+club.en+'</div>'
-		      + club.desc.map(p=>'<p>'+p+'</p>').join('');
+		      + '<div class="club-desc-row">'
+		      + (club.img ? '<img class="club-desc-img" src="'+club.img+'" alt="'+club.en+'">' : '')
+		      + '<div class="club-desc-copy">'+club.desc.map(p=>'<p>'+p+'</p>').join('')+'</div>'
+		      + '</div>';
 		  } else {
 		    mClub.innerHTML = '';
 		  }
