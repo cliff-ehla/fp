@@ -116,8 +116,8 @@
 		    tags:['社群連結','標誌系列','講座'],
 		    desc:'策展人、博士後研究員 Jen Lee 主講：喺一個「超越人類」嘅世界裡面，存在、經驗、感知同認知各自意味著咩。接住 10 月 May Fung 場，係噴泉茶聚第二場。',
 		    pics:['JL','L']},
-		  cineclub: {icon:'ic-crt', title:'Laser Frames 不一樣的畫幀：雷射視盤',
-		    meta:'循環系列 · 2026–2029 · 4 節 × 2 輯 · 需預先登記',
+		  cineclub: {icon:'ic-crt', title:'LaserFrames Cine Club · 雷射視盤',
+		    meta:'Clubs & Series · 循環系列 · 2026–2029 · 4 節 × 2 輯 · 需預先登記',
 		    tags:['有收入','社群連結','實驗性','媒體考古'],
 		    desc:['把賽璐珞電影轉上 laserdisc 唔止係保存一份拷貝。Laserdisc 唔同 VHS、VCD、DVD、Blu-ray 呢啲替代技術版本 — 佢係類比媒體，畫幀以連續流嘅方式存在，唔經數碼轉換。佢係一套獨特嘅儲存系統，而佢嘅消費者版本保留咗比 DVD 同其他數碼媒體更多關於電影製作嘅事實。',
 		      '呢個以技術為本嘅系列會配合劇情長片放映（2006 年或之前）做現場導讀同討論 — 一邊睇舊片，一邊聽平時少有人講嘅製作真相。系列由「Halloween Apocalypse 2026」打頭陣。',
@@ -145,15 +145,22 @@
 		    tags:['實驗性','有收入'],
 		    desc:'唔算係一個活動 — 係一個 play room：FP 擺出器材（FK 會帶埋自己嘅 modular），俾人上嚟玩聲、錄聲。現場租器材同 donation 做收入。可以同 artefact corner 合埋一齊做。',
 		    pics:['A','FK']},
-		  mediaarch: {icon:'ic-cassette', title:'媒體考古 Media Archaeology',
-		    meta:'研究線 · 總覽 · 貫穿 2026–2029',
-		    tags:['實驗性','標誌系列','媒體考古'],
-		    desc:['Linda 學術書寫嘅延伸，唔係一個單一活動，而係一條貫穿全期嘅研究線 — 圍住「舊媒體、舊格式點樣喺當下仲有生命力」呢個大問題轉。',
-		      '研究線嘅主幹係「Tales of Media Archaeology」三部曲：由講座入手（第一輯，四節，日期已定），走去展覽製作嘅工作坊（第二輯），最後同學員一齊做在地群展（第三輯）。每一節同每一輯都獨立列喺時間軸上。',
+		  mediaarch: {icon:'ic-cassette', title:'Club-MA 媒體考古 Club Media Archaeology',
+		    meta:'Clubs & Series · 研究線 · 總覽 · 貫穿 2026–2029',
+		    tags:['實驗性','標誌系列','媒體考古','Club-MA'],
+		    desc:['Linda Lai 主持嘅 Club Media Archaeology（Club-MA）— Linda 學術書寫嘅延伸，唔係一個單一活動，而係一條貫穿全期嘅研究線，圍住「舊媒體、舊格式點樣喺當下仲有生命力」呢個大問題轉。',
+		      'Club-MA 分三個 phase：Phase 1 講座（四節，日期已定）→ Phase 2 展覽製作工作坊 → Phase 3 在地群展。每 phase 有 3–4 次、每次 3 小時嘅聚會；成員可以揀參加一個、兩個或全部 phase。',
 		      '另外仲有一個 <b>pop-up 展覽</b>（免費入場）：用返 Linda 自己舊作嘅材料重新編排展出，唔係新製作，係舊素材嘅新讀法 — 日期未定。',
-		      '呢條線同 Hector 嘅 Laser Frames / laserdisc 線，同埋 Angela Su 嘅香港媒體藝術調查出版計劃互相呼應扣連。'],
+		      '呢條線同 Hector 嘅 LaserFrames Cine Club / laserdisc 線，同埋 Angela Su 嘅香港媒體藝術調查出版計劃互相呼應扣連。'],
 		    links:['mediaarch1a','mediaarch1b','mediaarch1c','mediaarch1d','mediaarch2','mediaarch3'],
 		    pics:['L','H']},
+		  solos: {icon:'ic-frame', title:'FP (Collective) SOLOs 據點成員個展',
+		    meta:'2027–2028 · 個人展覽 · 一次性',
+		    tags:['標誌系列','展覽'],
+		    desc:['據點成員喺 FP5.0 周期內舉辦嘅個人展覽 — 每位成員一個獨立項目，展期通常 3–4 週。',
+		      '目前排期：Fuk-kuen 動作追蹤聲音裝置（2027）、Sing CRT Wall 盒裝故事（2027 或 2028）、Hugo Yeung mnemonic catastrophe（2027 或 2028）。確實日期仍待確認。'],
+		    links:['fkinstall','crtwall','mnemonic'],
+		    pics:['FK','S','HG']},
 		  stc: {icon:'ic-shuffle', title:'Subject to Change',
 		    meta:'流動 · 未定形',
 		    tags:['實驗性'],
@@ -195,44 +202,44 @@
 		    tags:['標誌系列','社群連結','有收入'],
 		    desc:'FP 招牌研究型項目，2016–2023 已做三輯。第四輯強調跨學科同媒體考古視角 — 觀眾可以用手觸碰物件嘅玩具機器展，由硬件工作坊長出嚟。',
 		    pics:['A']},
-		  mediaarch1a: {icon:'ic-cassette', title:'媒體考古…榕樹下（第一節）',
-		    meta:'<b>2026.11.28（3–6pm）</b> · Tales of Media Archaeology 1 · 四節之一 · 日期已確定',
+		  mediaarch1a: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第一節）',
+		    meta:'<b>2026.11.28（3–6pm）</b> · Club-MA Phase 1 · 四節之一 · 日期已確定',
 		    tags:['實驗性','標誌系列','講座','媒體考古'],
-		    desc:['「媒體考古」三部曲第一輯開課，講座加工作坊，一共四節，由 Linda Lai 主持。',
+		    desc:['Club-MA Phase 1 開課，講座加工作坊，一共四節，由 Linda Lai 主持。',
 		      '前人的日常「欲望」驅策着「新」媒體同工具嘅出現，即使佢哋仲未有名。呢一輯就係由呢個問題行開去。',
 		      '<ul><li>媒體考古個案逐個講：遠程臨場、永生不朽、光與火、指頭的故事、記憶同庫存…</li>'
 		      +'<li>媒體考古點樣豐富我哋對媒體（藝術）實踐嘅理解 — 由研究嘅視野走到藝術創作嘅視野。</li></ul>'],
 		    pics:['L']},
-		  mediaarch1b: {icon:'ic-cassette', title:'媒體考古…榕樹下（第二節）',
-		    meta:'<b>2026.12.05（3–6pm）</b> · Tales of Media Archaeology 1 · 四節之二 · 日期已確定',
-		    tags:['實驗性','標誌系列','講座','媒體考古'],
-		    desc:['「媒體考古」三部曲第一輯第二節，講座加工作坊，由 Linda Lai 主持。',
+		  mediaarch1b: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第二節）',
+		    meta:'<b>2026.12.05（3–6pm）</b> · Club-MA Phase 1 · 四節之二 · 日期已確定',
+		    tags:['實驗性','標誌系列','講座','媒體考古','Club-MA'],
+		    desc:['Club-MA Phase 1 第二節，講座加工作坊，由 Linda Lai 主持。',
 		      '延續日常生活中嘅媒體考古片段同時刻：遠程臨場、永生不朽、光與火、指頭的故事、記憶同庫存…'],
 		    pics:['L']},
-		  mediaarch1c: {icon:'ic-cassette', title:'媒體考古…榕樹下（第三節）',
-		    meta:'<b>2027.01.30（3–6pm）</b> · Tales of Media Archaeology 1 · 四節之三 · 日期已確定',
-		    tags:['實驗性','標誌系列','講座','媒體考古'],
-		    desc:['「媒體考古」三部曲第一輯第三節，講座加工作坊，由 Linda Lai 主持。',
+		  mediaarch1c: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第三節）',
+		    meta:'<b>2027.01.30（3–6pm）</b> · Club-MA Phase 1 · 四節之三 · 日期已確定',
+		    tags:['實驗性','標誌系列','講座','媒體考古','Club-MA'],
+		    desc:['Club-MA Phase 1 第三節，講座加工作坊，由 Linda Lai 主持。',
 		      '由研究嘅視野行向藝術創作嘅視野：媒體考古點樣改寫我哋對媒體（藝術）實踐嘅理解。'],
 		    pics:['L']},
-		  mediaarch1d: {icon:'ic-cassette', title:'媒體考古…榕樹下（第四節）',
-		    meta:'<b>2027.02.06（3–6pm）</b> · Tales of Media Archaeology 1 · 四節之四 · 日期已確定',
-		    tags:['實驗性','標誌系列','講座','媒體考古'],
-		    desc:['「媒體考古」三部曲第一輯嘅收結一節，講座加工作坊，由 Linda Lai 主持。',
-		      '收攏四節嘅個案同討論，為第二輯「除草接枝施肥」嘅展覽製作工作坊鋪路。'],
+		  mediaarch1d: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第四節）',
+		    meta:'<b>2027.02.06（3–6pm）</b> · Club-MA Phase 1 · 四節之四 · 日期已確定',
+		    tags:['實驗性','標誌系列','講座','媒體考古','Club-MA'],
+		    desc:['Club-MA Phase 1 嘅收結一節，講座加工作坊，由 Linda Lai 主持。',
+		      '收攏四節嘅個案同討論，為 Phase 2「除草接枝施肥」嘅展覽製作工作坊鋪路。'],
 		    pics:['L']},
-		  mediaarch2: {icon:'ic-plant', title:'Tales of Media Archaeology 2 媒體考古…除草接枝施肥',
-		    meta:'2027–2028 · 3 節 × 3 小時 · 日期待定',
-		    tags:['實驗性','標誌系列','工作坊','媒體考古'],
-		    desc:['第二輯轉入展覽製作（exhibition-making），三節工作坊：',
+		  mediaarch2: {icon:'ic-plant', title:'Club-MA Phase 2 · 媒體考古…除草接枝施肥',
+		    meta:'2027–2028 · Club-MA Phase 2 · 3 節 × 3 小時 · 日期待定',
+		    tags:['實驗性','標誌系列','工作坊','媒體考古','Club-MA'],
+		    desc:['Club-MA Phase 2 轉入展覽製作（exhibition-making），三節工作坊：',
 		      '<ul><li><b>工作坊 (1)</b>：建構影像圖譜 — 由日常物品構成嘅想像樹狀網絡。</li>'
 		      +'<li><b>工作坊 (2)</b>：追尋驅動工具發明嘅「慾望」，由呢個角度重新理解科技史。</li>'
 		      +'<li><b>工作坊 (3)</b>：追溯個人嘅藝術／創作脈絡 — 整理成一份屬於自己嘅作品係譜。</li></ul>'],
 		    pics:['L']},
-		  mediaarch3: {icon:'ic-tree', title:'Tales of Media Archaeology 3 媒體考古…奇異叢林',
-		    meta:'<b>2028.03</b> · 在地群展 · 月份已確定',
-		    tags:['實驗性','標誌系列','展覽','媒體考古'],
-		    desc:'三部曲最後一輯：同第一、二輯嘅講座／工作坊參加者合作，把兩輯所獲化為一個在地群展。',
+		  mediaarch3: {icon:'ic-tree', title:'Club-MA Phase 3 · 媒體考古…奇異叢林',
+		    meta:'<b>2028.03</b> · Club-MA Phase 3 · 在地群展 · 月份已確定',
+		    tags:['實驗性','標誌系列','展覽','媒體考古','Club-MA'],
+		    desc:'Club-MA 最後一個 phase：同 Phase 1、2 嘅講座／工作坊參加者合作，把兩 phase 所獲化為一個在地群展。',
 		    pics:['L']},
 		  jazz: {icon:'ic-note', title:'Jazz vs Experimental Sound',
 		    meta:'2027 或 2028（待確認）· 三個演出單元',
@@ -265,6 +272,78 @@
 		    pics:['L','FP']}
 		};
 
+		/* FP5.0 program categories (from the FP5.0 brief) */
+		const CATEGORIES = [
+		  {id:'opendoor', en:'Regular Open Door', zh:'定期打開門'},
+		  {id:'clubs', en:'Clubs & Series', zh:'閉門研習｜實作系列'},
+		  {id:'opencall', en:'OPEN CALL', zh:'公開徵集'},
+		  {id:'playroom', en:'PLAY ROOM + Artefact Corner', zh:'玩樂場'},
+		  {id:'solos', en:'FP (Collective) SOLOs', zh:'據點成員個展'},
+		  {id:'accumulation', en:'Accumulation', zh:'集少成多'}
+		];
+		const CAT_OF = {
+		  adminnight:  'opendoor',
+		  mayfung:     'clubs',
+		  halloween1:  'clubs',
+		  halloween2:  'clubs',
+		  halloween3:  'clubs',
+		  teatime:     'clubs',
+		  teatime2:    'clubs',
+		  cineclub:    'clubs',
+		  spatial:     'clubs',
+		  workshop:    'clubs',
+		  mediaarch:   'clubs',
+		  mediaarch1a: 'clubs',
+		  mediaarch1b: 'clubs',
+		  mediaarch1c: 'clubs',
+		  mediaarch1d: 'clubs',
+		  mediaarch2:  'clubs',
+		  mediaarch3:  'clubs',
+		  stc:         'clubs',
+		  ml:          'clubs',
+		  jazz:        'clubs',
+		  toy:         'clubs',
+		  modular:     'playroom',
+		  board:       'playroom',
+		  vcd:         'opencall',
+		  essaying:    'opencall',
+		  solos:       'solos',
+		  fkinstall:   'solos',
+		  crtwall:     'solos',
+		  mnemonic:    'solos',
+		  platform:    'accumulation',
+		  tsundoku:    'accumulation'
+		};
+		const catOf = id => CAT_OF[id] || null;
+		const CLUBS = {
+		  laserframes: {
+		    en:'LaserFrames Cine Club', zh:'雷射視盤',
+		    desc:[
+		      'In the form of a private cine club, visitors register for an FP private club membership to join discussion and media sharing events. They may join by season to participate in all events.',
+		      '以 private cine club 形式運作：參加者須預先登記會籍，方可參與討論同 media sharing。可以按季加入，參與該季全部場次。放映用三至四部 CRT 電視散落空間同步播放，似裝置多過似戲院。'
+		    ]
+		  },
+		  clubma: {
+		    en:'Club-MA', zh:'媒體考古',
+		    desc:[
+		      'Club Media Archaeology proceeds in 3 phases: (1) lectures as tale-telling; (2) workshops with research and an introspective look at one\'s own artistic journeys; (3) a group exhibition of two-year learning. Each phase has 3–4 three-hour meetings. Members may join one, two, or all three phases.',
+		      'Club-MA 由 Linda Lai 主持，分三個 phase：講座 → 展覽製作工作坊 → 在地群展。每個 phase 3–4 次、每次 3 小時；可以揀參加一個、兩個或全部 phase。'
+		    ]
+		  }
+		};
+		const CLUB_OF = {
+		  halloween1: 'laserframes', halloween2: 'laserframes', halloween3: 'laserframes',
+		  cineclub: 'laserframes',
+		  mediaarch: 'clubma', mediaarch1a: 'clubma', mediaarch1b: 'clubma',
+		  mediaarch1c: 'clubma', mediaarch1d: 'clubma', mediaarch2: 'clubma', mediaarch3: 'clubma'
+		};
+		const CAT_ITEMS = {};
+		Object.keys(CAT_OF).forEach(id=>{
+		  if(!DATA[id]) return;
+		  const c = CAT_OF[id];
+		  (CAT_ITEMS[c] = CAT_ITEMS[c] || []).push(id);
+		});
+
 		/* recurring-series bracket: span from its own row down to the last card of the section */
 		(function(){
 		  const mark = document.querySelector('.spanmark');
@@ -285,10 +364,11 @@
 		const mIcon = document.getElementById('m-icon');
 		const mTitle = document.getElementById('m-title');
 		const mMeta = document.getElementById('m-meta');
-		const mTags = document.getElementById('m-tags');
 		const mDesc = document.getElementById('m-desc');
+		const mClub = document.getElementById('m-club');
 		const mLinks = document.getElementById('m-links');
 		const mKw = document.getElementById('m-kw');
+		const mCat = document.getElementById('m-cat');
 		const mPics = document.getElementById('m-pics');
 		let lastFocus = null;
 
@@ -298,7 +378,24 @@
 		  setIcon(mIcon, id, d.icon);
 		  mTitle.textContent = d.title;
 		  mMeta.innerHTML = d.meta;
-		  mTags.innerHTML = d.tags.map(t=>'<span class="tag">'+t+'</span>').join('');
+		  mDesc.innerHTML = Array.isArray(d.desc) ? d.desc.map(p=>'<p>'+p+'</p>').join('') : '<p>'+d.desc+'</p>';
+		  const clubKey = CLUB_OF[id];
+		  const club = clubKey && CLUBS[clubKey];
+		  const isClubOverview = id === 'cineclub' || id === 'mediaarch';
+		  if(club && !isClubOverview){
+		    mClub.innerHTML = '<div class="club-desc-lab">'+club.en+'</div>'
+		      + club.desc.map(p=>'<p>'+p+'</p>').join('');
+		  } else {
+		    mClub.innerHTML = '';
+		  }
+		  const cat = CATEGORIES.find(x=>x.id===catOf(id));
+		  mCat.innerHTML = cat
+		    ? '<span class="cat-of-lab">Program 分類</span><button class="cat-tag" type="button" data-cat="'+cat.id+'">'+cat.zh+'</button>'
+		    : '';
+		  mCat.querySelector('.cat-tag')?.addEventListener('click', ()=>{
+		    closeModal();
+		    setTimeout(()=>openCategoryModal(cat.id), 50);
+		  });
 		  const kwHTML = kwChipsHTML(id);
 		  mKw.innerHTML = kwHTML ? '<span class="kw-of-lab">所屬關鍵詞</span>'+kwHTML : '';
 		  mKw.querySelectorAll('.kw-tag').forEach(btn=>{
@@ -308,7 +405,6 @@
 		      setTimeout(()=>openKeywordModal(k), 50);
 		    });
 		  });
-		  mDesc.innerHTML = Array.isArray(d.desc) ? d.desc.map(p=>'<p>'+p+'</p>').join('') : '<p>'+d.desc+'</p>';
 		  mLinks.innerHTML = (d.links || []).filter(t=>DATA[t]).map(t=>
 		    '<button class="person-item" type="button" data-target="'+t+'">'
 		    + '<span class="pi-icon">'+iconHTML(t, DATA[t].icon)+'</span>'
@@ -362,6 +458,31 @@
 		  }
 		  const iconEl = c.querySelector('.icon');
 		  if(d && iconEl && ICONS[id]) setIcon(iconEl, id, d.icon);
+		  const cat = CATEGORIES.find(x=>x.id===catOf(id));
+		  if(cat){
+		    let catEl = c.querySelector('.cat-pill');
+		    const titleEl = c.querySelector('.top > div h3');
+		    if(!catEl && titleEl){
+		      catEl = document.createElement('span');
+		      catEl.className = 'cat-pill cat-'+cat.id;
+		      titleEl.insertAdjacentElement('afterend', catEl);
+		    }
+		    catEl.textContent = cat.zh;
+		    catEl.title = cat.en;
+		  }
+		  const clubKey = CLUB_OF[id];
+		  if(clubKey){
+		    const club = CLUBS[clubKey];
+		    let folder = c.querySelector('.club-folder');
+		    if(!folder){
+		      folder = document.createElement('div');
+		      folder.className = 'club-folder club-folder-'+clubKey;
+		      folder.setAttribute('aria-hidden', 'true');
+		      c.insertBefore(folder, c.firstChild);
+		    }
+		    folder.innerHTML = '<span class="club-folder-en">'+club.en+'</span>';
+		    c.classList.add('has-club-folder');
+		  }
 		  c.addEventListener('click', ()=>openModal(c.dataset.id));
 		  c.addEventListener('keydown', e=>{
 		    if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openModal(c.dataset.id); }
@@ -623,9 +744,59 @@
 		  btn.addEventListener('click', ()=>openKeywordModal(btn.dataset.kw));
 		});
 
+		const cOverlay = document.getElementById('c-overlay');
+		const cTitle = document.getElementById('c-title');
+		const cMeta = document.getElementById('c-meta');
+		const cList = document.getElementById('c-list');
+		const cCount = document.getElementById('c-count');
+		let lastFocusC = null;
+
+		function openCategoryModal(id){
+		  const c = CATEGORIES.find(x=>x.id===id);
+		  if(!c) return;
+		  cTitle.textContent = c.en;
+		  cMeta.textContent = c.zh;
+		  const items = CAT_ITEMS[c.id] || [];
+		  cList.innerHTML = items.map(pid=>
+		    '<button class="person-item" type="button" data-target="'+pid+'">'
+		    + '<span class="pi-icon">'+iconHTML(pid, DATA[pid].icon)+'</span>'
+		    + '<span class="pi-title">'+DATA[pid].title+'</span>'
+		    + '</button>').join('');
+		  cCount.textContent = items.length ? items.length + ' 個相關節目' : '';
+		  cList.querySelectorAll('.person-item').forEach(btn=>{
+		    btn.addEventListener('click', ()=>{
+		      const target = btn.dataset.target;
+		      closeCategoryModal();
+		      setTimeout(()=>{ scrollToCard(target); openModal(target); }, 50);
+		    });
+		  });
+		  lastFocusC = document.activeElement;
+		  cOverlay.classList.add('open');
+		  document.getElementById('c-close').focus();
+		  document.body.style.overflow = 'hidden';
+		}
+		function closeCategoryModal(){
+		  cOverlay.classList.remove('open');
+		  document.body.style.overflow = '';
+		  if(lastFocusC) lastFocusC.focus();
+		}
+		document.getElementById('c-close').addEventListener('click', closeCategoryModal);
+		cOverlay.addEventListener('click', e=>{ if(e.target===cOverlay) closeCategoryModal(); });
+
+		const catChips = document.getElementById('cat-chips');
+		catChips.innerHTML = CATEGORIES.map(c=>
+		  '<button class="cat-chip" type="button" data-cat="'+c.id+'" aria-label="'+c.en+'">'
+		  + '<span class="cat-chip-zh">'+c.zh+'</span>'
+		  + '<span class="cat-chip-en">'+c.en+'</span>'
+		  + '</button>').join('');
+		catChips.querySelectorAll('.cat-chip').forEach(btn=>{
+		  btn.addEventListener('click', ()=>openCategoryModal(btn.dataset.cat));
+		});
+
 		onDocument('keydown', e=>{
 		  if(e.key !== 'Escape') return;
-		  if(kOverlay.classList.contains('open')) closeKeywordModal();
+		  if(cOverlay.classList.contains('open')) closeCategoryModal();
+		  else if(kOverlay.classList.contains('open')) closeKeywordModal();
 		  else if(pOverlay.classList.contains('open')) closePersonModal();
 		  else if(overlay.classList.contains('open')) closeModal();
 		});
@@ -643,7 +814,7 @@
 	<title>FP 5.0 三年活動地圖 — Floating Projects</title>
 	<meta
 		name="description"
-		content="Floating Projects 5.0 三年活動地圖：2026 年秋到 2029 年嘅節目藍圖。"
+		content="Floating Projects 5.0 — A Learning Centre, A Hub for Experiments. 2026 年秋到 2029 年嘅節目地圖。"
 	/>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -677,13 +848,14 @@
 <symbol id="ic-shop" viewBox="0 0 24 24"><path d="M4 9h16v10a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19V9z"/><path d="M3 9l2.2-5.2h13.6L21 9"/><path d="M9.5 9v3M14.5 9v3"/></symbol>
 <symbol id="ic-plant" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-3.3-2.5-5.5-6-5.5 0 3.3 2.5 5.5 6 5.5z"/><path d="M12 13c0-3.9 2.5-6.5 6-6.5 0 3.9-2.5 6.5-6 6.5z"/><path d="M8.5 21h7"/></symbol>
 <symbol id="ic-tree" viewBox="0 0 24 24"><path d="M12 21v-6"/><path d="M12 15 7.5 10.5h9L12 15z"/><path d="M12 11 8.5 6.5h7L12 11z"/><path d="M9 21h6"/><path d="M4.5 18.5c1.2-1 2-2.2 2.3-3.6M19.5 18.5c-1.2-1-2-2.2-2.3-3.6" stroke-dasharray="1.6 2"/></symbol>
+<symbol id="ic-frame" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M4 8h16M4 16h16M8 4v16M16 4v16"/></symbol>
 </defs>
 </svg>
 
 <header>
   <div class="kicker">Floating Projects Collective · 據點。句點</div>
   <h1>FP <span class="num">5.0</span> 三年活動地圖</h1>
-  <p class="sub">一個藝術家自營媒體藝術空間嘅節目藍圖 — 由 2026 年秋開始，向 2029 伸展。</p>
+  <p class="sub">A Learning Centre, A Hub for Experiments<br><span class="sub-zh">一個學習中心，實驗集散地 — 由 2026 年秋開始，向 2029 伸展。</span></p>
   <div class="mast-rule"><span>2026 → 2029 · JOCKEY CLUB CREATIVE ARTS CENTRE</span></div>
 </header>
 
@@ -692,6 +864,11 @@
 <div class="kw-bar">
   <span class="kw-bar-label">FP5.0 關鍵詞</span>
   <div class="kw-chips" id="kw-chips"></div>
+</div>
+
+<div class="cat-bar">
+  <span class="cat-bar-label">Program 分類</span>
+  <div class="cat-chips" id="cat-chips"></div>
 </div>
 
 <div class="artist-bar">
@@ -704,6 +881,7 @@
   <div class="it"><span class="swatch-dash"></span><span class="dot hollow"></span> 未定日期，虛線大約指向年份</div>
   <div class="it"><span class="pill rec">循環系列</span> 會不斷重複發生</div>
   <div class="it"><span class="pill once">一次性</span> 有頭有尾嘅項目</div>
+  <div class="it"><span class="cat-pill cat-clubs">閉門研習｜實作系列</span> Program 分類標籤</div>
 </div>
 
 <div class="tl">
@@ -779,14 +957,14 @@
     </div>
   </div>
 
-  <!-- anchored: Tales of Media Archaeology 1, session 1 -->
+  <!-- anchored: Club-MA Phase 1, session 1 -->
   <div class="row">
     <div class="card anchored side-l" data-id="mediaarch1a" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
           <div class="date">2026.11.28（3–6pm）· 日期已定</div>
-          <h3>媒體考古…榕樹下（第一節）</h3>
+          <h3>Club-MA · 媒體考古…榕樹下（第一節）</h3>
           <div class="short">講座＋工作坊開課 — 前人嘅欲望點樣催生仲未有名嘅媒體</div>
         </div>
       </div>
@@ -795,7 +973,7 @@
     <div class="conn to-l"><span class="wire"></span><span class="pin"></span></div>
   </div>
 
-  <!-- anchored: Tales of Media Archaeology 1, session 2 -->
+  <!-- anchored: Club-MA Phase 1, session 2 -->
   <div class="row">
     <div class="conn to-r"><span class="wire"></span><span class="pin"></span></div>
     <div class="card anchored side-r" data-id="mediaarch1b" tabindex="0" role="button">
@@ -803,7 +981,7 @@
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
           <div class="date">2026.12.05（3–6pm）· 日期已定</div>
-          <h3>媒體考古…榕樹下（第二節）</h3>
+          <h3>Club-MA · 媒體考古…榕樹下（第二節）</h3>
           <div class="short">個案逐個講 — 遠程臨場、永生不朽、光與火、指頭的故事</div>
         </div>
       </div>
@@ -830,7 +1008,7 @@
   <!-- the same lecture series carries on into the new year -->
   <div class="tl-sec"><span class="lab">2027 年初 — 日期已定</span></div>
 
-  <!-- anchored: Tales of Media Archaeology 1, session 3 -->
+  <!-- anchored: Club-MA Phase 1, session 3 -->
   <div class="row">
     <div class="conn to-r"><span class="wire"></span><span class="pin"></span></div>
     <div class="card anchored side-r" data-id="mediaarch1c" tabindex="0" role="button">
@@ -838,7 +1016,7 @@
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
           <div class="date">2027.01.30（3–6pm）· 日期已定</div>
-          <h3>媒體考古…榕樹下（第三節）</h3>
+          <h3>Club-MA · 媒體考古…榕樹下（第三節）</h3>
           <div class="short">由研究嘅視野行向藝術創作嘅視野</div>
         </div>
       </div>
@@ -846,15 +1024,15 @@
     </div>
   </div>
 
-  <!-- anchored: Tales of Media Archaeology 1, session 4 -->
+  <!-- anchored: Club-MA Phase 1, session 4 -->
   <div class="row">
     <div class="card anchored side-l" data-id="mediaarch1d" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
           <div class="date">2027.02.06（3–6pm）· 日期已定</div>
-          <h3>媒體考古…榕樹下（第四節）</h3>
-          <div class="short">收結一節 — 為第二輯「除草接枝施肥」鋪路</div>
+          <h3>Club-MA · 媒體考古…榕樹下（第四節）</h3>
+          <div class="short">收結一節 — 為 Club-MA Phase 2「除草接枝施肥」鋪路</div>
         </div>
       </div>
       <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">四節之四</span></div>
@@ -886,8 +1064,8 @@
       <div class="top">
         <div class="icon"><svg><use href="#ic-crt"/></svg></div>
         <div>
-          <h3>Laser Frames 雷射視盤</h3>
-          <div class="short">幾部 CRT 電視同步播同一畫面，觀眾散落空間各角 — 即興、按主題</div>
+          <h3>LaserFrames Cine Club · 雷射視盤</h3>
+          <div class="short">Private cine club — 幾部 CRT 電視同步播同一畫面，觀眾散落空間各角</div>
         </div>
       </div>
       <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill rec">≈ 兩個月 ×1</span></div>
@@ -956,8 +1134,8 @@
       <div class="top">
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
-          <h3>媒體考古 Media Archaeology</h3>
-          <div class="short">貫穿 2026–2029 嘅研究線 — 三部曲加 pop-up 展，由此入</div>
+          <h3>Club-MA 媒體考古</h3>
+          <div class="short">Club Media Archaeology — 三個 phase 加 pop-up 展，由此入</div>
         </div>
       </div>
       <div class="foot"><div class="pics"><span class="av">L</span><span class="av">H</span></div><span class="pill rec">研究線 · 總覽</span></div>
@@ -1013,31 +1191,61 @@
     </div>
   </div>
 
+  <div class="tl-sec"><span class="lab">FP (Collective) SOLOs · 據點成員個展</span></div>
+
   <div class="row">
-    <div class="card side-l" data-id="fkinstall" tabindex="0" role="button">
+    <div class="card side-l" data-id="solos" tabindex="0" role="button">
       <div class="top">
-        <div class="icon"><svg><use href="#ic-motion"/></svg></div>
+        <div class="icon"><svg><use href="#ic-frame"/></svg></div>
         <div>
-          <h3>動作追蹤聲音裝置</h3>
-          <div class="short">Motion gesture tracking 聲音裝置展 — 大約一年後發生</div>
+          <h3>據點成員個展</h3>
+          <div class="short">FP5.0 周期內每位成員嘅個人展覽 — 由此睇三個項目</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">FK</span></div><span class="pill once">展期 3–4 週</span></div>
+      <div class="foot"><div class="pics"><span class="av">FK</span><span class="av">S</span><span class="av">HG</span></div><span class="pill once">總覽</span></div>
     </div>
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
 
   <div class="row">
     <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
-    <div class="card side-r" data-id="crtwall" tabindex="0" role="button">
+    <div class="card side-r" data-id="fkinstall" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-motion"/></svg></div>
+        <div>
+          <h3>動作追蹤聲音裝置</h3>
+          <div class="short">Motion gesture tracking 聲音裝置展 — Fuk-kuen 個展</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">FK</span></div><span class="pill once">展期 3–4 週</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="crtwall" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-wall"/></svg></div>
         <div>
           <h3>CRT Wall 盒裝故事</h3>
-          <div class="short">流動影像 CRT 牆裝置，帶參與式成分 — 大約一年後發生</div>
+          <div class="short">流動影像 CRT 牆裝置 — Sing 個展，帶參與式成分</div>
         </div>
       </div>
       <div class="foot"><div class="pics"><span class="av">S</span></div><span class="pill once">展期 3–4 週</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="mnemonic" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-chip"/></svg></div>
+        <div>
+          <h3>mnemonic catastrophe</h3>
+          <div class="short">Hugo Yeung 個展 — 回應當下機器學習數據文化</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">HG</span></div><span class="pill once">2027 或 2028</span></div>
     </div>
   </div>
 
@@ -1070,26 +1278,12 @@
   </div>
 
   <div class="row">
-    <div class="card side-l" data-id="mnemonic" tabindex="0" role="button">
-      <div class="top">
-        <div class="icon"><svg><use href="#ic-chip"/></svg></div>
-        <div>
-          <h3>mnemonic catastrophe</h3>
-          <div class="short">回應當下機器學習數據文化嘅個人展覽</div>
-        </div>
-      </div>
-      <div class="foot"><div class="pics"><span class="av">HG</span></div><span class="pill once">2027 或 2028</span></div>
-    </div>
-    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
-  </div>
-
-  <div class="row">
     <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
     <div class="card side-r" data-id="mediaarch2" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-plant"/></svg></div>
         <div>
-          <h3>媒體考古…除草接枝施肥（第二輯）</h3>
+          <h3>Club-MA Phase 2 · 除草接枝施肥</h3>
           <div class="short">三節工作坊：影像圖譜、工具發明背後嘅慾望、追溯自己嘅創作係譜</div>
         </div>
       </div>
@@ -1109,8 +1303,8 @@
         <div class="icon"><svg><use href="#ic-tree"/></svg></div>
         <div>
           <div class="date">2028.03 · 月份已定</div>
-          <h3>媒體考古…奇異叢林（在地展覽）</h3>
-          <div class="short">把「媒體考古」第一、二輯所獲化為展出，同工作坊學員合作</div>
+          <h3>Club-MA Phase 3 · 奇異叢林（在地展覽）</h3>
+          <div class="short">Club-MA 最終 phase — 同 Phase 1、2 學員合作群展</div>
         </div>
       </div>
       <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">群展</span></div>
@@ -1195,9 +1389,10 @@
         <div class="meta" id="m-meta"></div>
       </div>
     </div>
-    <div class="tags" id="m-tags"></div>
-    <div class="kw-of" id="m-kw"></div>
     <div id="m-desc" class="desc"></div>
+    <div id="m-club" class="club-desc"></div>
+    <div class="cat-of" id="m-cat"></div>
+    <div class="kw-of" id="m-kw"></div>
     <div id="m-links" class="person-list"></div>
     <div class="pic-block">
       <div class="lab">PERSON(S) IN CHARGE</div>
@@ -1218,6 +1413,23 @@
       </div>
     </div>
     <div id="p-list" class="person-list"></div>
+  </div>
+</div>
+
+<!-- ============ category modal ============ -->
+<div class="overlay" id="c-overlay" role="dialog" aria-modal="true" aria-labelledby="c-title">
+  <div class="modal">
+    <button class="x" id="c-close" aria-label="關閉">✕</button>
+    <div class="head">
+      <div>
+        <h2 id="c-title"></h2>
+        <div class="meta" id="c-meta"></div>
+      </div>
+    </div>
+    <div class="cat-items">
+      <div class="lab">相關節目 <span id="c-count"></span></div>
+      <div id="c-list" class="person-list"></div>
+    </div>
   </div>
 </div>
 
