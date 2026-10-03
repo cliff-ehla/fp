@@ -151,9 +151,10 @@ h1 .num{color:var(--cinnabar)}
   font-family:var(--mono);font-size:20px;font-weight:500;
   display:flex;align-items:center;justify-content:center;
   border:4px solid var(--card);margin-left:-14px;overflow:hidden;
+  position:relative;
 }
 .av:first-child{margin-left:0}
-.av img{width:100%;height:100%;object-fit:cover}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 /* section headers inside timeline */
 .tl-sec{display:grid;grid-template-columns:1fr 90px 1fr;margin:8px 0 26px;position:relative}
@@ -265,6 +266,11 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
 <symbol id="ic-books" viewBox="0 0 24 24"><rect x="5" y="15.5" width="14" height="4" rx="1"/><rect x="7" y="10.5" width="12" height="4" rx="1" transform="rotate(-3 13 12.5)"/><rect x="6" y="5.5" width="11" height="4" rx="1" transform="rotate(2 11.5 7.5)"/></symbol>
 <symbol id="ic-shuffle" viewBox="0 0 24 24"><path d="M4 7h4l8 10h4M4 17h4l2.5-3.1M13.5 10.1 16 7h4"/><path d="M18 5l2.5 2L18 9M18 15l2.5 2L18 19"/></symbol>
 <symbol id="ic-film" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 5v14M16 5v14"/><path d="M4 9h4M4 13h4M4 17h4M16 9h4M16 13h4M16 17h4" stroke-width="1.1"/></symbol>
+<symbol id="ic-note" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2.6"/><circle cx="17" cy="15" r="2.6"/><path d="M9.6 17V6.5l9.8-2.1V15"/><path d="M9.6 9.4l9.8-2.1"/></symbol>
+<symbol id="ic-mic" viewBox="0 0 24 24"><rect x="9.5" y="3" width="5" height="9" rx="2.5"/><path d="M6.5 11a5.5 5.5 0 0 0 11 0"/><path d="M12 16.5V21M9 21h6"/></symbol>
+<symbol id="ic-shop" viewBox="0 0 24 24"><path d="M4 9h16v10a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19V9z"/><path d="M3 9l2.2-5.2h13.6L21 9"/><path d="M9.5 9v3M14.5 9v3"/></symbol>
+<symbol id="ic-plant" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-3.3-2.5-5.5-6-5.5 0 3.3 2.5 5.5 6 5.5z"/><path d="M12 13c0-3.9 2.5-6.5 6-6.5 0 3.9-2.5 6.5-6 6.5z"/><path d="M8.5 21h7"/></symbol>
+<symbol id="ic-tree" viewBox="0 0 24 24"><path d="M12 21v-6"/><path d="M12 15 7.5 10.5h9L12 15z"/><path d="M12 11 8.5 6.5h7L12 11z"/><path d="M9 21h6"/><path d="M4.5 18.5c1.2-1 2-2.2 2.3-3.6M19.5 18.5c-1.2-1-2-2.2-2.3-3.6" stroke-dasharray="1.6 2"/></symbol>
 </defs>
 </svg>
 
@@ -319,12 +325,44 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       <div class="top">
         <div class="icon"><svg><use href="#ic-disc"/></svg></div>
         <div>
-          <div class="date">2026.10.30 · 日期已定</div>
-          <h3>萬聖節 Laserdisc 放映</h3>
-          <div class="short">Private Cine Club 首場：《變形邪魔》1956 + 1978 兩個版本連放</div>
+          <div class="date">2026.10.30 – 11.07 · 日期已定</div>
+          <h3>Halloween Apocalypse 萬聖末日啟示</h3>
+          <div class="short">Laser Frames 第一輯・三晚：《活死人黎明》《變形邪魔》兩版連放、《復製嬌妻》</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 第一場</span></div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 三晚</span></div>
+    </div>
+  </div>
+
+  <!-- anchored: Tales of Media Archaeology 1 -->
+  <div class="row">
+    <div class="card anchored side-l" data-id="mediaarch1" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
+        <div>
+          <div class="date">2026.11.28 起 · 四節 · 日期已定</div>
+          <h3>媒體考古…榕樹下（第一輯）</h3>
+          <div class="short">講座＋工作坊：媒體考古個案逐個講，由研究視野講到創作視野</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">四節 · 3-6pm</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire"></span><span class="pin"></span></div>
+  </div>
+
+  <!-- anchored: Jen Lee teatime -->
+  <div class="row">
+    <div class="conn to-r"><span class="wire"></span><span class="pin"></span></div>
+    <div class="card anchored side-r" data-id="teatime2" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-teacup"/></svg></div>
+        <div>
+          <div class="date">2026.12.12 · 日期已定</div>
+          <h3>More-Than-Human World 茶聚</h3>
+          <div class="short">Fountain Teatime 第二場 — Jen Lee 談超越人類世界裡嘅存在、經驗、感知同認知</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">JL</span><span class="av">L</span></div><span class="pill once">茶聚 · 第二場</span></div>
     </div>
   </div>
 
@@ -332,16 +370,16 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
   <div class="tl-sec"><span class="lab">循環系列 — 由第一年開始，不斷重複</span></div>
 
   <div class="row" style="min-height:120px">
-    <div class="spanmark" style="top:-6px;height:calc(100% + 1832px)" aria-hidden="true"></div>
+    <div class="spanmark" style="top:-6px" aria-hidden="true"></div>
     <div class="card side-l" data-id="teatime" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-teacup"/></svg></div>
         <div>
-          <h3>Fountain Teatime 茶聚噴泉</h3>
-          <div class="short">請唔同嘉賓嚟講 being / living / doing / survival — 一年長嘅講座系列</div>
+          <h3>Fountain Teatime 噴泉茶聚</h3>
+          <div class="short">請唔同嘉賓嚟講 being / living / doing / survival — 2026–2029 持續</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill rec">≈ 每月 ×1</span></div>
+      <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill rec">雙月 ×1</span></div>
     </div>
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
@@ -352,7 +390,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       <div class="top">
         <div class="icon"><svg><use href="#ic-crt"/></svg></div>
         <div>
-          <h3>Private Cine Club 私人放映會</h3>
+          <h3>Laser Frames 雷射視盤</h3>
           <div class="short">幾部 CRT 電視同步播同一畫面，觀眾散落空間各角 — 即興、按主題</div>
         </div>
       </div>
@@ -365,11 +403,12 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       <div class="top">
         <div class="icon"><svg><use href="#ic-laptop"/></svg></div>
         <div>
-          <h3>Admin Night</h3>
-          <div class="short">帶部電腦上嚟做自己嘢，安靜如自修室，夾雜小型分享</div>
+          <div class="date">2026.10.02–04 · 試局</div>
+          <h3>FP Open!「打開門」做吓事務局</h3>
+          <div class="short">開放門口一齊做事務：覆 email、寫申請、整檔案，夾雜小型分享</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">A</span></div><span class="pill rec">≈ 每月 ×1</span></div>
+      <div class="foot"><div class="pics"><span class="av">A</span></div><span class="pill rec">每月 2–3 日</span></div>
     </div>
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
@@ -393,7 +432,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       <div class="top">
         <div class="icon"><svg><use href="#ic-chip"/></svg></div>
         <div>
-          <h3>Workshop 工作坊</h3>
+          <h3>Device-making 工作坊</h3>
           <div class="short">Device-making 四節系列＋一至兩日 AI 起藝術家個人網站</div>
         </div>
       </div>
@@ -422,10 +461,10 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
           <h3>媒體考古 Media Archaeology</h3>
-          <div class="short">Pop-up 展、講座、三個工作坊 — 貫穿全期嘅研究線</div>
+          <div class="short">貫穿 2026–2029 嘅研究線 — 三部曲加 pop-up 展，由此入</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">L</span><span class="av">H</span></div><span class="pill rec">分階段</span></div>
+      <div class="foot"><div class="pics"><span class="av">L</span><span class="av">H</span></div><span class="pill rec">研究線 · 總覽</span></div>
     </div>
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
@@ -444,24 +483,24 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
     </div>
   </div>
 
+  <div class="row" id="rec-end">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="platform" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-shop"/></svg></div>
+        <div>
+          <h3>FLOATING PLATFORM 據㸃浮台</h3>
+          <div class="short">JCCAC L3-06D 嘅寄賣角 — 全期常設</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">W</span></div><span class="pill rec">常設 · 2026–29</span></div>
+    </div>
+  </div>
+
   <!-- ====== 2027 ====== -->
   <div class="row tight">
     <div class="year-note l">一次性項目 · 大約落喺呢一年</div>
     <div class="year"><span class="badge">2027</span></div>
-  </div>
-
-  <div class="row">
-    <div class="card side-l" data-id="ml" tabindex="0" role="button">
-      <div class="top">
-        <div class="icon"><svg><use href="#ic-net"/></svg></div>
-        <div>
-          <h3>ML Series 學習系統的詩學</h3>
-          <div class="short">12 週兩軌課程：基礎編程＋ML 實作，配前後公開講座</div>
-        </div>
-      </div>
-      <div class="foot"><div class="pics"><span class="av">H</span><span class="av">HG</span><span class="av">L</span></div><span class="pill once">12週 · 待批款</span></div>
-    </div>
-    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
 
   <div class="row">
@@ -470,7 +509,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       <div class="top">
         <div class="icon"><svg><use href="#ic-film"/></svg></div>
         <div>
-          <h3>VCD Found-footage 公開徵集</h3>
+          <h3>More than Found Footage 何止現成影音碎片</h3>
           <div class="short">用 FP 嘅 VCD 收藏創作：徵集 → 比賽 → 放映 → 書寫</div>
         </div>
       </div>
@@ -498,7 +537,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
       <div class="top">
         <div class="icon"><svg><use href="#ic-wall"/></svg></div>
         <div>
-          <h3>CRT TV Wall</h3>
+          <h3>CRT Wall 盒裝故事</h3>
           <div class="short">流動影像 CRT 牆裝置，帶參與式成分 — 大約一年後發生</div>
         </div>
       </div>
@@ -520,10 +559,95 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
 
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="jazz" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-note"/></svg></div>
+        <div>
+          <h3>Jazz vs Experimental Sound</h3>
+          <div class="short">爵士對實驗聲音・三個演出單元，其中一個做 FP Manual</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">S</span></div><span class="pill once">2027 或 2028</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="mnemonic" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-chip"/></svg></div>
+        <div>
+          <h3>mnemonic catastrophe</h3>
+          <div class="short">回應當下機器學習數據文化嘅個人展覽</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">HG</span></div><span class="pill once">2027 或 2028</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="mediaarch2" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-plant"/></svg></div>
+        <div>
+          <h3>媒體考古…除草接枝施肥（第二輯）</h3>
+          <div class="short">三節工作坊：影像圖譜、工具發明背後嘅慾望、追溯自己嘅創作係譜</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">3 節 × 3 小時</span></div>
+    </div>
+  </div>
+
   <!-- ====== 2028 ====== -->
   <div class="row tight">
     <div class="year"><span class="badge">2028</span></div>
     <div class="year-note">第二至第三年 · 招牌項目回歸</div>
+  </div>
+
+  <div class="row">
+    <div class="card anchored side-l" data-id="mediaarch3" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-tree"/></svg></div>
+        <div>
+          <div class="date">2028.03 · 月份已定</div>
+          <h3>媒體考古…奇異叢林（在地展覽）</h3>
+          <div class="short">把「媒體考古」第一、二輯所獲化為展出，同工作坊學員合作</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">群展</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire"></span><span class="pin"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="ml" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-net"/></svg></div>
+        <div>
+          <h3>Poetics of ML 學習系統的詩學</h3>
+          <div class="short">FP5.0 標誌性總結系列・12 週兩軌課程，配前後公開講座</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">H</span><span class="av">HG</span><span class="av">L</span></div><span class="pill once">2028–29 · 待批款</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="essaying" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-mic"/></svg></div>
+        <div>
+          <h3>聲影散文探索：講演式表演系列</h3>
+          <div class="short">公開徵集 2028.04–06 → 評審 → 2029.03 開門講演式表演</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">公開徵集</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
 
   <div class="row">
@@ -562,7 +686,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
 
 </div>
 
-<footer>FLOATING PROJECTS 5.0 · 更新於 2026.08 · 內容按 FP 內部工作紙整理，日期以最新公佈為準</footer>
+<footer>FLOATING PROJECTS 5.0 · 更新於 2026.09 · 內容按 FP 內部工作紙整理，日期以最新公佈為準</footer>
 
 <!-- ============ modal ============ -->
 <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="m-title">
@@ -577,6 +701,7 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
     </div>
     <div class="tags" id="m-tags"></div>
     <div id="m-desc" class="desc"></div>
+    <div id="m-links" class="person-list"></div>
     <div class="pic-block">
       <div class="lab">PERSON(S) IN CHARGE</div>
       <div id="m-pics"></div>
@@ -602,25 +727,35 @@ footer{max-width:1020px;margin:20px auto 0;padding:26px 24px 60px;text-align:cen
 <script>
 const CDN = 'https://fpchk.s3.ap-southeast-1.amazonaws.com/';
 const ICONS = {
-  mayfung:   '/fp5icon/teatime-removebg-preview.png',
-  teatime:   '/fp5icon/teatime-removebg-preview.png',
-  cineclub:  '/fp5icon/cine_club-removebg-preview.png',
-  halloween: '/fp5icon/cine_club-removebg-preview.png',
-  crtwall:   '/fp5icon/cine_club-removebg-preview.png',
-  mediaarch: '/fp5icon/media_archeology-removebg-preview.png',
-  adminnight:'/fp5icon/admin_night-removebg-preview.png',
-  spatial:   '/fp5icon/spacial_calibration-removebg-preview.png',
-  workshop:  '/fp5icon/workshop-removebg-preview.png',
-  modular:   '/fp5icon/synth_onsite_rental-removebg-preview.png',
-  stc:       '/fp5icon/subject_to_change-removebg-preview.png',
-  ml:        '/fp5icon/ML_serius-removebg-preview.png',
-  vcd:       '/fp5icon/vcd_found_footage-removebg-preview.png',
-  fkinstall: '/fp5icon/motion_tracking_sound_installation-removebg-preview.png',
-  board:     '/fp5icon/chess-removebg-preview.png'
+  mayfung:   'fp5icon/teatime-removebg-preview.png',
+  teatime:   'fp5icon/teatime-removebg-preview.png',
+  cineclub:  'fp5icon/cine_club-removebg-preview.png',
+  halloween: 'fp5icon/cine_club-removebg-preview.png',
+  crtwall:   'fp5icon/cine_club-removebg-preview.png',
+  mediaarch: 'fp5icon/media_archeology-removebg-preview.png',
+  mediaarch1:'fp5icon/media_archeology-removebg-preview.png',
+  mediaarch2:'fp5icon/media_archeology-removebg-preview.png',
+  mediaarch3:'fp5icon/media_archeology-removebg-preview.png',
+  teatime2:  'fp5icon/teatime-removebg-preview.png',
+  platform:  'fp5icon/floating_platform.png',
+  adminnight:'fp5icon/admin_night-removebg-preview.png',
+  spatial:   'fp5icon/spacial_calibration-removebg-preview.png',
+  workshop:  'fp5icon/workshop-removebg-preview.png',
+  modular:   'fp5icon/synth_onsite_rental-removebg-preview.png',
+  stc:       'fp5icon/subject_to_change-removebg-preview.png',
+  ml:        'fp5icon/ML_serius-removebg-preview.png',
+  vcd:       'fp5icon/vcd_found_footage-removebg-preview.png',
+  fkinstall: 'fp5icon/motion_tracking_sound_installation-removebg-preview.png',
+  board:     'fp5icon/chess-removebg-preview.png'
 };
+const SVG_ICON = svgId => '<svg><use href="#'+svgId+'"/></svg>';
 function iconHTML(id, svgId){
   const img = ICONS[id];
-  return img ? '<img src="'+img+'" alt="">' : '<svg><use href="#'+svgId+'"/></svg>';
+  if(!img) return SVG_ICON(svgId);
+  // a missing PNG degrades to the line-art symbol instead of a broken-image glyph
+  return '<img src="'+img+'" alt="" data-fallback="'+svgId+'"'
+    + ' onerror="const p=this.parentElement;p.classList.remove(\'img-icon\');'
+    + 'p.innerHTML=\'<svg><use href=&quot;#\'+this.dataset.fallback+\'&quot;/></svg>\';">';
 }
 function setIcon(el, id, svgId){
   el.classList.toggle('img-icon', !!ICONS[id]);
@@ -628,21 +763,22 @@ function setIcon(el, id, svgId){
 }
 const PEOPLE = {
   L:  {name:'Linda Chiu-han Lai 黎肖嫻', init:'L',  photo:CDN+'2015/07/B-W_Linda_London2015_square.jpg'},
-  H:  {name:'Hector Rodriguez', init:'H',        photo:'/fp5icon/hector.jpg'},
-  A:  {name:'LAI Chung-man Andio 黎仲民', init:'A', photo:'/fp5icon/andio.jpg'},
-  FK: {name:'WONG Fuk-kuen 黃福權', init:'FK',      photo:'/fp5icon/fukkuen.jpeg'},
+  H:  {name:'Hector Rodriguez', init:'H',        photo:'fp5icon/hector.jpg'},
+  A:  {name:'LAI Chung-man Andio 黎仲民', init:'A', photo:'fp5icon/andio.jpg'},
+  FK: {name:'WONG Fuk-kuen 黃福權', init:'FK',      photo:'fp5icon/fukkuen.jpeg'},
   W:  {name:'LAI Wai-leung 黎偉亮', init:'W',       photo:CDN+'2015/08/Wai_image02_sq-bw.jpg'},
   S:  {name:'NG Sing-yiu Stanley 伍昇耀', init:'S', photo:CDN+'Stan_Ng_profile_image_026a672b60.jpg'},
   HC: {name:'LAU Ho-chi 劉浩知', init:'HC',         photo:CDN+'Lau_Hochi_profile_1_8e5de784b5.jpg'},
   HG: {name:'Hugo Yeung 楊鳴謙', init:'HG',         photo:CDN+'2015/07/Profile_BW_RGB-300dpi.jpg'},
   MF: {name:'May Fung 馮美華', init:'馮'},
+  JL: {name:'Jen Lee', init:'JL'},
   FP: {name:'FP 集體', init:'FP', photo:'https://floatingprojectscollective.net/fp-icon.png'}
 };
 function avHTML(k){
   const p = PEOPLE[k];
   if(!p) return '';
-  const inner = p.photo ? '<img src="'+p.photo+'" alt="'+p.name+'" loading="lazy">' : p.init;
-  return '<span class="av" data-person="'+k+'" title="'+p.name+'">'+inner+'</span>';
+  const img = p.photo ? '<img src="'+p.photo+'" alt="" loading="lazy" onerror="this.remove()">' : '';
+  return '<span class="av" data-person="'+k+'" title="'+p.name+'">'+p.init+img+'</span>';
 }
 
 const DATA = {
@@ -651,83 +787,98 @@ const DATA = {
     tags:['社群連結','標誌系列','講座'],
     desc:'馮美華借 Maya Deren 嘅實驗短片《Meshes of the Afternoon》做參照，回望自己一路行過嚟嘅生活同存在方式 — 有時真實、有時超現實嘅一連串夢，交纏成一個以實驗精神為軸嘅存在。佢會放自己第一條短片《The Sea》（super 8，4 分鐘，數碼檔播放）打開話題。',
     pics:['MF','L']},
-  halloween: {icon:'ic-disc', title:'萬聖節 Laserdisc 放映',
-    meta:'<b>2026.10.30</b> · Private Cine Club 首場 · 日期已確定',
-    tags:['有收入','社群連結','放映'],
-    desc:'Hector 從佢過百隻嘅 laserdisc 收藏揀片：《變形邪魔 Invasion of the Body Snatchers》1956 同 1978 兩個版本連放。技術上跟足 D1 規格 — 用分配放大器推幾部 CRT，唔用被動分線，保住每部電視都收到足電壓嘅訊號。',
+  halloween: {icon:'ic-disc', title:'Halloween Apocalypse 萬聖末日啟示',
+    meta:'<b>2026.10.30 – 11.07</b> · Laser Frames 第一輯 · 日期已確定',
+    tags:['有收入','社群連結','放映','媒體考古'],
+    desc:['Hector 從佢嘅 laserdisc 收藏揀恐怖片，以 private cine club 形式放映，需要預先登記。三晚：',
+      '<ul><li><b>2026.10.30（6:30–9:30pm）</b>《活死人黎明 Dawn of the Dead》（1978，George A. Romero）</li>'
+      +'<li><b>2026.10.31（5:00–6:00pm）</b>《變形邪魔 Invasion of the Body Snatchers》1956（Don Siegel）同 1978（Philip Kaufman）兩個版本連放</li>'
+      +'<li><b>2026.11.07（5:00–9:00pm）</b>《復製嬌妻 The Stepford Wives》（1975，Bryan Forbes）</li></ul>',
+      '每場都有導讀、分析同討論。技術上跟足 D1 規格 — 用分配放大器推幾部 CRT，唔用被動分線，保住每部電視都收到足電壓嘅訊號。'],
     pics:['H']},
-  teatime: {icon:'ic-teacup', title:'Fountain Teatime 茶聚噴泉',
-    meta:'循環系列 · ≈ 每月一次 · 一年長',
+  teatime: {icon:'ic-teacup', title:'Fountain Teatime 噴泉茶聚',
+    meta:'循環系列 · 雙月一次 · 2026–2029 持續',
     tags:['社群連結','標誌系列','實驗性'],
-    desc:'請唔同嘉賓嚟傾 being、living、doing、survival 同 interdisciplinarity。已接受邀請未定期：Jen Lee（跨物種思維）、Ocean Leung + Mark Chung（新藝術空間嘅孕育）、Lau Ho-chi（展覽製作作為職業）。待邀名單仲有 Elliot Leung、Lo Lai-lai、Ding Cheuk-laam、Zhang Zimu、Ryo 等；Jerry &amp; Mandy（遊戲）留第二年。',
-    pics:['L']},
-  cineclub: {icon:'ic-crt', title:'Private Cine Club 私人放映會',
-    meta:'循環系列 · ≈ 兩個月一次 · 即興按主題',
-    tags:['有收入','社群連結','實驗性'],
-    desc:'唔係戲院式放映：三至四部舊 CRT 電視散落空間，同步播同一畫面，觀眾喺唔同角落各自圍住細電視睇 — 親密、可以傾偈、似裝置多過似戲院。強調 laserdisc / VCD 呢啲類比格式嘅暖度同質感。以會員制 cine-club 結構運作（法律細節仍需本地確認）。',
+    desc:['請唔同嘉賓嚟傾 being、living、doing、survival 同 interdisciplinarity。FP 策劃，Linda Lai 統籌，雙月一次。',
+      '已確定場次：<b>2026.10.17</b> May Fung《May Fung amid Meshes of The Afternoon》；<b>2026.12.12</b> Jen Lee《Being, Experiencing, Perceiving, and Knowing in the More-Than-Human World》。',
+      '排期中：Lau Ho-chi 講展覽製作作為職業（2027，日期待定）；2027 尾或 2028 有《Name of the Will》遊戲開發者分享、Hugo Yeung 嘅項目，潛在合作者 Zeitgeist Studio（Mandy Wong 同 Jerry Chan）。'],
+    pics:['L','MF','JL']},
+  teatime2: {icon:'ic-teacup', title:'Being, Experiencing, Perceiving, and Knowing in the More-Than-Human World',
+    meta:'<b>2026.12.12</b>（3–6pm）· Fountain Teatime 第二場 · 日期已確定',
+    tags:['社群連結','標誌系列','講座'],
+    desc:'策展人、博士後研究員 Jen Lee 主講：喺一個「超越人類」嘅世界裡面，存在、經驗、感知同認知各自意味著咩。接住 10 月 May Fung 場，係噴泉茶聚第二場。',
+    pics:['JL','L']},
+  cineclub: {icon:'ic-crt', title:'Laser Frames 不一樣的畫幀：雷射視盤',
+    meta:'循環系列 · 2026–2029 · 4 節 × 2 輯 · 需預先登記',
+    tags:['有收入','社群連結','實驗性','媒體考古'],
+    desc:['把賽璐珞電影轉上 laserdisc 唔止係保存一份拷貝。Laserdisc 唔同 VHS、VCD、DVD、Blu-ray 呢啲替代技術版本 — 佢係類比媒體，畫幀以連續流嘅方式存在，唔經數碼轉換。佢係一套獨特嘅儲存系統，而佢嘅消費者版本保留咗比 DVD 同其他數碼媒體更多關於電影製作嘅事實。',
+      '呢個以技術為本嘅系列會配合劇情長片放映（2006 年或之前）做現場導讀同討論 — 一邊睇舊片，一邊聽平時少有人講嘅製作真相。系列由「Halloween Apocalypse 2026」打頭陣。',
+      '放映形式唔係戲院式：三至四部舊 CRT 電視散落空間，同步播同一畫面，觀眾喺唔同角落各自圍住細電視睇 — 親密、可以傾偈、似裝置多過似戲院。以會員制 cine-club 結構運作（法律細節仍需本地確認）。'],
     pics:['H']},
-  adminnight: {icon:'ic-laptop', title:'Admin Night',
-    meta:'循環系列 · ≈ 每月一次',
-    tags:['社群連結'],
-    desc:'空間閒置嘅時候開放：大家帶部電腦上嚟做自己積落嘅嘢，中間夾雜小型 presentation、書同動漫分享 — 參加者可做嘢可淨聽。基調安靜，似自修室，唔會有打機嘈吵環節。提供咖啡同 wifi，收入靠 donation。',
-    pics:['A']},
+  adminnight: {icon:'ic-laptop', title:'FP Open!「打開門」做吓事務局',
+    meta:'循環系列 · 每月 2–3 日 · <b>2026.10.02–04</b> 試局（2–8pm）',
+    tags:['社群連結','工作空間','自由定價'],
+    desc:['Admin night、chore settlement、面對面 hang out — 把非創作嘅事務（覆 email、申請 grant、整檔案）同創作活動接駁埋一齊。',
+      'Andio、Fuk-kuen 同 Sing 喺 FP 做嘢，公眾可以一齊上嚟做自己積落嘅嘢，中間夾雜小型分享。基調安靜，似自修室。歡迎 donation。',
+      '#工作空間 #學習 #閒聊 #自由定價'],
+    pics:['A','FK','S']},
   spatial: {icon:'ic-speaker', title:'Spatial Calibration 空間校正',
-    meta:'循環系列 · ≈ 三個月一次 · 聲音表演',
+    meta:'循環系列 · 每季一次 · 2026–2029 · 聲音表演',
     tags:['社群連結','實驗性','有收入'],
     desc:'名字嚟自以前喺工廠大廈唔可以做公開演出，於是叫「聲壓測試」。重點係提供一個試煉場，俾經驗未夠嘅 sound artist 落場表演 — FP 負責場地、觀眾、海報設計同宣傳。',
     pics:['A']},
-  workshop: {icon:'ic-chip', title:'Workshop 工作坊',
-    meta:'不定期 · 睇人手同檔期',
+  workshop: {icon:'ic-chip', title:'Device-making Workshop Series',
+    meta:'循環系列 · 2026–2029 · 兩條軌道 · 日期待定',
     tags:['有收入','實驗性','社群連結'],
     desc:'兩條線：Andio 嘅 device-making，暫定四節系列（仍待佢確認），教藝術家落手做硬件；Fuk-kuen 嘅藝術家個人網站工作坊 — 仲月月俾錢 WIX？用 AI 自己起一個，一日內或最多連續兩日搞掂。呢條線係最直接嘅收入來源。',
     pics:['A','FK']},
   modular: {icon:'ic-knobs', title:'Synth / DAW / Modular 玩聲角',
-    meta:'≈ 半年一次 · Play room',
+    meta:'Play room + Artefact Corner · 半年一次 · 2026–2029',
     tags:['實驗性','有收入'],
     desc:'唔算係一個活動 — 係一個 play room：FP 擺出器材（FK 會帶埋自己嘅 modular），俾人上嚟玩聲、錄聲。現場租器材同 donation 做收入。可以同 artefact corner 合埋一齊做。',
     pics:['A','FK']},
   mediaarch: {icon:'ic-cassette', title:'媒體考古 Media Archaeology',
-    meta:'研究線 · 分階段展開',
-    tags:['實驗性','標誌系列'],
-    desc:['Linda 學術書寫嘅延伸，唔係一個單一活動，而係一條貫穿全期嘅研究線，分幾個部分逐步展開：',
-      '<ul><li><b>Pop-up 展覽</b>（免費入場）：用返 Linda 自己舊作嘅材料重新編排展出，唔係新製作，係舊素材嘅新讀法。</li>'
-      +'<li><b>講座「日常生活中嘅媒體考古時刻」</b>：講點樣喺日常生活入面搵到「媒體考古」呢種目光 — 舊科技、舊格式、舊物件點樣仍然滲透喺而家嘅生活入面。</li>'
-      +'<li><b>三個工作坊</b>，遞進式：<ul>'
-        +'<li>影像地圖（image maps）— 學員練習用地圖式思維整理同連結圖像素材。</li>'
-        +'<li>「慾望」研究 — 探討驅動人類發明工具背後嘅慾望同動機，由呢個角度重新理解科技史。</li>'
-        +'<li>追溯自己嘅創作系譜 — 學員回望自己一路以嚟嘅創作脈絡，最後整理成一份屬於自己嘅作品集。</li>'
-      +'</ul></li></ul>',
-      '呢條線同 Hector 嘅 laserdisc / Private Cine Club 線，同埋 Angela Su 嘅香港媒體藝術調查出版計劃互相呼應扣連 — 三者都係圍住「舊媒體、舊格式點樣喺當下仲有生命力」呢個大問題轉。'],
+    meta:'研究線 · 總覽 · 貫穿 2026–2029',
+    tags:['實驗性','標誌系列','媒體考古'],
+    desc:['Linda 學術書寫嘅延伸，唔係一個單一活動，而係一條貫穿全期嘅研究線 — 圍住「舊媒體、舊格式點樣喺當下仲有生命力」呢個大問題轉。',
+      '研究線嘅主幹係「Tales of Media Archaeology」三部曲：由講座入手（第一輯），走去展覽製作嘅工作坊（第二輯），最後同學員一齊做在地群展（第三輯）。每一輯嘅日期同內容睇下面三張卡。',
+      '另外仲有一個 <b>pop-up 展覽</b>（免費入場）：用返 Linda 自己舊作嘅材料重新編排展出，唔係新製作，係舊素材嘅新讀法 — 日期未定。',
+      '呢條線同 Hector 嘅 Laser Frames / laserdisc 線，同埋 Angela Su 嘅香港媒體藝術調查出版計劃互相呼應扣連。'],
+    links:['mediaarch1','mediaarch2','mediaarch3'],
     pics:['L','H']},
   stc: {icon:'ic-shuffle', title:'Subject to Change',
     meta:'流動 · 未定形',
     tags:['實驗性'],
     desc:'Ho-chi 嘅開放式新計劃：由 "subject"、"to"、"change" 三個字嘅重新排列衍生活動。刻意保持流動、未定形 — 所以喺呢張地圖上只標到節奏，標唔到內容。',
     pics:['HC']},
-  ml: {icon:'ic-net', title:'ML Series 學習系統的詩學',
-    meta:'12 週課程 · 待 ADC 批款（申請 2026.12 交）',
+  ml: {icon:'ic-net', title:'Poetics of ML Series 學習系統的詩學',
+    meta:'FP5.0 標誌性總結系列 · 2028–2029 · 12 週課程 · 待 ADC 批款（申請 2026.12 交）',
     tags:['有收入','社群連結','標誌系列'],
     desc:['兩條平行軌道：Track 1「基礎編程」（4週）打底，由零開始學 Python 同基本邏輯；Track 2「ML實作」（4週）進階到用 scikit-learn 同 PyTorch 訓練同操作實際模型。每節3小時，每軌大約24小時，用 Google Colab 做教學平台，上限30人，務求人人有機會落手做，唔係得個睇字。',
       'Hector 係主教，貫穿成個課程嘅技術脈絡；但呢個唔止係一個 coding class — 前面有 Linda 嘅「影像作為數據」講座打頭陣，由非技術角度切入，講點樣睇「一張圖」變成「一堆數字」呢件事本身有咩文化含義，同埋帶學員做城市考察，將呢種思考帶出課室。課程中段有 Winnie Soon 同 Fiona Lau 嘅 lecture-performance「Generating dialogue, generating text」，用表演形式拆解人機對話同文本生成呢個題目。尾聲收喺 Hector 嘅公開講座「Poetics of Infrastructure」，將前面成套技術訓練拉返上去，問返「基礎建設本身有冇詩意」呢個大問題。',
       '即係話成套嘢嘅骨架係編程訓練，但血肉係文化提問 — 技術同人文兩條線一齊教，先夠得上「學習系統的詩學」呢個名。（延伸版本預算約 HK$192,060，含10%行政費；12月前要交 ADC 申請。）'],
     pics:['H','HG','L']},
-  vcd: {icon:'ic-film', title:'VCD Found-footage 公開徵集',
-    meta:'一次性項目 · 徵集 → 比賽 → 放映',
-    tags:['社群連結','標誌系列'],
-    desc:'用 FP 自己嘅 VCD 收藏做 found-footage 創作：講座打頭，然後公開徵集、比賽、放映、書寫。同 Wai 嘅 VCD shop 同 zine 系列「Wanna watch again」係同一條線。',
-    pics:['W','L']},
-  fkinstall: {icon:'ic-motion', title:'動作追蹤聲音裝置',
-    meta:'一次性展覽 · 展期 3–4 週 · 約 2027',
+  vcd: {icon:'ic-film', title:'More than Found Footage 何止現成影音碎片咁簡單',
+    meta:'公開徵集 · 2027.04 開 → 2027.10 截 → 2028.03 發表',
+    tags:['社群連結','標誌系列','公開徵集'],
+    desc:['大約 300 套香港商業電影嘅 VCD 會開放俾申請者（按公佈名單揀）複製做再創作。同 Wai 嘅 VCD shop 同 zine 系列「Wanna watch again」係同一條線。',
+      '<ul><li><b>2027.04–10</b>：導論講座；四月開徵集，十月截止</li>'
+      +'<li><b>2027.11 – 2028.02</b>：評審選拔同宣傳</li>'
+      +'<li><b>2028.03</b>：發表 — 放映會加討論</li></ul>',
+      '合作單位待定。'],
+    pics:['L','W']},
+  fkinstall: {icon:'ic-motion', title:'Motion Gesture Tracking 動作追蹤聲音裝置',
+    meta:'一次性展覽 · 2027.09–10（待確認）· 展期 3–4 週',
     tags:['實驗性'],
     desc:'Motion gesture tracking 聲音裝置，可以同 modular 一齊展出。一次性展覽，大約一年之後先發生 — 確實日期未定，所以喺呢度只虛指住 2027 呢條地平線。',
     pics:['FK']},
-  crtwall: {icon:'ic-wall', title:'CRT TV Wall',
-    meta:'一次性展覽 · 展期 3–4 週 · 約 2027',
+  crtwall: {icon:'ic-wall', title:'CRT Wall 盒裝故事',
+    meta:'一次性展覽 · 2027 或 2028（待確認）· 展期 3–4 週',
     tags:['實驗性','社群連結'],
     desc:'Sing 嘅流動影像 CRT 牆，帶參與式成分，FP 提供場地同 CRT。排期要留意：同 Private Cine Club 用緊同一批電視機 — 展覽霸機嗰段時間，放映要停或改單一投影。',
     pics:['S']},
-  board: {icon:'ic-board', title:'地形康樂棋',
-    meta:'一次性 · 2027 · 製作＋開玩',
+  board: {icon:'ic-board', title:'地形康樂棋 Topographic Carrom',
+    meta:'Play room · 一次性 · 2027 · 製作＋開玩',
     tags:['社群連結','實驗性'],
     desc:'自己鬥木整嘅康樂棋：棋盤唔係普通正方形 — 上面有山、草地、障礙物；唔止四個窿，中間仲有好多窿；另加特別規則，例如用三隻棋圍住對手中間會死。由 Ng Sing 同 Fuk-kuen 認頭做 lead。',
     pics:['S','FK']},
@@ -736,6 +887,50 @@ const DATA = {
     tags:['標誌系列','社群連結','有收入'],
     desc:'FP 招牌研究型項目，2016–2023 已做三輯。第四輯強調跨學科同媒體考古視角 — 觀眾可以用手觸碰物件嘅玩具機器展，由硬件工作坊長出嚟。',
     pics:['A']},
+  mediaarch1: {icon:'ic-cassette', title:'Tales of Media Archaeology 1 媒體考古…榕樹下',
+    meta:'<b>2026.11.28 | 12.05 | 2027.01.30 | 02.06</b>（3–6pm）· 四節 · 日期已確定',
+    tags:['實驗性','標誌系列','講座','媒體考古'],
+    desc:['「媒體考古」三部曲第一輯，講座加工作坊，四節。由 Linda Lai 主持。',
+      '<ul><li>媒體考古個案逐個講 — 日常生活中嘅媒體考古片段同時刻。</li>'
+      +'<li>媒體考古點樣豐富我們對媒體（藝術）實踐嘅理解 — 由研究嘅視野走到藝術創作嘅視野。</li></ul>'],
+    pics:['L']},
+  mediaarch2: {icon:'ic-plant', title:'Tales of Media Archaeology 2 媒體考古…除草接枝施肥',
+    meta:'2027–2028 · 3 節 × 3 小時 · 日期待定',
+    tags:['實驗性','標誌系列','工作坊','媒體考古'],
+    desc:['第二輯轉入展覽製作（exhibition-making），三節工作坊：',
+      '<ul><li><b>工作坊 (1)</b>：建構影像圖譜 — 由日常物品構成嘅想像樹狀網絡。</li>'
+      +'<li><b>工作坊 (2)</b>：追尋驅動工具發明嘅「慾望」，由呢個角度重新理解科技史。</li>'
+      +'<li><b>工作坊 (3)</b>：追溯個人嘅藝術／創作脈絡 — 整理成一份屬於自己嘅作品係譜。</li></ul>'],
+    pics:['L']},
+  mediaarch3: {icon:'ic-tree', title:'Tales of Media Archaeology 3 媒體考古…奇異叢林',
+    meta:'<b>2028.03</b> · 在地群展 · 月份已確定',
+    tags:['實驗性','標誌系列','展覽','媒體考古'],
+    desc:'三部曲最後一輯：同第一、二輯嘅講座／工作坊參加者合作，把兩輯所獲化為一個在地群展。',
+    pics:['L']},
+  jazz: {icon:'ic-note', title:'Jazz vs Experimental Sound',
+    meta:'2027 或 2028（待確認）· 三個演出單元',
+    tags:['實驗性','社群連結','表演'],
+    desc:'爵士同實驗聲音嘅演出。目標三個演出單元，其中一個會以製作一份 FP Manual 為目標。Sing 正邀請「Fountain de Chopin 翻騰三周半」同其他爵士樂愛好者做潛在合作者。日期未定。',
+    pics:['S']},
+  mnemonic: {icon:'ic-chip', title:'mnemonic catastrophe',
+    meta:'2027 或 2028（待確認）· 個人展覽',
+    tags:['實驗性','數據文化'],
+    desc:'Hugo Yeung 嘅展覽，回應當下機器學習生態裡面由數據文化衍生出嚟嘅問題。確實日期待定。',
+    pics:['HG']},
+  essaying: {icon:'ic-mic', title:'Essaying with Sight and Sound 聲影散文探索：講演式表演系列',
+    meta:'公開徵集 · 2028.04 開 → 2028.06 截 → 2029.03 發表',
+    tags:['社群連結','公開徵集','表演'],
+    desc:['公開徵集提案加導論講座，申請要交：題目、論點、媒介範圍、素材來源、演出流程（大綱）。',
+      '<ul><li><b>2028.04–06</b>：四月開徵集，六月截止收提案</li>'
+      +'<li><b>2028.07 – 2029.11</b>：評審選拔同行政安排</li>'
+      +'<li><b>2029.03</b>：發表 — 開門講演式表演系列</li></ul>',
+      '合作單位待定。'],
+    pics:['L']},
+  platform: {icon:'ic-shop', title:'FLOATING PLATFORM 據㸃浮台',
+    meta:'常設 · 2026–2029 · JCCAC L3-06D',
+    tags:['有收入','社群連結','常設'],
+    desc:'FP 喺 JCCAC L3-06D 嘅寄賣角（sales corner），全期常設。由 Lai Wai-leung 負責。',
+    pics:['W']},
   tsundoku: {icon:'ic-books', title:'Tsundoku 負載讀取',
     meta:'一次性 · 開放周末 · 約 2028–29',
     tags:['社群連結'],
@@ -743,12 +938,29 @@ const DATA = {
     pics:['L','FP']}
 };
 
+/* recurring-series bracket: span from its own row down to the last card of the section */
+(function(){
+  const mark = document.querySelector('.spanmark');
+  const endRow = document.getElementById('rec-end');
+  if(!mark || !endRow) return;
+  const fit = ()=>{
+    const start = mark.parentElement.getBoundingClientRect().top;
+    const end = endRow.getBoundingClientRect().bottom;
+    mark.style.height = Math.max(0, end - start + 6) + 'px';
+  };
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
+
 const overlay = document.getElementById('overlay');
 const mIcon = document.getElementById('m-icon');
 const mTitle = document.getElementById('m-title');
 const mMeta = document.getElementById('m-meta');
 const mTags = document.getElementById('m-tags');
 const mDesc = document.getElementById('m-desc');
+const mLinks = document.getElementById('m-links');
 const mPics = document.getElementById('m-pics');
 let lastFocus = null;
 
@@ -760,6 +972,18 @@ function openModal(id){
   mMeta.innerHTML = d.meta;
   mTags.innerHTML = d.tags.map(t=>'<span class="tag">'+t+'</span>').join('');
   mDesc.innerHTML = Array.isArray(d.desc) ? d.desc.map(p=>'<p>'+p+'</p>').join('') : '<p>'+d.desc+'</p>';
+  mLinks.innerHTML = (d.links || []).filter(t=>DATA[t]).map(t=>
+    '<button class="person-item" type="button" data-target="'+t+'">'
+    + '<span class="pi-icon">'+iconHTML(t, DATA[t].icon)+'</span>'
+    + '<span class="pi-title">'+DATA[t].title+'</span>'
+    + '</button>').join('');
+  mLinks.querySelectorAll('.person-item').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const target = btn.dataset.target;
+      closeModal();
+      setTimeout(()=>{ scrollToCard(target); openModal(target); }, 50);
+    });
+  });
   mPics.innerHTML = d.pics.map(k=>{
     const p = PEOPLE[k];
     return '<span class="person">'+avHTML(k)+'<span>'+p.name+'</span></span>';
@@ -839,7 +1063,7 @@ function openPersonModal(k){
   const p = PEOPLE[k];
   const ids = PERSON_ITEMS[k] || [];
   if(!p || !ids.length) return;
-  pIcon.innerHTML = '<img src="'+p.photo+'" alt="'+p.name+'">';
+  pIcon.innerHTML = p.photo ? '<img src="'+p.photo+'" alt="'+p.name+'" onerror="this.remove()">' : '';
   pTitle.textContent = p.name;
   pMeta.textContent = ids.length + ' 個相關節目';
   pList.innerHTML = ids.map(id=>{
@@ -878,7 +1102,7 @@ Object.keys(PEOPLE).forEach(k=>{
   btn.className = 'artist-av';
   btn.title = p.name;
   btn.setAttribute('aria-label', p.name);
-  btn.innerHTML = '<img src="'+p.photo+'" alt="'+p.name+'" loading="lazy">';
+  btn.innerHTML = '<img src="'+p.photo+'" alt="'+p.name+'" loading="lazy" onerror="this.closest(\'.artist-av\').remove()">';
   btn.addEventListener('click', ()=>openPersonModal(k));
   artistAvs.appendChild(btn);
 });
