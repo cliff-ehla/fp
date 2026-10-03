@@ -18,20 +18,22 @@
 		const ICONS = {
 		  mayfung:   '/fp5icon/teatime-removebg-preview.png',
 		  teatime:   '/fp5icon/teatime-removebg-preview.png',
-		  cineclub:  '/fp5icon/LaserFrames_series_Hector_1_-removebg-preview.png',
-		  halloween1:'/fp5icon/HalloweenApocalypse2026_Hector-removebg-preview.png',
-		  halloween2:'/fp5icon/HalloweenApocalypse2026_Hector-removebg-preview.png',
-		  halloween3:'/fp5icon/HalloweenApocalypse2026_Hector-removebg-preview.png',
+		  cineclub:  '/fp5icon/F_Club_LaserFrames.jpg',
+		  halloween1:'/fp5icon/F_HalloweenApocalypse2026_Hector.png',
+		  halloween2:'/fp5icon/F_HalloweenApocalypse2026_Hector.png',
+		  halloween3:'/fp5icon/F_HalloweenApocalypse2026_Hector.png',
+		  xmasghost: '/fp5icon/F_XmasGhost_LaserFrame_Hector-S.jpg',
+		  halloween2027:'/fp5icon/F_Halloween-2027-S.jpg',
 		  crtwall:   '/fp5icon/cine_club-removebg-preview.png',
-		  mediaarch: '/fp5icon/media_archeology-removebg-preview.png',
-		  mediaarch1a:'/fp5icon/media_archeology-removebg-preview.png',
-		  mediaarch1b:'/fp5icon/media_archeology-removebg-preview.png',
-		  mediaarch1c:'/fp5icon/media_archeology-removebg-preview.png',
-		  mediaarch1d:'/fp5icon/media_archeology-removebg-preview.png',
-		  mediaarch2:'/fp5icon/media_archeology-removebg-preview.png',
-		  mediaarch3:'/fp5icon/media_archeology-removebg-preview.png',
+		  mediaarch: '/fp5icon/F_Club_MA.jpg',
+		  mediaarch1a:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
+		  mediaarch1b:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
+		  mediaarch1c:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
+		  mediaarch1d:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
+		  mediaarch2:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
+		  mediaarch3:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
 		  teatime2:  '/fp5icon/teatime-removebg-preview.png',
-		  platform:  '/fp5icon/FloatingPlatform-at-FP_zines-books-media-removebg-preview.png',
+		  platform:  '/fp5icon/F_Floating-Plat-at-FP_ChineseS.jpg',
 		  mnemonic:  '/fp5icon/Mnemonic-Catastrophe_Hugo-removebg-preview.png',
 		  essaying:  '/fp5icon/OpenCall_Essaying-w-Sight-y-Sound__a_lecture_pe_182491-removebg-preview.png',
 		  adminnight:'/fp5icon/admin_night-removebg-preview.png',
@@ -40,7 +42,7 @@
 		  modular:   '/fp5icon/synth_onsite_rental-removebg-preview.png',
 		  stc:       '/fp5icon/subject_to_change-removebg-preview.png',
 		  ml:        '/fp5icon/ML_serius-removebg-preview.png',
-		  vcd:       '/fp5icon/vcd_found_footage-removebg-preview.png',
+		  vcd:       '/fp5icon/F_OpenCall_More-than-foundfootage.png',
 		  fkinstall: '/fp5icon/motion_tracking_sound_installation-removebg-preview.png',
 		  board:     '/fp5icon/chess-removebg-preview.png'
 		};
@@ -104,6 +106,18 @@
 		      '共同問題：我哋有幾人類？ How human are we? 每場都有導讀、分析同討論。',
 		      'Private cine club 形式，需要預先登記。技術上跟足 D1 規格 — 用分配放大器推幾部 CRT，唔用被動分線。'],
 		    pics:['H']},
+		  xmasghost: {icon:'ic-disc', title:'Christmas Ghosts · 《The Legend of Hell House》',
+		    meta:'約 <b>2026.12</b> · LaserFrames Cine Club · X\'mas 2026 · 日期待定',
+		    tags:['有收入','社群連結','放映','媒體考古'],
+		    desc:['John Hough 1973 年嘅《The Legend of Hell House》。LaserFrames 聖誕場：一座鬼屋、一班研究者、一個聖誕星底下嘅放映。',
+		      'Private cine club 形式，需要預先登記。CRT 同步播映，跟足 D1 規格。'],
+		    pics:['H']},
+		  halloween2027: {icon:'ic-disc', title:'Halloween Apocalypse 2027',
+		    meta:'約 <b>2027.10–11</b> · LaserFrames Cine Club · 三場放映 · 日期待定',
+		    tags:['有收入','社群連結','放映','媒體考古'],
+		    desc:['Halloween Apocalypse 第二年：LaserFrames 再來三場恐怖片放映。確實片單同日期仍待確認。',
+		      'Private cine club 形式，需要預先登記。CRT 同步播映，跟足 D1 規格。'],
+		    pics:['H']},
 		  teatime: {icon:'ic-teacup', title:'Fountain Teatime 噴泉茶聚',
 		    meta:'循環系列 · 雙月一次 · 2026–2029 持續',
 		    tags:['社群連結','標誌系列','實驗性'],
@@ -120,8 +134,9 @@
 		    meta:'Clubs & Series · 循環系列 · 2026–2029 · 4 節 × 2 輯 · 需預先登記',
 		    tags:['有收入','社群連結','實驗性','媒體考古'],
 		    desc:['把賽璐珞電影轉上 laserdisc 唔止係保存一份拷貝。Laserdisc 唔同 VHS、VCD、DVD、Blu-ray 呢啲替代技術版本 — 佢係類比媒體，畫幀以連續流嘅方式存在，唔經數碼轉換。佢係一套獨特嘅儲存系統，而佢嘅消費者版本保留咗比 DVD 同其他數碼媒體更多關於電影製作嘅事實。',
-		      '呢個以技術為本嘅系列會配合劇情長片放映（2006 年或之前）做現場導讀同討論 — 一邊睇舊片，一邊聽平時少有人講嘅製作真相。系列由「Halloween Apocalypse 2026」打頭陣。',
+		      '呢個以技術為本嘅系列會配合劇情長片放映（2006 年或之前）做現場導讀同討論 — 一邊睇舊片，一邊聽平時少有人講嘅製作真相。系列由「Halloween Apocalypse 2026」打頭陣，接住有「Christmas Ghosts」（2026.12，《The Legend of Hell House》）同「Halloween Apocalypse 2027」三場。',
 		      '放映形式唔係戲院式：三至四部舊 CRT 電視散落空間，同步播同一畫面，觀眾喺唔同角落各自圍住細電視睇 — 親密、可以傾偈、似裝置多過似戲院。以會員制 cine-club 結構運作（法律細節仍需本地確認）。'],
+		    links:['halloween1','halloween2','halloween3','xmasghost','halloween2027'],
 		    pics:['H']},
 		  adminnight: {icon:'ic-laptop', title:'FP Open!「打開門」做吓事務局',
 		    meta:'循環系列 · 每月 2–3 日 · <b>2026.10.02–04</b> 試局（2–8pm）',
@@ -287,6 +302,8 @@
 		  halloween1:  'clubs',
 		  halloween2:  'clubs',
 		  halloween3:  'clubs',
+		  xmasghost:   'clubs',
+		  halloween2027:'clubs',
 		  teatime:     'clubs',
 		  teatime2:    'clubs',
 		  cineclub:    'clubs',
@@ -333,6 +350,7 @@
 		};
 		const CLUB_OF = {
 		  halloween1: 'laserframes', halloween2: 'laserframes', halloween3: 'laserframes',
+		  xmasghost: 'laserframes', halloween2027: 'laserframes',
 		  cineclub: 'laserframes',
 		  mediaarch: 'clubma', mediaarch1a: 'clubma', mediaarch1b: 'clubma',
 		  mediaarch1c: 'clubma', mediaarch1d: 'clubma', mediaarch2: 'clubma', mediaarch3: 'clubma'
@@ -637,6 +655,8 @@
 		  halloween1:  ['archaeology','reactivate','contrib'],
 		  halloween2:  ['archaeology','reactivate','contrib'],
 		  halloween3:  ['archaeology','reactivate','contrib'],
+		  xmasghost:   ['archaeology','reactivate','contrib'],
+		  halloween2027:['archaeology','reactivate','contrib'],
 		  teatime:     ['commoning','coindiv'],
 		  teatime2:    ['commoning'],
 		  cineclub:    ['archaeology','reactivate','contrib'],
@@ -1005,6 +1025,22 @@
     <div class="conn to-l"><span class="wire"></span><span class="pin"></span></div>
   </div>
 
+  <!-- LaserFrames: Christmas Ghosts, X'mas 2026 -->
+  <div class="row">
+    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
+    <div class="card side-r" data-id="xmasghost" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-disc"/></svg></div>
+        <div>
+          <div class="date">約 2026.12 · X'mas · 日期待定</div>
+          <h3>Christmas Ghosts · Hell House</h3>
+          <div class="short">LaserFrames 聖誕場 — 放映 John Hough《The Legend of Hell House》</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 需登記</span></div>
+    </div>
+  </div>
+
   <!-- the same lecture series carries on into the new year -->
   <div class="tl-sec"><span class="lab">2027 年初 — 日期已定</span></div>
 
@@ -1175,6 +1211,21 @@
   <div class="row tight">
     <div class="year-note l">一次性項目 · 大約落喺呢一年</div>
     <div class="year"><span class="badge">2027</span></div>
+  </div>
+
+  <div class="row">
+    <div class="card side-l" data-id="halloween2027" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-disc"/></svg></div>
+        <div>
+          <div class="date">約 2027.10–11 · 日期待定</div>
+          <h3>Halloween Apocalypse 2027</h3>
+          <div class="short">LaserFrames 第二年萬聖三場放映 — 片單待確認</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 三場</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
 
   <div class="row">
