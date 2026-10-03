@@ -43,6 +43,7 @@
 		  stc:       '/fp5icon/subject_to_change-removebg-preview.png',
 		  ml:        '/fp5icon/ML_serius-removebg-preview.png',
 		  vcd:       '/fp5icon/F_OpenCall_More-than-foundfootage.png',
+		  toy:       '/fp5icon/media_archeology-removebg-preview.png',
 		  fkinstall: '/fp5icon/motion_tracking_sound_installation-removebg-preview.png',
 		  board:     '/fp5icon/chess-removebg-preview.png'
 		};
@@ -169,13 +170,6 @@
 		      '呢條線同 Hector 嘅 LaserFrames Cine Club / laserdisc 線，同埋 Angela Su 嘅香港媒體藝術調查出版計劃互相呼應扣連。'],
 		    links:['mediaarch1a','mediaarch1b','mediaarch1c','mediaarch1d','mediaarch2','mediaarch3'],
 		    pics:['L','H']},
-		  solos: {icon:'ic-frame', title:'FP (Collective) SOLOs 據點成員個展',
-		    meta:'2027–2028 · 個人展覽 · 一次性',
-		    tags:['標誌系列','展覽'],
-		    desc:['據點成員喺 FP5.0 周期內舉辦嘅個人展覽 — 每位成員一個獨立項目，展期通常 3–4 週。',
-		      '目前排期：Fuk-kuen 動作追蹤聲音裝置（2027）、Sing CRT Wall 盒裝故事（2027 或 2028）、Hugo Yeung mnemonic catastrophe（2027 或 2028）。確實日期仍待確認。'],
-		    links:['fkinstall','crtwall','mnemonic'],
-		    pics:['FK','S','HG']},
 		  stc: {icon:'ic-shuffle', title:'Subject to Change',
 		    meta:'流動 · 未定形',
 		    tags:['實驗性'],
@@ -324,7 +318,6 @@
 		  board:       'playroom',
 		  vcd:         'opencall',
 		  essaying:    'opencall',
-		  solos:       'solos',
 		  fkinstall:   'solos',
 		  crtwall:     'solos',
 		  mnemonic:    'solos',
@@ -873,7 +866,6 @@
 <symbol id="ic-shop" viewBox="0 0 24 24"><path d="M4 9h16v10a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19V9z"/><path d="M3 9l2.2-5.2h13.6L21 9"/><path d="M9.5 9v3M14.5 9v3"/></symbol>
 <symbol id="ic-plant" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-3.3-2.5-5.5-6-5.5 0 3.3 2.5 5.5 6 5.5z"/><path d="M12 13c0-3.9 2.5-6.5 6-6.5 0 3.9-2.5 6.5-6 6.5z"/><path d="M8.5 21h7"/></symbol>
 <symbol id="ic-tree" viewBox="0 0 24 24"><path d="M12 21v-6"/><path d="M12 15 7.5 10.5h9L12 15z"/><path d="M12 11 8.5 6.5h7L12 11z"/><path d="M9 21h6"/><path d="M4.5 18.5c1.2-1 2-2.2 2.3-3.6M19.5 18.5c-1.2-1-2-2.2-2.3-3.6" stroke-dasharray="1.6 2"/></symbol>
-<symbol id="ic-frame" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M4 8h16M4 16h16M8 4v16M16 4v16"/></symbol>
 </defs>
 </svg>
 
@@ -1248,20 +1240,6 @@
   </div>
 
   <div class="tl-sec"><span class="lab">FP (Collective) SOLOs · 據點成員個展</span></div>
-
-  <div class="row">
-    <div class="card side-l" data-id="solos" tabindex="0" role="button">
-      <div class="top">
-        <div class="icon"><svg><use href="#ic-frame"/></svg></div>
-        <div>
-          <h3>據點成員個展</h3>
-          <div class="short">FP5.0 周期內每位成員嘅個人展覽 — 由此睇三個項目</div>
-        </div>
-      </div>
-      <div class="foot"><div class="pics"><span class="av">FK</span><span class="av">S</span><span class="av">HG</span></div><span class="pill once">總覽</span></div>
-    </div>
-    <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
-  </div>
 
   <div class="row">
     <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
