@@ -102,11 +102,6 @@
 		    }
 		  });
 		}
-		fetchFp5Events().then(remote=>{
-		  mergeFp5Data(DATA, remote);
-		  syncCardFaces();
-		}).catch(err=>console.warn('fp5_events fallback to seed', err));
-		/* FP5.0 program categories (from the FP5.0 brief) */
 		const CATEGORIES = [
 		  {id:'opendoor', en:'Regular Open Door', zh:'定期打開門'},
 		  {id:'clubs', en:'Clubs & Series', zh:'閉門研習｜實作系列'},
@@ -177,11 +172,82 @@
 		  mediaarch1c: 'clubma', mediaarch1d: 'clubma', mediaarch2: 'clubma', mediaarch3: 'clubma'
 		};
 		const CAT_ITEMS = {};
-		Object.keys(CAT_OF).forEach(id=>{
-		  if(!DATA[id]) return;
-		  const c = CAT_OF[id];
-		  (CAT_ITEMS[c] = CAT_ITEMS[c] || []).push(id);
-		});
+		function rebuildCatItems(){
+		  Object.keys(CAT_ITEMS).forEach(k=>delete CAT_ITEMS[k]);
+		  Object.keys(CAT_OF).forEach(id=>{
+		    if(!DATA[id]) return;
+		    const c = CAT_OF[id];
+		    if(c) (CAT_ITEMS[c] = CAT_ITEMS[c] || []).push(id);
+		  });
+		}
+		function applyCardMaps(){
+		  Object.keys(DATA).forEach(id=>{
+		    const d = DATA[id];
+		    if(d.category) CAT_OF[id] = d.category;
+		    else delete CAT_OF[id];
+		    if(d.club) CLUB_OF[id] = d.club;
+		    else delete CLUB_OF[id];
+		  });
+		  rebuildCatItems();
+		}
+		applyCardMaps();
+
+		function paintCardChrome(c){
+		  const id = c.dataset.id;
+		  const d = DATA[id];
+		  if(!d) return;
+		  const picsEl = c.querySelector('.pics');
+		  if(picsEl){
+		    picsEl.innerHTML = (d.pics || []).map(avHTML).join('');
+		    let wrap = picsEl.parentElement;
+		    if(!wrap.classList.contains('people')){
+		      wrap = document.createElement('div');
+		      wrap.className = 'people';
+		      picsEl.parentNode.insertBefore(wrap, picsEl);
+		      wrap.appendChild(picsEl);
+		    }
+		    let namesEl = wrap.querySelector('.names');
+		    if(!namesEl){
+		      namesEl = document.createElement('div');
+		      namesEl.className = 'names';
+		      wrap.appendChild(namesEl);
+		    }
+		    namesEl.innerHTML = (d.pics || []).map(k=>{
+		      const p = PEOPLE[k];
+		      return '<span>'+(p ? p.name : k)+'</span>';
+		    }).join('');
+		  }
+		  const cat = CATEGORIES.find(x=>x.id===catOf(id));
+		  let catEl = c.querySelector('.cat-pill');
+		  const titleEl = c.querySelector('.top > div h3');
+		  if(cat && titleEl){
+		    if(!catEl){
+		      catEl = document.createElement('span');
+		      titleEl.insertAdjacentElement('afterend', catEl);
+		    }
+		    catEl.className = 'cat-pill cat-'+cat.id;
+		    catEl.textContent = cat.zh;
+		    catEl.title = cat.en;
+		  } else if(catEl){
+		    catEl.remove();
+		  }
+		  const clubKey = CLUB_OF[id];
+		  let folder = c.querySelector('.club-folder');
+		  if(clubKey && CLUBS[clubKey]){
+		    const club = CLUBS[clubKey];
+		    if(!folder){
+		      folder = document.createElement('div');
+		      folder.setAttribute('aria-hidden', 'true');
+		      c.insertBefore(folder, c.firstChild);
+		    }
+		    folder.className = 'club-folder club-folder-'+clubKey;
+		    folder.innerHTML = '<span class="club-folder-en">'+club.en+'</span>';
+		    c.classList.add('has-club-folder');
+		  } else {
+		    if(folder) folder.remove();
+		    c.classList.remove('has-club-folder');
+		  }
+		}
 
 		/* recurring-series bracket: span from its own row down to the last card of the section */
 		(function(){
@@ -259,8 +325,9 @@
 		      setTimeout(()=>{ scrollToCard(target); openModal(target); }, 50);
 		    });
 		  });
-		  mPics.innerHTML = d.pics.map(k=>{
+		  mPics.innerHTML = (d.pics || []).map(k=>{
 		    const p = PEOPLE[k];
+		    if(!p) return '';
 		    return '<span class="person">'+avHTML(k)+'<span>'+p.name+'</span></span>';
 		  }).join('');
 		  lastFocus = document.activeElement;
@@ -277,54 +344,9 @@
 		document.querySelectorAll('.card').forEach(c=>{
 		  const id = c.dataset.id;
 		  const d = DATA[id];
-		  const picsEl = c.querySelector('.pics');
-		  if(d && picsEl){
-		    picsEl.innerHTML = d.pics.map(avHTML).join('');
-		    let wrap = picsEl.parentElement;
-		    if(!wrap.classList.contains('people')){
-		      wrap = document.createElement('div');
-		      wrap.className = 'people';
-		      picsEl.parentNode.insertBefore(wrap, picsEl);
-		      wrap.appendChild(picsEl);
-		    }
-		    let namesEl = wrap.querySelector('.names');
-		    if(!namesEl){
-		      namesEl = document.createElement('div');
-		      namesEl.className = 'names';
-		      wrap.appendChild(namesEl);
-		    }
-		    namesEl.innerHTML = d.pics.map(k=>{
-		      const p = PEOPLE[k];
-		      return '<span>'+(p ? p.name : k)+'</span>';
-		    }).join('');
-		  }
 		  const iconEl = c.querySelector('.icon');
 		  if(d && iconEl && ICONS[id]) setIcon(iconEl, id, d.icon);
-		  const cat = CATEGORIES.find(x=>x.id===catOf(id));
-		  if(cat){
-		    let catEl = c.querySelector('.cat-pill');
-		    const titleEl = c.querySelector('.top > div h3');
-		    if(!catEl && titleEl){
-		      catEl = document.createElement('span');
-		      catEl.className = 'cat-pill cat-'+cat.id;
-		      titleEl.insertAdjacentElement('afterend', catEl);
-		    }
-		    catEl.textContent = cat.zh;
-		    catEl.title = cat.en;
-		  }
-		  const clubKey = CLUB_OF[id];
-		  if(clubKey){
-		    const club = CLUBS[clubKey];
-		    let folder = c.querySelector('.club-folder');
-		    if(!folder){
-		      folder = document.createElement('div');
-		      folder.className = 'club-folder club-folder-'+clubKey;
-		      folder.setAttribute('aria-hidden', 'true');
-		      c.insertBefore(folder, c.firstChild);
-		    }
-		    folder.innerHTML = '<span class="club-folder-en">'+club.en+'</span>';
-		    c.classList.add('has-club-folder');
-		  }
+		  paintCardChrome(c);
 		  c.addEventListener('click', ()=>openModal(c.dataset.id));
 		  c.addEventListener('keydown', e=>{
 		    if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openModal(c.dataset.id); }
@@ -514,10 +536,31 @@
 		const kwOf = id => (KW_OF[id] || []).slice().sort((a,b)=>KW_ORDER.indexOf(a)-KW_ORDER.indexOf(b));
 		/* the same table read the other way round, for the keyword dialog */
 		const KW_ITEMS = {};
-		Object.keys(KW_OF).forEach(id=>{
-		  if(!DATA[id]) return;
-		  kwOf(id).forEach(k=>{ (KW_ITEMS[k] = KW_ITEMS[k] || []).push(id); });
-		});
+		function rebuildKwItems(){
+		  Object.keys(KW_ITEMS).forEach(k=>delete KW_ITEMS[k]);
+		  Object.keys(KW_OF).forEach(id=>{
+		    if(!DATA[id]) return;
+		    kwOf(id).forEach(k=>{ (KW_ITEMS[k] = KW_ITEMS[k] || []).push(id); });
+		  });
+		}
+		function applyKeywordMaps(){
+		  Object.keys(DATA).forEach(id=>{
+		    const kws = DATA[id].keywords;
+		    if(!Array.isArray(kws)) return;
+		    if(kws.length) KW_OF[id] = kws.slice();
+		    else delete KW_OF[id];
+		  });
+		  rebuildKwItems();
+		}
+		rebuildKwItems();
+
+		fetchFp5Events().then(remote=>{
+		  mergeFp5Data(DATA, remote);
+		  applyCardMaps();
+		  applyKeywordMaps();
+		  syncCardFaces();
+		  document.querySelectorAll('.card[data-id]').forEach(paintCardChrome);
+		}).catch(err=>console.warn('fp5_events fallback to seed', err));
 
 		function kwChipsHTML(id){
 		  return kwOf(id).filter(k=>KEYWORDS.some(x=>x.id===k)).map(k=>{

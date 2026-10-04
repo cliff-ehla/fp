@@ -1,8 +1,45 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
+    match /media/{mediaId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null
+                    && request.auth.token.email == 'fukkuen.work@gmail.com';
+    }
+
+    // TODO: tighten these — tracked as follow-up, out of scope here.
+    // Listed explicitly (rather than a blanket {document=**} catch-all) so
+    // they can't accidentally OR-override the restricted /media rules above,
+    // since Firestore grants access if ANY matching rule allows it.
+    match /posts/{docId} {
       allow read, write: if true;
+    }
+    match /events/{docId} {
+      allow read, write: if true;
+    }
+    match /categories/{docId} {
+      allow read, write: if true;
+    }
+    match /authors/{docId} {
+      allow read, write: if true;
+    }
+    match /tags/{docId} {
+      allow read, write: if true;
+    }
+    match /abouts/{docId} {
+      allow read, write: if true;
+    }
+    match /vcd_collection/{docId} {
+      allow read, write: if true;
+    }
+
+    match /fp5_events/{docId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null
+                    && request.auth.token.email in [
+                      'fukkuen.work@gmail.com',
+                      'smllai@cityu.edu.hk'
+                    ];
     }
   }
 }

@@ -4,7 +4,10 @@ import { FP5_SEED } from '$lib/fp5-seed.js';
 
 export const FP5_COLLECTION = 'fp5_events';
 
-export const ADMIN_EMAILS = ['fukkuen.work@gmail.com'];
+export const ADMIN_EMAILS = [
+	'fukkuen.work@gmail.com',
+	'smllai@cityu.edu.hk'
+];
 
 export function isAdminEmail(email) {
 	return ADMIN_EMAILS.includes(email);
@@ -47,6 +50,132 @@ export const FP5_FACE = {
 	tsundoku: { date: '2029.04 · 待確認', short: '書山堆喺 FP 空間 — 開放周末做裝置同再創造' }
 };
 
+export const FP5_PEOPLE = [
+	{ id: 'L', name: 'Linda Chiu-han Lai 黎肖嫻' },
+	{ id: 'H', name: 'Hector Rodriguez' },
+	{ id: 'A', name: 'LAI Chung-man Andio 黎仲民' },
+	{ id: 'FK', name: 'WONG Fuk-kuen 黃福權' },
+	{ id: 'W', name: 'LAI Wai-leung 黎偉亮' },
+	{ id: 'S', name: 'NG Sing-yiu Stanley 伍昇耀' },
+	{ id: 'HC', name: 'LAU Ho-chi 劉浩知' },
+	{ id: 'HG', name: 'Hugo Yeung 楊鳴謙' },
+	{ id: 'MF', name: 'May Fung 馮美華' },
+	{ id: 'JL', name: 'Jen Lee' },
+	{ id: 'FP', name: 'FP 集體' }
+];
+
+export const FP5_CATEGORIES = [
+	{ id: 'opendoor', en: 'Regular Open Door', zh: '定期打開門' },
+	{ id: 'clubs', en: 'Clubs & Series', zh: '閉門研習｜實作系列' },
+	{ id: 'opencall', en: 'OPEN CALL', zh: '公開徵集' },
+	{ id: 'playroom', en: 'PLAY ROOM + Artefact Corner', zh: '玩樂場' },
+	{ id: 'solos', en: 'FP (Collective) SOLOs', zh: '據點成員個展' },
+	{ id: 'accumulation', en: 'Accumulation', zh: '集少成多' }
+];
+
+export const FP5_CLUBS = [
+	{ id: 'laserframes', en: 'LaserFrames Cine Club', zh: '雷射視盤' },
+	{ id: 'clubma', en: 'Club-MA', zh: '媒體考古' }
+];
+
+export const FP5_CAT_OF = {
+	adminnight: 'opendoor',
+	mayfung: 'clubs',
+	halloween1: 'clubs',
+	halloween2: 'clubs',
+	halloween3: 'clubs',
+	widescreen: 'clubs',
+	xmasghost: 'clubs',
+	halloween2027: 'clubs',
+	teatime: 'clubs',
+	teatime2: 'clubs',
+	cineclub: 'clubs',
+	spatial: 'clubs',
+	workshop: 'clubs',
+	mediaarch: 'clubs',
+	mediaarch1a: 'clubs',
+	mediaarch1b: 'clubs',
+	mediaarch1c: 'clubs',
+	mediaarch1d: 'clubs',
+	mediaarch2: 'clubs',
+	mediaarch3: 'clubs',
+	stc: 'clubs',
+	ml: 'clubs',
+	jazz: 'clubs',
+	toy: 'clubs',
+	modular: 'playroom',
+	board: 'playroom',
+	vcd: 'opencall',
+	essaying: 'opencall',
+	fkinstall: 'solos',
+	crtwall: 'solos',
+	mnemonic: 'solos',
+	platform: 'accumulation',
+	tsundoku: 'accumulation'
+};
+
+export const FP5_CLUB_OF = {
+	halloween1: 'laserframes',
+	halloween2: 'laserframes',
+	halloween3: 'laserframes',
+	widescreen: 'laserframes',
+	xmasghost: 'laserframes',
+	halloween2027: 'laserframes',
+	cineclub: 'laserframes',
+	mediaarch: 'clubma',
+	mediaarch1a: 'clubma',
+	mediaarch1b: 'clubma',
+	mediaarch1c: 'clubma',
+	mediaarch1d: 'clubma',
+	mediaarch2: 'clubma',
+	mediaarch3: 'clubma'
+};
+
+export const FP5_KEYWORDS = [
+	{ id: 'commoning', zh: '共有實踐', en: 'Commoning' },
+	{ id: 'coindiv', zh: '共同個體化', en: 'Co-individuation' },
+	{ id: 'contrib', zh: '貢獻經濟', en: 'Contributive Economics' },
+	{ id: 'reactivate', zh: '資源活化', en: 'Reactivation' },
+	{ id: 'archaeology', zh: '媒體考古', en: 'Media Archaeology' },
+	{ id: 'datacult', zh: '數據文化', en: 'Data Culture' }
+];
+
+export const FP5_KW_OF = {
+	mayfung: ['commoning', 'reactivate'],
+	halloween1: ['archaeology', 'reactivate', 'contrib'],
+	halloween2: ['archaeology', 'reactivate', 'contrib'],
+	halloween3: ['archaeology', 'reactivate', 'contrib'],
+	widescreen: ['archaeology', 'reactivate'],
+	xmasghost: ['archaeology', 'reactivate', 'contrib'],
+	halloween2027: ['archaeology', 'reactivate', 'contrib'],
+	teatime: ['commoning', 'coindiv'],
+	teatime2: ['commoning'],
+	cineclub: ['archaeology', 'reactivate', 'contrib'],
+	adminnight: ['commoning', 'contrib'],
+	spatial: ['commoning', 'coindiv'],
+	workshop: ['commoning', 'reactivate'],
+	modular: ['commoning', 'contrib'],
+	mediaarch: ['archaeology', 'reactivate'],
+	mediaarch1a: ['archaeology'],
+	mediaarch1b: ['archaeology'],
+	mediaarch1c: ['archaeology'],
+	mediaarch1d: ['archaeology'],
+	mediaarch2: ['archaeology', 'coindiv'],
+	mediaarch3: ['archaeology', 'coindiv'],
+	stc: ['coindiv'],
+	ml: ['datacult', 'reactivate'],
+	vcd: ['archaeology', 'reactivate'],
+	fkinstall: ['datacult'],
+	crtwall: ['archaeology', 'reactivate'],
+	board: ['coindiv', 'commoning'],
+	toy: ['archaeology', 'reactivate'],
+	jazz: ['coindiv', 'commoning'],
+	mnemonic: ['datacult'],
+	essaying: ['commoning', 'coindiv'],
+	platform: ['contrib', 'reactivate', 'archaeology'],
+	tsundoku: ['commoning', 'coindiv', 'reactivate']
+};
+
 export const FP5_IDS = Object.keys(FP5_SEED);
 
 export function cloneFp5Seed() {
@@ -55,6 +184,10 @@ export function cloneFp5Seed() {
 		const face = FP5_FACE[id] || {};
 		data[id].date = face.date || '';
 		data[id].short = face.short || '';
+		data[id].pics = Array.isArray(data[id].pics) ? data[id].pics.slice() : [];
+		data[id].category = FP5_CAT_OF[id] || '';
+		data[id].club = FP5_CLUB_OF[id] || '';
+		data[id].keywords = (FP5_KW_OF[id] || []).slice();
 	}
 	return data;
 }
@@ -76,8 +209,17 @@ export function editableFields(card) {
 		meta: card.meta || '',
 		date: card.date || '',
 		short: card.short || '',
-		desc: descToText(card.desc)
+		desc: descToText(card.desc),
+		pics: Array.isArray(card.pics) ? card.pics.slice() : [],
+		category: card.category || '',
+		club: card.club || '',
+		keywords: Array.isArray(card.keywords) ? card.keywords.slice() : []
 	};
+}
+
+function asStringArray(value) {
+	if (!Array.isArray(value)) return null;
+	return value.map((v) => String(v)).filter(Boolean);
 }
 
 export function applyFp5Override(base, remote) {
@@ -88,7 +230,28 @@ export function applyFp5Override(base, remote) {
 	if (typeof remote.date === 'string') next.date = remote.date;
 	if (typeof remote.short === 'string') next.short = remote.short;
 	if (remote.desc !== undefined) next.desc = remote.desc;
+	const pics = asStringArray(remote.pics);
+	if (pics) next.pics = pics;
+	if (typeof remote.category === 'string') next.category = remote.category;
+	if (typeof remote.club === 'string') next.club = remote.club;
+	const keywords = asStringArray(remote.keywords);
+	if (keywords) next.keywords = keywords;
 	return next;
+}
+
+export function fp5WritePayload(fields) {
+	return {
+		title: fields.title || '',
+		meta: fields.meta || '',
+		date: fields.date || '',
+		short: fields.short || '',
+		desc: fields.desc !== undefined && typeof fields.desc !== 'string' ? fields.desc : textToDesc(fields.desc),
+		pics: Array.isArray(fields.pics) ? fields.pics.filter(Boolean) : [],
+		category: fields.category || '',
+		club: fields.club || '',
+		keywords: Array.isArray(fields.keywords) ? fields.keywords.filter(Boolean) : [],
+		updatedAt: serverTimestamp()
+	};
 }
 
 export async function fetchFp5Events() {
@@ -114,15 +277,7 @@ export async function fetchFp5Event(id) {
 }
 
 export async function saveFp5Event(id, fields) {
-	const payload = {
-		title: fields.title || '',
-		meta: fields.meta || '',
-		date: fields.date || '',
-		short: fields.short || '',
-		desc: textToDesc(fields.desc),
-		updatedAt: serverTimestamp()
-	};
-	await setDoc(doc(db, FP5_COLLECTION, id), payload, { merge: true });
+	await setDoc(doc(db, FP5_COLLECTION, id), fp5WritePayload(fields), { merge: true });
 }
 
 export async function seedFp5EventsIfEmpty() {
@@ -133,14 +288,17 @@ export async function seedFp5EventsIfEmpty() {
 	const batch = writeBatch(db);
 	for (const id of missing) {
 		const card = seed[id];
-		batch.set(doc(db, FP5_COLLECTION, id), {
+		batch.set(doc(db, FP5_COLLECTION, id), fp5WritePayload({
 			title: card.title || '',
 			meta: card.meta || '',
 			date: card.date || '',
 			short: card.short || '',
 			desc: card.desc,
-			updatedAt: serverTimestamp()
-		});
+			pics: card.pics,
+			category: card.category,
+			club: card.club,
+			keywords: card.keywords
+		}));
 	}
 	await batch.commit();
 	return { seeded: missing.length, total: FP5_IDS.length };

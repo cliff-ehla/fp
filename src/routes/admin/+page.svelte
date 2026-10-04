@@ -2,15 +2,11 @@
     import { onMount } from 'svelte';
     import { auth, googleProvider, signInWithPopup, signOut } from '../../lib/firebase.js';
     import { onAuthStateChanged } from 'firebase/auth';
+    import { ADMIN_EMAILS } from '$lib/fp5.js';
 
     let user = null;
     let isAdmin = false;
     let loading = true;
-
-    // Hardcode the admin emails here
-    const ADMIN_EMAILS = [
-        'fukkuen.work@gmail.com',
-    ];
 
     onMount(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

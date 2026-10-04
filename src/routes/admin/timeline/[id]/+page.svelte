@@ -8,6 +8,10 @@
 		cloneFp5Seed,
 		editableFields,
 		fetchFp5Event,
+		FP5_CATEGORIES,
+		FP5_CLUBS,
+		FP5_KEYWORDS,
+		FP5_PEOPLE,
 		isAdminEmail,
 		saveFp5Event
 	} from '$lib/fp5.js';
@@ -24,8 +28,48 @@
 	let date = '';
 	let short = '';
 	let desc = '';
+	let pics = [];
+	let category = '';
+	let club = '';
+	let keywords = [];
+	let addPerson = '';
+	let addKeyword = '';
 
 	$: id = $page.params.id;
+	$: unusedPeople = FP5_PEOPLE.filter((p) => !pics.includes(p.id));
+	$: unusedKeywords = FP5_KEYWORDS.filter((k) => !keywords.includes(k.id));
+
+	$: id = $page.params.id;
+	$: unusedPeople = FP5_PEOPLE.filter((p) => !pics.includes(p.id));
+
+	function personName(pid) {
+		return FP5_PEOPLE.find((p) => p.id === pid)?.name || pid;
+	}
+
+	function addSelectedPerson() {
+		if (!addPerson || pics.includes(addPerson)) return;
+		pics = [...pics, addPerson];
+		addPerson = '';
+	}
+
+	function removePerson(pid) {
+		pics = pics.filter((p) => p !== pid);
+	}
+
+	function keywordName(kid) {
+		const k = FP5_KEYWORDS.find((x) => x.id === kid);
+		return k ? `${k.zh} · ${k.en}` : kid;
+	}
+
+	function addSelectedKeyword() {
+		if (!addKeyword || keywords.includes(addKeyword)) return;
+		keywords = [...keywords, addKeyword];
+		addKeyword = '';
+	}
+
+	function removeKeyword(kid) {
+		keywords = keywords.filter((k) => k !== kid);
+	}
 
 	onMount(() => {
 		const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -62,6 +106,10 @@
 		date = fields.date;
 		short = fields.short;
 		desc = fields.desc;
+		pics = fields.pics;
+		category = fields.category;
+		club = fields.club;
+		keywords = fields.keywords;
 	}
 
 	async function save() {
@@ -69,7 +117,7 @@
 		saveNote = '';
 		error = '';
 		try {
-			await saveFp5Event(id, { title, meta, date, short, desc });
+			await saveFp5Event(id, { title, meta, date, short, desc, pics, category, club, keywords });
 			saveNote = 'Saved. Public /timeline will show this after a refresh.';
 		} catch (e) {
 			error = e.message || String(e);
@@ -113,6 +161,70 @@
 						<span class="block text-xs font-bold text-gray-400 uppercase mb-2">Date / meta in modal</span>
 						<textarea bind:value={meta} rows="2" class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm"></textarea>
 						<span class="text-xs text-gray-500">Can include simple HTML such as &lt;b&gt;…&lt;/b&gt;</span>
+					</label>
+					<label class="block">
+						<span class="block text-xs font-bold text-gray-400 uppercase mb-2">Person in charge</span>
+						<select
+							bind:value={addPerson}
+							on:change={addSelectedPerson}
+							class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm"
+						>
+							<option value="">Add person…</option>
+							{#each unusedPeople as person}
+								<option value={person.id}>{person.name}</option>
+							{/each}
+						</select>
+						{#if pics.length}
+							<ul class="mt-2 space-y-1">
+								{#each pics as pid}
+									<li class="flex items-center justify-between bg-[#181826] border border-gray-700 rounded px-3 py-1.5 text-sm">
+										<span>{personName(pid)}</span>
+										<button type="button" class="text-gray-400 hover:text-white text-xs" on:click={() => removePerson(pid)}>Remove</button>
+									</li>
+								{/each}
+							</ul>
+						{/if}
+					</label>
+					<label class="block">
+						<span class="block text-xs font-bold text-gray-400 uppercase mb-2">Program 分類</span>
+						<select bind:value={category} class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm">
+							<option value="">None</option>
+							{#each FP5_CATEGORIES as cat}
+								<option value={cat.id}>{cat.zh} · {cat.en}</option>
+							{/each}
+						</select>
+					</label>
+					<label class="block">
+						<span class="block text-xs font-bold text-gray-400 uppercase mb-2">Club</span>
+						<select bind:value={club} class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm">
+							<option value="">None</option>
+							{#each FP5_CLUBS as c}
+								<option value={c.id}>{c.en} · {c.zh}</option>
+							{/each}
+						</select>
+					</label>
+					<label class="block">
+						<span class="block text-xs font-bold text-gray-400 uppercase mb-2">所屬關鍵詞</span>
+						<select
+							bind:value={addKeyword}
+							on:change={addSelectedKeyword}
+							class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm"
+						>
+							<option value="">Add keyword…</option>
+							{#each unusedKeywords as kw}
+								<option value={kw.id}>{kw.zh} · {kw.en}</option>
+							{/each}
+						</select>
+						{#if keywords.length}
+							<ul class="mt-2 space-y-1">
+								{#each keywords as kid}
+									<li class="flex items-center justify-between bg-[#181826] border border-gray-700 rounded px-3 py-1.5 text-sm">
+										<span>{keywordName(kid)}</span>
+										<button type="button" class="text-gray-400 hover:text-white text-xs" on:click={() => removeKeyword(kid)}>Remove</button>
+									</li>
+								{/each}
+							</ul>
+						{/if}
 					</label>
 					<label class="block">
 						<span class="block text-xs font-bold text-gray-400 uppercase mb-2">Description</span>
