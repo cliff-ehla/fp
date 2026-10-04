@@ -1,12 +1,14 @@
 <script>
     import { onMount } from 'svelte';
-    import { auth, googleProvider, signInWithPopup, signOut } from '../../lib/firebase.js';
+    import { auth, googleProvider, signInWithEmailAndPassword, signInWithPopup, signOut } from '../../lib/firebase.js';
     import { onAuthStateChanged } from 'firebase/auth';
-    import { ADMIN_EMAILS } from '$lib/fp5.js';
+    import { ADMIN_EMAILS, TOKEN_LOGIN_EMAIL } from '$lib/fp5.js';
 
     let user = null;
     let isAdmin = false;
     let loading = true;
+    let accessToken = '';
+    let tokenBusy = false;
 
     onMount(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -31,6 +33,23 @@
         }
     };
 
+    const loginWithToken = async () => {
+        const token = accessToken.trim();
+        if (!token) {
+            alert('Enter the access token.');
+            return;
+        }
+        tokenBusy = true;
+        try {
+            await signInWithEmailAndPassword(auth, TOKEN_LOGIN_EMAIL, token);
+        } catch (error) {
+            console.error("Token login failed", error);
+            alert("Login failed: " + error.message);
+        } finally {
+            tokenBusy = false;
+        }
+    };
+
     const logout = async () => {
         try {
             await signOut(auth);
@@ -49,11 +68,30 @@
                 Admin Area
             </h2>
             <p class="mt-2 text-center text-sm text-gray-600">
-                Please sign in with Google to continue
+                Sign in with Google, or with an access token.
             </p>
-            <div class="mt-8 flex justify-center">
-                <button on:click={login} class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-                    Sign in with Google
+            <form class="mt-8 space-y-3" on:submit|preventDefault={loginWithToken}>
+                <label class="block text-sm text-gray-700">
+                    Access token
+                    <input
+                        type="password"
+                        bind:value={accessToken}
+                        autocomplete="current-password"
+                        class="mt-1 w-full border border-gray-300 rounded-md p-2.5 text-sm"
+                        placeholder="Paste the token"
+                    />
+                </label>
+                <button
+                    type="submit"
+                    disabled={tokenBusy}
+                    class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50"
+                >
+                    {tokenBusy ? 'Signing in…' : 'Sign in with token'}
+                </button>
+            </form>
+            <div class="mt-6 flex justify-center">
+                <button on:click={login} class="text-sm text-blue-600 hover:underline">
+                    Sign in with Google instead
                 </button>
             </div>
         </div>

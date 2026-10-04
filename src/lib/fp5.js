@@ -13,6 +13,9 @@ export function isAdminEmail(email) {
 	return ADMIN_EMAILS.includes(email);
 }
 
+/** Firebase email/password account that the access-token login uses. */
+export const TOKEN_LOGIN_EMAIL = 'smllai@cityu.edu.hk';
+
 /** Card face copy shown on the timeline (date line + short blurb). */
 export const FP5_FACE = {
 	mayfung: { date: '2026.10.17 · 日期已定', short: 'Fountain Teatime 開幕場 — 馮美華以 Maya Deren 對照自己嘅實驗人生' },
