@@ -115,6 +115,16 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h2 class="text-xl font-semibold mb-4">FP5 Timeline</h2>
+                    <p class="text-gray-600 mb-6">Edit Floating Projects 5.0 timeline cards. Separate from Events.</p>
+                    <div class="flex gap-4">
+                        <a href="/admin/timeline" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 inline-block">
+                            Edit timeline cards
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     {/if}
