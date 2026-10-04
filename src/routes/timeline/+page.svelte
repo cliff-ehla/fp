@@ -22,6 +22,7 @@
 		  halloween1:'/fp5icon/F_HalloweenApocalypse2026_Hector.png',
 		  halloween2:'/fp5icon/F_HalloweenApocalypse2026_Hector.png',
 		  halloween3:'/fp5icon/F_HalloweenApocalypse2026_Hector.png',
+		  widescreen:'/fp5icon/F_Widescreen_LaserFrames_Hector.png',
 		  xmasghost: '/fp5icon/F_XmasGhost_LaserFrame_Hector-S.jpg',
 		  halloween2027:'/fp5icon/F_Halloween-2027-S.jpg',
 		  crtwall:   '/fp5icon/cine_club-removebg-preview.png',
@@ -31,7 +32,7 @@
 		  mediaarch1c:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
 		  mediaarch1d:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
 		  mediaarch2:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
-		  mediaarch3:'/fp5icon/F_Tales-of-Media-Archaeology_Linda.png',
+		  mediaarch3:'/fp5icon/F_ArchiveUnheard_exh-2029S.jpg',
 		  teatime2:  '/fp5icon/teatime-removebg-preview.png',
 		  platform:  '/fp5icon/F_Floating-Plat-at-FP_ChineseS.jpg',
 		  mnemonic:  '/fp5icon/Mnemonic-Catastrophe_Hugo-removebg-preview.png',
@@ -94,7 +95,7 @@
 		      '技術上跟足 D1 規格 — 用分配放大器推幾部 CRT，唔用被動分線，保住每部電視都收到足電壓嘅訊號。'],
 		    pics:['H']},
 		  halloween2: {icon:'ic-disc', title:'《變形邪魔 Invasion of the Body Snatchers》兩版連放',
-		    meta:'<b>2026.10.31（5:00–6:00pm）</b> · Halloween Apocalypse 萬聖末日啟示 · Laser Frames 第一輯 · 日期已確定',
+		    meta:'<b>2026.10.31（5:00–9:00pm）</b> · Halloween Apocalypse 萬聖末日啟示 · LaserFrames 第一輯 · 日期已確定',
 		    tags:['有收入','社群連結','放映','媒體考古'],
 		    desc:['1956 年（Don Siegel）同 1978 年（Philip Kaufman）兩個版本連放，一次過對照兩個年代點樣講同一個恐懼。',
 		      '三晚系列嘅第二晚，共同問題：我哋有幾人類？ How human are we? 每場都有導讀、分析同討論。',
@@ -108,15 +109,21 @@
 		      'Private cine club 形式，需要預先登記。技術上跟足 D1 規格 — 用分配放大器推幾部 CRT，唔用被動分線。'],
 		    pics:['H']},
 		  xmasghost: {icon:'ic-disc', title:'Christmas Ghosts · 《The Legend of Hell House》',
-		    meta:'約 <b>2026.12</b> · LaserFrames Cine Club · X\'mas 2026 · 日期待定',
-		    tags:['有收入','社群連結','放映','媒體考古'],
-		    desc:['John Hough 1973 年嘅《The Legend of Hell House》。LaserFrames 聖誕場：一座鬼屋、一班研究者、一個聖誕星底下嘅放映。',
-		      'Private cine club 形式，需要預先登記。CRT 同步播映，跟足 D1 規格。'],
+		    meta:'<b>2026.12.26（5:00–9:00pm）</b> · LaserFrames · OPEN TO ALL · 日期已確定',
+		    tags:['社群連結','放映','媒體考古'],
+		    desc:['John Hough 1973 年嘅《The Legend of Hell House》（93 分鐘），gothic supernatural horror，來自 Hector 嘅 laserdisc 收藏。',
+		      '公開場，唔使 cine-club 會籍。CRT 同步播映，跟足 D1 規格。More details to come.'],
+		    pics:['H']},
+		  widescreen: {icon:'ic-crt', title:'Widescreen cinema and the nature of the frame 寬銀幕電影與畫框的性質',
+		    meta:'<b>2026.12.05（Sat 3:00–5:30pm）</b> · LaserFrames · 日期已確定',
+		    tags:['社群連結','講座','媒體考古'],
+		    desc:['There is no true version of a film. Every frame is a matrix of possibilities. Learn about the “soft matte” and “open matte” approach.',
+		      'Hector Rodriguez 主講：寬銀幕電影同畫框嘅性質。'],
 		    pics:['H']},
 		  halloween2027: {icon:'ic-disc', title:'Halloween Apocalypse 2027',
-		    meta:'約 <b>2027.10–11</b> · LaserFrames Cine Club · 三場放映 · 日期待定',
+		    meta:'<b>2027.10.30–31</b>（Sat–Sun）· LaserFrames Cine Club · 日期待確認',
 		    tags:['有收入','社群連結','放映','媒體考古'],
-		    desc:['Halloween Apocalypse 第二年：LaserFrames 再來三場恐怖片放映。確實片單同日期仍待確認。',
+		    desc:['Halloween Apocalypse 第二年：LaserFrames 再來萬聖放映（2027.10.30–31 Saturday to Sunday）。確實片單仍待確認。',
 		      'Private cine club 形式，需要預先登記。CRT 同步播映，跟足 D1 規格。'],
 		    pics:['H']},
 		  teatime: {icon:'ic-teacup', title:'Fountain Teatime 噴泉茶聚',
@@ -135,9 +142,9 @@
 		    meta:'Clubs & Series · 循環系列 · 2026–2029 · 4 節 × 2 輯 · 需預先登記',
 		    tags:['有收入','社群連結','實驗性','媒體考古'],
 		    desc:['把賽璐珞電影轉上 laserdisc 唔止係保存一份拷貝。Laserdisc 唔同 VHS、VCD、DVD、Blu-ray 呢啲替代技術版本 — 佢係類比媒體，畫幀以連續流嘅方式存在，唔經數碼轉換。佢係一套獨特嘅儲存系統，而佢嘅消費者版本保留咗比 DVD 同其他數碼媒體更多關於電影製作嘅事實。',
-		      '呢個以技術為本嘅系列會配合劇情長片放映（2006 年或之前）做現場導讀同討論 — 一邊睇舊片，一邊聽平時少有人講嘅製作真相。系列由「Halloween Apocalypse 2026」打頭陣，接住有「Christmas Ghosts」（2026.12，《The Legend of Hell House》）同「Halloween Apocalypse 2027」三場。',
+		      '呢個以技術為本嘅系列會配合劇情長片放映（2006 年或之前）做現場導讀同討論 — 一邊睇舊片，一邊聽平時少有人講嘅製作真相。系列由「Halloween Apocalypse 2026」打頭陣；12 月有寬銀幕講座同公開場 Christmas Ghosts；2027 年再有 Halloween Apocalypse。可以按季（2026.10–2027.01）加入，或逐場參加。',
 		      '放映形式唔係戲院式：三至四部舊 CRT 電視散落空間，同步播同一畫面，觀眾喺唔同角落各自圍住細電視睇 — 親密、可以傾偈、似裝置多過似戲院。以會員制 cine-club 結構運作（法律細節仍需本地確認）。'],
-		    links:['halloween1','halloween2','halloween3','xmasghost','halloween2027'],
+		    links:['halloween1','halloween2','halloween3','widescreen','xmasghost','halloween2027'],
 		    pics:['H']},
 		  adminnight: {icon:'ic-laptop', title:'FP Open!「打開門」做吓事務局',
 		    meta:'循環系列 · 每月 2–3 日 · <b>2026.10.02–04</b> 試局（2–8pm）',
@@ -165,7 +172,7 @@
 		    meta:'Clubs & Series · 研究線 · 總覽 · 貫穿 2026–2029',
 		    tags:['實驗性','標誌系列','媒體考古','Club-MA'],
 		    desc:['Linda Lai 主持嘅 Club Media Archaeology（Club-MA）— Linda 學術書寫嘅延伸，唔係一個單一活動，而係一條貫穿全期嘅研究線，圍住「舊媒體、舊格式點樣喺當下仲有生命力」呢個大問題轉。',
-		      'Club-MA 分三個 phase：Phase 1 講座（四節，日期已定）→ Phase 2 展覽製作工作坊 → Phase 3 在地群展。每 phase 有 3–4 次、每次 3 小時嘅聚會；成員可以揀參加一個、兩個或全部 phase。',
+		      'Club-MA 分三個 phase：01 榕樹下（四節，2026.11.21、11.28、2027.01.30、02.06）→ 02 除草接枝施肥（研究工作坊）→ 03 Archive Unheard 奇異叢林（2028.03 在地爆發展覽）。每 phase 有 3–4 次、每次 3 小時嘅聚會；成員可以揀參加一個、兩個或全部 phase。',
 		      '另外仲有一個 <b>pop-up 展覽</b>（免費入場）：用返 Linda 自己舊作嘅材料重新編排展出，唔係新製作，係舊素材嘅新讀法 — 日期未定。',
 		      '呢條線同 Hector 嘅 LaserFrames Cine Club / laserdisc 線，同埋 Angela Su 嘅香港媒體藝術調查出版計劃互相呼應扣連。'],
 		    links:['mediaarch1a','mediaarch1b','mediaarch1c','mediaarch1d','mediaarch2','mediaarch3'],
@@ -211,33 +218,33 @@
 		    tags:['標誌系列','社群連結','有收入'],
 		    desc:'FP 招牌研究型項目，2016–2023 已做三輯。第四輯強調跨學科同媒體考古視角 — 觀眾可以用手觸碰物件嘅玩具機器展，由硬件工作坊長出嚟。',
 		    pics:['A']},
-		  mediaarch1a: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第一節）',
-		    meta:'<b>2026.11.28（3–6pm）</b> · Club-MA Phase 1 · 四節之一 · 日期已確定',
+		  mediaarch1a: {icon:'ic-cassette', title:'Club-MA 01 · 媒體考古…榕樹下（第一節）',
+		    meta:'<b>2026.11.21（3–6pm）</b> · Club-MA Phase 1 · 四節之一 · 日期已確定',
 		    tags:['實驗性','標誌系列','講座','媒體考古'],
 		    desc:['Club-MA Phase 1 開課，講座加工作坊，一共四節，由 Linda Lai 主持。',
 		      '前人的日常「欲望」驅策着「新」媒體同工具嘅出現，即使佢哋仲未有名。呢一輯就係由呢個問題行開去。',
 		      '<ul><li>媒體考古個案逐個講：遠程臨場、永生不朽、光與火、指頭的故事、記憶同庫存…</li>'
 		      +'<li>媒體考古點樣豐富我哋對媒體（藝術）實踐嘅理解 — 由研究嘅視野走到藝術創作嘅視野。</li></ul>'],
 		    pics:['L']},
-		  mediaarch1b: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第二節）',
-		    meta:'<b>2026.12.05（3–6pm）</b> · Club-MA Phase 1 · 四節之二 · 日期已確定',
+		  mediaarch1b: {icon:'ic-cassette', title:'Club-MA 01 · 媒體考古…榕樹下（第二節）',
+		    meta:'<b>2026.11.28（3–6pm）</b> · Club-MA Phase 1 · 四節之二 · 日期已確定',
 		    tags:['實驗性','標誌系列','講座','媒體考古','Club-MA'],
 		    desc:['Club-MA Phase 1 第二節，講座加工作坊，由 Linda Lai 主持。',
 		      '延續日常生活中嘅媒體考古片段同時刻：遠程臨場、永生不朽、光與火、指頭的故事、記憶同庫存…'],
 		    pics:['L']},
-		  mediaarch1c: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第三節）',
+		  mediaarch1c: {icon:'ic-cassette', title:'Club-MA 01 · 媒體考古…榕樹下（第三節）',
 		    meta:'<b>2027.01.30（3–6pm）</b> · Club-MA Phase 1 · 四節之三 · 日期已確定',
 		    tags:['實驗性','標誌系列','講座','媒體考古','Club-MA'],
 		    desc:['Club-MA Phase 1 第三節，講座加工作坊，由 Linda Lai 主持。',
 		      '由研究嘅視野行向藝術創作嘅視野：媒體考古點樣改寫我哋對媒體（藝術）實踐嘅理解。'],
 		    pics:['L']},
-		  mediaarch1d: {icon:'ic-cassette', title:'Club-MA Phase 1 · 媒體考古…榕樹下（第四節）',
+		  mediaarch1d: {icon:'ic-cassette', title:'Club-MA 01 · 媒體考古…榕樹下（第四節）',
 		    meta:'<b>2027.02.06（3–6pm）</b> · Club-MA Phase 1 · 四節之四 · 日期已確定',
 		    tags:['實驗性','標誌系列','講座','媒體考古','Club-MA'],
 		    desc:['Club-MA Phase 1 嘅收結一節，講座加工作坊，由 Linda Lai 主持。',
 		      '收攏四節嘅個案同討論，為 Phase 2「除草接枝施肥」嘅展覽製作工作坊鋪路。'],
 		    pics:['L']},
-		  mediaarch2: {icon:'ic-plant', title:'Club-MA Phase 2 · 媒體考古…除草接枝施肥',
+		  mediaarch2: {icon:'ic-plant', title:'Club-MA 02 · 媒體考古…除草接枝施肥',
 		    meta:'2027–2028 · Club-MA Phase 2 · 3 節 × 3 小時 · 日期待定',
 		    tags:['實驗性','標誌系列','工作坊','媒體考古','Club-MA'],
 		    desc:['Club-MA Phase 2 轉入展覽製作（exhibition-making），三節工作坊：',
@@ -245,10 +252,10 @@
 		      +'<li><b>工作坊 (2)</b>：追尋驅動工具發明嘅「慾望」，由呢個角度重新理解科技史。</li>'
 		      +'<li><b>工作坊 (3)</b>：追溯個人嘅藝術／創作脈絡 — 整理成一份屬於自己嘅作品係譜。</li></ul>'],
 		    pics:['L']},
-		  mediaarch3: {icon:'ic-tree', title:'Club-MA Phase 3 · 媒體考古…奇異叢林',
-		    meta:'<b>2028.03</b> · Club-MA Phase 3 · 在地群展 · 月份已確定',
+		  mediaarch3: {icon:'ic-tree', title:'Club-MA 03 · Archive Unheard 媒體考古…奇異叢林',
+		    meta:'<b>2028.03</b> · Club-MA Phase 3 · 在地爆發展覽 · 月份已確定',
 		    tags:['實驗性','標誌系列','展覽','媒體考古','Club-MA'],
-		    desc:'Club-MA 最後一個 phase：同 Phase 1、2 嘅講座／工作坊參加者合作，把兩 phase 所獲化為一個在地群展。',
+		    desc:'Archive Unheard, on-site group exhibition。把 Club-MA 1–2 嘅講座／工作坊所獲化為在地爆發展覽，同參加者合作。',
 		    pics:['L']},
 		  jazz: {icon:'ic-note', title:'Jazz vs Experimental Sound',
 		    meta:'2027 或 2028（待確認）· 三個演出單元',
@@ -275,7 +282,7 @@
 		    desc:'FP 喺 JCCAC L3-06D 嘅寄賣角（sales corner），全期常設。由 Lai Wai-leung 負責。',
 		    pics:['W']},
 		  tsundoku: {icon:'ic-books', title:'Tsundoku 負載讀取',
-		    meta:'一次性 · 開放周末 · 約 2028–29',
+		    meta:'一次性 · 開放周末 · <b>2029.04</b>（待確認）',
 		    tags:['社群連結'],
 		    desc:'「積書」：一座書山堆喺 FP 空間度。開放周末做現場裝置；再嚟嘅周末做再創造 — 分類、堆山丘、另類閱讀方法、造新書。可以做 JCCAC 合作項目。',
 		    pics:['L','FP']}
@@ -296,6 +303,7 @@
 		  halloween1:  'clubs',
 		  halloween2:  'clubs',
 		  halloween3:  'clubs',
+		  widescreen:  'clubs',
 		  xmasghost:   'clubs',
 		  halloween2027:'clubs',
 		  teatime:     'clubs',
@@ -345,7 +353,7 @@
 		};
 		const CLUB_OF = {
 		  halloween1: 'laserframes', halloween2: 'laserframes', halloween3: 'laserframes',
-		  xmasghost: 'laserframes', halloween2027: 'laserframes',
+		  widescreen: 'laserframes', xmasghost: 'laserframes', halloween2027: 'laserframes',
 		  cineclub: 'laserframes',
 		  mediaarch: 'clubma', mediaarch1a: 'clubma', mediaarch1b: 'clubma',
 		  mediaarch1c: 'clubma', mediaarch1d: 'clubma', mediaarch2: 'clubma', mediaarch3: 'clubma'
@@ -653,6 +661,7 @@
 		  halloween1:  ['archaeology','reactivate','contrib'],
 		  halloween2:  ['archaeology','reactivate','contrib'],
 		  halloween3:  ['archaeology','reactivate','contrib'],
+		  widescreen:  ['archaeology','reactivate'],
 		  xmasghost:   ['archaeology','reactivate','contrib'],
 		  halloween2027:['archaeology','reactivate','contrib'],
 		  teatime:     ['commoning','coindiv'],
@@ -948,8 +957,8 @@
       <div class="top">
         <div class="icon"><svg><use href="#ic-disc"/></svg></div>
         <div>
-          <div class="date">2026.10.31（5:00–6:00pm）· 日期已定</div>
-          <h3>《變形邪魔》1956 + 1978 兩版連放</h3>
+          <div class="date">2026.10.31（5:00–9:00pm）· 日期已定</div>
+          <h3>《變形邪魔 Invasion of the Body Snatchers》兩版連放</h3>
           <div class="short">Halloween Apocalypse 第二晚 — Don Siegel 同 Philip Kaufman 兩個版本對照</div>
         </div>
       </div>
@@ -980,7 +989,7 @@
       <div class="top">
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
-          <div class="date">2026.11.28（3–6pm）· 日期已定</div>
+          <div class="date">2026.11.21（3–6pm）· 日期已定</div>
           <h3>Club-MA · 媒體考古…榕樹下（第一節）</h3>
           <div class="short">講座＋工作坊開課 — 前人嘅欲望點樣催生仲未有名嘅媒體</div>
         </div>
@@ -997,13 +1006,29 @@
       <div class="top">
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
-          <div class="date">2026.12.05（3–6pm）· 日期已定</div>
+          <div class="date">2026.11.28（3–6pm）· 日期已定</div>
           <h3>Club-MA · 媒體考古…榕樹下（第二節）</h3>
           <div class="short">個案逐個講 — 遠程臨場、永生不朽、光與火、指頭的故事</div>
         </div>
       </div>
       <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">四節之二</span></div>
     </div>
+  </div>
+
+  <!-- LaserFrames: widescreen lecture -->
+  <div class="row">
+    <div class="card anchored side-l" data-id="widescreen" tabindex="0" role="button">
+      <div class="top">
+        <div class="icon"><svg><use href="#ic-crt"/></svg></div>
+        <div>
+          <div class="date">2026.12.05（3:00–5:30pm）· 日期已定</div>
+          <h3>Widescreen cinema and the nature of the frame</h3>
+          <div class="short">Hector · 寬銀幕電影與畫框的性質 — soft matte / open matte</div>
+        </div>
+      </div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">講座</span></div>
+    </div>
+    <div class="conn to-l"><span class="wire"></span><span class="pin"></span></div>
   </div>
 
   <!-- anchored: Jen Lee teatime -->
@@ -1024,17 +1049,17 @@
 
   <!-- LaserFrames: Christmas Ghosts, X'mas 2026 -->
   <div class="row">
-    <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
-    <div class="card side-r" data-id="xmasghost" tabindex="0" role="button">
+    <div class="conn to-r"><span class="wire"></span><span class="pin"></span></div>
+    <div class="card anchored side-r" data-id="xmasghost" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-disc"/></svg></div>
         <div>
-          <div class="date">約 2026.12 · X'mas · 日期待定</div>
-          <h3>Christmas Ghosts · Hell House</h3>
-          <div class="short">LaserFrames 聖誕場 — 放映 John Hough《The Legend of Hell House》</div>
+          <div class="date">2026.12.26（5:00–9:00pm）· 日期已定</div>
+          <h3>Christmas Ghosts · The Legend of Hell House</h3>
+          <div class="short">公開場 OPEN TO ALL — John Hough 1973 gothic horror</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 需登記</span></div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 公開</span></div>
     </div>
   </div>
 
@@ -1215,12 +1240,12 @@
       <div class="top">
         <div class="icon"><svg><use href="#ic-disc"/></svg></div>
         <div>
-          <div class="date">約 2027.10–11 · 日期待定</div>
+          <div class="date">2027.10.30–31（Sat–Sun）· 待確認</div>
           <h3>Halloween Apocalypse 2027</h3>
-          <div class="short">LaserFrames 第二年萬聖三場放映 — 片單待確認</div>
+          <div class="short">LaserFrames 第二年萬聖放映 — 片單待確認</div>
         </div>
       </div>
-      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映 · 三場</span></div>
+      <div class="foot"><div class="pics"><span class="av">H</span></div><span class="pill once">放映</span></div>
     </div>
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
   </div>
@@ -1337,8 +1362,8 @@
         <div class="icon"><svg><use href="#ic-tree"/></svg></div>
         <div>
           <div class="date">2028.03 · 月份已定</div>
-          <h3>Club-MA Phase 3 · 奇異叢林（在地展覽）</h3>
-          <div class="short">Club-MA 最終 phase — 同 Phase 1、2 學員合作群展</div>
+          <h3>Club-MA 03 · Archive Unheard 奇異叢林</h3>
+          <div class="short">在地爆發展覽 — 把 Club-MA 1–2 所獲化為展出</div>
         </div>
       </div>
       <div class="foot"><div class="pics"><span class="av">L</span></div><span class="pill once">群展</span></div>
@@ -1388,11 +1413,18 @@
     </div>
   </div>
 
+  <!-- ====== 2029 ====== -->
+  <div class="row tight">
+    <div class="year minor"><span class="badge">2029</span></div>
+    <div class="year-note">三年 line-up 收尾 · 下一個循環</div>
+  </div>
+
   <div class="row">
     <div class="card side-l" data-id="tsundoku" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-books"/></svg></div>
         <div>
+          <div class="date">2029.04 · 待確認</div>
           <h3>Tsundoku 負載讀取</h3>
           <div class="short">書山堆喺 FP 空間 — 開放周末做裝置同再創造</div>
         </div>
@@ -1400,12 +1432,6 @@
       <div class="foot"><div class="pics"><span class="av">L</span><span class="av">FP</span></div><span class="pill once">開放周末</span></div>
     </div>
     <div class="conn to-l"><span class="wire dash"></span><span class="pin approx"></span></div>
-  </div>
-
-  <!-- ====== 2029 ====== -->
-  <div class="row tight">
-    <div class="year minor"><span class="badge">2029</span></div>
-    <div class="year-note">三年 line-up 收尾 · 下一個循環</div>
   </div>
 
 </div>
