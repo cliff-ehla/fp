@@ -1,3 +1,41 @@
+<script>
+	const programs = [
+		{
+			en: 'Regular Open Door',
+			zh: '定期打開門',
+			img: '/fp5icon/admin_night-removebg-preview.png',
+			dark: true
+		},
+		{
+			en: 'Clubs & Series',
+			zh: '閉門研習｜實作系列',
+			img: '/fp5icon/F_Club_LaserFrames.jpg'
+		},
+		{
+			en: 'OPEN CALL',
+			zh: '公開徵集',
+			img: '/fp5icon/F_OpenCall_More-than-foundfootage.png'
+		},
+		{
+			en: 'PLAY ROOM + Artefact Corner',
+			zh: '玩樂場',
+			img: '/fp5icon/synth_onsite_rental-removebg-preview.png',
+			dark: true
+		},
+		{
+			en: 'FP (Collective) SOLOs',
+			zh: '據㸃成員個展',
+			img: '/fp5icon/Mnemonic-Catastrophe_Hugo-removebg-preview.png',
+			dark: true
+		},
+		{
+			en: 'Accumulation',
+			zh: '集少成多',
+			img: '/fp5icon/F_Floating-Plat-at-FP_ChineseS.jpg'
+		}
+	]
+</script>
+
 <svelte:head>
 	<title>FP5.0 — Floating Projects 2026–2029</title>
 	<meta name="description" content="Floating Projects 2026–2029: A Learning Centre, A Hub for Experiments. Six keywords, programmes, and the clubs now forming." />
@@ -211,13 +249,18 @@
 
 	<section class="mt-14 border-t border-gray-300 pt-8">
 		<h2 class="text-2xl font-medium mb-4">Programs</h2>
-		<ul class="space-y-2">
-			<li>Regular Open Door <span class="text-gray-600">定期打開門</span></li>
-			<li>Clubs &amp; Series <span class="text-gray-600">閉門研習｜實作系列</span></li>
-			<li>OPEN CALL <span class="text-gray-600">公開徵集</span></li>
-			<li>PLAY ROOM + Artefact Corner <span class="text-gray-600">玩樂場</span></li>
-			<li>FP (Collective) SOLOs <span class="text-gray-600">據㸃成員個展</span></li>
-			<li>Accumulation <span class="text-gray-600">集少成多</span></li>
+		<ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+			{#each programs as program}
+				<li class="border border-gray-300 rounded-lg overflow-hidden bg-white">
+					<div class="h-44 flex items-center justify-center {program.dark ? 'bg-neutral-950' : 'bg-[#f6f3ec]'}">
+						<img src={program.img} alt="" class="max-h-40 max-w-full object-contain" />
+					</div>
+					<p class="p-3">
+						{program.en}
+						<span class="text-gray-600">{program.zh}</span>
+					</p>
+				</li>
+			{/each}
 		</ul>
 		<p class="mt-4">
 			<a class="underline" href="/timeline">Full programme list</a>
@@ -226,6 +269,7 @@
 
 		<div class="mt-8">
 			<h3 class="text-xl font-medium">Accumulation <span class="text-gray-500 font-normal">集少成多</span></h3>
+			<img src="/fp5icon/F_Floating-Plat-at-FP_ChineseS.jpg" alt="Floating Platform 據點浮台" class="mt-4 w-full max-w-sm rounded-lg border border-gray-200 bg-[#f6f3ec]" />
 			<p class="mt-3">FLOATING PLATFORM「據㸃浮台」Sales corner at JCCAC L3-06D</p>
 			<p class="mt-2">
 				<a class="underline" href="/timeline#floating-platform">Floating Platform on the programme map</a>
@@ -238,7 +282,8 @@
 		<p class="mt-2 text-gray-600">Clubs we are forming.</p>
 
 		<div class="mt-6 border border-gray-300 rounded-lg p-5 bg-white">
-			<h3 class="text-xl font-medium">LaserFrames Cine Club</h3>
+			<img src="/fp5icon/F_Club_LaserFrames.jpg" alt="LaserFrames Cine Club" class="w-full max-w-sm rounded-lg bg-[#f6f3ec]" />
+			<h3 class="text-xl font-medium mt-4">LaserFrames Cine Club</h3>
 			<p class="mt-3">In the form of a private cine club, visitors will register for an FP private club membership (see documents of our findings by research) to join the discussion and media sharing events. They may join by season to participate in all events.</p>
 			<p class="mt-3">
 				<a class="underline" href="/timeline#laserframes">LaserFrames on the programme map</a>
@@ -246,7 +291,8 @@
 		</div>
 
 		<div class="mt-4 border border-gray-300 rounded-lg p-5 bg-white">
-			<h3 class="text-xl font-medium">CLUB-MA</h3>
+			<img src="/fp5icon/F_Club_MA.jpg" alt="Club Media Archaeology" class="w-full max-w-sm rounded-lg bg-[#f6f3ec]" />
+			<h3 class="text-xl font-medium mt-4">CLUB-MA</h3>
 			<p class="mt-3">Club Media Archaeology is another club within FP5.0. The program will proceed in 3 phases: (1) lectures on media archaeology in the form of tale-telling; (2) workshop with research activities and introspective look of one’s own artistic journeys; and (3) a group exhibition to spotlight our 2-year learning. Each phase will have 3–4 3-hour meetings. Club members may decide to join one or two or all three phases. Club-MA will be run by Linda Lai.</p>
 			<p class="mt-3">
 				<a class="underline" href="/timeline#club-ma">Club-MA on the programme map</a>
