@@ -979,7 +979,7 @@
 
   <div class="row">
     <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
-    <div class="card side-r" data-id="cineclub" tabindex="0" role="button">
+    <div class="card side-r" id="laserframes" data-id="cineclub" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-crt"/></svg></div>
         <div>
@@ -1049,7 +1049,7 @@
   </div>
 
   <div class="row">
-    <div class="card side-l" data-id="mediaarch" tabindex="0" role="button">
+    <div class="card side-l" id="club-ma" data-id="mediaarch" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-cassette"/></svg></div>
         <div>
@@ -1078,7 +1078,7 @@
 
   <div class="row" id="rec-end">
     <div class="conn to-r"><span class="wire dash"></span><span class="pin approx"></span></div>
-    <div class="card side-r" data-id="platform" tabindex="0" role="button">
+    <div class="card side-r" id="floating-platform" data-id="platform" tabindex="0" role="button">
       <div class="top">
         <div class="icon"><svg><use href="#ic-shop"/></svg></div>
         <div>
