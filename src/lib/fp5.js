@@ -4,13 +4,32 @@ import { FP5_SEED } from '$lib/fp5-seed.js';
 
 export const FP5_COLLECTION = 'fp5_events';
 
+// Keep in sync with isAdmin() in firestore.rules and storage.rules.
 export const ADMIN_EMAILS = [
+	'andiolai@gmail.com',
+	'contact@studioleung.com',
 	'fukkuen.work@gmail.com',
-	'smllai@cityu.edu.hk'
+	'hatch.mm@gmail.com',
+	'hugoymh@gmail.com',
+	'johnchow0829@gmail.com',
+	'kinlam8@gmail.com',
+	'kmcheng212@gmail.com',
+	'knellmc@yahoo.com.hk',
+	'lailindach@gmail.com',
+	'lauhoc@gmail.com',
+	'lisankitandy@gmail.com',
+	'ngsing519@gmail.com',
+	'sinyichoi89@gmail.com',
+	'smhect@cityu.edu.hk',
+	'smllai@cityu.edu.hk',
+	'waileunglai2014@gmail.com',
+	'winsome.wd@gmail.com',
+	'wongchunhoi9@gmail.com',
+	'yanwywinnie@gmail.com'
 ];
 
 export function isAdminEmail(email) {
-	return ADMIN_EMAILS.includes(email);
+	return !!email && ADMIN_EMAILS.includes(String(email).toLowerCase());
 }
 
 /** Firebase email/password account that the access-token login uses. */

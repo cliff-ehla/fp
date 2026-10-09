@@ -3,14 +3,14 @@
     import { onAuthStateChanged } from 'firebase/auth';
     import { onMount } from 'svelte';
     import EventForm from '$lib/components/EventForm.svelte';
+    import { isAdminEmail } from '$lib/fp5.js';
 
     let isAdmin = false;
     let loading = true;
-    const ADMIN_EMAILS = ['fukkuen.work@gmail.com'];
 
     onMount(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user && ADMIN_EMAILS.includes(user.email)) {
+            if (user && isAdminEmail(user.email)) {
                 isAdmin = true;
             } else {
                 isAdmin = false;

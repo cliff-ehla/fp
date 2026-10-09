@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import { auth, googleProvider, signInWithEmailAndPassword, signInWithPopup, signOut } from '../../lib/firebase.js';
     import { onAuthStateChanged } from 'firebase/auth';
-    import { ADMIN_EMAILS, TOKEN_LOGIN_EMAIL } from '$lib/fp5.js';
+    import { TOKEN_LOGIN_EMAIL, isAdminEmail } from '$lib/fp5.js';
 
     let user = null;
     let isAdmin = false;
@@ -13,7 +13,7 @@
     onMount(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             user = currentUser;
-            if (user && ADMIN_EMAILS.includes(user.email)) {
+            if (user && isAdminEmail(user.email)) {
                 isAdmin = true;
             } else {
                 isAdmin = false;

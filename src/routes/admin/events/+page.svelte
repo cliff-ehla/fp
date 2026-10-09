@@ -3,6 +3,7 @@
     import { collection, getCountFromServer, getDocs, limit, orderBy, query, startAfter } from 'firebase/firestore';
     import { onAuthStateChanged } from 'firebase/auth';
     import { onMount } from 'svelte';
+    import { isAdminEmail } from '$lib/fp5.js';
 
     let isAdmin = false;
     let loading = true;
@@ -15,11 +16,9 @@
     let pageCursors = [null]; // pageCursors[i] = the "startAfter" doc cursor to fetch page i+1
     let hasNextPage = false;
 
-    const ADMIN_EMAILS = ['fukkuen.work@gmail.com'];
-
     onMount(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
-            if (user && ADMIN_EMAILS.includes(user.email)) {
+            if (user && isAdminEmail(user.email)) {
                 isAdmin = true;
                 await Promise.all([loadTotalCount(), loadPage(1)]);
             } else {

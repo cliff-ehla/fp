@@ -1,10 +1,35 @@
 rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
+    // Keep in sync with ADMIN_EMAILS in src/lib/fp5.js.
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email in [
+        'andiolai@gmail.com',
+        'contact@studioleung.com',
+        'fukkuen.work@gmail.com',
+        'hatch.mm@gmail.com',
+        'hugoymh@gmail.com',
+        'johnchow0829@gmail.com',
+        'kinlam8@gmail.com',
+        'kmcheng212@gmail.com',
+        'knellmc@yahoo.com.hk',
+        'lailindach@gmail.com',
+        'lauhoc@gmail.com',
+        'lisankitandy@gmail.com',
+        'ngsing519@gmail.com',
+        'sinyichoi89@gmail.com',
+        'smhect@cityu.edu.hk',
+        'smllai@cityu.edu.hk',
+        'waileunglai2014@gmail.com',
+        'winsome.wd@gmail.com',
+        'wongchunhoi9@gmail.com',
+        'yanwywinnie@gmail.com'
+      ];
+    }
+
     match /media/{allPaths=**} {
       allow read: if true;
-      allow write: if request.auth != null
-                   && request.auth.token.email == 'fukkuen.work@gmail.com';
+      allow write: if isAdmin();
     }
     // No other paths are in use yet (Storage was previously configured but
     // unused by any app code) — default deny everything outside /media.
