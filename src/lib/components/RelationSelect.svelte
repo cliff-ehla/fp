@@ -6,6 +6,7 @@
     export let options = []; // array of { id, label }
     export let selectedIds = [];
     export let multiple = true;
+    export let required = false;
     
     let dropdownOpen = false;
     let searchQuery = '';
@@ -88,7 +89,7 @@
 
 <div class="mb-6">
     <label class="block text-xs font-bold text-gray-400 uppercase mb-2 flex items-center gap-2">
-        {label} {#if selectedIds.length > 0}({selectedIds.length}){/if}
+        {label}{#if required}<span class="text-red-400 ml-1">*</span>{/if} {#if selectedIds.length > 0}({selectedIds.length}){/if}
     </label>
     
     <div class="relative mb-3">

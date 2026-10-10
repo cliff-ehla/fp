@@ -1,6 +1,6 @@
 <script>
     import { db } from '$lib/firebase.js';
-    import { collection, addDoc, doc, getDoc, updateDoc, serverTimestamp, getDocs } from 'firebase/firestore';
+    import { collection, addDoc, doc, getDoc, updateDoc, serverTimestamp, getDocs, Timestamp } from 'firebase/firestore';
     import { onMount } from 'svelte';
     import 'quill/dist/quill.snow.css';
     import RelationSelect from '$lib/components/RelationSelect.svelte';
@@ -88,6 +88,33 @@
         }
     }
 
+    function asDateInput(value) {
+        if (!value) return '';
+        if (typeof value === 'string') return value.slice(0, 10);
+        if (typeof value.toDate === 'function') {
+            try {
+                return value.toDate().toISOString().slice(0, 10);
+            } catch (e) {
+                return '';
+            }
+        }
+        return '';
+    }
+
+    function dateToTimestamp(value) {
+        const day = asDateInput(value);
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return null;
+        return Timestamp.fromDate(new Date(`${day}T00:00:00Z`));
+    }
+
+    function plainText(html) {
+        return String(html || '')
+            .replace(/<[^>]*>/g, ' ')
+            .replace(/&nbsp;/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
     async function loadEventData() {
         try {
             const eventRef = doc(db, 'events', eventId);
@@ -99,8 +126,8 @@
                 slug = data.slug || '';
                 content = data.content || '';
                 mainImage = data.mainImage || '';
-                eventDate = data.eventDate || '';
-                endDate = data.endDate || '';
+                eventDate = asDateInput(data.eventDate) || asDateInput(data.start_date) || asDateInput(data.startDate);
+                endDate = asDateInput(data.endDate) || asDateInput(data.end_date);
                 location = data.location || '';
 
                 if (data.categories) {
@@ -121,8 +148,25 @@
     }
 
     const saveEvent = async () => {
-        if (!title || !slug) {
-            alert('Title and Slug are required!');
+        if (quill) content = quill.root.innerHTML;
+
+        const missing = [];
+        if (!title.trim()) missing.push('Title');
+        if (!excerpt.trim()) missing.push('Excerpt');
+        if (!plainText(content)) missing.push('Content');
+        if (!slug.trim()) missing.push('Slug');
+        if (!mainImage) missing.push('Cover image');
+        if (!eventDate) missing.push('Start date');
+        if (!endDate) missing.push('End date');
+        if (!location.trim()) missing.push('Location');
+        if (!selectedCategoryArray.length) missing.push('Category');
+
+        if (missing.length) {
+            alert('請填齊所有資料先至儲存。\n\nMissing:\n' + missing.map((name) => '• ' + name).join('\n'));
+            return;
+        }
+        if (endDate < eventDate) {
+            alert('End date 唔可以早過 start date。');
             return;
         }
 
@@ -135,14 +179,17 @@
             const category = categories.length > 0 ? categories[0] : null;
 
             const eventData = {
-                title,
-                slug,
-                excerpt,
+                title: title.trim(),
+                slug: slug.trim(),
+                excerpt: excerpt.trim(),
                 content,
                 mainImage,
                 eventDate,
+                startDate: dateToTimestamp(eventDate),
+                start_date: eventDate,
                 endDate,
-                location,
+                end_date: endDate,
+                location: location.trim(),
                 updatedAt: serverTimestamp(),
                 category,
                 categories
@@ -171,7 +218,7 @@
 {#if loadingData}
     <div class="flex items-center justify-center h-full text-gray-400 mt-20">Loading event data...</div>
 {:else}
-<form on:submit|preventDefault={saveEvent}>
+<form novalidate on:submit|preventDefault={saveEvent}>
     <div class="flex justify-between items-center mb-8">
         <div>
             <a href="/admin/events" class="text-sm text-gray-400 hover:text-white flex items-center gap-2 mb-2">
@@ -199,13 +246,13 @@
                         <input type="text" bind:value={title} required class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm focus:border-[#4945ff] focus:ring-1 focus:ring-[#4945ff] outline-none transition" />
                     </div>
                     <div class="col-span-2 md:col-span-1">
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">excerpt</label>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">excerpt<span class="text-red-400 ml-1">*</span></label>
                         <textarea bind:value={excerpt} rows="3" class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm focus:border-[#4945ff] focus:ring-1 focus:ring-[#4945ff] outline-none transition"></textarea>
                     </div>
                 </div>
 
                 <div class="mb-6 quill-dark">
-                    <label class="block text-xs font-bold text-gray-400 uppercase mb-2">content</label>
+                    <label class="block text-xs font-bold text-gray-400 uppercase mb-2">content<span class="text-red-400 ml-1">*</span></label>
                     <div class="bg-[#32324d] rounded border border-gray-600 text-white overflow-hidden text-sm">
                         <div use:editorAction class="min-h-[400px]"></div>
                     </div>
@@ -217,7 +264,7 @@
                         <input type="text" bind:value={slug} required class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm focus:border-[#4945ff] focus:ring-1 focus:ring-[#4945ff] outline-none transition" />
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">cover image</label>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">cover image<span class="text-red-400 ml-1">*</span></label>
                         {#if mainImage}
                             <img src={mainImage} alt="" class="w-full h-32 object-cover rounded border border-gray-600 mb-2" />
                         {/if}
@@ -239,20 +286,21 @@
 
                 <div class="space-y-6">
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">start date</label>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">start date<span class="text-red-400 ml-1">*</span></label>
                         <input type="date" bind:value={eventDate} class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm focus:border-[#4945ff] focus:ring-1 focus:ring-[#4945ff] outline-none transition" />
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">end date</label>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">end date<span class="text-red-400 ml-1">*</span></label>
                         <input type="date" bind:value={endDate} class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm focus:border-[#4945ff] focus:ring-1 focus:ring-[#4945ff] outline-none transition" />
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">location</label>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">location<span class="text-red-400 ml-1">*</span></label>
                         <input type="text" bind:value={location} class="w-full bg-[#32324d] text-white border border-gray-600 rounded p-2.5 text-sm focus:border-[#4945ff] focus:ring-1 focus:ring-[#4945ff] outline-none transition" />
                     </div>
 
                     <RelationSelect
                         label="categories"
+                        required
                         options={dbCategories.map(c => ({ id: c.id, label: c.name || c.slug }))}
                         bind:selectedIds={selectedCategoryArray}
                     />
